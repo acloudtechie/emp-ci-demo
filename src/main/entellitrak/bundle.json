@@ -1,0 +1,10 @@
+{
+  "bundleSpecVersion" : "1.2",
+  "bundleType" : "Uncompiled",
+  "createdBy" : "eam:1.1.3.0.0",
+  "createdOn" : "2017-07-16T06:23:03Z",
+  "createdOnOperatingSystem" : "Linux",
+  "databaseVendor" : "oracle",
+  "eamVersion" : "1.1.3.0.0",
+  "etkVersion" : "3.26.0.0.0"
+}

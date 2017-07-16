@@ -1,0 +1,9 @@
+{
+  "applicationVersion" : null,
+  "businessKey" : "etk.app",
+  "description" : "demo",
+  "isBeanshellEnabled" : false,
+  "isGroovyEnabled" : false,
+  "isJavaEnabled" : true,
+  "name" : "demo"
+}

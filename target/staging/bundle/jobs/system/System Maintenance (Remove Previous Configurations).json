@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "com.entellitrak.job.trackingConfigCleanup",
+  "createdBy" : "ServiceAccount",
+  "createdOn" : "2017-07-16T03:57:41Z",
+  "cronTriggerExpression" : "0 0 2 ? * *",
+  "cronTriggerType" : "CUSTOM",
+  "description" : "System maintenance job scheduled to be run every morning at 2:00am to clean up previously deployed configurations",
+  "endDate" : null,
+  "jobType" : "TRACKING_CONFIG_CLEANUP",
+  "lastUpdatedBy" : "ServiceAccount",
+  "lastUpdatedOn" : "2017-07-16T03:57:41Z",
+  "name" : "System Maintenance (Remove Previous Configurations)",
+  "quartzJobDetails" : {
+    "description" : "System maintenance job scheduled to be run every morning at 2:00am to clean up previously deployed configurations",
+    "isDurable" : "1",
+    "isNonconcurrent" : "1",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ExecutableSystemJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAQdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "com.entellitrak.job.trackingConfigCleanup",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : null,
+  "repeatUnits" : null,
+  "suspendOnError" : false,
+  "triggerType" : "CRON_TRIGGER"
+}
