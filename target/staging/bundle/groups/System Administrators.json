@@ -1,7 +1,0 @@
-{
-  "businessKey" : "group.systemAdministrators",
-  "description" : "Group of system administrators.",
-  "name" : "System Administrators",
-  "subjectPreferences" : [ ],
-  "subjectRoles" : [ ]
-}

@@ -1,8 +1,0 @@
-{
-  "businessKey" : "role.administration",
-  "dataPermissions" : [ ],
-  "description" : "Role with administration permissions.",
-  "name" : "Administrator",
-  "profile" : null,
-  "systemPermissions" : [ "permission" ]
-}
