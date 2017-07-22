@@ -8,8 +8,8 @@
   "description" : "System maintenance job scheduled to be run every morning at 2:00am to clean up previously deployed configurations",
   "endDate" : null,
   "jobType" : "TRACKING_CONFIG_CLEANUP",
-  "lastUpdatedBy" : "ServiceAccount",
-  "lastUpdatedOn" : "2017-07-16T03:57:41Z",
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-20T15:57:38Z",
   "name" : "System Maintenance (Remove Previous Configurations)",
   "quartzJobDetails" : {
     "description" : "System maintenance job scheduled to be run every morning at 2:00am to clean up previously deployed configurations",
