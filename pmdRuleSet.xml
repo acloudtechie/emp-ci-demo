@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset name="MicroPact Custom PMD ruleset"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+  
+  <description>
+    Custom PMD rule-set at MicroPact, Inc.
+  </description>
+  
+  <exclude-pattern>.*src/test/java/.*</exclude-pattern>
+  
+  <rule ref="rulesets/jsp/basic.xml"/>
+
+  <rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals">
+    <properties>
+        <property name="skipAnnotations" value="true"/>
+    </properties>    
+  </rule>
+
+  <rule ref="rulesets/java/codesize.xml">
+    <exclude name="TooManyMethods"/>
+  </rule>
+
+  <rule ref="rulesets/java/codesize.xml/TooManyFields">
+    <properties>
+        <!-- The default value is 15 -->
+        <property name="maxfields" value="25"/>
+    </properties>    
+  </rule>
+
+  <rule ref="rulesets/java/codesize.xml/ExcessivePublicCount">
+    <properties>
+        <!-- The default value is 45 -->
+        <property name="minimum" value="55"/>
+    </properties>    
+  </rule>
+  
+  <rule ref="rulesets/java/codesize.xml/StdCyclomaticComplexity">
+    <properties>
+        <property name="violationSuppressRegex" value="(^The method 'hashCode'.*)|(^The method 'equals'.*)|(^The method 'toString'.*)|(^The class '.*VO'.*)"/>
+    </properties>    
+  </rule>
+
+  <rule ref="rulesets/java/codesize.xml/CyclomaticComplexity">
+    <properties>
+        <property name="violationSuppressRegex" value="(^The method 'hashCode'.*)|(^The method 'equals'.*)|(^The method 'toString'.*)|(^The class '.*VO'.*)"/>
+    </properties>    
+  </rule>
+
+  <rule ref="rulesets/java/codesize.xml/ModifiedCyclomaticComplexity">
+    <properties>
+        <property name="violationSuppressRegex" value="(^The method 'hashCode'.*)|(^The method 'equals'.*)|(^The method 'toString'.*)|(^The class '.*VO'.*)"/>
+    </properties>    
+  </rule>
+
+  <rule ref="rulesets/java/codesize.xml/NPathComplexity">
+    <properties>
+        <property name="violationSuppressRegex" value="(^The method hashCode().*)|(^The method equals().*)|(^The method toString().*)"/>
+    </properties>    
+  </rule>
+
+  <rule ref="rulesets/java/logging-java.xml">
+    <exclude name="LoggerIsNotStaticFinal"/>
+  </rule>
+  
+  <rule ref="rulesets/java/logging-jakarta-commons.xml">
+	<!-- Since we are using slf4j -->
+	<exclude name="GuardLogStatement"/>
+  </rule>
+
+  <rule ref="rulesets/java/coupling.xml/ExcessiveImports">
+    <properties>
+        <!-- The default value is 30 -->
+        <property name="minimum" value="40"/>
+    </properties>    
+  </rule>  
+  
+  <rule ref="rulesets/java/coupling.xml">
+    <exclude name="LawOfDemeter"/>
+    <exclude name="LoosePackageCoupling"/>
+  </rule>
+  
+  <rule ref="rulesets/java/naming.xml">
+    <exclude name="LongVariable"/>
+    <exclude name="MethodNamingConventions"/>
+    <exclude name="BooleanGetMethodName"/>
+  </rule>
+
+  <rule ref="rulesets/java/empty.xml/EmptyCatchBlock">
+    <properties>
+        <property name="allowCommentedBlocks" value="true"/>
+    </properties>
+  </rule>
+
+  <rule ref="rulesets/java/design.xml">
+    <exclude name="ClassWithOnlyPrivateConstructorsShouldBeFinal"/>
+    <exclude name="AvoidSynchronizedAtMethodLevel"/>
+  </rule>
+
+  <rule ref="rulesets/java/optimizations.xml">
+    <exclude name="MethodArgumentCouldBeFinal"/>
+    <exclude name="LocalVariableCouldBeFinal"/>
+    <exclude name="AvoidInstantiatingObjectsInLoops"/>
+  </rule>
+
+  <rule ref="rulesets/java/javabeans.xml">
+	<exclude name="BeanMembersShouldSerialize"/>
+  </rule>
+
+  <rule ref="rulesets/java/strictexception.xml">
+	<exclude name="AvoidCatchingGenericException"/>
+	<exclude name="AvoidRethrowingException"/>
+  </rule>
+
+  <rule ref="rulesets/java/basic.xml"/>
+
+  <rule ref="rulesets/java/unnecessary.xml">
+    <exclude name="UselessParentheses"/>
+  </rule>
+  
+  <rule ref="rulesets/java/strings.xml"/>
+  <rule ref="rulesets/java/empty.xml"/>
+  <rule ref="rulesets/java/imports.xml"/>
+  <rule ref="rulesets/java/unusedcode.xml"/>
+  <rule ref="rulesets/java/braces.xml"/>
+  <rule ref="rulesets/java/finalizers.xml"/>
+  <rule ref="rulesets/java/clone.xml"/>
+  <rule ref="rulesets/java/j2ee.xml"/>
+  <rule ref="rulesets/java/sunsecure.xml"/>
+</ruleset>

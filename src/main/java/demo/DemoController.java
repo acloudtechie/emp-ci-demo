@@ -17,8 +17,8 @@ import com.entellitrak.PageExecutionContext;
 public class DemoController implements PageController {
 
     public Response execute(PageExecutionContext etk) throws ApplicationException {
-	User user = etk.getCurrentUser();
-	    TextResponse response = etk.createTextResponse();
+        User user = etk.getCurrentUser();
+        TextResponse response = etk.createTextResponse();
             response.put("user", user); return response;
 
     }

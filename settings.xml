@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+  <pluginGroups>
+    <pluginGroup>com.entellitrak</pluginGroup>
+  </pluginGroups>
+
+  <profiles>	
+ 	<profile>
+      <id>etkprofile</id>
+      <properties>
+        <downloadSources>true</downloadSources>
+        <downloadJavadocs>true</downloadJavadocs>
+        <etkUrl>http://184.73.4.174:38080/entellitrak</etkUrl>
+        <eamUrl>http://54.225.97.187:38089/</eamUrl>
+        <eamUsername>administrator</eamUsername>
+        <eamPassword>admin1953</eamPassword>
+        <eamAppName>Dev</eamAppName>
+      </properties>
+      <repositories>
+        <repository>
+          <id>etk</id>
+          <name>Entellitrak Repository</name>
+          <layout>default</layout>
+          <url>http://184.73.4.174:38080/entellitrak/maven2/</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </repository>
+	    <repository>
+          <id>maven-central</id>
+          <url>https://repo1.maven.org/maven2/</url>
+          <layout>default</layout>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+          <pluginRepository>
+              <id>etk</id>
+              <name>Entellitrak Plugin Repository</name>
+              <url>http://184.73.4.174:38080/entellitrak/maven2/</url>
+              <layout>default</layout>
+              <snapshots>
+                  <enabled>true</enabled>
+              </snapshots>
+			  <releases>
+                  <updatePolicy>always</updatePolicy>
+              </releases>
+          </pluginRepository>		 
+	      <pluginRepository>
+              <id>maven-central</id>
+              <name>Maven Plugin Repository</name>
+              <url>https://repo1.maven.org/maven2/</url>
+              <layout>default</layout>
+              <snapshots>
+                  <enabled>true</enabled>
+              </snapshots>
+          </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  
+  <activeProfiles>
+  <activeProfile>etkprofile</activeProfile>
+  </activeProfiles>
+  <servers>
+   <server>
+      <id>etk</id>
+      <username>administrator</username>
+      <password>admin1953</password>
+   </server>
+  <server>
+    <id>archetype</id>
+    <username>administrator</username>
+    <password>admin1953</password>
+  </server>
+ </servers>
+ 
+</settings>

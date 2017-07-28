@@ -13,6 +13,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <checkstyle.config.location>sample_checks.xml</checkstyle.config.location>
     </properties>
 
     <parent>
@@ -70,6 +71,88 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!--  Custom libs -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>1.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jibx</groupId>
+            <artifactId>jibx-run</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>3.3.1.GA</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts-core</artifactId>
+            <version>1.3.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.entellitrak</groupId>
+            <artifactId>core</artifactId>
+            <version>3.27.0.0.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>/Users/ming.zhang/git/etk/entellitrak-core/build/libs/entellitrak-core-etk-core-dev.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
@@ -100,7 +183,111 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <excludes>
+                        <!-- Exclude test utility classes -->
+                        <exclude>%regex[com.mptraining.test.*]</exclude>
+                    </excludes>                    
+                </configuration>                
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
+                <configuration>
+                    <excludes>
+                        <!-- Exclude test utility classes -->
+                        <exclude>%regex[com.mptraining.test.*]</exclude>
+                    </excludes>
+                    
+                    <destFile>${project.build.directory}/jacoco/test.exec</destFile>
+                </configuration>
+                
+                <executions>
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.7</version>
+
+                <configuration>
+                    <failOnViolation>false</failOnViolation>
+                    <rulesets>
+                        <ruleset>pmdRuleSet.xml</ruleset>
+                    </rulesets>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>check</goal>
+                            <goal>cpd-check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.4</version>
+
+                <configuration>
+                    <failOnError>false</failOnError>
+                    <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+
+                <configuration>
+                    <failOnViolation>false</failOnViolation>
+                    <propertyExpansion>project_loc=${basedir}</propertyExpansion>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>com.entellitrak</groupId>
                 <artifactId>etk-maven-plugin</artifactId>
@@ -125,5 +312,74 @@
                 </executions>
             </plugin>
         </plugins>
+        <pluginManagement>
+         <plugins>
+          <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+          <plugin>
+           <groupId>org.eclipse.m2e</groupId>
+           <artifactId>lifecycle-mapping</artifactId>
+           <version>1.0.0</version>
+           <configuration>
+            <lifecycleMappingMetadata>
+             <pluginExecutions>
+              <pluginExecution>
+               <pluginExecutionFilter>
+                <groupId>com.entellitrak</groupId>
+                <artifactId>etk-maven-plugin</artifactId>
+                <versionRange>[1.0.2,)</versionRange>
+                <goals>
+                 <goal>generate</goal>
+                </goals>
+               </pluginExecutionFilter>
+               <action>
+                <ignore></ignore>
+               </action>
+              </pluginExecution>
+              <pluginExecution>
+               <pluginExecutionFilter>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <versionRange>[3.7,)</versionRange>
+                <goals>
+                 <goal>cpd-check</goal>
+                 <goal>check</goal>
+                </goals>
+               </pluginExecutionFilter>
+               <action>
+                <ignore></ignore>
+               </action>
+              </pluginExecution>
+              <pluginExecution>
+               <pluginExecutionFilter>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <versionRange>[3.0.4,)</versionRange>
+                <goals>
+                 <goal>check</goal>
+                </goals>
+               </pluginExecutionFilter>
+               <action>
+                <ignore></ignore>
+               </action>
+              </pluginExecution>
+              <pluginExecution>
+               <pluginExecutionFilter>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <versionRange>[2.17,)</versionRange>
+                <goals>
+                 <goal>check</goal>
+                </goals>
+               </pluginExecutionFilter>
+               <action>
+                <ignore></ignore>
+               </action>
+              </pluginExecution>
+             </pluginExecutions>
+            </lifecycleMappingMetadata>
+           </configuration>
+          </plugin>
+         </plugins>
+        </pluginManagement>
     </build>
 </project>
