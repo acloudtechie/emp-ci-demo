@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Script Object Usage</title>
+    
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <style type="text/css">
+        .invalid {
+            background-color: #FE6565;
+        }
+        
+        .formLabel{
+            margin-right: 0.2em;
+        }
+        
+        .formLabel:after{
+            content: ":"
+        }
+        
+        .scriptObjects > li{
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        
+        ul.scriptObjects > li > a {
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.2em;
+            font-size: 1.3em;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+    
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+    
+    <script type="text/javascript">
+        "use strict"
+        
+        var model = (function(){
+        	
+        	var state = {
+        			items: $items,
+                    scriptObjects: $scriptObjects,
+                    
+                    regex: "",
+                    
+        			eventListeners: []
+        	}
+        	
+        	function addEventListener(func){
+                state.eventListeners.push(func)
+            }
+            
+            function callEventListeners(){
+                for(var i = 0; i < state.eventListeners.length; i++){
+                    state.eventListeners[i]()
+                }
+            }
+        	
+            function setRegex(regex){
+                state.regex = regex
+                callEventListeners()
+            }
+            
+            function getRegex(){
+                return state.regex
+            }
+            
+            function getScriptObjects(){
+            	return state.scriptObjects
+            }
+            
+            function getItems(scriptId){
+            	return state.items.filter(function(item){
+            		return item.SCRIPT_ID == scriptId
+            	})
+            }
+            
+            function getFilteredScriptObjects(){
+            	if(isRegexValid(getRegex())){
+            		var regexp = new RegExp(state.regex, "i")
+            		
+            		return state.scriptObjects.filter(function(scriptObject){
+            			return regexp.test(scriptObject.FULLY_QUALIFIED_SCRIPT_NAME)
+            		})
+            	}else{
+            		return []
+            	}
+            }
+            
+        	return {
+        		state: state,
+        		
+        		getScriptObjects: getScriptObjects,
+        		getFilteredScriptObjects: getFilteredScriptObjects,
+        		
+        		getItems: getItems,
+        		
+        		setRegex: setRegex,
+        		getRegex: getRegex,
+        		
+        		addEventListener: addEventListener
+        	}
+        }())
+        
+        function isRegexValid(string){
+            try{
+                new RegExp(string)
+                return true
+            }catch(e){
+                return false
+            }
+        }
+        
+        var Regex = React.createFactory(React.createClass({
+        	render: function(){
+        		var model = this.props.model
+        		var regex = model.getRegex()
+        		
+        		return React.DOM.div({},
+        				React.DOM.label({className: "formLabel"}, 
+        						"Filter Script Object by Name (Regex)"),
+        				React.DOM.input({type: "text",
+        					className: isRegexValid(regex) ? null : "invalid",
+        					value: regex,
+        					onChange: function(e){
+        						model.setRegex(e.target.value)
+        					}}))
+        	}
+        }))
+        
+        function getUrl(item){
+        	switch (item.type){
+        	case "PAGE_CONTROLLER":
+        		return "page.update.request.do?id=" + encodeURIComponent(item.ID)
+        	case "PAGE_VIEW":
+        		return "page.update.request.do?id=" + encodeURIComponent(item.ID)
+        	case "DISPLAY_MAPPING":
+        		return "cfg.process.displaymapping.update.request.do?displayMappingId=" + encodeURIComponent(item.ID)
+        	case "SYSTEM_EVENT_LISTENER":
+        		return "admin.systemEventListener.update.request.do?businessKey="+encodeURIComponent(item.ID)
+        	case "FORM_EVENT":
+        		return "cfg.ui.FormDesigner.do?method=getView&id=" + encodeURIComponent(item.ID)
+        	case "FORM_ELEMENT_EVENT":
+        		return "cfg.ui.FormDesigner.do?method=getView&id=" + encodeURIComponent(item.FORM_ID)
+        	case "JOB":
+        		return "admin.job.update.request.do?job=" + encodeURIComponent(item.ID)
+        	case "LOOKUP":
+        		return "cfg.lookup.update.request.do?id=" + encodeURIComponent(item.ID)
+        	case "TRANSITION":
+        		return "cfg.datatransition.update.request.do?&transitionId=" + encodeURIComponent(item.ID)
+        	case "DATA_EVENT":
+        		/* We link to the General tab instead of Data Events because core throws a system exception
+        		 * if the General tab has not previously been visited this session. */
+        		return "cfg.dataobject.update.request.do?id=" + encodeURIComponent(item.ID)
+        	case "RESPONSIVE_SCRIPT":
+        	    return "cfg.ui.FormDesigner.do?method=getView&id=" + encodeURIComponent(item.ID)
+        	case "FILTER_HANDLER":
+        	    return "cfg.dataobject.update.request.do?id=" + encodeURIComponent(item.ID)
+        	default: throw "Item type not found"
+        	}
+        }
+        
+        var Items = React.createFactory(React.createClass({
+        	render: function(){
+        		var items = model.getItems(this.props.scriptObject.SCRIPT_ID)
+        		return items.length == 0
+        		? null
+        		: React.DOM.ul(null,
+        				items.map(function(item){
+        					return React.DOM.li({key: item.ID},
+        							React.DOM.a({href: getUrl(item),
+        								target: "_blank"},
+        								item.NAME))
+        				}))
+        	}
+        }))
+        
+        var ScriptObject = React.createFactory(React.createClass({
+        	render: function(){
+        		var scriptObject = this.props.scriptObject
+        		var childProps = {scriptObject: scriptObject}
+        		return React.DOM.li(null, 
+        				React.DOM.a({href: "cfg.scriptobject.update.request.do?id="+scriptObject.SCRIPT_ID,
+        					target: "_blank"}, 
+        						scriptObject.FULLY_QUALIFIED_SCRIPT_NAME),
+        				Items(childProps))
+        	}
+        }))
+        
+        var ScriptObjects = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.ul({className: "scriptObjects"}, 
+        				model.getFilteredScriptObjects().map(function(scriptObject){
+        			return ScriptObject({
+        				key: scriptObject.SCRIPT_ID,
+        				scriptObject: scriptObject})
+        		}.bind(this)))
+        	}
+        }))
+        
+        var ScriptObjectContent = React.createFactory(React.createClass({
+        	getInitialState: function(){
+                return {model: null,
+                    modelCallback: null}
+            },
+            componentWillMount: function(){
+                var modelCallback = function(){
+                    this.setState({})
+                }.bind(this)
+                this.setState({model: model,
+                      modelCallback: modelCallback})
+                model.addEventListener(modelCallback)
+            },render: function(){
+        		return React.DOM.div(null, 
+        				Regex({model: model}),
+        				ScriptObjects(null))
+        	}
+        }))
+        
+        var ScriptObjectUsageApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Script Object Usage",
+                    instructions: ["This page can be used to determine where Script Objects are being used.",
+                                   "It is recommended to check this page before modifying a Script Object.",
+                                   "This page may become out of date as entellitrak adds more handler types."],
+                    mainContent: ScriptObjectContent({})})
+            }
+        }))
+        
+        jQuery(function(){
+            ReactDOM.render(ScriptObjectUsageApp(null),
+                       jQuery('.app')[0])})
+        
+    </script>
+    
+    </head>
+    <body>
+        <div class="app"></div>
+    </body>
+</html>

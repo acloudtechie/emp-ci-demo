@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dbutilinstallerview.1819e09e-3b91-4ade-8b83-66fb6cca4527",
+  "description" : " \tAn installer script that installs a common set of helpful DB views, packages and stored procedures for use by the AEA frameworks and AE code.",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "DbUtilInstallerView",
+  "packageBusinessKey" : "package.dbUtilInstaller.a9ecdae3-798f-49b3-b114-8922ab9fe858",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

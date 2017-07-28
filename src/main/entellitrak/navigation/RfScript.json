@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.rfScript",
+  "children" : [ {
+    "businessKey" : "object.rfScriptParameter",
+    "children" : [ ],
+    "listOrder" : 1
+  } ],
+  "navigationStyle" : "VERTICAL"
+}

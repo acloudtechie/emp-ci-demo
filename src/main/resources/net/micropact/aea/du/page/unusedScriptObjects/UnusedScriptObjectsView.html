@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Unused Script Objects</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var unusedScriptObjects = $unusedScriptObjects
+        
+        var UnusedScriptObjects = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.table({className: "grid aea-core-grid"},
+                		React.DOM.thead(null,
+                				React.DOM.tr(null, ["Language", "Handler", "Name"].map(function(title, i){
+                                    return React.DOM.th({key: i}, title)
+                                }))),
+                        React.DOM.tbody(null, unusedScriptObjects.map(function(scriptObject, i){
+                        	return React.DOM.tr({key: i},
+                        			React.DOM.td(null, scriptObject.SCRIPT_LANGUAGE_TYPE),
+                        			React.DOM.td(null, scriptObject.SCRIPT_HANDLER_TYPE),
+                        			React.DOM.td(null, React.DOM.a({href: "cfg.scriptobject.update.request.do?id=" + encodeURIComponent(scriptObject.SCRIPT_ID),
+                        				target: "_blank"},
+                        				scriptObject.FULLY_QUALIFIED_SCRIPT_NAME)))
+                        })))
+            }
+        }))
+        
+        var UnusedScriptObjectsApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Unused Script Objects",
+                    instructions: ["This page generates a list of Script Objects which do not appear to be being used by entellitrak. This is done by looking at Handler Types and Language Types and then searching for the places where these should be used within entellitrak.",
+                                   "This will not return things like Beanshell or generic Java Script Objects because there is no way to know that these are not included someplace else. This also may return Script Objects which are used if the metadata is incorrect, for instance a SQL Script which has Page Controller as a Handler Type selected will be returned or a HTML resource used for javadocs.",
+                                   "With the addition of Data Type Plug-Ins, HTML or javascript files may be referenced from the code of other Script Objects. These scripts will show up as unused even though they are required for the Plug-In",
+                                   "Please provide feedback if you feel this page is returning too many or too few Script Objects."],
+                    mainContent: UnusedScriptObjects({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(UnusedScriptObjectsApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

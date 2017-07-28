@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cmpdocumentrouter.5ec4bdbf-3ef3-4bb9-a46b-2e799649c555",
+  "description" : "Handles business logic for CMP Document for each CRUD operation",
+  "handlerType" : "DATA_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "CmpDocumentRouter",
+  "packageBusinessKey" : "package.doe.5abff064-d1ce-4285-9106-ecbd926c7f6d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

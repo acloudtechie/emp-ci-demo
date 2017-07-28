@@ -1,0 +1,81 @@
+{
+  "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView",
+  "dataObjectBusinessKey" : "object.aeaAuditLog",
+  "dataViewElements" : [ {
+    "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView.element.dataelementname",
+    "dataElementBusinessKey" : "object.aeaAuditLog.element.dataElementName",
+    "description" : "Data Element Name column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Data Element Name",
+    "multiValueDelimiter" : null,
+    "name" : "dataElementName",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView.element.dataobjectname",
+    "dataElementBusinessKey" : "object.aeaAuditLog.element.dataObjectName",
+    "description" : "Data Object Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Data Object Name",
+    "multiValueDelimiter" : null,
+    "name" : "dataObjectName",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView.element.eventtype",
+    "dataElementBusinessKey" : "object.aeaAuditLog.element.eventType",
+    "description" : "Event Type column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Event Type",
+    "multiValueDelimiter" : null,
+    "name" : "eventType",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView.element.newvalue",
+    "dataElementBusinessKey" : "object.aeaAuditLog.element.newValue",
+    "description" : null,
+    "displayOrder" : 16,
+    "displaySize" : null,
+    "label" : "New Value",
+    "multiValueDelimiter" : null,
+    "name" : "newValue",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView.element.previousvalue",
+    "dataElementBusinessKey" : "object.aeaAuditLog.element.previousValue",
+    "description" : null,
+    "displayOrder" : 15,
+    "displaySize" : null,
+    "label" : "Previous Value",
+    "multiValueDelimiter" : null,
+    "name" : "previousValue",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView.element.timestamp",
+    "dataElementBusinessKey" : "object.aeaAuditLog.element.timestamp",
+    "description" : "Timestamp column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Timestamp",
+    "multiValueDelimiter" : null,
+    "name" : "timestamp",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaAuditLog.view.aeaAuditLogDefaultView.element.useraccountname",
+    "dataElementBusinessKey" : "object.aeaAuditLog.element.userAccountName",
+    "description" : "User Account Name column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "User Account Name",
+    "multiValueDelimiter" : null,
+    "name" : "userAccountName",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "AEA Audit Log Listing",
+  "name" : "AEA Audit Log Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "AEA Audit Log Listing"
+}

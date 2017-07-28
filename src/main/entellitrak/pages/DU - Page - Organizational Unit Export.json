@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.organizationalUnitExport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.orgunitexportcontroller.46047796-1889-4857-9552-c556daca2dcb",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Organizational Unit Export",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Organizational Unit Export",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

@@ -1,0 +1,18 @@
+{
+  "businessKey" : "object.cmpComplaint.displayMapping.78295",
+  "dataFormBusinessKey" : "object.cmpComplaint.form.cmpComplaintReadOnlyForm",
+  "dataObjectBusinessKey" : "object.cmpComplaint",
+  "dataViewBusinessKey" : null,
+  "description" : "Form becomes read only for eFilers after creation but they can still perform a \"soft delete\".",
+  "disableForm" : false,
+  "disableView" : false,
+  "etpStateBusinessKey" : "object.cmpComplaint.state.interim",
+  "evaluationOrder" : 3,
+  "evaluationScriptObjectBusinessKey" : null,
+  "name" : "Efiler - Read Only",
+  "processDataObjectBusinessKey" : "object.cmpComplaint",
+  "readOnlyForm" : false,
+  "roleBusinessKey" : "role.efiler",
+  "useDefaultForm" : false,
+  "useDefaultView" : true
+}

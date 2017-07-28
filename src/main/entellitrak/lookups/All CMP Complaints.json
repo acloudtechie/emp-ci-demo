@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.allCmpComplaints",
+  "dataObjectBusinessKey" : null,
+  "description" : "Lookup of all CMP Complaints",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "All CMP Complaints",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.relatedcomplaintslookup.a6ba9d39-c0a7-4031-a289-8106c20775cc",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

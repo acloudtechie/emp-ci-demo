@@ -1,0 +1,12 @@
+{
+  "active" : true,
+  "businessKey" : "net.micropact.aea.du.applyChanges.NotifyAdministrators",
+  "createdBy" : "administrator",
+  "createdOn" : "2016-09-27T15:26:27Z",
+  "description" : "Emails Users in the \"aea.du.applyChangesCompleteEmailRecipients\" Group that an Apply Changes has completed.",
+  "eventType" : "ON_APPLY_CHANGES_COMPLETE",
+  "lastUpdatedBy" : "administrator",
+  "lastUpdatedOn" : "2017-07-28T13:25:53Z",
+  "name" : "AEA - DU - Notify Administrators",
+  "scriptObjectBusinessKey" : "script.notifyadministrators.a2b81eb8-95bb-412e-b0f8-2a506b00ff07"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.updateLogViewer.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.updatelogviewerajaxcontroller.1767aeba-2c04-4fe3-b643-31a442bb71da",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Update Log Viewer - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Update Log Viewer - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

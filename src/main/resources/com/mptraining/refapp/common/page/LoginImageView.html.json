@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.loginimageview.0e906e90-6a83-4dcc-b56a-7761df0a37f8",
+  "description" : "Serves up the login page logo image",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "LoginImageView",
+  "packageBusinessKey" : "package.page.18a51acf-10e3-4f0a-83da-d8820b37ac6f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.stringescapeutils.40c53c77-5552-4f96-bfe2-a1549fc9eac4",
+  "description" : "StringEscapeUtils",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "StringEscapeUtils",
+  "packageBusinessKey" : "package.utility.a3652cc4-3e96-42a8-9c42-099cd257fd1b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

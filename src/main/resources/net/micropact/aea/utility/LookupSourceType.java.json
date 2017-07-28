@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookupsourcetype.afbf3dae-7836-4cf9-87a1-b73d617f5df1",
+  "description" : "Defines the types of lookups in the system.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "LookupSourceType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

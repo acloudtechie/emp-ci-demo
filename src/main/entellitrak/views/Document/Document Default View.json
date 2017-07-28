@@ -1,0 +1,81 @@
+{
+  "businessKey" : "object.document.view.documentDefaultView",
+  "dataObjectBusinessKey" : "object.document",
+  "dataViewElements" : [ {
+    "businessKey" : "object.document.view.documentDefaultView.element.description",
+    "dataElementBusinessKey" : "object.document.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.document.view.documentDefaultView.element.dmfile",
+    "dataElementBusinessKey" : "object.document.element.dmFile",
+    "description" : "DM File column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "DM File",
+    "multiValueDelimiter" : null,
+    "name" : "dmFile",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.document.view.documentDefaultView.element.documentname",
+    "dataElementBusinessKey" : "object.document.element.documentName",
+    "description" : "Document Name column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Document Name",
+    "multiValueDelimiter" : null,
+    "name" : "documentName",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.document.view.documentDefaultView.element.documenttype",
+    "dataElementBusinessKey" : "object.document.element.documentType",
+    "description" : "Document Type column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Document Type",
+    "multiValueDelimiter" : null,
+    "name" : "documentType",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.document.view.documentDefaultView.element.file",
+    "dataElementBusinessKey" : "object.document.element.file",
+    "description" : "File column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "File",
+    "multiValueDelimiter" : null,
+    "name" : "file",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.document.view.documentDefaultView.element.lastupdatedon",
+    "dataElementBusinessKey" : "object.document.element.lastUpdatedOn",
+    "description" : "Last Updated On column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Last Updated On",
+    "multiValueDelimiter" : null,
+    "name" : "lastUpdatedOn",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.document.view.documentDefaultView.element.title",
+    "dataElementBusinessKey" : "object.document.element.title",
+    "description" : "Title column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Title",
+    "multiValueDelimiter" : null,
+    "name" : "title",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Document Listing",
+  "name" : "Document Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Document Listing"
+}

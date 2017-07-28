@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.irfmigrationservice.b0717576-edea-4ee7-90c5-070af45ebeb9",
+  "description" : "IRfMigrationService",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IRfMigrationService",
+  "packageBusinessKey" : "package.service.c91f3592-d751-44c9-b00f-cdc447fbc85e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

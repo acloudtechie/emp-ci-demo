@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.formDocumentJavascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.documentjavascriptcontroller.83a1e87b-ef81-4a10-825a-fa576646e2dc",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "Page containing JavaScript to run on the Document form",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Form - Document - JavaScript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.documentjavascriptview.c97b6f83-1945-4a03-98b5-b440cda26aea"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transferutilitycssview.0ed68db3-5124-40df-b746-7ac58f6f5731",
+  "description" : "TransferUtilityCssView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "TransferUtilityCssView",
+  "packageBusinessKey" : "package.transferUtilityCss.9e403fa2-7a4a-4d5d-9d92-bd2a3dfdaf71",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.scriptobjectimpl.cb179c3a-ed6e-4d72-88d2-efd02d068382",
+  "description" : "ScriptObjectImpl",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ScriptObjectImpl",
+  "packageBusinessKey" : "package.dao.24096f08-6cac-4044-9974-f24950b92903",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

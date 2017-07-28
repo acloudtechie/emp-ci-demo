@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.logdownloadercontroller.9362982b-24c4-4e36-8d65-797574df5b9f",
+  "description" : "LogDownloaderController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "LogDownloaderController",
+  "packageBusinessKey" : "package.logDownloader.9bdda22c-49da-42d0-860b-7892874deeb9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

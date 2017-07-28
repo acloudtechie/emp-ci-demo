@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.page.viewWorkflowGraph.javascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewworkflowgraphjavascriptcontroller.6fef60a0-43ba-4a08-8015-6c45ced06f75",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Page - View Workflow - Graph - Javascript",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - View Workflow - Graph - Javascript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewworkflowgraphjavascriptview.3bbe13c8-7eac-453b-a597-a77506f1daba"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.documentnamelookup.d6ea9704-8da8-4d82-87a3-fe67f9d4b92c",
+  "description" : "Document Name Lookup",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "DocumentNameLookup",
+  "packageBusinessKey" : "package.lookup.a7a2d836-9aab-4cb5-bb18-2fbfc0c197d3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

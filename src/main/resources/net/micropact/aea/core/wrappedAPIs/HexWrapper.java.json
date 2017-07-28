@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.hexwrapper.4248f81c-1baa-4dc4-a844-0b8e3f5bb939",
+  "description" : "HexWrapper",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "HexWrapper",
+  "packageBusinessKey" : "package.wrappedAPIs.abbea5cf-10a7-4c50-9faa-e8b3b194d0d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewlockeddocumentmanagementfilescontroller.a87c1a97-3984-43c4-9c57-4e940315bfa5",
+  "description" : "ViewLockedDocumentManagementFilesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewLockedDocumentManagementFilesController",
+  "packageBusinessKey" : "package.viewLockedDocumentManagementFiles.efdf6a8b-29f4-4543-8c82-eb42cdcef1fa",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

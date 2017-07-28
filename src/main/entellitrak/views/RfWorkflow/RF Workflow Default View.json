@@ -1,0 +1,71 @@
+{
+  "businessKey" : "object.rfWorkflow.view.rfWorkflowDefaultView",
+  "dataObjectBusinessKey" : "object.rfWorkflow",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfWorkflow.view.rfWorkflowDefaultView.element.childobject",
+    "dataElementBusinessKey" : "object.rfWorkflow.element.childObject",
+    "description" : "Child Object column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Child Object",
+    "multiValueDelimiter" : null,
+    "name" : "childObject",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflow.view.rfWorkflowDefaultView.element.childtransitionelement",
+    "dataElementBusinessKey" : "object.rfWorkflow.element.childTransitionElement",
+    "description" : "Child Transition Element column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "Child Transition Element",
+    "multiValueDelimiter" : null,
+    "name" : "childTransitionElement",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflow.view.rfWorkflowDefaultView.element.code",
+    "dataElementBusinessKey" : "object.rfWorkflow.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflow.view.rfWorkflowDefaultView.element.description",
+    "dataElementBusinessKey" : "object.rfWorkflow.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 9,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflow.view.rfWorkflowDefaultView.element.name",
+    "dataElementBusinessKey" : "object.rfWorkflow.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflow.view.rfWorkflowDefaultView.element.parentstateelement",
+    "dataElementBusinessKey" : "object.rfWorkflow.element.parentStateElement",
+    "description" : "Parent State Element column.",
+    "displayOrder" : 8,
+    "displaySize" : null,
+    "label" : "Parent State Element",
+    "multiValueDelimiter" : null,
+    "name" : "parentStateElement",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Workflow Listing",
+  "name" : "RF Workflow Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Workflow Listing"
+}

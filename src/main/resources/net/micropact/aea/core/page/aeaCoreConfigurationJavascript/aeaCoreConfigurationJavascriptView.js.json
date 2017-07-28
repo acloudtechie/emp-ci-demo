@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeacoreconfigurationjavascriptview.9dcf66ff-d26d-4502-958d-de5b0d1e8c27",
+  "description" : "aeaCoreConfigurationJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "aeaCoreConfigurationJavascriptView",
+  "packageBusinessKey" : "package.aeaCoreConfigurationJavascript.66c61a4e-adbc-41f7-8706-dd555836aff0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

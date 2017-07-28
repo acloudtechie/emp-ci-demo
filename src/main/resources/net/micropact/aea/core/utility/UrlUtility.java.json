@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.urlutility.b84f6037-a45b-407e-a9f7-1ff306ed7a1f",
+  "description" : "UrlUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "UrlUtility",
+  "packageBusinessKey" : "package.utility.a3652cc4-3e96-42a8-9c42-099cd257fd1b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

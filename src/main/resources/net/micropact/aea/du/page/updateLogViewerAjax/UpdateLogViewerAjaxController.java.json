@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.updatelogviewerajaxcontroller.1767aeba-2c04-4fe3-b643-31a442bb71da",
+  "description" : "UpdateLogViewerAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "UpdateLogViewerAjaxController",
+  "packageBusinessKey" : "package.updateLogViewerAjax.4c7dc04f-29bd-46ad-bfa0-d270806959ed",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

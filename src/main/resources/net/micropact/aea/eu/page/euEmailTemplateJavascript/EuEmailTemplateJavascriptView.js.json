@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euemailtemplatejavascriptview.1c43803a-56d9-4f25-a09d-96020c773268",
+  "description" : "EuEmailTemplateJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "EuEmailTemplateJavascriptView",
+  "packageBusinessKey" : "package.euEmailTemplateJavascript.11101ab9-5516-42d4-b76c-18ac4d7f098f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

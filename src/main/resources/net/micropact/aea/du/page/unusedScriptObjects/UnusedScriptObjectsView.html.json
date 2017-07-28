@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unusedscriptobjectsview.13cdeea9-b442-44c4-96ae-6d0510af6243",
+  "description" : "UnusedScriptObjectsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "UnusedScriptObjectsView",
+  "packageBusinessKey" : "package.unusedScriptObjects.6083c5c0-2261-472f-b2b8-ca6504fab946",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

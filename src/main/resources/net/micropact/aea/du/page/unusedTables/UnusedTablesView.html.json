@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unusedtablesview.879ef3c9-ef69-4676-9f92-a30ab3eec49b",
+  "description" : "UnusedTablesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "UnusedTablesView",
+  "packageBusinessKey" : "package.unusedTables.5f89b724-d6ae-4bcb-9faa-7fdcb6329960",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

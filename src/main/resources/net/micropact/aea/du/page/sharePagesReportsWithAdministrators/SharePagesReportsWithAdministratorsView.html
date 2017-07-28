@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Grant Administrators Page/Report Permissions</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var SharePagesReports = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.p(null, "The Administrator role has been given full permissions to all Pages and Reports")
+            }
+        }))
+        
+        var SharePagesReportsApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Grant Administrators Page/Report Permissions",
+                    instructions: ["This page gives the administrator Role full permissions to edit all Pages and Reports"],
+                    mainContent: SharePagesReports({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(SharePagesReportsApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+        
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

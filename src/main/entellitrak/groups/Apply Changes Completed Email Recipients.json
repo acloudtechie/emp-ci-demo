@@ -1,0 +1,7 @@
+{
+  "businessKey" : "aea.du.applyChangesCompleteEmailRecipients",
+  "description" : "Group containing users who should receive a notification whenever an Apply Changes completes.",
+  "name" : "Apply Changes Completed Email Recipients",
+  "subjectPreferences" : [ ],
+  "subjectRoles" : [ ]
+}

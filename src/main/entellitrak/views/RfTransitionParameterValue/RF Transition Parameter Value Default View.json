@@ -1,0 +1,31 @@
+{
+  "businessKey" : "object.rfTransitionParameterValue.view.rfTransitionParameterValueDefaultView",
+  "dataObjectBusinessKey" : "object.rfTransitionParameterValue",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfTransitionParameterValue.view.rfTransitionParameterValueDefaultView.element.value",
+    "dataElementBusinessKey" : "object.rfTransitionParameterValue.element.value",
+    "description" : "Value column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Value",
+    "multiValueDelimiter" : null,
+    "name" : "value",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransitionParameterValue.view.rfTransitionParameterValueDefaultView.element.workflowparameter",
+    "dataElementBusinessKey" : "object.rfTransitionParameterValue.element.workflowParameter",
+    "description" : "Workflow Parameter column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Workflow Parameter",
+    "multiValueDelimiter" : null,
+    "name" : "workflowParameter",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Transition Parameter Value Listing",
+  "name" : "RF Transition Parameter Value Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Transition Parameter Value Listing"
+}

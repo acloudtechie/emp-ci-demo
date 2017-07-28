@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.htmlpagebuilderutility.811bb224-b60c-4bdf-bc17-2f0504d07685",
+  "description" : "Helper page to build HTML elements on a form.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoSearchPageUtility",
+  "packageBusinessKey" : "package.rdoutils.b3b825b9-e029-4fd7-8eca-d1bd724314d1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

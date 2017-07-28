@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.yesnounknown.64497760-9f65-40c7-a906-3903fb23dc9a",
+  "description" : "Data Type Plug-in",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "YesNoUnknown",
+  "packageBusinessKey" : "package.yesnounknown.ec427d53-9cd6-4511-917a-a3d34d7033f9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

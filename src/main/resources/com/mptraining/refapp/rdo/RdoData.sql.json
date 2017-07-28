@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodata.c3967441-7a5e-45c3-9ab5-c46aaf2725ca",
+  "description" : "SQL to generate all needed RDO data",
+  "handlerType" : "NONE",
+  "languageType" : "SQL",
+  "name" : "RdoData",
+  "packageBusinessKey" : "package.rdo.8229fe1d-5d91-463d-b96d-c11669778df2",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

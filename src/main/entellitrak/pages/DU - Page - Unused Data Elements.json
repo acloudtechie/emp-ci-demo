@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.unusedDataElements",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.unuseddataelementscontroller.841cf7a2-910c-4407-8ec5-43bd9850ac86",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Unused Data Elements",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Unused Data Elements",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.unuseddataelementsview.196c0878-5077-4882-a48b-e2ae53c972ef"
+}

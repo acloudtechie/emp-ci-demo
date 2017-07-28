@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Re-Order Workflow Effects</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <link rel="stylesheet" type="text/css" href="web-pub/aearchitecture/jquery-ui-1.11.4/css/jquery-ui.min.css" />
+
+    <style type="text/css">
+        ul.sortable {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        ul.sortable>li {
+            margin: 0.2 0.2em 0.2em 0em;
+            cursor: pointer;
+            padding: 0.3em 1em;
+        }
+        
+        #buttonHolder>button {
+            font-size: 1em;
+        }
+        
+        a.upArrow {
+            margin-right: 0.5em;
+        }
+        
+        a.downArrow {}
+        
+        .effectNameSpan {
+            margin-left: 1em;
+        }
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/jquery-ui-1.11.4/js/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        "use strict";
+
+        var rfWorkflow = $rfWorkflow
+        var workflowEffects = $workflowEffects;
+
+        var OrderEffects = React.createFactory(React.createClass({
+            render: function() {
+
+                /* This will be bound to the ul which holds the sortables. This is because the save button needs to examine
+                the list for the order. The state is being kept track of in the DOM because we are using jQuery UI to do the
+                ordering. */
+                var list
+                
+                /* ref callback which will use jQuery UI to create the sortable list. Will bind the list to the 
+                list var for use by the saving code */
+                function attachSortable(sortableHolder) {
+                    list = jQuery('<ul>')
+                        .addClass('sortable')
+                        .append(jQuery(workflowEffects).map(function(i, workflowEffect) {
+                            return jQuery('<li>')
+                                .addClass("ui-state-default")
+                                .data('workflowEffect', workflowEffect)
+                                .append(jQuery('<a href="#">')
+                                    .click(function() {
+                                        var li = jQuery(this).closest('li')
+                                        li.insertBefore(li.prev())
+                                        jQuery(this).focus();
+                                        return false;
+                                    })
+                                    .addClass('upArrow')
+                                    .attr({
+                                        title: 'Move Up'
+                                    })
+                                    .html('&#x2191;'))
+                                .append(jQuery('<a href="#">')
+                                    .click(function() {
+                                        var li = jQuery(this).closest('li')
+                                        li.insertAfter(li.next())
+                                        jQuery(this).focus()
+                                        return false;
+                                    })
+                                    .addClass('downArrow')
+                                    .attr({
+                                        title: 'Move Down'
+                                    })
+                                    .html('&#x2193;'))
+                                .append(jQuery('<span>')
+                                    .addClass('effectNameSpan')
+                                    .text(workflowEffect.C_NAME))[0]
+                        }))
+                        .sortable({})
+                        .appendTo(sortableHolder)
+                }
+
+                return React.DOM.div(null,
+                    React.DOM.div({
+                        ref: attachSortable
+                    }),
+                    React.DOM.div(null,
+                        React.DOM.button({
+                                onClick: function(event) {
+                                    event.preventDefault()
+                                    var xml = jQuery('<root>')
+                                        .append(jQuery('<rf-workflow>')
+                                            .append(jQuery(list).children().map(function(i, li) {
+                                                return jQuery(li).data().workflowEffect
+                                            }).map(function(i, effect) {
+                                                return jQuery('<workflow-effect>')
+                                                    .attr({
+                                                        id: effect.ID,
+                                                        order: (i + 1) * 10
+                                                    })[0]
+                                            })))
+                                    jQuery.post('page.request.do', {
+                                            page: 'rf.page.orderWorkflowEffects.ajaxHandler',
+                                            xmlData: xml.html()
+                                        },
+                                        function(response) {
+                                            alert(response)
+                                        })
+                                }
+                            },
+                            "Save Order")))
+            }
+        }))
+
+        var OrderEffectsApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Re-Order Workflow Effects",
+                    instructions: ["This page is for changing the execution order of Workflow Effects.",
+                        "Drag or use the arrows to move the below Workflow Effects into the desired Execution Order and click \"Save Order\"."
+                    ],
+                    mainContent: OrderEffects({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(OrderEffectsApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

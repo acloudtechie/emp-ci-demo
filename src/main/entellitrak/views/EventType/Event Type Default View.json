@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.eventType.view.eventTypeDefaultView",
+  "dataObjectBusinessKey" : "object.eventType",
+  "dataViewElements" : [ {
+    "businessKey" : "object.eventType.view.eventTypeDefaultView.element.code",
+    "dataElementBusinessKey" : "object.eventType.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.eventType.view.eventTypeDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.eventType.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.eventType.view.eventTypeDefaultView.element.name",
+    "dataElementBusinessKey" : "object.eventType.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.eventType.view.eventTypeDefaultView.element.order",
+    "dataElementBusinessKey" : "object.eventType.element.order",
+    "description" : "Order column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Order",
+    "multiValueDelimiter" : null,
+    "name" : "order",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.eventType.view.eventTypeDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.eventType.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Event Type Listing",
+  "name" : "Event Type Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Event Type Listing"
+}

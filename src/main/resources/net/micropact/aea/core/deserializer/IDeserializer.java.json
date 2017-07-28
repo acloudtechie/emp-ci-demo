@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ideserializer.20c5fd44-252c-4365-8127-a4ffe8207cad",
+  "description" : "IDeserializer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IDeserializer",
+  "packageBusinessKey" : "package.deserializer.a4a46229-8b12-406c-b118-0032671a8349",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

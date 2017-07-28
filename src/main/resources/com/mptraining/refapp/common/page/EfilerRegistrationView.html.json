@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.efilerregistrationview.073ad9c9-e86a-41d3-8c1f-f788ba804c96",
+  "description" : "View for the eFiler registration page",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "EfilerRegistrationView",
+  "packageBusinessKey" : "package.page.18a51acf-10e3-4f0a-83da-d8820b37ac6f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

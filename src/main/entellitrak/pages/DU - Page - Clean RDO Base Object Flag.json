@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.cleanRdoBaseObjectFlag",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cleanrdobaseobjectflagcontroller.421ea8a1-abd5-4406-a6db-60e526198c93",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Clean RDO Base Object Flag",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Clean RDO Base Object Flag",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cleanrdobaseobjectflagview.000775a6-f9a6-4e48-bfa7-3c0de0812f1d"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.cleanOrphanedSubjects",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cleanorphanedsubjectscontroller.071ffecf-8f9e-4d8f-be11-fda0d29c2372",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Clean Orphaned Subjects",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Clean Orphaned Subjects",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cleanorphanedsubjectsview.487a0e57-221f-41bd-ad53-251086c98397"
+}

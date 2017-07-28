@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Create Standard RDO</title>
+        
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <style type="text/css">
+            .inputs-holder{
+                display: table;
+            }
+            
+            .inputs-holder > div{
+                display: table-row;
+            }
+            
+            .inputs-holder > * > *{
+                display: table-cell;
+            }
+            
+            input[type=text], textarea{
+                width: 30em;
+            }
+                        
+            .inputs-holder label::after{
+                content: ": ";
+            }
+            
+            label{
+                vertical-align: middle;
+                text-align: right;
+                padding-right: 1em;
+            }
+            
+            .new-link{
+                display: block;
+            }
+            
+            .hidden.hidden {
+            	display:none; 
+            }
+        </style>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var DEFAULT_ELEMENTS = $dataElements
+        
+        var createRDOModel = (function(){
+        	var state = {
+        			name: $name,
+        			objectName: $objectName,
+        			businessKeySegment: $businessKeySegment,
+        			description: $description,
+        			label: $label,
+        			tableName: $tableName,
+        			generateLookup: $generateLookup,
+        			lookupName: $lookupName,
+        			
+        			dataObjectId: $dataObjectId,
+        			dataFormId: $dataFormId,
+        			dataViewId: $dataViewId,
+        			lookupDefinitionId: $lookupDefinitionId,
+        			error: $error
+        	}
+        	
+        	function callEventListeners(){
+        		init()
+        	}
+        	
+        	function getDataObjectId(){
+        		return state.dataObjectId
+        	}
+        	
+        	function getDataFormId(){
+        		return state.dataFormId
+        	}
+        	
+        	function getDataViewId(){
+        		return state.dataViewId
+        	}
+        	
+        	function getLookupDefinitionId(){
+        		return state.lookupDefinitionId
+        	}
+        	
+        	function getName(){
+        		return state.name
+        	}
+        	
+        	function getObjectName(){
+        		return state.objectName
+        	}
+        	
+        	function getBusinessKeySegment(){
+        		return state.businessKeySegment
+        	}
+        	
+        	function getDescription(){
+        		return state.description
+        	}
+        	
+        	function getLabel(){
+        		return state.label
+        	}
+        	
+        	function getTableName(){
+        		return state.tableName
+        	}
+        	
+        	function getLookupName(){
+        		return state.lookupName
+        	}
+        	
+        	function getGenerateLookup(){
+        		return state.generateLookup
+        	}
+        	
+        	function getError(){
+        		return state.error
+        	}
+        	
+        	function setName(name){
+        		state.name = name
+        		state.tableName = convertTableName(name)
+        		state.objectName = convertObjectName(name)
+        		state.businessKeySegment = convertBusinessKey(name)
+        		state.label = convertLabel(name)
+        		state.description = convertDescription(name)
+        		
+        		callEventListeners()
+        	}
+        	
+        	function setDescription(description){
+        		state.description = description
+        		
+        		callEventListeners()
+        	}
+        	
+        	function setLabel(label){
+        		state.label = label
+        		
+        		callEventListeners()
+        	}
+        	
+        	function setTableName(tableName){
+        		state.tableName = tableName
+        		
+        		callEventListeners()
+        	}
+        	
+        	function setLookupName(lookupName){
+        		state.lookupName = lookupName
+        		
+        		callEventListeners()
+        	}
+        	
+        	function setGenerateLookup(generateLookup){
+                state.generateLookup = generateLookup
+                
+                callEventListeners()
+            }
+        	
+            function correctName(){
+            	var name = getName()
+            	var goodName = convertName(name)
+            	setName(goodName)
+            }
+        	
+            function convertName(name){
+                return name.trim();
+            }
+            
+            function convertTableName(name){
+                return "T_" + name.replace(/ /g, "_").toUpperCase();
+            }
+            
+            function convertObjectName(name){
+                return name.split(/\s+/)
+                        .map(function(word){
+                            return word.toLowerCase()})
+                        .map(function(word){
+                            return word.charAt(0).toUpperCase() + word.slice(1)})
+                        .join('')
+            }
+            
+            function convertBusinessKey(name){
+                var objectName = convertObjectName(name);
+                return objectName.charAt(0).toLowerCase() + objectName.slice(1);
+            }
+            
+            function convertLabel(name){
+                return name;
+            }
+            
+            function convertDescription(name){
+                return name;
+            }
+            
+        	return {
+        		getName: getName,
+        		getObjectName: getObjectName,
+        		getBusinessKeySegment: getBusinessKeySegment,
+        		getDescription: getDescription,
+        		getLabel: getLabel,
+        		getTableName: getTableName,
+        		getLookupName: getLookupName,
+        		getGenerateLookup: getGenerateLookup,
+        		getError: getError,
+        		
+        		correctName: correctName,
+        		
+        		getDataObjectId: getDataObjectId,
+        		getDataFormId: getDataFormId,
+        		getDataViewId: getDataViewId,
+        		getLookupDefinitionId: getLookupDefinitionId,
+        		
+        		setName: setName,
+        		setDescription: setDescription,
+        		setLabel: setLabel,
+        		setTableName: setTableName,
+        		setGenerateLookup: setGenerateLookup
+        	}
+        }())
+        
+        var Form = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.form({method: "POST",
+        			action: "page.request.do?page=du.page.createStandardRDO"},
+        			React.DOM.input({type: "hidden",
+        				name: "requestedAction",
+        				value: "generate"}),
+        			React.DOM.div({className: "inputs-holder"},
+       					React.DOM.div(null,
+       							React.DOM.label(null, "Name"),
+       							React.DOM.input({type: "text",
+       								name: "name",
+       								value: createRDOModel.getName(),
+       								onChange: function(e){
+       									createRDOModel.setName(e.target.value)
+       								},
+       								onBlur: function(e){
+       									createRDOModel.correctName()
+       								}})),
+       					React.DOM.div(null,
+       							React.DOM.label(null, "Object Name"),
+       							React.DOM.input({type: "hidden",
+       								name: "objectName",
+       								value: createRDOModel.getObjectName()}),
+       							React.DOM.div({className: "objectName"}, createRDOModel.getObjectName())),
+       					React.DOM.div(null,
+       							React.DOM.label(null, "Business Key"),
+       							React.DOM.input({type: "hidden",
+       								name: "businessKeySegment",
+       								value: createRDOModel.getBusinessKeySegment()}),
+       							React.DOM.div({className: "businessKey"},
+       									"object." + createRDOModel.getBusinessKeySegment())),
+       					React.DOM.div(null,
+       							React.DOM.label(null, "Description"),
+       							React.DOM.textarea({name: "description",
+       								value: createRDOModel.getDescription(),
+       								onChange: function(e){
+       									createRDOModel.setDescription(e.target.value)
+       								}})),
+       					React.DOM.div(null,
+       							React.DOM.label(null, "Label"),
+       							React.DOM.input({type: "text",
+       								name: "label",
+       								value: createRDOModel.getLabel(),
+       								onChange: function(e){
+       									createRDOModel.setLabel(e.target.value)
+       								}})),
+       					React.DOM.div(null,
+       							React.DOM.label(null, "Table Name"),
+       							React.DOM.input({type: "text",
+       								name: "tableName",
+       								value: createRDOModel.getTableName(),
+       								onChange: function(e){
+       									createRDOModel.setTableName(e.target.value)
+       								}})),
+       					React.DOM.div(null,
+       							React.DOM.label(null, "Generate Lookup"),
+       							React.DOM.input({type: "checkbox",
+       								name: "generateLookup",
+       								value: "1",
+       								checked: createRDOModel.getGenerateLookup(),
+       								onChange: function(e){
+       									createRDOModel.setGenerateLookup(e.target.checked)
+       								}})),
+						React.DOM.div({ className: createRDOModel.getGenerateLookup() ? "" : "hidden" },
+       							React.DOM.label(null, "Lookup Name"),
+       							React.DOM.input({type: "text",
+       								name: "lookupName",
+       								value: createRDOModel.getLookupName(),
+       								onChange: function(e){
+       									createRDOModel.setLookupName(e.target.value)
+       								}}),
+       							React.DOM.span(null, "(Optional)"))
+        			),
+   					React.DOM.input({type: "submit",
+   						value: "Generate RDO"}))
+        	}
+        }))
+        
+        function Error(){
+            var error = createRDOModel.getError()
+            if(error){
+                return AeaCoreReactComponents.Errors({errors: [error]})
+            }
+        }
+        
+        var Success = React.createFactory(React.createClass({
+        	render: function(){
+        		var dataObjectId = createRDOModel.getDataObjectId()
+        		return dataObjectId 
+        		? React.DOM.div(null,
+        				React.DOM.span({className: "aea-core-success aea-core-message"},
+        						"Reference Data Object Created"),
+        				[{id: createRDOModel.getDataObjectId(),
+                            urlPrefix: "cfg.dataobject.update.request.do?id=",
+                            display: "Open Data Object"},
+                          {id: createRDOModel.getDataFormId(),
+                           urlPrefix: "cfg.ui.FormDesigner.do?method=getView&id=",
+                           display: "Open Form"},
+                          {id: createRDOModel.getDataViewId(),
+                           urlPrefix: "cfg.viewdesigner.do?method=requestUpdate&id=",
+                           display: "Open View"},
+                          {id: createRDOModel.getLookupDefinitionId(),
+                           urlPrefix: "cfg.lookup.update.request.do?id=",
+                           display: "Open Lookup"}].map(function(link, i){
+                        	   return link.id 
+                        	   ? React.DOM.a({key: i,
+                        	       href: link.urlPrefix + encodeURIComponent(link.id),
+                        		   className: "new-link",
+                        		   target: "_blank"},
+                        		   link.display)
+                        			   : null
+                           }))
+        				: null
+        	}
+        }))
+        
+        var CreateRDO = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div(null, Error(),
+                		Success(),
+                		Form())
+            }
+        }))
+        
+        var Instructions = React.DOM.div(null,
+                React.DOM.p(null, "This page is used for creating a \"Standard\" Reference Data Object with Data Elements for "),
+                React.DOM.ul(null, DEFAULT_ELEMENTS.map(function(element, i){
+                	return React.DOM.li({key: i},
+                			element.name)
+                })),
+                React.DOM.em(null, "This page does no error checking except to see that the object's Business Key and Table Name are not already in use."))
+        
+        var CreateRDOApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Create Standard RDO",
+                    instructions: Instructions,
+                    mainContent: CreateRDO({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(CreateRDOApp(null), document.getElementById("app"));
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

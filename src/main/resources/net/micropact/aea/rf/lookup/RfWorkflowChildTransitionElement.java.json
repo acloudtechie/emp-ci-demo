@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfworkflowchildtransitionelement.2f254f1e-c6a3-47ec-af62-2c0c51f37086",
+  "description" : "RF Workflow - Child Transition Element",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfWorkflowChildTransitionElement",
+  "packageBusinessKey" : "package.lookup.065a5fb2-a524-4643-a7a1-b89642f1c62e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

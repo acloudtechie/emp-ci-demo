@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanorphanedfilescontroller.c553c350-37e3-46aa-b408-9ce4cebd4196",
+  "description" : "CleanOrphanedFilesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CleanOrphanedFilesController",
+  "packageBusinessKey" : "package.cleanOrphanedFiles.2cfe0703-da23-4e8f-b389-476ad352e820",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

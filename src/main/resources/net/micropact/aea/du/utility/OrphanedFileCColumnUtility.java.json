@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.orphanedfileccolumnutility.81ebdbc8-145c-4d8a-aa8c-e8b22ad949ec",
+  "description" : "OrphanedFileCColumnUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "OrphanedFileCColumnUtility",
+  "packageBusinessKey" : "package.utility.8fe2784e-917e-4ebe-b3d5-8fae29c3d499",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

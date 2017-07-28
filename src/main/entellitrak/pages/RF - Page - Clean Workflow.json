@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.page.cleanWorkflow",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cleanworkflowcontroller.969803a5-849c-43ff-9cb1-0464e1b75e76",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "RF - Page - Clean Workflow",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - Clean Workflow",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cleanworkflowview.42f50ec8-0105-4e6d-b57c-a1945eb5ffcb"
+}

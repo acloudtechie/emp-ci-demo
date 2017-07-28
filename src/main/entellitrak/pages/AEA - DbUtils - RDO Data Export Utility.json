@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.db.utils.rdoDataExportUtility",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.rdodataexportcontroller.bdf98f2d-a8a1-4c68-9452-f75e35c9d8f7",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RDO Data Export Utility",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - DbUtils - RDO Data Export Utility",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.rdodataexportview.4cd1a2d7-f9dc-439e-ad8f-f4dcb0328bcf"
+}

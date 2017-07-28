@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ireplacer.416b3dcd-5f85-46dc-b9bc-17a349100154",
+  "description" : "IReplacer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IReplacer",
+  "packageBusinessKey" : "package.tu.3f95fcf4-4c86-40d0-b81b-0969c72399c1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

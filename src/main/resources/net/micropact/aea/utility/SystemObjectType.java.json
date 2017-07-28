@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.systemobjecttype.1bf05432-e1b9-4d9c-9fcc-1aa0cd1cd803",
+  "description" : "System Object types for Lookup Definitions.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SystemObjectType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

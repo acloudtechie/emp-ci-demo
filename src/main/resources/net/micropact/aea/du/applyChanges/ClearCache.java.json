@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.clearcache.20def568-1110-4c75-b58d-139f27a13d47",
+  "description" : "ClearCache",
+  "handlerType" : "APPLY_CHANGES_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "ClearCache",
+  "packageBusinessKey" : "package.applyChanges.20442ff9-2ca3-430a-a86e-106df437a4d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

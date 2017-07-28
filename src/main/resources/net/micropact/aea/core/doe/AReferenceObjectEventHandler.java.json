@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.areferenceobjecteventhandler.3a3b1f69-7b10-4da2-8d18-42dd34b195a3",
+  "description" : "AReferenceObjectEventHandler",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AReferenceObjectEventHandler",
+  "packageBusinessKey" : "package.doe.0b43c896-1e5f-45ca-aa7f-15e44f89726f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

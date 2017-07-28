@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rftransitionjavascriptview.fc11ddb6-9b89-4aa4-a481-111e5ac926e9",
+  "description" : "RfTransitionJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "RfTransitionJavascriptView",
+  "packageBusinessKey" : "package.rfTransitionJavascript.5cf15a12-39c0-412d-9baa-0dda868c92f9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

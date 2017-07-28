@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.etktablesdao.49664560-5c8b-4d1b-9337-3df27cfcea5d",
+  "description" : "Contains methods for accessing core ETK tables",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "EtkTablesDao",
+  "packageBusinessKey" : "package.dao.bd67c632-9f9d-4258-8dce-202a3048a553",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

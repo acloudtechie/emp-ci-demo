@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookupdefinitionusageview.ebae7e28-3322-400f-a087-b5e9ce467cab",
+  "description" : "LookupDefinitionUsageView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "LookupDefinitionUsageView",
+  "packageBusinessKey" : "package.lookupDefinitionUsage.d0f5b391-2d26-492d-8150-9406f38718c6",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

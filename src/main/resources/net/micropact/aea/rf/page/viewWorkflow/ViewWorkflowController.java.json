@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewworkflowcontroller.f18307f2-9458-433f-89b1-7c472ccfd969",
+  "description" : "ViewWorkflowController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewWorkflowController",
+  "packageBusinessKey" : "package.viewWorkflow.cfe11761-2b97-4385-a630-70fc71694878",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

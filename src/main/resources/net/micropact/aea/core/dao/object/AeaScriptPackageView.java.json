@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeascriptpackageview.c89bacf0-1671-4764-a138-56d842898f7e",
+  "description" : "AeaScriptPackageView POJO",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaScriptPackageView",
+  "packageBusinessKey" : "package.object.4e7d3cb1-3786-4bc7-a1c2-983935384190",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.roledatapermissionsview.9d4e8029-90e2-47c3-843f-0e3e435b8519",
+  "description" : "RoleDataPermissionsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "RoleDataPermissionsView",
+  "packageBusinessKey" : "package.roleDataPermissions.db72c9ea-7304-4ecc-ac10-aee13991846c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

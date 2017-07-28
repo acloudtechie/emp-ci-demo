@@ -1,0 +1,21 @@
+{
+  "businessKey" : "tu.page.objectExport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.objectexportcontroller.f1c159b4-286b-4b17-98ad-0448a999d827",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "TU - Page - Data Export",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "TU - Page - Data Export",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

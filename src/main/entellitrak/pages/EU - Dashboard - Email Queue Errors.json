@@ -1,0 +1,28 @@
+{
+  "businessKey" : "eu.dashboard.emailQueueErrors",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaulthtmlcontroller.76cf7c84-2e19-46b0-b017-b53beeba2122",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "This page will display all emails in the queue which currently have the status of Error. It only renders correctly on the Home Screen.",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "EU - Dashboard - Email Queue Errors",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.emailqueueerrorsview.07bf83c0-f624-4856-b98f-708d282d8910"
+}

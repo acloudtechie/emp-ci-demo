@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.changednamesview.3302fa18-1ce4-4263-966c-8e7964a9279e",
+  "description" : "ChangedDataModelNamesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ChangedDataModelNamesView",
+  "packageBusinessKey" : "package.changedDataModelNames.c52323bb-41f3-48ca-b31c-c3a5e217342a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

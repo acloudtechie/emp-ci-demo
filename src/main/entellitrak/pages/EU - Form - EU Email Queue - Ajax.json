@@ -1,0 +1,28 @@
+{
+  "businessKey" : "eu.form.euEmailQueue.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.euemailqueueajaxcontroller.67d616d7-3cce-4a73-a163-754aca7fbe10",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "EU - Form - EU Email Queue - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "EU - Form - EU Email Queue - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

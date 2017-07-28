@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfstateallowedtransitions.775bab3d-51d4-4af5-8688-21bf6e5a47fe",
+  "description" : "RF State - Allowed Transitions",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfStateAllowedTransitions",
+  "packageBusinessKey" : "package.lookup.065a5fb2-a524-4643-a7a1-b89642f1c62e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

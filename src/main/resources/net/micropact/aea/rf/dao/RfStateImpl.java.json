@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfstateimpl.87273382-7e3c-4e64-80dd-bd3effa48e2f",
+  "description" : "RfStateImpl",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfStateImpl",
+  "packageBusinessKey" : "package.dao.24096f08-6cac-4044-9974-f24950b92903",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfparametertypejavascriptview.cf8d6bd1-17a4-4289-99f5-7153221cc7d2",
+  "description" : "RfParameterTypeJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "RfParameterTypeJavascriptView",
+  "packageBusinessKey" : "package.rfParameterTypeJavascript.fd924903-9190-4d3e-bc85-98c1ffb5a000",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

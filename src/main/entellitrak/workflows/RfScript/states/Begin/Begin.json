@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.rfScript.state.begin",
+  "dataObjectBusinessKey" : "object.rfScript",
+  "description" : "Begin",
+  "name" : "Begin",
+  "type" : "BEGIN",
+  "x" : 0,
+  "y" : 0
+}

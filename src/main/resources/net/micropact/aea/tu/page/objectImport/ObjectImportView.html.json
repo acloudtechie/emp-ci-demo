@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.objectimportview.7cbdb2c6-6ee2-433e-b2ba-35d36e889253",
+  "description" : "ObjectImportView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ObjectImportView",
+  "packageBusinessKey" : "package.objectImport.2ababe60-9768-4fd4-92d5-a16b41c9dd5c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.duplicatecodevaluesview.53b273e1-5d08-4570-9676-e4a220310f93",
+  "description" : "DuplicateCodeValuesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "DuplicateCodeValuesView",
+  "packageBusinessKey" : "package.duplicateCodeValues.9ec26d19-cd4b-4796-9b50-19e47ba9a9f1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

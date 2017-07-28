@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodataimportutilitycontroller.85a457a1-f8f7-4baa-8f33-9a28631b64b5",
+  "description" : "RdoDataImportUtilityController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RdoDataImportUtilityController",
+  "packageBusinessKey" : "package.rdodataimportutility.b9d2bbd3-6c3a-4ec9-b52f-f08d1fc02dee",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euqueueattachmentdoe.cf208f73-c80f-4bf7-b1aa-f0d043a8bb97",
+  "description" : "EuQueueAttachmentDoe",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "EuQueueAttachmentDoe",
+  "packageBusinessKey" : "package.doe.41a16562-4920-484b-96d2-2cbf7dad3da5",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

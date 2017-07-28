@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.simpleoutview.8f85be5e-ae50-4f79-a296-5f6e7c1504ce",
+  "description" : "Simple view that just displays a single velocity variable \"out\"",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "SimpleOutView",
+  "packageBusinessKey" : "package.page.18a51acf-10e3-4f0a-83da-d8820b37ac6f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

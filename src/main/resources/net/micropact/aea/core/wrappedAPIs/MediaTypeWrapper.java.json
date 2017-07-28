@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.mediatypewrapper.206faa0c-14f4-4fef-9ec2-c80be5a300a8",
+  "description" : "MediaTypeWrapper",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "MediaTypeWrapper",
+  "packageBusinessKey" : "package.wrappedAPIs.abbea5cf-10a7-4c50-9faa-e8b3b194d0d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.determinemediatypeview.71935f2d-791c-4653-bcab-320677d90331",
+  "description" : "DetermineMediaTypeView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "DetermineMediaTypeView",
+  "packageBusinessKey" : "package.determineMediaType.7ae26276-0df4-4b6b-b01d-dce7226a326a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.form.rfParameterType.javascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultjavascriptcontroller.d3996852-5cb5-433c-b3fe-652e6af45fc6",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Form - RF Parameter Type - Javascript",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Form - RF Parameter Type - Javascript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.rfparametertypejavascriptview.cf8d6bd1-17a4-4289-99f5-7153221cc7d2"
+}

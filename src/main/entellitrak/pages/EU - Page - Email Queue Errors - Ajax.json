@@ -1,0 +1,28 @@
+{
+  "businessKey" : "eu.page.emailQueueErrors.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.emailqueueerrorsajaxcontroller.68bd0c5d-973c-4daf-8a4c-d20508b7b2b5",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "EU - Page - Email Queue Errors - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "EU - Page - Email Queue Errors - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

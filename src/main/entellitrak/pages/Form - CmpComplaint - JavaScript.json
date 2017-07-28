@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.formCmpComplaintJavascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cmpcomplaintjavascriptcontroller.cf2e2c1a-5547-4abd-8dad-497df989ebba",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Form - CmpComplaint - JavaScript",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Form - CmpComplaint - JavaScript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cmpcomplaintjavascriptview.79c0c0fa-6597-486b-937d-9c4884d06c1f"
+}

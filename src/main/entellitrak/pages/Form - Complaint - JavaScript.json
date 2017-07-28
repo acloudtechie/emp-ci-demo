@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.formComplaintJavascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.complaintjavascriptcontroller.9b33956d-70fd-486f-a21b-84840f4520e4",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "Page containing JavaScript to run on the Complaint form",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Form - Complaint - JavaScript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.complaintjavascript.058df12f-dde2-44f1-af17-552edd42679a"
+}

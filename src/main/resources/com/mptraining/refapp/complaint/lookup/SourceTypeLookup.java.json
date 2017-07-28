@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sourcetypelookup.dc0e87f5-3733-4951-9f01-3b36c7f51cf6",
+  "description" : "Source Type Lookup",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "SourceTypeLookup",
+  "packageBusinessKey" : "package.lookup.a7a2d836-9aab-4cb5-bb18-2fbfc0c197d3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.formcontroltype.d1304e1e-28a7-4523-b932-df78c1872bf8",
+  "description" : "FormControlType",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "FormControlType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

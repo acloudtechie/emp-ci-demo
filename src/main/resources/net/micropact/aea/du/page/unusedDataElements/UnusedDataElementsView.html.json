@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unuseddataelementsview.196c0878-5077-4882-a48b-e2ae53c972ef",
+  "description" : "UnusedDataElementsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "UnusedDataElementsView",
+  "packageBusinessKey" : "package.unusedDataElements.0680a19d-0cee-4c9c-9679-80854fc871aa",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

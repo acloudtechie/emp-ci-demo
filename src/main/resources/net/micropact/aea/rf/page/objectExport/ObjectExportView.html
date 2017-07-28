@@ -1,0 +1,198 @@
+#if(${form} == "initial")
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Rules Framework - Data Export</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+    <style type="text/css">
+        .multiselect {
+            display: block;
+        }
+        
+        .selectAllNone {
+            font-style: italic;
+        }
+        
+        .selectAllNone:before {
+            content: "(";
+        }
+        
+        .selectAllNone:after {
+            content: ")";
+        }
+        
+        label:hover {
+            background-color: #ccc;
+        }
+        
+        input[type=submit]{
+            margin-top: 1em;
+        }
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var rfExportModel = (function() {
+
+            var state = {
+                rfWorkflows: $rfWorkflows
+            }
+
+            initialize()
+
+            function initialize() {
+                state.rfWorkflows.forEach(function(rfWorkflow) {
+                    rfWorkflow.selected = false
+                })
+            }
+
+            function callCallbacks() {
+                init()
+            }
+
+            function getRfWorkflows() {
+                return state.rfWorkflows
+            }
+
+            function toggleWorkflow(workflowId) {
+                state.rfWorkflows.forEach(function(workflow) {
+                    if (workflow.ID === workflowId) {
+                        workflow.selected = !workflow.selected
+                    }
+                })
+
+                callCallbacks()
+            }
+
+            function setAllWorkflowsSelectedValue(value) {
+                state.rfWorkflows.forEach(function(rfWorkflow) {
+                    rfWorkflow.selected = value
+                })
+
+                callCallbacks()
+            }
+
+            return {
+                getRfWorkflows: getRfWorkflows,
+                toggleWorkflow: toggleWorkflow,
+                setAllWorkflowsSelectedValue: setAllWorkflowsSelectedValue
+            }
+        }())
+        
+        function Checkboxes(props){
+            /* Could add select all/none to this. If that were done, would probably have to decide between
+             * a) Pass in the select all/none callback
+             * b) Change the regular callback to not toggle, but instead explicitly pass in the new selected boolean
+             */
+            return React.DOM.div(null,
+                    props.items.map(function(item){
+                        return React.DOM.label({key: item.value,
+                            className: "multiselect"},
+                            React.DOM.input({
+                                type: "checkbox",
+                                name: props.name,
+                                value: item.value,
+                                checked: item.selected,
+                                onChange: function(event){
+                                    props.onChange(item.value, !item.selected)
+                                }
+                            }),
+                            item.display)
+                    }))
+        }
+        
+        function RfWorkflows(props) {
+            var model = props.model
+            var rfWorkflows = model.getRfWorkflows()
+
+            var allWorkflowsSelected = true
+            for (var i = 0; i < rfWorkflows.length; i++) {
+                if (rfWorkflows[i].selected === false) {
+                    allWorkflowsSelected = false
+                    break;
+                }
+            }
+
+            return React.DOM.div(null,
+                React.DOM.label(null,
+                    React.DOM.input({
+                        type: "checkbox",
+                        checked: allWorkflowsSelected,
+                        onChange: function(event) {
+                            model.setAllWorkflowsSelectedValue(!allWorkflowsSelected)
+                        }
+                    }),
+                    React.DOM.span({
+                        className: "selectAllNone"
+                    }, "Select All/None")),
+                    Checkboxes({name: "rfWorkflowIds",
+                        onChange: model.toggleWorkflow,
+                        items: rfWorkflows.map(function(rfWorkflow){
+                            return {value: rfWorkflow.ID,
+                                selected: rfWorkflow.selected,
+                                display: rfWorkflow.C_CODE}
+                        })}))
+        }
+
+        function RfExport(props) {
+            return React.DOM.form({
+                    method: "post"
+                },
+                React.DOM.input({
+                    type: "hidden",
+                    name: "requestedAction",
+                    value: "generateXml"
+                }),
+                React.DOM.input({
+                    type: "hidden",
+                    name: "page",
+                    value: "rf.page.objectExport"
+                }),
+                RfWorkflows(props),
+                React.DOM.input({
+                    type: "submit",
+                    value: "Export"
+                }))
+        }
+
+        var RfExportApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Rules Framework - Data Export",
+                    instructions: ["This page exports data associated with the Rules Framework and can be used to move your Rules Framework configuration between sites.",
+                        React.DOM.span(null, "The export file generated by this page can be imported using the page ", React.DOM.em(null, "RF - Page - Data Import"))
+                    ],
+                    mainContent: RfExport({
+                        model: rfExportModel
+                    })
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(RfExportApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>
+#elseif(${form} == "serveXml")${xml}#end

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sqlreplacer.dd3ae3e3-925b-4bb5-9ebf-91beab9ae615",
+  "description" : "SqlReplacer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SqlReplacer",
+  "packageBusinessKey" : "package.replacers.8e5ed76a-52e5-4f09-9eae-f251612b9855",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

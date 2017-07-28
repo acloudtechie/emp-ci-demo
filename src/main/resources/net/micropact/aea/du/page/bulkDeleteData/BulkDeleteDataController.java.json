@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.bulkdeletedatacontroller.80f859ac-38d5-481e-a8c2-25d9048025b2",
+  "description" : "BulkDeleteDataController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "BulkDeleteDataController",
+  "packageBusinessKey" : "package.bulkDeleteData.c052b562-1042-4e59-90b2-cacf92880b0e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

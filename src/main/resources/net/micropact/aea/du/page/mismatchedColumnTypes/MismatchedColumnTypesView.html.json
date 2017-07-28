@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.mismatchedcolumntypesview.8316ac29-c6c0-46bb-b0c8-a1d43a45d891",
+  "description" : "MismatchedColumnTypesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "MismatchedColumnTypesView",
+  "packageBusinessKey" : "package.mismatchedColumnTypes.6b7622a2-a936-46b7-94ad-ddd536b2d149",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

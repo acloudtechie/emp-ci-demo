@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.schedulerJobStatus",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.schedulerjobstatuscontroller.cde111c2-eb75-42ca-9c2c-03fdc34352ca",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "This page indicates the status of Scheduler Jobs and is intended to be displayed on the Home page of Administators.",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Scheduler Job Status",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.schedulerjobstatusview.1f0ae8e4-b71b-4fee-b32a-a6372087b593"
+}

@@ -1,0 +1,28 @@
+{
+  "businessKey" : "tt.ajax.getFormControlData",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.getformcontroldatacontroller.23b7a071-26fb-4127-85ad-36555f76daaa",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "TT - Ajax - Get Form Control Data",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "TT - Ajax - Get Form Control Data",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

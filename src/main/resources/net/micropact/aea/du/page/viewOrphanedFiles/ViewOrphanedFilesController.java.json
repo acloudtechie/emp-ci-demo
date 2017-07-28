@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.vieworphanedfilescontroller.c9913a41-c063-4050-82ba-ad85c588284a",
+  "description" : "ViewOrphanedFilesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewOrphanedFilesController",
+  "packageBusinessKey" : "package.viewOrphanedFiles.aff54a64-c5d2-4b4a-af34-2fab34a2a033",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

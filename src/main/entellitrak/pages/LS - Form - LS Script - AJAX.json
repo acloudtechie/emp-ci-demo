@@ -1,0 +1,28 @@
+{
+  "businessKey" : "ls.form.lsScript.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.lsajaxcontroller.68109edf-90b3-4e9c-8f2a-78a20bee854a",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:48Z",
+  "description" : "LS - Form - LS Script - AJAX",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "LS - Form - LS Script - AJAX",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.lsajaxview.9c5698aa-b864-46c0-ad48-8b4421a489c5"
+}

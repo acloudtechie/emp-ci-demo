@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodataimportutilityview.eaa104cc-c6a2-4c59-b694-c51c4e3b947f",
+  "description" : "RdoDataImportUtilityView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "RdoDataImportUtilityView",
+  "packageBusinessKey" : "package.rdodataimportutility.b9d2bbd3-6c3a-4ec9-b52f-f08d1fc02dee",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

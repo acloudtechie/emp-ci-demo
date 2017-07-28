@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - View Bad Dates</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var config = {
+                badDates: $badRecords
+        }
+        
+        var ViewBadDates = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div(null,
+                        React.DOM.table({className: "grid aea-core-grid"},
+                                React.DOM.thead(null,
+                                        React.DOM.tr(null, 
+                                                React.DOM.th(null, "Element"),
+                                                React.DOM.th(null, "Bad Records"),
+                                                React.DOM.th(null, "Query"))),
+                                React.DOM.tbody(null,
+                                        config.badDates.map(function(badDate){
+                                            return React.DOM.tr({key: badDate.ELEMENT_BUSINESS_KEY},
+                                                    React.DOM.td(null, badDate.ELEMENT_BUSINESS_KEY),
+                                                    React.DOM.td(null, badDate.total),
+                                                    React.DOM.td(null, badDate.query)
+                                                    )
+                                        }))))
+            }
+        }))
+        
+        var ViewBadDatesApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "View Bad Dates",
+                    instructions: ["This page shows data elements which are marked as Date in entellitrak, but are being used to store Date and Time.",
+                                   "This is a problem for both core code and custom code. For instance features such as Standard Search will not work as expected on these fields."],
+                    mainContent: ViewBadDates({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(ViewBadDatesApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

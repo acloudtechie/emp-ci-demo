@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeaetkdataobject.c2863c43-96ed-416c-89a6-70f6aacb542e",
+  "description" : "Etk Data Object",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaEtkDataObject",
+  "packageBusinessKey" : "package.lookup.2de02577-0671-4661-acfa-255f2490ce5a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

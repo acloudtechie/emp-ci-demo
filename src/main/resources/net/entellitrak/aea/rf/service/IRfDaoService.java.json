@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.irfdaoservice.72e9dc60-8489-4200-bee7-d21dad93101b",
+  "description" : "IRfDaoService",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IRfDaoService",
+  "packageBusinessKey" : "package.service.c91f3592-d751-44c9-b00f-cdc447fbc85e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

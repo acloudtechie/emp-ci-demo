@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodataexportutility.0a7ac348-f60f-48fe-8b57-f0965e731af2",
+  "description" : "Utility class for RDO Data Exports",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoDataExportUtility",
+  "packageBusinessKey" : "package.utility.bed674da-474a-4742-9c8a-4974aa7eca21",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

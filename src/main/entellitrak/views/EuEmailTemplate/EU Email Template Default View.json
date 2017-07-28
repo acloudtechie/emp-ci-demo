@@ -1,0 +1,81 @@
+{
+  "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView",
+  "dataObjectBusinessKey" : "object.euEmailTemplate",
+  "dataViewElements" : [ {
+    "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView.element.body",
+    "dataElementBusinessKey" : "object.euEmailTemplate.element.body",
+    "description" : "Body column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Body",
+    "multiValueDelimiter" : null,
+    "name" : "body",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView.element.code",
+    "dataElementBusinessKey" : "object.euEmailTemplate.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView.element.description",
+    "dataElementBusinessKey" : "object.euEmailTemplate.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.euEmailTemplate.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView.element.name",
+    "dataElementBusinessKey" : "object.euEmailTemplate.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.euEmailTemplate.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailTemplate.view.euEmailTemplateDefaultView.element.subject",
+    "dataElementBusinessKey" : "object.euEmailTemplate.element.subject",
+    "description" : "Subject column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Subject",
+    "multiValueDelimiter" : null,
+    "name" : "subject",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "EU Email Template Listing",
+  "name" : "EU Email Template Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "EU Email Template Listing"
+}

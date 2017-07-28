@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanworkflowview.42f50ec8-0105-4e6d-b57c-a1945eb5ffcb",
+  "description" : "CleanWorkflowView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CleanWorkflowView",
+  "packageBusinessKey" : "package.cleanWorkflow.fa4398af-52eb-4ded-8a61-11aa5a0b42fc",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

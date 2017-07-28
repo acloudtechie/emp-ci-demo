@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.getobjectlocationajaxcontroller.d68c0cb4-0e82-4801-810e-94becd96efcd",
+  "description" : "GetObjectLocationAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "GetObjectLocationAjaxController",
+  "packageBusinessKey" : "package.getObjectLocationAjaxController.2bec3e89-77bd-472d-af96-840d163b20a7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.viewLockedDocumentManagementFiles",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewlockeddocumentmanagementfilescontroller.a87c1a97-3984-43c4-9c57-4e940315bfa5",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - View Locked Document Management Files",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - View Locked Document Management Files",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewlockeddocumentmanagementfilesview.a9c6ca12-4a49-441b-9ecc-93f34f39188b"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transferentellisqlview.442e0f71-da60-4ab2-b1b6-7394f162758e",
+  "description" : "TransferEntelliSqlOwnershipView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "TransferEntelliSqlOwnershipView",
+  "packageBusinessKey" : "package.transferEntelliSqlOwnership.07df64e6-d66d-4ce9-aff3-94c3355f7630",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

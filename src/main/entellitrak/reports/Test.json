@@ -1,0 +1,12 @@
+{
+  "businessKey" : "report.administrator.test",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:50Z",
+  "datasource" : null,
+  "description" : "Test",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Test",
+  "reportPermissions" : [ ],
+  "reportType" : "JASPER"
+}

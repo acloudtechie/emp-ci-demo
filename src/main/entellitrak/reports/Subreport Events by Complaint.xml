@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 5.5.1  -->
+<!-- 2017-05-22T15:29:49 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Complaint Events" pageWidth="600" pageHeight="700" columnWidth="598" leftMargin="1" rightMargin="1" topMargin="1" bottomMargin="1" uuid="19b5d630-a1c1-4ec5-b893-fe94e974bf03">
+  <property name="com.jaspersoft.studio.data.sql.tables" value="" />
+  <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Ref App Dev" />
+  <style name="Style1">
+    <conditionalStyle>
+      <conditionExpression><![CDATA[$F{Due Date}.before(new java.util.Date()) && ($F{Complaint Current Status}.equals( "Open Case" ) || $F{Complaint Current Status}.equals( "Open Allegation" )) && $F{Date Completed} == null]]></conditionExpression>
+      <style mode="Opaque" backcolor="#FCB6B3" />
+    </conditionalStyle>
+  </style>
+  <parameter name="ETK ID Complaint" class="java.math.BigDecimal">
+    <parameterDescription />
+  </parameter>
+  <queryString><![CDATA[SELECT 
+ e.ID as "Event ID",
+ e.ID_BASE as "ComplaintID",
+ et.c_name as "Event Type",
+ e.c_start_date as "Start Date",
+ e.c_due_date as "Due Date",
+ e.c_completed_date as "Date Completed",
+ e.c_description as "Description",
+ st.c_name as "Complaint Current Status",
+ sys.c_value as "URL"
+FROM t_event e
+JOIN t_complaint c
+ ON c.id = e.id_base
+JOIN t_status st
+ ON st.id = c.c_current_status
+ JOIN t_event_type et
+  ON et.id = e.c_event_type
+LEFT JOIN t_system_information sys 
+ ON sys.c_code = 'url'
+ WHERE e.ID_BASE = $P{ETK ID Complaint}]]></queryString>
+  <field name="Event ID" class="java.math.BigDecimal" />
+  <field name="ComplaintID" class="java.math.BigDecimal" />
+  <field name="Event Type" class="java.lang.String" />
+  <field name="Start Date" class="java.sql.Timestamp" />
+  <field name="Due Date" class="java.sql.Timestamp" />
+  <field name="Date Completed" class="java.sql.Timestamp" />
+  <field name="Description" class="java.lang.String" />
+  <field name="Complaint Current Status" class="java.lang.String" />
+  <field name="URL" class="java.lang.String" />
+  <columnHeader>
+    <band height="20" splitType="Prevent">
+      <staticText>
+        <reportElement x="147" y="0" width="68" height="20" uuid="e21d2cfe-e389-4b89-a38d-79170d1c5145" />
+        <textElement>
+          <font fontName="Arial" size="10" isUnderline="true" />
+        </textElement>
+        <text><![CDATA[Start Date]]></text>
+      </staticText>
+      <staticText>
+        <reportElement x="226" y="0" width="70" height="20" uuid="a16404c1-7daf-4e71-95c8-b00737bc31e4" />
+        <textElement>
+          <font fontName="Arial" size="10" isUnderline="true" />
+        </textElement>
+        <text><![CDATA[Due Date]]></text>
+      </staticText>
+      <staticText>
+        <reportElement x="307" y="0" width="76" height="20" uuid="1998794e-8fca-46a3-8934-54035ff654c6" />
+        <textElement>
+          <font fontName="Arial" size="10" isUnderline="true" />
+        </textElement>
+        <text><![CDATA[Date Completed]]></text>
+      </staticText>
+      <staticText>
+        <reportElement x="396" y="0" width="144" height="20" uuid="f2f8fa01-166b-4e5f-b011-475ac0e6d7bb" />
+        <textElement>
+          <font fontName="Arial" size="10" isUnderline="true" />
+        </textElement>
+        <text><![CDATA[Description]]></text>
+      </staticText>
+      <staticText>
+        <reportElement x="10" y="0" width="124" height="20" uuid="27f67484-3548-4ef0-90a6-16df363b3cb3" />
+        <textElement>
+          <font fontName="Arial" size="10" isUnderline="true" />
+        </textElement>
+        <text><![CDATA[Event Type]]></text>
+      </staticText>
+    </band>
+  </columnHeader>
+  <detail>
+    <band height="16" splitType="Prevent">
+      <textField pattern="MMM d, yyyy" isBlankWhenNull="true">
+        <reportElement x="147" y="0" width="68" height="16" uuid="647b7a43-0b01-4c0f-a890-49fee32318e9" />
+        <textElement>
+          <font fontName="Arial" size="10" isBold="false" />
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Start Date}]]></textFieldExpression>
+      </textField>
+      <textField pattern="MMM d, yyyy" isBlankWhenNull="true">
+        <reportElement key="" style="Style1" x="226" y="0" width="70" height="16" uuid="3e48b745-66c5-4363-b1bf-14198804be76" />
+        <textElement>
+          <font fontName="Arial" size="10" />
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Due Date}]]></textFieldExpression>
+      </textField>
+      <textField pattern="MMM d, yyyy" isBlankWhenNull="true">
+        <reportElement x="307" y="0" width="76" height="16" uuid="dc438cdc-de82-4c9d-a9f7-d473a8d90839" />
+        <textElement>
+          <font fontName="Arial" size="10" />
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Date Completed}]]></textFieldExpression>
+      </textField>
+      <textField isBlankWhenNull="true">
+        <reportElement x="396" y="0" width="184" height="16" uuid="d7b11084-262b-4bec-9ae0-b666bc4900a8" />
+        <textElement>
+          <font fontName="Arial" size="10" />
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+      </textField>
+      <textField hyperlinkType="Reference" hyperlinkTarget="Blank">
+        <reportElement x="9" y="0" width="126" height="16" forecolor="#0033CC" uuid="11c63995-b14a-4bfd-82ee-e47228960adf">
+          <property name="com.jaspersoft.studio.unit.height" value="pixel" />
+        </reportElement>
+        <textElement>
+          <font fontName="Arial" size="10" isUnderline="true" />
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Event Type}]]></textFieldExpression>
+        <hyperlinkReferenceExpression><![CDATA[$F{URL}+"/workflow.do?dataObjectKey=object.event&trackingId="+$F{Event ID}]]></hyperlinkReferenceExpression>
+      </textField>
+    </band>
+  </detail>
+</jasperReport>

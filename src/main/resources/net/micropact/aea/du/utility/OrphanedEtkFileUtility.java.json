@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.orphanedetkfileutility.db2e038e-73e3-4324-9139-51889b73be95",
+  "description" : "OrphanedEtkFileUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "OrphanedEtkFileUtility",
+  "packageBusinessKey" : "package.utility.8fe2784e-917e-4ebe-b3d5-8fae29c3d499",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

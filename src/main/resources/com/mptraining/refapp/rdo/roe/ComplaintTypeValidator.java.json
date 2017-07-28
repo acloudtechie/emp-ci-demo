@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.complainttypevalidator.07f3e92e-fd0d-473b-bfdc-d583242ffd9d",
+  "description" : "Validates that the Code value for any new entries is unique.",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "ComplaintTypeValidator",
+  "packageBusinessKey" : "package.roe.2c803e16-8d1b-4fcd-8892-30101a10090f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

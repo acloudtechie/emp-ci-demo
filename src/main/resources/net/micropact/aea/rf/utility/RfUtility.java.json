@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfutility.9265ed79-e6f7-43c4-86d9-288b1d014c6f",
+  "description" : "RF - Utility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfUtility",
+  "packageBusinessKey" : "package.utility.bef37a55-d967-49ca-9b13-cd626ab48229",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.trackingconfigurationidview.70f75430-04e9-4ad4-9b12-6f6e01875da6",
+  "description" : "TrackingConfigurationIdView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "TrackingConfigurationIdView",
+  "packageBusinessKey" : "package.trackingConfigurationId.43d07537-afa4-4f2d-99d0-edbfe54abd56",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

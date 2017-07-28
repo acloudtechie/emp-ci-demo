@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.db.utils",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.dbutilinstallercontroller.c5e01386-7bba-42da-85de-3a4fcf0d8f0b",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "An installer script that installs a common set of helpful DB views, packages and stored procedures for use by the AEA frameworks and AE code.",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - DbUtils - Installer",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.internetaddressutility.d289d59f-0f27-4975-b8f3-34e1cd3ee37b",
+  "description" : "InternetAddressUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "InternetAddressUtility",
+  "packageBusinessKey" : "package.utility.147b89af-db98-45c9-bf21-dd34094583fa",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

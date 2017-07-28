@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.searchauditlogcontroller.0ee64e71-7e26-49b9-9d4c-37512f0e4f8c",
+  "description" : "Page to search the AEA Audit Log",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "SearchAuditLogController",
+  "packageBusinessKey" : "package.searchAuditLog.0c7350eb-9396-41ea-93d0-eced6c8af83d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Role Data Permissions</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/editor.css" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <style type="text/css">
+        body {
+            font-family: verdana, arial, sans-serif;
+        }
+        
+        .toggle-button,
+        img.not-available {
+            padding: 0;
+            margin: 0.2em;
+            background-color: #ffffff;
+            border: none;
+            width: 16px;
+        }
+        
+        .toggle-button:hover,
+        .toggle-button:focus {
+            background-color: #ffffff;
+            outline: 2px solid #4D90FE;
+        }
+        
+        .divider {
+            width: 1em;
+            display: inline-block;
+            text-align: center;
+            color: #aaaaaa;
+            position: relative;
+            top: -0.25em;
+        }
+        
+        .input-group {
+            border: 0.3em solid #666666;
+            display: inline-block;
+            margin: 1em 1em 0 0em;
+            padding: 1em;
+            vertical-align: top;
+        }
+        
+        .input-group>label {
+            display: block;
+        }
+        
+        .input-header {
+            margin-top: 0em;
+            color: inherit;
+        }
+        
+        .key-header {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #444444;
+        }
+        
+        .access-description {
+            margin-right: 1em;
+        }
+        
+        .access-level {
+            display: inline;
+        }
+        
+        .position-title {
+            display: inline-block;
+            vertical-align: top;
+            color: #444444;
+        }
+        
+        .position-container {
+            display: inline-block;
+            border: .3em solid #666666;
+        }
+        
+        .key-position {
+            font-size: 1em;
+            padding-left: 0.3em;
+            padding-right: 0.3em;
+            display: inline-block;
+        }
+        
+        .key-access-holder {
+            display: inline-block;
+            border: .3em solid #666666;
+            padding-left: 1em;
+            padding-right: 1em;
+            height: 4em;
+            margin-right: 1em;
+            margin-top: 1em;
+        }
+        
+        .key-position-holder {
+            display: inline-block;
+            border: .3em solid #666666;
+            height: 4em;
+        }
+        
+        .key {
+            background-color: #ffffff;
+        }
+        
+        .selected {
+            background-color: #3182BD;
+            color: #ffffff;
+        }
+        
+        .role-anchor {
+            text-decoration: none;
+        }
+        
+        .role-anchor:link {
+            color: inherit;
+        }
+        
+        .role-anchor:visited {
+            color: inherit;
+        }
+        
+        .role-anchor:hover {
+            color: #ffffff !important;
+            background-color: #444444;
+        }
+        
+        .all-none {
+            font-style: italic;
+        }
+        
+        .all-none>span:before {
+            content: "(";
+        }
+        
+        .all-none>span:after {
+            content: ")";
+        }
+        
+        .permission-container {
+            margin: 1em 0em 1em 0em;
+        }
+        
+        table {
+            color: #333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        
+        table th {
+            border-width: 1px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #eeeeee;
+            min-width: 6em;
+        }
+        
+        table>tbody>tr>th {
+            text-align: left;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        
+        table td {
+            border-width: 1px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+            min-width: 6em;
+            text-align: center;
+            ;
+        }
+        
+        .bottom-buttons {
+            margin-top: 1em;
+        }
+        
+        .rdp-hidden {
+            visibility: hidden;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        /* Note: There is room for optimizations, however the page is pretty responsive as long as there is not an enormous
+        number of Roles and Data Objects selected. */
+
+        var ACCESS_LEVELS = [{
+            name: "No Access",
+            path: "no_access",
+            description: "The role/user has no access to the data permission"
+        }, {
+            name: "User",
+            path: "user",
+            description: "The role/user has access to the data permission for objects they 'own'"
+        }, {
+            name: "Organizational Unit",
+            path: "org_unit",
+            description: "The role/user has access to the data permission for objects 'owned' by their organizational unit"
+        }, {
+            name: "Parent: Child Organizational Units",
+            path: "parent_child",
+            description: "The role/user has access to the data permission for objects 'owned' by their organizational unit and child organizational units"
+        }, {
+            name: "Organization Wide",
+            path: "organization",
+            description: "Organization Wide"
+        }]
+        
+    
+        function attachTreeLevel(array, idProperty, parentIdProperty, levelProperty) {
+            function objectLevel(id) {
+                if (id == null) {
+                    return 0;
+                } else {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i][idProperty] == id) {
+                            return 1 +
+                                (array[i][levelProperty] != undefined ? array[i][levelProperty] : objectLevel(array[i][parentIdProperty]))
+                        }
+                    }
+                }
+            }
+
+            array.forEach(function(object) {
+                object[levelProperty] = objectLevel(object[parentIdProperty]);
+            })
+        }
+
+        function sortTreeObjects(objects, idProperty, parentProperty) {
+            var newArray = objects.filter(function(object) {
+                return object[parentProperty] == null;
+            })
+
+            var tempObjects = objects.filter(function(object) {
+                return object[parentProperty] != null;
+            }).reverse();
+
+            while (tempObjects.length > 0) {
+                for (var i = 0; i < tempObjects.length; i++) {
+                    var parentIndex = find(newArray, function(ele) {
+                        return ele[idProperty] == tempObjects[i][parentProperty]
+                    })
+                    if (parentIndex != undefined) {
+                        newArray.splice(parentIndex + 1, 0, tempObjects[i])
+                        tempObjects.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+            return newArray
+        }
+
+        function find(array, pred) {
+            for (var i = 0; i < array.length; i++) {
+                if (pred(array[i])) {
+                    return i;
+                }
+            }
+        }
+
+        var model = (function() {
+            /* The state could greatly benefit from indexes or having the data in an actual javascript database */
+            var state = {
+                isCreate: $isCreate, // Not used after initialization
+                initiallySelectedPermissions: $selectedPermissions, // Not used after initialization
+                roles: $roles,
+                dataObjects: $dataObjects,
+                dataObjectPermissions: $dataObjectPermissions,
+                permissionTypes: [{
+                    property: "CREATE_ACCESS_LEVEL",
+                    name: "Create"
+                }, {
+                    property: "READ_ACCESS_LEVEL",
+                    name: "Read"
+                }, {
+                    property: "UPDATE_ACCESS_LEVEL",
+                    name: "Update"
+                }, {
+                    property: "DELETE_ACCESS_LEVEL",
+                    name: "Delete"
+                }, {
+                    property: "ASSIGN_ACCESS_LEVEL",
+                    name: "Assign"
+                }, {
+                    property: "SEARCHING_ACCESS_LEVEL",
+                    name: "Search"
+                }]
+            }
+            
+            initialize()
+
+            function initialize() {
+                if(state.isCreate){
+                    setAllEnabled(state.permissionTypes, true)
+                }else{
+                    setAllEnabled(state.permissionTypes, false)
+                    state.initiallySelectedPermissions.forEach(function(permission){
+                        state.permissionTypes[permission].enabled = true
+                    })
+                }
+                attachTreeLevel(state.dataObjects, "DATA_OBJECT_ID", "PARENT_OBJECT_ID", "level")
+                state.dataObjects = sortTreeObjects(state.dataObjects, "DATA_OBJECT_ID", "PARENT_OBJECT_ID")
+            }
+
+            function setAllEnabled(arr, enabled) {
+                arr.forEach(function(ele) {
+                    ele.enabled = enabled
+                })
+            }
+
+            function setRolesEnabled(enabled) {
+                setAllEnabled(state.roles, enabled)
+                callEventListeners()
+            }
+
+            function setDataObjectsEnabled(enabled) {
+                setAllEnabled(state.dataObjects, enabled)
+                callEventListeners()
+            }
+
+            function setPermissionTypesEnabled(enabled) {
+                setAllEnabled(state.permissionTypes, enabled)
+                callEventListeners()
+            }
+
+            function callEventListeners() {
+                renderApp()
+            }
+
+            function getRoles() {
+                return state.roles
+            }
+
+            function getPermissionTypes() {
+                return state.permissionTypes
+            }
+
+            function getDataObjects() {
+                return state.dataObjects
+            }
+
+            function getEnabledRoles() {
+                return getRoles().filter(function(role) {
+                    return role.enabled
+                })
+            }
+
+            function getEnabledDataObjects() {
+                return getDataObjects().filter(function(dataObject) {
+                    return dataObject.enabled
+                })
+            }
+
+            function getEnabledPermissionTypes() {
+                return getPermissionTypes().filter(function(permissionType) {
+                    return permissionType.enabled
+                })
+            }
+
+            function setRoleEnabled(roleId, isEnabled) {
+                for (var i = 0; i < state.roles.length; i++) {
+                    if (state.roles[i].ROLE_ID === roleId) {
+                        state.roles[i].enabled = isEnabled
+                        callEventListeners()
+                        return
+                    }
+                }
+            }
+
+            function setPermissionTypeEnabled(permissionTypeId, isEnabled) {
+                model.state.permissionTypes[permissionTypeId].enabled = isEnabled
+                callEventListeners()
+            }
+
+            function setDataObjectEnabled(dataObjectId, isEnabled) {
+                for (var i = 0; i < state.dataObjects.length; i++) {
+                    if (state.dataObjects[i].DATA_OBJECT_ID === dataObjectId) {
+                        state.dataObjects[i].enabled = isEnabled
+                        callEventListeners()
+                        return
+                    }
+                }
+            }
+
+            function getSpecificDataObjectPermission(tableName, roleId) {
+                /* This is one of the worst performance problems */
+                for (var i = 0; i < state.dataObjectPermissions.length; i++) {
+                    if (state.dataObjectPermissions[i].ROLE_ID === roleId 
+                            && state.dataObjectPermissions[i].DATA_OBJECT_TYPE === tableName) {
+                        return state.dataObjectPermissions[i]
+                    }
+                }
+                /* This is where we are handling no matching data element permission in the table.
+                 * This would probably be more cleanly handled by the controller code. */
+                return {
+                    DATA_OBJECT_TYPE: tableName,
+                    ROLE_ID: roleId,
+                    ASSIGN_ACCESS_LEVEL: 0,
+                    CREATE_ACCESS_LEVEL: 0,
+                    DELETE_ACCESS_LEVEL: 0,
+                    READ_ACCESS_LEVEL: 0,
+                    SEARCHING_ACCESS_LEVEL: 0,
+                    UPDATE_ACCESS_LEVEL: 0
+                }
+            }
+
+            function incrementSpecificPermission(dataObjectPermission, property) {
+                /*
+                var currentValue = dataObjectPermission[property];
+                dataObjectPermission[property] = (currentValue + 1) % ACCESS_LEVELS.length
+                callEventListeners()
+                */
+            }
+
+            function isAssignable(tableName) {
+                for (var i = 0; i < state.dataObjects.length; i++) {
+                    if (tableName === state.dataObjects[i].TABLE_NAME) {
+                        return state.dataObjects[i].PARENT_OBJECT_ID === null
+                    }
+                }
+            }
+
+            function getDataObjectPermissions() {
+                return state.dataObjectPermissions
+            }
+
+            function getVisibleDataObjectPermissions() {
+                var returnArray = []
+                getEnabledDataObjects().forEach(function(dataObject) {
+                    getEnabledRoles().forEach(function(role) {
+                        returnArray.push(getSpecificDataObjectPermission(dataObject.TABLE_NAME, role.ROLE_ID))
+                    })
+                })
+                return returnArray
+            }
+
+            function selectRolesBasedOnDataObjectsPermissions() {
+                /* This is going to be a pretty inefficient operation. We will
+                    - filter the data object permissions based on the enabled data objects & permissions
+                    - set all roles to inactive
+                    - go over the filtered permissions and set the corresponding roles to activte */
+                var enabledDataObjects = getEnabledDataObjects()
+                
+                var enabledPermissionTypes = getEnabledPermissionTypes().map(function(permissionType) {
+                    return permissionType.property
+                })
+
+                model.getRoles().forEach(function(role) {
+                    role.enabled = false
+                })
+
+                function isPermissionEnabledByType(dataObjectPermission) {
+                    for (var i = 0; i < enabledPermissionTypes.length; i++) {
+                        if (0 < dataObjectPermission[enabledPermissionTypes[i]]) {
+                            return true
+                        }
+                    }
+                    return false
+                }
+                
+                function isObjectEnabled(dataObjectType){
+                    for(var i = 0; i < enabledDataObjects.length; i++){
+                        if(enabledDataObjects[i].TABLE_NAME === dataObjectType){
+                            return true
+                        }
+                    }
+                    return false
+                }
+                
+                state.dataObjectPermissions.filter(function(dataObjectPermission) {
+                    return isPermissionEnabledByType(dataObjectPermission) 
+                    && isObjectEnabled(dataObjectPermission.DATA_OBJECT_TYPE)
+                }).forEach(function(dataObjectPermission) {
+                    // This calls event listeners, so we'd prefer one that didn't
+                    setRoleEnabled(dataObjectPermission.ROLE_ID, true)
+                })
+                callEventListeners()
+            }
+
+            return {
+                state: state,
+
+                getRoles: getRoles,
+                getPermissionTypes: getPermissionTypes,
+                getDataObjects: getDataObjects,
+                getDataObjectPermissions: getDataObjectPermissions,
+
+                getEnabledRoles: getEnabledRoles,
+                getEnabledDataObjects: getEnabledDataObjects,
+                getEnabledPermissionTypes: getEnabledPermissionTypes,
+                getVisibleDataObjectPermissions: getVisibleDataObjectPermissions,
+
+                setRoleEnabled: setRoleEnabled,
+                setPermissionTypeEnabled: setPermissionTypeEnabled,
+                setDataObjectEnabled: setDataObjectEnabled,
+
+                getSpecificDataObjectPermission: getSpecificDataObjectPermission,
+                incrementSpecificPermission: incrementSpecificPermission,
+                isAssignable: isAssignable,
+
+                setRolesEnabled: setRolesEnabled,
+                setDataObjectsEnabled: setDataObjectsEnabled,
+                setPermissionTypesEnabled: setPermissionTypesEnabled,
+                selectRolesBasedOnDataObjectsPermissions: selectRolesBasedOnDataObjectsPermissions
+            }
+        }())
+
+        function areAllEnabled(array) {
+            for (var i = 0; i < array.length; i++) {
+                if (!array[i].enabled) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        var SelectAllView = React.createFactory(React.createClass({
+            render: function() {
+                var allEnabled = areAllEnabled(this.props.items)
+
+                return React.DOM.label({
+                        className: "all-none"
+                    },
+                    React.DOM.input({
+                        type: "checkbox",
+                        checked: allEnabled,
+                        onChange: function(event) {
+                            this.props.setAllEnabled(!allEnabled)
+                        }.bind(this)
+                    }),
+                    React.DOM.span({}, "Select All/None"))
+            }
+        }))
+
+        var AutoSelectRoles = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.button({
+                        onClick: function(event) {
+                            event.preventDefault()
+                            if (model.getEnabledDataObjects().length == 0 || model.getEnabledPermissionTypes().length == 0) {
+                                alert("The auto-select feature selects the roles which have permissions based on the selections which were made for Data Objects and Permission Type. You have not yet made selections for both Data Objects and Permission Type.")
+                            } else {
+                                model.selectRolesBasedOnDataObjectsPermissions()
+                            }
+                        }
+                    },
+                    "Auto-Select")
+            }
+        }))
+
+        var RolesInputs = React.createFactory(React.createClass({
+            render: function() {
+                var roles = model.getRoles()
+
+                return React.DOM.div({
+                        className: "input-group"
+                    },
+                    React.DOM.h3({
+                        className: "input-header"
+                    }, "Roles"),
+                    AutoSelectRoles({}),
+                    SelectAllView({
+                        items: roles,
+                        setAllEnabled: model.setRolesEnabled
+                    }),
+                    roles.map(function(role) {
+                        var roleId = role.ROLE_ID
+                        var enabled = role.enabled
+                        return React.DOM.label({
+                                key: roleId
+                            },
+                            React.DOM.input({
+                                type: "checkbox",
+                                name: "roles",
+                                value: roleId,
+                                checked: enabled,
+                                onChange: function(event) {
+                                    model.setRoleEnabled(roleId, !enabled)
+                                }
+                            }),
+                            React.DOM.span({}, role.NAME))
+                    }))
+            }
+        }))
+
+        var DataObjectInputs = React.createFactory(React.createClass({
+            render: function() {
+                var dataObjects = model.getDataObjects()
+
+                return React.DOM.div({
+                        className: "input-group"
+                    },
+                    React.DOM.h3({
+                        className: "input-header"
+                    }, "Data Objects"),
+                    SelectAllView({
+                        items: dataObjects,
+                        setAllEnabled: model.setDataObjectsEnabled
+                    }),
+                    dataObjects.map(function(dataObject) {
+                        var dataObjectId = dataObject.DATA_OBJECT_ID
+                        var enabled = dataObject.enabled
+                        return React.DOM.label({
+                                key: dataObjectId
+                            },
+                            React.DOM.input({
+                                type: "checkbox",
+                                name: "dataObjects",
+                                value: dataObjectId, // not required?
+                                checked: enabled,
+                                onChange: function(event) {
+                                    model.setDataObjectEnabled(dataObjectId, !enabled)
+                                }
+                            }),
+                            LevelIndicatorView(dataObject),
+                            React.DOM.span({}, dataObject.LABEL))
+                    }))
+            }
+        }))
+
+        var PermissionTypeInputs = React.createFactory(React.createClass({
+            render: function() {
+                var permissionTypes = model.getPermissionTypes()
+
+                return React.DOM.div({
+                        className: "input-group"
+                    },
+                    React.DOM.h3({
+                        className: "input-header"
+                    }, "Permission Type"),
+                    SelectAllView({
+                        items: permissionTypes,
+                        setAllEnabled: model.setPermissionTypesEnabled
+                    }),
+                    permissionTypes.map(function(permissionType, index) {
+                        var id = index
+                        var enabled = permissionType.enabled
+                        return React.DOM.label({
+                                key: id
+                            },
+                            React.DOM.input({
+                                type: "checkbox",
+                                name: "permissionTypes",
+                                value: id,
+                                checked: enabled,
+                                onChange: function(event) {
+                                    model.setPermissionTypeEnabled(id, !enabled)
+                                }
+                            }),
+                            React.DOM.span({}, permissionType.name))
+                    }))
+            }
+        }))
+
+        var IconView = React.createFactory(React.createClass({
+            render: function() {
+                var accessLevel = this.props.accessLevel
+
+                return React.DOM.img({
+                    src: "themes/default/web-pub/images/icons/16x16/access/" + accessLevel.path + ".gif",
+                    title: this.props.title || accessLevel.description,
+                    alt: accessLevel.description,
+                    className: this.props.enabled ? null : "rdp-hidden"
+                })
+            }
+        }))
+
+        var PermissionAccessLevelView = React.createFactory(React.createClass({
+            getInitialState: function() {
+                return {
+                    enabled: this.props.permissionType.enabled,
+                    accessLevel: this.props.dataObjectPermission[this.props.permissionType.property]
+                }
+            },
+            shouldComponentUpdate: function(nextProps, nextState) {
+                return this.state.accessLevel != nextState.accessLevel || this.state.enabled != nextState.enabled
+            },
+            componentWillReceiveProps: function(nextProps) {
+                this.setState({
+                    enabled: nextProps.permissionType.enabled,
+                    accessLevel: nextProps.dataObjectPermission[this.props.permissionType.property]
+                })
+            },
+            render: function() {
+                var dataObjectPermission = this.props.dataObjectPermission
+                var permissionType = this.props.permissionType
+
+                return permissionType.property !== "ASSIGN_ACCESS_LEVEL" || model.isAssignable(dataObjectPermission.DATA_OBJECT_TYPE) ? React.DOM.button({
+                        className: "toggle-button",
+                        title: permissionType.name,
+                        onClick: function(event) {
+                            event.preventDefault()
+                            model.incrementSpecificPermission(dataObjectPermission, permissionType.property)
+                        }
+                    },
+                    IconView({
+                        accessLevel: ACCESS_LEVELS[dataObjectPermission[permissionType.property]],
+                        title: permissionType.name,
+                        enabled: permissionType.enabled
+                    })) : NaIconView({enabled: permissionType.enabled})
+            }
+        }))
+        
+        var NaIconView = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.img({
+                    src: "themes/default/web-pub/images/icons/16x16/access/na.gif",
+                    title: "Assign",
+                    className: "not-available " + (this.props.enabled ? "" : "rdp-hidden")
+                })
+            }
+        }))
+        
+        var PermissionCellView = React.createFactory(React.createClass({
+            render: function() {
+                var dataObjectPermissions = this.props.dataObjectPermissions
+
+                var children = model.getPermissionTypes().map(function(permissionType, index) {
+                    return PermissionAccessLevelView({
+                        key: index,
+                        dataObjectPermission: dataObjectPermissions,
+                        permissionType: permissionType
+                    })
+                })
+
+                children.splice(3, 0, React.DOM.br({
+                    key: -1
+                }))
+
+                return React.DOM.td({}, children)
+            }
+        }))
+
+        function repeat(func, count) {
+            var array = []
+            for (var i = 0; i < count; i++) {
+                array.push(func(i))
+            }
+            return array
+        }
+
+        function LevelIndicatorView(dataObject) {
+            return repeat(function(key) {
+                return React.DOM.span({
+                        className: "divider",
+                        key: key
+                    },
+                    "\u221F")
+            }, dataObject.level)
+        }
+
+        var PermissionTableView = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.table({},
+                    React.DOM.thead({},
+                        React.DOM.tr({},
+                            React.DOM.th({}),
+                            model.getEnabledRoles().map(function(role) {
+                                var roleId = role.ROLE_ID
+                                return React.DOM.th({
+                                        key: roleId
+                                    },
+                                    React.DOM.a({
+                                            className: "role-anchor",
+                                            href: "admin.role.datapermissions.update.request.do?id=" + encodeURIComponent(roleId),
+                                            target: "_blank"
+                                        },
+                                        role.NAME))
+                            }))),
+                    React.DOM.tbody({},
+                        model.getEnabledDataObjects().map(function(dataObject) {
+                            var dataObjectId = dataObject.DATA_OBJECT_ID
+                            return React.DOM.tr({
+                                    key: dataObjectId
+                                },
+                                React.DOM.th({}, LevelIndicatorView(dataObject), dataObject.LABEL),
+                                model.getEnabledRoles().map(function(role) {
+                                    var roleId = role.ROLE_ID
+                                    return PermissionCellView({
+                                        key: roleId,
+                                        dataObjectPermissions: model.getSpecificDataObjectPermission(dataObject.TABLE_NAME, roleId)
+                                    })
+                                }))
+                        })))
+            }
+        }))
+
+        var KeyView = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div({
+                        className: "key"
+                    },
+                    AccessLevelKeyView(),
+                    PositionKeyView())
+            }
+        }))
+
+        var PositionKeyView = React.createFactory(React.createClass({
+            render: function() {
+                var children = model.getPermissionTypes().map(function(permissionType, i) {
+                    return React.DOM.span({
+                            className: "key-position" + (permissionType.enabled ? "" : " rdp-hidden"),
+                            key: i
+                        },
+                        permissionType.name)
+                })
+
+                children.splice(3, 0, React.DOM.br({
+                    key: -1
+                }))
+
+                return React.DOM.div({
+                        className: "key-position-holder"
+                    },
+                    React.DOM.div({
+                        className: "position-title key-header"
+                    }, "Position Key"),
+                    React.DOM.div({
+                            className: "position-container"
+                        },
+                        children))
+            }
+        }))
+
+        var AccessLevelKeyView = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div({
+                        className: "key-access-holder"
+                    },
+                    React.DOM.div({
+                        className: "key-header"
+                    }, "Access Level Key"),
+                    ACCESS_LEVELS.map(function(accessLevel, index) {
+                        return React.DOM.div({
+                                key: index,
+                                className: "access-level"
+                            },
+                            IconView({
+                                accessLevel: accessLevel,
+                                enabled: true
+                            }),
+                            React.DOM.span({
+                                className: "access-description"
+                            }, accessLevel.name))
+                    }))
+            }
+        }))
+
+        function SubmissionView(props){
+            return React.DOM.div({className: "bottom-buttons"},
+                    React.DOM.button(null, "Refresh Page"))
+        }
+        
+        var AppView = React.createFactory(React.createClass({
+            render: function() {
+
+                return AeaCoreReactComponents.Application({
+                    title: "Role Data Permissions",
+                    instructions: React.DOM.div(null,
+                            React.DOM.p(null, "This page can be used to view Role Data Permissions for ",
+                                    React.DOM.strong(null, "Data Objects"),
+                                    " only. It will not display permissions for ",
+                                    React.DOM.strong(null, " Data Elements"),
+                                    ". If you wish to see Data Element permissions, or change Data Object permissions you may use this page to navigate to the core data permissions for a specific Role and change them from there."),
+                            React.DOM.p(null, "If this page is not very responsive, try only selecting a few Roles or Data Objects at a time")),
+                    mainContent: React.DOM.form({method: "POST",
+                        action: "page.request.do?page=du.page.roleDataPermissions"
+                    },
+                    React.DOM.input({type: "hidden",
+                        name: "update",
+                        value: "1"}),
+                        RolesInputs({}),
+                        DataObjectInputs({}),
+                        PermissionTypeInputs({}),
+                        KeyView({}),
+                        PermissionTableView({}),
+                        SubmissionView({})
+                    )
+                })
+            }
+        }))
+
+        function renderApp() {
+            ReactDOM.render(AppView({}), document.getElementById("app"));
+        }
+
+    </script>
+
+</head>
+
+<body onload="renderApp()">
+    <div id="app"></div>
+</body>
+
+</html>

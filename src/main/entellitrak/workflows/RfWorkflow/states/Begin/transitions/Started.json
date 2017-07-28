@@ -1,0 +1,15 @@
+{
+  "businessKey" : "object.rfWorkflow.state.begin.transition.started",
+  "description" : "Started",
+  "name" : "Started",
+  "nextStateBusinessKey" : "object.rfWorkflow.state.interim",
+  "previousStateBusinessKey" : "object.rfWorkflow.state.begin",
+  "sequenceNumber" : 1,
+  "trackingEventListeners" : [ {
+    "businessKey" : "object.rfWorkflow.state.begin.transition.started.listener.create.object.rfWorkflow",
+    "dataObjectBusinessKey" : "object.rfWorkflow",
+    "trackingEventType" : "DATA_OBJECT_CREATE"
+  } ],
+  "transitionType" : "ALWAYS_TRANSITION",
+  "triggerScriptObjectBusinessKey" : null
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.showbaddatescontroller.3449c5c6-72eb-4c0d-bceb-76a9ee613d03",
+  "description" : "ViewBadDatesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewBadDatesController",
+  "packageBusinessKey" : "package.viewBadDates.6645cfde-f8ee-484e-aed9-7436e5f1e864",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

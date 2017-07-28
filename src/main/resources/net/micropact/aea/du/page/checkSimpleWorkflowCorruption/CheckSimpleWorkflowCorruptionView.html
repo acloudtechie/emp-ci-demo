@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Check Simple Workflow Corruption</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            useSimpleWorkflow: $useSimpleWorkflow,
+            recordsWithoutWorkItems: $recordsWithoutWorkItems,
+            recordsWithoutRuntimes: $recordsWithoutRuntimes
+        }
+
+        function SimpleWorkflowNotEnabled() {
+            return React.DOM.p(null,
+                "This site does not use Simple Workflow.")
+        }
+
+        function ResultTable(props) {
+            return React.DOM.div(null,
+                React.DOM.h2(null, props.title),
+                AeaCoreReactComponents.SimpleHeaderTableGrid({
+                    headers: ["Business Key", "Tracking Id", "Link"],
+                    tbody: React.DOM.tbody(null,
+                        props.records.map(function(record, i) {
+                            var businessKey = record.businessKey
+                            var trackingId = record.trackingId
+                            return React.DOM.tr({
+                                    key: i
+                                },
+                                React.DOM.td(null,
+                                    businessKey),
+                                React.DOM.td(null,
+                                    trackingId),
+                                React.DOM.td(null,
+                                    React.DOM.a({
+                                            href: "workflow.do?dataObjectKey=" + encodeURIComponent(businessKey) + "&trackingId=" + encodeURIComponent(trackingId),
+                                            target: "_blank"
+                                        },
+                                        "(Open Object)")))
+                        }))
+                }))
+        }
+
+        var CheckWorkflowCorruption = React.createFactory(React.createClass({
+            render: function() {
+                var props = this.props
+                return props.useSimpleWorkflow ?
+                    React.DOM.div(null,
+                        ResultTable({
+                            title: "Records without Workitems",
+                            records: props.recordsWithoutWorkItems
+                        }),
+                        ResultTable({
+                            title: "Records without Workflow Runtimes",
+                            records: props.recordsWithoutRuntimes
+                        })) :
+                    SimpleWorkflowNotEnabled()
+            }
+        }))
+
+        var CheckWorkflowCorruptionApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Check Simple Workflow Corruption",
+                    instructions: ["This page checks to see whether the workflows for objects appear to have been corrupted.",
+                        "Specifically it checks that each BTO has at least one record in both ETK_WORKITEM and ETK_WORKFLOW_RUNTIME."
+                    ],
+                    mainContent: CheckWorkflowCorruption(config)
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(CheckWorkflowCorruptionApp(config),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

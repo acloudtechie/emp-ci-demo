@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.viewPagePermissions",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewpagepermissionscontroller.0d83a018-9bea-4b76-8671-da45dfd8b1a3",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - View Page Permissions",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - View Page Permissions",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewpagepermissionsview.44faef8d-d196-4abf-9150-7d76eb7b2efc"
+}

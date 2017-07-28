@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.tureplacementvariabledoe.502e04cc-89f7-4a6b-88e0-3057a66e994f",
+  "description" : "TuReplacementVariableDoe",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "TuReplacementVariableDoe",
+  "packageBusinessKey" : "package.doe.4812854a-ca30-445d-ae16-d59ceed07fd7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

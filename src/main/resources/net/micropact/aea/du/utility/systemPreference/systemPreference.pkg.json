@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.systemPreference.d19bfbcc-e861-4735-96c3-ec4d11c1545f",
+  "name" : "systemPreference",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.utility.8fe2784e-917e-4ebe-b3d5-8fae29c3d499",
+  "workspaceName" : "system"
+}

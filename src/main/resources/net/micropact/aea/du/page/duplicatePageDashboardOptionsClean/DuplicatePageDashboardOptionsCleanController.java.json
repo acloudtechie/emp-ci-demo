@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.duplicatepagedashboardoptionscleancontroller.7c3d9ca4-054e-4d3a-9e70-6905ba1b4638",
+  "description" : "DuplicatePageDashboardOptionsCleanController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DuplicatePageDashboardOptionsCleanController",
+  "packageBusinessKey" : "package.duplicatePageDashboardOptionsClean.5eb7d153-be31-41e8-b460-e7cb41a9b957",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

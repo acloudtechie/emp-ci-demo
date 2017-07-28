@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewmutablereadonlyfieldscontroller.02828287-705b-4f55-a9b9-aab7e8999637",
+  "description" : "ViewMutableReadOnlyFieldsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewMutableReadOnlyFieldsController",
+  "packageBusinessKey" : "package.viewMutableReadOnlyFields.3d6be19a-e2bb-4e4d-af5c-515f1c7f4371",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

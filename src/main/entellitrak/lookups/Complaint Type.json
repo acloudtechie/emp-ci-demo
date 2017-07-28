@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.complaintType",
+  "dataObjectBusinessKey" : null,
+  "description" : "Complaint Type",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "Complaint Type",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.complainttypelookup.4f39edc3-68e6-492b-b5ac-4b14fe6b1ffe",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

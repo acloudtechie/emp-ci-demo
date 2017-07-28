@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.duplicatePageDashboardOptionsClean",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.duplicatepagedashboardoptionscleancontroller.7c3d9ca4-054e-4d3a-9e70-6905ba1b4638",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Duplicate Page Dashboard Options - Clean",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Duplicate Page Dashboard Options - Clean",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

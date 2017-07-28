@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewpagereportdashboarddisplayview.98b4252b-7598-43e4-ad1c-4fd19cb9cf3d",
+  "description" : "ViewPageReportDashboardDisplayView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ViewPageReportDashboardDisplayView",
+  "packageBusinessKey" : "package.viewPageReportDashboardDisplay.2317be25-78e8-482e-81d7-a943d5ff8b8e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

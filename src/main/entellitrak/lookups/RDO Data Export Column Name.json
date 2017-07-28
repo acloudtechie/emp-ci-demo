@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.rdoDataExportUniqueIdColumn",
+  "dataObjectBusinessKey" : null,
+  "description" : "Returns a column for a selected table.",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RDO Data Export Column Name",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.columnnamelookup.a39b11f1-d99d-4aa4-ae5e-ffd1d4bce0ab",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "TEXT"
+}

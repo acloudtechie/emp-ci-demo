@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.pdfparseexception.1a8ea0c8-764e-4c23-a7c9-a2aed3a663eb",
+  "description" : "Exception that is thrown when there is an error parsing a PDF file with the PDF Template Utility.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "PdfParseException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

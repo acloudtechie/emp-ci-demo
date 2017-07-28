@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.componentdataimporter.1d0dde26-a272-4dcb-8d1e-be0d90518c4b",
+  "description" : "ComponentDataImporter",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ComponentDataImporter",
+  "packageBusinessKey" : "package.importExport.2e1ace73-5d8c-463a-bb72-4caf866c2329",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - System Preferences Tool</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+    
+    <style type="text/css">
+      
+      .preferenceNotPresentOnSystem {
+        background-color: #f1f1f1;
+      }
+      
+      .noValue.noValue{
+        font-style: italic;
+        color: #888;
+      }
+      
+    </style>
+    
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            actions: [{
+                name: "Export",
+                action: "export"
+            }, {
+                name: "Import",
+                action: "import"
+            }, {
+                name: "Set Production Values",
+                action: "setProductionValues"
+            }],
+            /* productionPreferences is just here for initialization, it gets copied by setProductionValuesModel */
+            productionPreferences: $productionPreferences,
+            /* allPreferences is just here for initialization, it gets copied by exportModel */
+            allPreferences: $allPreferences,
+
+            selectedAction: "export"
+        }
+
+        var exportModel = (function(){
+            var state = {
+                    preferences: null
+            }
+            
+            init()
+            
+            function init(){
+                state.preferences = config.allPreferences.map(function(preference){
+                    return {
+                        name: preference.name,
+                        isExportableByDefault: preference.isExportableByDefault,
+                        currentValue: preference.currentValue,
+                        setInCurrentDB: preference.setInCurrentDB,
+                        isSelected: false
+                    }
+                })
+            }
+            
+            function getPreferences(){
+                return state.preferences
+            }
+            
+            function setPreference(name, selected){
+                state.preferences.filter(function(preference){
+                    return preference.name === name
+                })[0].isSelected = selected
+                
+                render()
+            }
+            
+            function clearAll(){
+                state.preferences.forEach(function(preference){
+                    preference.isSelected = false
+                })
+                render()
+            }
+            
+            function selectRecommended(){
+                state.preferences.forEach(function(preference){
+                    preference.isSelected = preference.isExportableByDefault;
+                })
+                
+                render()
+            }
+            
+            return {
+                getPreferences: getPreferences,
+                setPreference: setPreference,
+                clearAll: clearAll,
+                selectRecommended: selectRecommended
+            }
+        }())
+        
+        var setProductionValuesModel = (function() {
+            var state = {
+                preferences: null
+            }
+
+            init()
+
+            function init() {
+                state.preferences = config.productionPreferences.map(function(productionPreference) {
+                    return {
+                        defaultProductionValue: productionPreference.defaultProductionValue,
+                        name: productionPreference.name,
+                        currentValue: getCurrentValue(productionPreference.name),
+                        isSelected: false
+                    }
+                })
+            }
+
+            function getPreferences() {
+                return state.preferences
+            }
+
+            function setPreference(name, selected) {
+                state.preferences.filter(function(preference) {
+                    return preference.name === name
+                })[0].isSelected = selected
+                render()
+            }
+
+            function setAllSelected(selected) {
+                state.preferences.forEach(function(preference) {
+                    preference.isSelected = selected
+                })
+                render()
+            }
+
+            function areAllSelected() {
+                return state.preferences.every(function(preference) {
+                    return preference.isSelected
+                })
+            }
+
+            return {
+                getPreferences: getPreferences,
+                setPreference: setPreference,
+                areAllSelected: areAllSelected,
+                setAllSelected: setAllSelected
+            }
+        }())
+
+        function getCurrentValue(preferenceName) {
+            var preferences = config.allPreferences;
+            for (var i = 0; i < preferences.length; i++) {
+                var preference = preferences[i]
+                if (preference.name === preferenceName) {
+                    return preference.currentValue
+                }
+            }
+        }
+
+        function selectAction(action) {
+            config.selectedAction = action
+            render()
+        }
+
+        var ActionType = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null,
+                    React.DOM.label(null, "Action"),
+                    React.DOM.select({
+                            name: "action",
+                            value: config.selectedAction,
+                            onChange: function(event) {
+                                selectAction(event.target.value)
+                            }
+                        },
+                        config.actions.map(function(action) {
+                            return React.DOM.option({
+                                    key: action.action,
+                                    value: action.action
+                                },
+                                action.name)
+                        })))
+            }
+        }))
+
+        function ExportContent() {
+            return React.DOM.div(null,
+                    React.DOM.table({className: "grid aea-core-grid aea-core-highlight"},
+                            React.DOM.thead(null,
+                                    React.DOM.tr(null,
+                                            React.DOM.th(null,
+                                                    React.DOM.button({type: "button",
+                                                        onClick: exportModel.clearAll},
+                                                            "Clear All"),
+                                                    React.DOM.button({type: "button",
+                                                        onClick: exportModel.selectRecommended},
+                                                            "Select Recommended")),
+                                                            React.DOM.th(null, "Name"),
+                                                            React.DOM.th(null, "Current Value"))),
+                            React.DOM.tbody(null,
+                                    exportModel.getPreferences().map(function(preference){
+                                        var isSelected = preference.isSelected;
+                                        var setInCurrentDB = preference.setInCurrentDB;
+                                        return React.DOM.tr({key: preference.name},
+                                                React.DOM.td(null,
+                                                        React.DOM.input({type: "checkbox",
+                                                            name: "preferences",
+                                                            value: preference.name,
+                                                            checked: isSelected,
+                                                            onChange: function(event){
+                                                                exportModel.setPreference(preference.name, !isSelected)
+                                                            }})),
+                                                React.DOM.td(null,
+                                                        preference.name),
+                                                React.DOM.td({className: setInCurrentDB ? null : "noValue"},
+                                                		setInCurrentDB ? preference.currentValue : "(No Value Set)"))
+                                    }))),
+                                    React.DOM.button({type: "submit"},
+                                            "Export"))
+        }
+
+        function ImportContent() {
+            return React.DOM.div(null,
+                React.DOM.label(null,
+                    "File",
+                    React.DOM.input({
+                        type: "file",
+                        name: "importFile"
+                    })),
+                React.DOM.button({
+                        type: "submit"
+                    },
+                    "Import"))
+        }
+
+        function SetProductionContent() {
+            var model = setProductionValuesModel
+            var areAllSelected = model.areAllSelected()
+
+            return React.DOM.div(null, React.DOM.table({
+                        className: "grid aea-core-grid aea-core-highlight"
+                    },
+                    React.DOM.thead(null,
+                        React.DOM.tr(null,
+                            React.DOM.th(null,
+                                React.DOM.label(null, "Select All/None"),
+                                React.DOM.input({
+                                    type: "checkbox",
+                                    checked: areAllSelected,
+                                    onChange: function(event) {
+                                        model.setAllSelected(!areAllSelected)
+                                    }
+                                })),
+                            React.DOM.th(null, "Name"),
+                            React.DOM.th(null, "Current Value"),
+                            React.DOM.th(null, "New Value"))),
+                    React.DOM.tbody(null, model.getPreferences().map(function(preference) {
+                        var isSelected = preference.isSelected;
+                        return React.DOM.tr({
+                                key: preference.name
+                            },
+                            React.DOM.td(null,
+                                React.DOM.input({
+                                    type: "checkbox",
+                                    name: "preferences",
+                                    value: preference.name,
+                                    checked: isSelected,
+                                    onChange: function(event) {
+                                        model.setPreference(preference.name, !isSelected)
+                                    }
+                                })),
+                            React.DOM.td(null, preference.name),
+                            React.DOM.td(null, preference.currentValue),
+                            React.DOM.td(null, preference.defaultProductionValue))
+                    }))),
+                React.DOM.button({
+                        type: "submit"
+                    },
+                    "Set to Production Values"))
+        }
+
+        var SystemPreferences = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.form({
+                    method: "POST",
+                    action: "page.request.do?page=du.page.systemPreferencesTool",
+                    encType: "multipart/form-data"
+                },
+                ActionType(), {
+                    "export": ExportContent,
+                    "import": ImportContent,
+                    setProductionValues: SetProductionContent
+                }[config.selectedAction]())
+            }
+        }))
+
+        var SystemPreferencesApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "System Preferences Tool",
+                    instructions: ["This page is for manipulating System Preferences. It has actions for Exporting and Importing preferences from one site to another. It can also set security-related values to their recommended values for a production environment. After using this page to change any preferences, the application must be restarted in order to clear the cache."],
+                    mainContent: SystemPreferences({})
+                })
+            }
+        }))
+
+        function render() {
+            ReactDOM.render(SystemPreferencesApp(null),
+                document.getElementById("app"))
+        }
+
+        function init() {
+            render()
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

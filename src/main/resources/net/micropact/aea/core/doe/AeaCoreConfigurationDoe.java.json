@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeacoreconfigurationdoe.a5de99ff-5997-41d9-8187-9b98318fde0b",
+  "description" : "AeaCoreConfigurationDoe",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "AeaCoreConfigurationDoe",
+  "packageBusinessKey" : "package.doe.0b43c896-1e5f-45ca-aa7f-15e44f89726f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

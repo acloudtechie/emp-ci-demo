@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.organizationalUnitImport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.orgunitimportcontroller.e466577e-905c-415d-8b65-9b4d0908425c",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Organizational Unit Import",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Organizational Unit Import",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.orgunitimportview.e7986548-eb13-4c7b-b5c8-c569afbabe0a"
+}

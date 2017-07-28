@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - View Mutable Read Only Fields</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <style type="text/css">
+            table.grid{
+                width: auto;
+            }
+        </style>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var fields = $fields
+        
+        var ViewMutableReadOnlyFields = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.SimpleHeaderTableGrid({
+                    headers: ["Data Object", "Form Name", "Element Name"],
+                    tbody: React.DOM.tbody(null,
+                            fields.map(function(field, i){
+                                return React.DOM.tr({key: i},
+                                        React.DOM.td(null, 
+                                                React.DOM.a({href: "cfg.dataobject.update.request.do?id=" + encodeURIComponent(field.DATA_OBJECT_ID),
+                                                    target: "_blank"}, 
+                                                    field.OBJECT_NAME)),
+                                        React.DOM.td(null,
+                                                React.DOM.a({href: "cfg.ui.FormDesigner.do?method=getView&id=" + encodeURIComponent(field.DATA_FORM_ID),
+                                                    target: "_blank"}, 
+                                                    field.FORM_NAME)),
+                                        React.DOM.td(null, field.FORM_CONTROL_NAME))
+                            }))
+                })
+            }
+        }))
+        
+        var ViewMutableReadOnlyFieldsApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "View Mutable Read Only Fields",
+                    instructions: ["This page displays fields which are marked as Mutable Read Only fields in the Form Designer.",
+                                   "All Read Only fields were migrated as Mutable as part of the entellitrak 3.20.1.0.0 upgrade.",
+                                   "Any Read Only fields which do not need to be Mutable should be changed to Immutable."],
+                    mainContent: ViewMutableReadOnlyFields({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(ViewMutableReadOnlyFieldsApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

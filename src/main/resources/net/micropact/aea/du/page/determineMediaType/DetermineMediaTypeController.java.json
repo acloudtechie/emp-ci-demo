@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.determinemediatypecontroller.2fc07b61-e3bb-4fe4-85ff-a64f92f10ae5",
+  "description" : "DetermineMediaTypeController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DetermineMediaTypeController",
+  "packageBusinessKey" : "package.determineMediaType.7ae26276-0df4-4b6b-b01d-dce7226a326a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

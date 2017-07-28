@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.page.objectImport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.controller.16217879-e0fb-4ceb-b8ec-7e254a8de89d",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "AEA - Page - Object Import",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - Page - Object Import",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.view.72bba1bf-4cc8-4f49-92d9-9cd6d281c961"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.getaccessiblecontroller.15419d2b-d464-49cd-934d-c94b7be41104",
+  "description" : "GetAccessibleController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "GetAccessibleController",
+  "packageBusinessKey" : "package.getAccessible.2fdebb4e-4f28-46cf-8b11-104357875a2b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

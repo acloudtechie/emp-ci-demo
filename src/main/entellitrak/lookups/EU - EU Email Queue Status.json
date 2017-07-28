@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.euEuEmailQueueStatus",
+  "dataObjectBusinessKey" : "object.euEmailQueueStatus",
+  "description" : "EU - EU Email Queue Status",
+  "displayDataElementBusinessKey" : "object.euEmailQueueStatus.element.name",
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "DATA_OBJECT_LOOKUP",
+  "name" : "EU - EU Email Queue Status",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : null
+}

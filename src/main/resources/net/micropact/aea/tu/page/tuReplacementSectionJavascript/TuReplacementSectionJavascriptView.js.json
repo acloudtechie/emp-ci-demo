@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.tureplacementsectionjavascriptview.8eac1dc7-af93-4297-b3cd-ad83a00afbf0",
+  "description" : "TuReplacementSectionJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "TuReplacementSectionJavascriptView",
+  "packageBusinessKey" : "package.tuReplacementSectionJavascript.6896bb5c-c7cf-40b7-859f-38161456b21f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,18 @@
+{
+  "businessKey" : "object.complaint.displayMapping.65793",
+  "dataFormBusinessKey" : "object.complaint.form.complaintDefaultForm",
+  "dataObjectBusinessKey" : "object.complaint",
+  "dataViewBusinessKey" : null,
+  "description" : "Form becomes read only for eFilers after creation",
+  "disableForm" : false,
+  "disableView" : false,
+  "etpStateBusinessKey" : "object.complaint.state.interim",
+  "evaluationOrder" : 3,
+  "evaluationScriptObjectBusinessKey" : null,
+  "name" : "Efiler - Read Only",
+  "processDataObjectBusinessKey" : "object.complaint",
+  "readOnlyForm" : true,
+  "roleBusinessKey" : "role.efiler",
+  "useDefaultForm" : false,
+  "useDefaultView" : true
+}

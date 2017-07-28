@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.datadictionaryview.fcf09a98-afe8-4f3b-9d7b-78bd24cc4947",
+  "description" : "DataDictionaryView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "DataDictionaryView",
+  "packageBusinessKey" : "package.dataDictionary.8e33608d-f003-4177-bd82-29f90e132bc8",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfdaoservice.56573b87-d12f-4b39-a370-0634c9863d34",
+  "description" : "RfDaoService",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfDaoService",
+  "packageBusinessKey" : "package.service.f06b2c56-685e-4c4e-b7a2-32b095596055",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfscriptimpl.62aea830-f0ed-40cb-aacd-b2201d65dc77",
+  "description" : "RfScriptImpl",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfScriptImpl",
+  "packageBusinessKey" : "package.dao.24096f08-6cac-4044-9974-f24950b92903",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.codesearchcontroller.d83ee3a9-2e80-4128-8b40-471c8ec6a2ff",
+  "description" : "CodeSearchController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CodeSearchController",
+  "packageBusinessKey" : "package.codeSearch.8e9b3300-38dc-4bcf-a609-6b8aa9b17872",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

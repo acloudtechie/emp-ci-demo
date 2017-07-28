@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.trackeddataobjectgraphajaxcontroller.7a3c253d-82d8-48db-b3ad-702c3e2459fd",
+  "description" : "TrackedDataObjectGraphAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "TrackedDataObjectGraphAjaxController",
+  "packageBusinessKey" : "package.trackedDataObjectGraphAjax.30c337ff-07da-4b7d-83db-04db3a19bd06",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

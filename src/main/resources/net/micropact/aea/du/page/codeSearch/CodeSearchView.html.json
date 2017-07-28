@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.codesearchview.2e8f475b-8370-450a-8033-1f5b9bea6a34",
+  "description" : "CodeSearchView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CodeSearchView",
+  "packageBusinessKey" : "package.codeSearch.8e9b3300-38dc-4bcf-a609-6b8aa9b17872",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

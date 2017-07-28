@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ajaxgetrfparametertypes.284f0b53-5726-45ba-ba92-bae2940323bf",
+  "description" : "AjaxGetRfParameterTypes",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "AjaxGetRfParameterTypes",
+  "packageBusinessKey" : "package.ajaxGetRfParameterTypes.68abdf28-d7b5-420c-af1f-659b1a7c3c7d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

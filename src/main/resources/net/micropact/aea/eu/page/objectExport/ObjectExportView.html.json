@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.objectexportview.7af94951-84de-4ba7-b565-b43463032912",
+  "description" : "ObjectExportView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ObjectExportView",
+  "packageBusinessKey" : "package.objectExport.26b24197-944b-42f0-9a89-f9bca6240db0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

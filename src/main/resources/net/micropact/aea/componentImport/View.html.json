@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.view.72bba1bf-4cc8-4f49-92d9-9cd6d281c961",
+  "description" : "View",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "View",
+  "packageBusinessKey" : "package.componentImport.f07f5dec-925c-4df9-810a-8f49f1c00fc4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

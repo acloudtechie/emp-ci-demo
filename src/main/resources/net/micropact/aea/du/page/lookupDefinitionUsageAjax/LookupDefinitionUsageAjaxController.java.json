@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookupdefinitionusageajaxcontroller.43e4ab85-67bd-48b5-8e26-65bb6fe3ce4a",
+  "description" : "LookupDefinitionUsageAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "LookupDefinitionUsageAjaxController",
+  "packageBusinessKey" : "package.lookupDefinitionUsageAjax.f656f070-317d-4e95-b034-60fcf96d175c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

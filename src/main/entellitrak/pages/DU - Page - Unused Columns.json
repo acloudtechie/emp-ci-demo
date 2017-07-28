@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.unusedColumns",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.unusedcolumnscontroller.7461b3a1-56b2-49dc-bc06-3ee8737f9008",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Unused Columns",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Unused Columns",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.unusedcolumnsview.e51a7012-6c42-4fd9-9979-5c3e4008a135"
+}

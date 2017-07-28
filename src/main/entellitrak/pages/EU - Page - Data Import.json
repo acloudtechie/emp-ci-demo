@@ -1,0 +1,21 @@
+{
+  "businessKey" : "eu.page.objectImport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.objectimportcontroller.d724dddb-bb6a-4e8b-bb51-60f666e72476",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "EU - Page - Data Import",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "EU - Page - Data Import",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.objectimportview.afde1ad4-61a5-4ecd-a87a-a03e47cc9777"
+}

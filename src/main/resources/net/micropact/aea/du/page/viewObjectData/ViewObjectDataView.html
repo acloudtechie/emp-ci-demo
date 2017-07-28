@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - View Object Data</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <style type="text/css">
+        form > div {
+            display: table-row;
+        }
+        
+        form > div > *{
+            display: table-cell;
+        }
+    
+        form label{
+            padding-right: 0.5em;
+        }
+        
+        .collapsed {
+            display: none;
+        }
+        
+        .elements:hover{
+            background-color: #ddd;
+        }
+        
+        .elements{
+            display: inline-table;
+        }
+        
+        .elements > div{
+            display: table-row;
+        }
+        
+        .elements > div:hover{
+            background-color: #bbb;
+        }
+        
+        .elements > div > *{
+            display: table-cell;
+        }
+        
+        .elements > div > label:first-child{
+            font-weight: bold;
+            padding: 0.1em 1em 0.1em 0;
+        }
+        
+        ul.multivalue{
+            padding-left: 0;
+        }
+        
+        ul.multivalue > li{
+            display: inline;
+        }
+        
+        ul.multivalue > li:not(:first-child):before{
+            content: ", ";
+        }
+        
+        .toggleHeader{
+            cursor: pointer;
+        }
+        
+        .toggleHeader:hover{
+            background-color: #ddd;
+        }
+        
+        button.toggle{
+            width: 2em;
+            height: 2em;
+            background: no-repeat center center;
+            margin: 0;
+        }
+        
+        button.toggle:hover{
+            background-color: #ddd;
+        }
+
+        button.toggle-uncollapsed{
+            background-image: url("web-pub/images/tree/minus.gif");
+        }
+        
+        button.toggle-collapsed{
+            background-image: url("web-pub/images/tree/plus.gif");
+        }
+        
+        
+        .trackingId{
+            font-style: italic;
+        }
+        
+        .trackingId:before{
+            content: " (";
+        }
+        
+        .trackingId:after{
+            content: ")";
+        }
+        
+        .objectLink{
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        button.objectType{
+            font-size: 1.3em;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0;
+            background-color: inherit;
+            color: #000;
+            cursor: pointer;
+        }
+        
+        ul{
+            list-style-type: none;
+        }
+        
+        .objectInfoHolder{
+            padding-left: 2em;
+        }
+        
+        .children{
+            padding-left: 0;
+        }
+        
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            dataObjects: $dataObjects
+        }
+
+        var Model = (function() {
+            var state = {
+                dataObject: config.dataObjects[0].BUSINESS_KEY,
+                trackingId: "",
+                tree: null
+            }
+
+            function callEventListeners() {
+                init()
+            }
+
+            function getDataObject() {
+                return state.dataObject
+            }
+
+            function setDataObject(dataObjectBusinessKey) {
+                state.dataObject = dataObjectBusinessKey
+                callEventListeners()
+            }
+
+            function getTrackingId() {
+                return state.trackingId
+            }
+
+            function setTrackingId(trackingId) {
+                state.trackingId = trackingId
+                callEventListeners()
+            }
+
+            function loadObject() {
+                jQuery.getJSON("page.request.do", {
+                        page: "du.page.viewObjectData.ajax",
+                        dataObjectKey: state.dataObject,
+                        trackingId: state.trackingId
+                    })
+                    .done(function(response) {
+                        state.tree = response
+                        callEventListeners()
+                    })
+                    .fail(function() {
+                        alert("Could not load data")
+                    })
+            }
+
+            function getObject() {
+                return state.tree
+            }
+
+            function toggleCollapse(childType) {
+                childType.collapsed = !childType.collapsed
+                callEventListeners()
+            }
+
+            function toggleObject(object) {
+                object.collapsed = !object.collapsed
+                callEventListeners()
+            }
+
+            return {
+                getDataObject: getDataObject,
+                setDataObject: setDataObject,
+                getTrackingId: getTrackingId,
+                setTrackingId: setTrackingId,
+
+                loadObject: loadObject,
+                getObject: getObject,
+
+                toggleCollapse: toggleCollapse,
+                toggleObject: toggleObject
+            }
+        }())
+
+        function InputForm() {
+            return React.DOM.form({onSubmit: function(event){
+                event.preventDefault()
+            }},
+                React.DOM.div(null,
+                    React.DOM.label(null, "Data Object"),
+                    React.DOM.select({
+                            value: Model.getDataObject(),
+                            onChange: function(e) {
+                                Model.setDataObject(e.target.value)
+                            }
+                        },
+                        config.dataObjects.map(function(dataObject) {
+                            return React.DOM.option({
+                                    key: dataObject.BUSINESS_KEY,
+                                    value: dataObject.BUSINESS_KEY
+                                },
+                                dataObject.LABEL)
+                        }))),
+                React.DOM.div(null,
+                    React.DOM.label(null, "Tracking Id"),
+                    React.DOM.input({
+                        type: "text",
+                        value: Model.getTrackingId(),
+                        onChange: function(event) {
+                            Model.setTrackingId(event.target.value)
+                        }
+                    })),
+                React.DOM.button({
+                        type: "submit",
+                        onClick: function(event) {
+                            Model.loadObject()
+                        }
+                    },
+                    "View"))
+        }
+
+        function ElementValue(value){
+            var reactElement
+            
+            if(Array.isArray(value)){
+                reactElement = React.DOM.ul({className: "multivalue"},
+                        value.map(function(val, i){
+                            return React.DOM.li({key: i}, val)
+                        }))
+            }else{
+                reactElement = React.DOM.label(null, value)
+            }
+            
+            return reactElement
+        }
+        
+        function ElementsView(trackingId, elements) {
+            return React.DOM.div({
+                    className: "elements"
+                },
+                React.DOM.div(null,
+                        React.DOM.label(null, "trackingId"),
+                        ElementValue(trackingId)),
+                elements.map(function(element) {
+                    return React.DOM.div({
+                            key: element.elementBusinessKey,
+                        },
+                        React.DOM.label(null, element.name),
+                        ElementValue(element.value))
+                }))
+        }
+
+        function TreeView(object) {
+            var collapsed = object.collapsed
+            return React.DOM.div({
+                    className: "object"
+                },
+                    Toggle(collapsed, function(){Model.toggleObject(object)}),
+                React.DOM.a({
+                    className: "objectLink",
+                        "href": "workflow.do?dataObjectKey=" + encodeURIComponent(object.dataObjectKey) + "&trackingId=" + encodeURIComponent(object.trackingId),
+                        target: "_blank"
+                    },
+                    React.DOM.span({className: "objectType"}, object.name)/*,
+                    React.DOM.span({className: "trackingId"}, object.trackingId)*/),
+                React.DOM.div({
+                        className: "objectInfoHolder" + (collapsed ? " collapsed" : "")
+                    },
+                    ElementsView(object.trackingId, object.elements),
+                    ChildrenView(object.children)))
+        }
+
+        function ChildrenView(children) {
+            return children === null ?
+                null :
+                React.DOM.ul({
+                        className: "children"
+                    },
+                    children.map(function(childType) {
+                        var collapsed = childType.collapsed
+                        var hasChildren = childType.objects.length > 0
+                        var toggleFn = function(){Model.toggleCollapse(childType)}
+                        
+                        return hasChildren ?
+                            React.DOM.li({
+                                    key: childType.businessKey
+                                },
+                                React.DOM.div({className: "toggleHeader"},
+                                Toggle(collapsed, toggleFn),
+                                React.DOM.button({className: "objectType",
+                                    onClick: toggleFn}, 
+                                        childType.name,
+                                        React.DOM.span({className: "aea-core-count"}, childType.objects.length))),
+                                React.DOM.ul({
+                                        className: "childTypes" + (collapsed ? " collapsed" : "")
+                                    },
+                                    childType.objects.map(function(child) {
+                                        return React.DOM.li({
+                                                key: child.trackingId
+                                            },
+                                            TreeView(child))
+                                    }))) :
+                            null
+                    }))
+        }
+        
+        function Toggle(collapsed, callback){
+            return React.DOM.button({type: "button",
+                className: "toggle " + (collapsed ? "toggle-collapsed" : "toggle-uncollapsed"),
+                onClick: function(event){
+                    event.preventDefault()
+                    callback()
+                }},
+                collapsed ? "" : "")
+        }
+        
+        var ViewObject = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null,
+                    InputForm(),
+                    ChildrenView(Model.getObject()))
+            }
+        }))
+
+        var ViewObjectApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "View Object Data",
+                    instructions: ["This page can be used to view a BTO and all of its descendents in a single page. It shows the values stored in the database for all elements and does not currently decode lookups.",
+                                   "This page can hopefully save some time when debugging issues since it may save writing database queries to get the values on objects or elements not available through the front-end."],
+                    mainContent: ViewObject({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(ViewObjectApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

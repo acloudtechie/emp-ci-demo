@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Mismatched Column Types</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var badElements = $badElements;
+        
+        var MismatchedColumnTypes = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.table({className: "grid aea-core-grid"},
+                		React.DOM.thead(null,
+                				React.DOM.tr(null,
+                						React.DOM.th(null, "Data Object Name"),
+                						React.DOM.th(null, "Data Element Name"),
+                						React.DOM.th(null, "Data Element Type")/*,
+                						React.DOM.th(null, "Database Column Type")*/)),
+                		React.DOM.tbody(null, badElements.map(function(element, i){
+                			return React.DOM.tr({key: i},
+                					React.DOM.td(null, element.DATAOBJECTNAME),
+                					React.DOM.td(null, element.DATAELEMENTNAME),
+                					React.DOM.td(null, element.ELEMENTTYPENAME)/*,
+                					React.DOM.td(null, element.COLUMNTYPE)*/)
+                		})))
+            }
+        }))
+        
+        var MismatchedColumnTypesApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Mismatched Column Types",
+                    instructions: 
+                        React.DOM.div(null,
+                                ["This page attempts to display discrepancies between entellitrak data types and database column types.",
+                                 "It uses the currently deployed tracking configuration.",
+                                 "Just because an element is listed here does not mean that your site needs to be fixed.",
+                                 "For instance lookups do not let you choose a length in entellitrak so the database may deliberately have a different value than entellitrak.",
+                                 "This page is still being tested so feedback is appreciated."].map(function(note, i){
+                                     return React.DOM.p({key: i}, note)
+                                 }), 
+                                 React.DOM.p(null, React.DOM.strong(null, "Note: This page has not been updated for Data Type Plugins"))),
+                    mainContent: MismatchedColumnTypes({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(MismatchedColumnTypesApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

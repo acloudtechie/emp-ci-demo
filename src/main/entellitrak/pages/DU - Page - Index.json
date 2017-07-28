@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.index",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaulthtmlcontroller.76cf7c84-2e19-46b0-b017-b53beeba2122",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "This page contains links to the other Developer Utility pages. It is intended to be Displayed on the Home screen of Administrators",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Index",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.indexview.cb0dc653-f6be-4c92-b194-a97f9896d201"
+}

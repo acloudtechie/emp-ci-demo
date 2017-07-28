@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.twowaymultiselectfactory.7b36aaaf-6675-43de-b6ae-6eee4e8c45e4",
+  "description" : "TwoWayMultiselectFactory",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "TwoWayMultiselectFactory",
+  "packageBusinessKey" : "package.twoWayMultiselect.e0286f64-8520-49b0-b59f-a76dfa95e01e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+    <head>
+    	<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    	<title>User Registration</title>
+    	<link rel="stylesheet" media="screen" href="themes/default/web-pub/page-resources/entellitrak/signon/login.css"/>
+    	<style type="text/css">
+    	
+    		#login input[type="text"], #login input[type="password"]{
+    			height: 28px;
+    		}
+    		
+    		#inputs td{
+    			padding: 0px;
+    		}
+    	
+    	</style>
+    </head>
+	<body>
+		<div id="content" style="width: 22em;">
+			<div id="login">
+				<img src='page.request.do?page=page.loginLogo' style='height: 90px;'>
+				<p class="policy">User Registration</p>
+				<br/>
+				#if($!success)
+				<label>Your username is $!{username}. Navigate to the Sign On page to log in.</label>
+				<br/><br/>
+				#else
+				#if($!errors)
+					#foreach($!error in $!errors)
+					#if($!error == 'This Account Name is already in use.')
+					<font color="red" style="font-weight: bold;">This email address is already associated with a user account. Use the Reset Password link on the Sign On page, if needed.</font>
+					#else
+					<font color="red" style="font-weight: bold;">$!error</font>
+					#end
+					<br/><br/>
+					#end
+				#end
+				
+				<form action="page.request.do?page=page.efilerRegistration" method="post">
+					<input type="hidden" id="createUser" name="createUser" value="true">
+					<table id="inputs" style="font-size: 12.8px;">
+						<tr><td colspan="2"><label for="firstName">First&nbsp;Name</label><td></tr>
+						<tr>
+							<td><input id="firstName" name="firstName" type="text"/></td>
+							<td><img src="themes/default/web-pub/images/icons/required.gif" title="Required" alt="Required"></td>
+						</tr>
+						<tr><td colspan="2"><label for="lastName">Last&nbsp;Name</label><td></tr>
+						<tr>
+							<td><input id="lastName" name="lastName" type="text"/></td>
+							<td><img src="themes/default/web-pub/images/icons/required.gif" title="Required" alt="Required"></td>
+						</tr>
+						<tr><td colspan="2"><label for="email">Email&nbsp;Address</label><td></tr>
+						<tr>
+							<td><input id="email" name="email" type="text"/></td>
+							<td><img src="themes/default/web-pub/images/icons/required.gif" title="Required" alt="Required"></td>
+						</tr>
+						<tr><td colspan="2"><label for="password">Password</label><td></tr>
+						<tr>
+							<td><input id="password" name="password" type="password"/></td>
+							<td><img src="themes/default/web-pub/images/icons/required.gif" title="Required" alt="Required"></td>
+						</tr>
+						<tr><td colspan="2"><label for="passwordConfirm">Confirm&nbsp;Password</label><td></tr>
+						<tr>
+							<td><input id="passwordConfirm" name="passwordConfirm" type="password"/></td>
+							<td><img src="themes/default/web-pub/images/icons/required.gif" title="Required" alt="Required"></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td><input type="submit" class="button" value="Submit"/></td>
+							<td><a href="login.request.do" class="button">Back&nbsp;to&nbsp;Sign&nbsp;On</a></td>
+						</tr>
+					</table>
+				</form>
+				#end
+				#if($!success)
+				<a href="login.request.do" class="button">Back&nbsp;to&nbsp;Sign&nbsp;On</a>
+				#end
+			</div>
+		</div>
+	</body>
+</html>

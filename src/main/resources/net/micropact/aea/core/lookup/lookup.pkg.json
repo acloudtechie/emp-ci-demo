@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.lookup.de76c125-9fa6-4336-8202-44db11e67683",
+  "name" : "lookup",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.core.a5e06a3b-5da7-43d0-83b1-8a5750f93ada",
+  "workspaceName" : "system"
+}

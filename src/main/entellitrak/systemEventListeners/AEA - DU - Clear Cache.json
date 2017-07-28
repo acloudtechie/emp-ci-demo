@@ -1,0 +1,12 @@
+{
+  "active" : true,
+  "businessKey" : "net.micropact.aea.du.applyChanges.ClearCache",
+  "createdBy" : "administrator",
+  "createdOn" : "2016-09-27T15:26:27Z",
+  "description" : "Clears the developer cache.\nIf actions are taken which could populate the cache during the Apply Changes (such as running pages) then YOU MAY STILL HAVE TO CLEAR THE CACHE MANUALLY!",
+  "eventType" : "ON_APPLY_CHANGES_COMPLETE",
+  "lastUpdatedBy" : "administrator",
+  "lastUpdatedOn" : "2017-07-28T13:25:53Z",
+  "name" : "AEA - DU - Clear Cache",
+  "scriptObjectBusinessKey" : "script.clearcache.20def568-1110-4c75-b58d-139f27a13d47"
+}

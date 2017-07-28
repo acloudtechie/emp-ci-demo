@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfparametertypeimpl.ad1de89f-105d-4e73-8f4a-36c22eff9c27",
+  "description" : "RfParameterTypeImpl",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfParameterTypeImpl",
+  "packageBusinessKey" : "package.dao.24096f08-6cac-4044-9974-f24950b92903",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Determine Media Type</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <style type="text/css">
+        .mediaType-holder{
+            margin-bottom: 1em;
+        }
+    
+        .mediaType{
+            font-family: "courier new", monospace;
+        }
+        
+        label{
+            display: block;
+            margin-bottom: 1em;
+        }
+        
+        .success, .error{
+            padding: 1em;
+            color: #FFFFFF;
+        }
+        
+        .success{
+            background-color: #009900;
+        }
+        
+        .error{
+            background-color: #ee0000;
+        }
+        
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = $config
+
+        function MediaType() {
+            var mediaType = config.mediaType
+
+            var message = mediaType == null 
+            ? null /*React.DOM.div({className: "error"},
+                    "Please upload a file") */
+                    : React.DOM.div({className: "mediaType-holder success"},
+                                "The media type of the uploaded file is ", 
+                                React.DOM.strong({className: "mediaType"}, mediaType))
+            
+            return React.DOM.div({className: "info"},
+                    message)
+        }
+
+        function Form() {
+            return React.DOM.form({
+                    method: "post",
+                    encType: "multipart/form-data"
+                },
+                React.DOM.input({
+                    type: "hidden",
+                    name: "page",
+                    value: "du.page.determineMediaType"
+                }),
+                React.DOM.label(null,
+                        "File: ",
+                    React.DOM.input({
+                        name: "file",
+                        type: "file"
+                    })),
+                React.DOM.button({className: "submit"}, "Submit"))
+        }
+
+        var DetermineMediaType = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null,
+                    MediaType(), 
+                    Form())
+            }
+        }))
+
+        var DetermineMediaTypeApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Determine Media Type",
+                    instructions: ["This page attempts to determine the media-type that should be specified in the media-type-config.xml file in order to whitelist it."],
+                    mainContent: DetermineMediaType({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(DetermineMediaTypeApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

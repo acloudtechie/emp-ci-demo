@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.form.rfWorkflowEffect.javascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.rfworkfloweffectjavascriptcontroller.22c5c933-6487-48ca-879e-bac95811b114",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "RF - Form - RF Workflow Effect - Javascript",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Form - RF Workflow Effect - Javascript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.rfworkfloweffectjavascriptview.503e4f24-92b3-4eba-8894-b7b713c47d79"
+}

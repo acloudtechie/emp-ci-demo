@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.isystempreferencemigrationservice.f0e7e77c-c8df-4a23-ad7d-43f20b6304c1",
+  "description" : "ISystemPreferenceMigrationService",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ISystemPreferenceMigrationService",
+  "packageBusinessKey" : "package.service.38372b5d-9488-4005-bc7a-1d1a46a1e438",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

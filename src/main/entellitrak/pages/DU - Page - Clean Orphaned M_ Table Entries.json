@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.cleanOrphanedMTableEntries",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cleanorphanedmtableentries.e9f37ae5-2f16-4331-a7e3-f004838a339b",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Clean Orphaned M_ Table Entries",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Clean Orphaned M_ Table Entries",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cleanorphanedmtableentriesview.f122f6f3-6f62-4c6c-b5e5-80ad2e39e824"
+}

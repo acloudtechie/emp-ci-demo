@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developer Utility - Tracked Data Object Graph</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <style>
+    .node {
+        cursor: pointer;
+    }
+    
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+    
+    .node text {
+        font: 10px sans-serif;
+    }
+    
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+    }
+    
+    .wrapper{
+        border: 1px solid #CCCCCC;
+        border-radius: 1em;
+        padding: 1em;
+        margin: 1em;
+        display: inline-block;
+        color: #333333;
+    }
+    
+    </style>
+</head>
+<body>
+    <ul class="aea-core-navigation">
+        <li><a href="home.do">Home</a></li><li class="aea-core-active"><a href="page.request.do?page=du.page.trackedDataObjectGraph">Tracked Data Object Graph</a></li>
+    </ul>
+    <div class="wrapper">
+        <h1>Instructions</h1>
+        <ol>
+            <li>Hover over a node to view information about the object such as its Table and business key</li>
+            <li>Click on an object&apos;s name to open that Object in a new tab</li>
+            <li>Click on a circle to collapse that section of the tree</li>
+        </ol>
+    </div>
+    
+    <div id="svg-holder"></div>
+    
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+    <script src="web-pub/aearchitecture/d3/d3.min.js"></script>
+    <script>
+       "use strict";
+    
+        /* This function adds an item to a tree. The parent already has to exist. */
+        function add(tree, item) {
+            if (item.PARENT_OBJECT_ID == tree.name) {
+                tree.children.push({
+                    name : item.DATA_OBJECT_ID,
+                    label : item.LABEL,
+                    etkName : item.NAME,
+                    objectName : item.OBJECT_NAME,
+                    tableName : item.TABLE_NAME,
+                    businessKey : item.BUSINESS_KEY,
+                    children : []
+                })
+                return true;
+            } else {
+                for ( var i = 0; i < tree.children.length; i++) {
+                    if (add(tree.children[i], item)) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /* This function converts the JSON response from the ajax page into a tree that d3 expects*/
+        function convertJson(json) {
+            var tree = {
+                name : null,
+                label : null,
+                etkName : null,
+                objectName : null,
+                tableName : null,
+                businessKey : null,
+                children : []
+            }
+
+            /* This is a pretty inefficient algorithm, however, it works and maintains LIST_ORDER and only runs once. */
+
+            while (json.length > 0) {
+                for ( var i = 0; i < json.length; i++) {
+                    if (add(tree, json[i])) {
+                        json.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+
+            return tree;
+        }
+        
+        var i = 0, duration = 750;
+        var pathWidth = 200;
+        
+        var root;
+        var width;
+        var height;
+        var svg;
+        var tree;
+        
+        function calculateMaxBreadth(rootNode){
+            
+            var breadths = [];
+            var max = 0;
+            
+            function nodeHandler(node, depth){
+                var currentCount = breadths[depth];
+                breadths[depth] = currentCount === undefined ? 1 : (currentCount + 1);
+                
+                jQuery(node.children).each(function(i, child){
+                    nodeHandler(child, depth + 1);
+                })
+            }
+            
+            nodeHandler(rootNode, 0);
+            
+            jQuery(breadths).each(function(i, value){
+                max = Math.max(max, value);
+            })
+            
+            return max;
+        }
+                
+        function initializeSvg(){
+            
+            var totalHeight = 40 + (30 * calculateMaxBreadth(root));
+            var totalWidth = 2000; // This could be calculated
+            
+            var margin = {
+                    top : 20,
+                    right : 120,
+                    bottom : 20,
+                    left : 160
+                };
+            
+            width = totalWidth - margin.right - margin.left;
+            height = totalHeight - margin.top - margin.bottom;
+            
+            tree = d3.layout.tree().size([ height, width ]);
+            
+            /* Initialize the SVG */
+            svg = d3.select("#svg-holder").append("svg").attr("width",
+                    width + margin.right + margin.left).attr("height",
+                    height + margin.top + margin.bottom).append("g").attr(
+                    "transform",
+                    "translate(" + (margin.left - pathWidth) + "," + margin.top + ")");
+            
+            d3.select(self.frameElement).style("height", totalHeight + "px");
+            
+        }
+
+        var diagonal = d3.svg.diagonal().projection(function(d) {
+            return [ d.y, d.x ];
+        });
+
+        /* Initialize the ajax call to populate the graph */
+        d3.json('page.request.do?page=du.page.trackedDataObjectGraph.ajax',
+                function(error, ajaxJson) {
+
+                    root = convertJson(ajaxJson);
+
+                    initializeSvg()
+                    
+                    root.x0 = height / 2;
+                    root.y0 = 0;
+                    
+                    function collapse(d) {
+                        if (d.children.length != 0) {
+                            d._children = d.children;
+                            d._children.forEach(collapse);
+                            d.children = null;
+                        }
+                    }
+
+                    //root.children.forEach(collapse); //This would collapse all the children, but i don't want them collapsed
+                    update(root); //Display the graph for the first time
+                });
+
+        function update(source) {
+
+            // Compute the new tree layout.
+            var nodes = tree.nodes(root).reverse(), links = tree.links(nodes);
+
+            // Normalize for fixed-depth.
+            nodes.forEach(function(d) {
+                d.y = d.depth * pathWidth;
+            });
+
+            // Update the nodes
+            
+            var nodesWithoutRoot = jQuery(nodes).filter(function(i, node){
+                    return node.name}).toArray()
+            
+            var node = svg.selectAll("g.node").data(nodesWithoutRoot, function(d) {
+                return d.id || (d.id = ++i);
+            });
+
+            // Enter any new nodes at the parent's previous position.
+            var nodeEnter = node.enter().append("g")
+                    .attr("class", "node")
+                    .attr(
+                            "transform",
+                            function(d) {
+                                return "translate(" + source.y0 + ","
+                                        + source.x0 + ")";})
+            
+            nodeEnter.append("title")
+                       .text(function(d) {
+                                return 'Label: ' + (d.label || '') + '\n'
+                                        + 'Table: ' + (d.tableName || '')
+                                        + '\n' + 'Name: ' + (d.etkName || '')
+                                        + '\n' + 'Object Name: '
+                                        + (d.objectName || '') + '\n'
+                                        + 'Business Key: '
+                                        + (d.businessKey || '')
+                            })
+
+            nodeEnter.append("circle").attr("r", 1e-6).style("fill",
+                    function(d) {
+                        return d._children ? "lightsteelblue" : "#fff";
+                    })
+                    .on("click", toggleNode);
+
+            nodeEnter.append("text").attr("x", function(d) {
+                return d.children || d._children ? -10 : 10;
+            }).attr("dy", ".35em").attr("text-anchor", function(d) {
+                return d.children || d._children ? "end" : "start";
+            }).text(function(d) {
+                return (d.label || '') /*+ ' (' + (d.tableName || '') + ')'*/; //This is the text for the nodes
+            }).style("fill-opacity", 1e-6)
+            .on('click', openDataObject);
+
+            // Transition nodes to their new position.
+            var nodeUpdate = node.transition().duration(duration).attr(
+                    "transform", function(d) {
+                        return "translate(" + d.y + "," + d.x + ")";
+                    });
+
+            nodeUpdate.select("circle").attr("r", 4.5).style("fill",
+                    function(d) {
+                        return d._children ? "lightsteelblue" : "#fff";
+                    });
+
+            nodeUpdate.select("text").style("fill-opacity", 1);
+
+            // Transition exiting nodes to the parent's new position.
+            var nodeExit = node.exit().transition().duration(duration).attr(
+                    "transform", function(d) {
+                        return "translate(" + source.y + "," + source.x + ")";
+                    }).remove();
+
+            nodeExit.select("circle").attr("r", 1e-6);
+            
+            nodeExit.select("text").style("fill-opacity", 1e-6);
+
+            // Update the links
+            
+            var linksWithoutRoot = jQuery(links).filter(function(i, link){
+                    return link.source.name}).toArray();
+            
+            var link = svg.selectAll("path.link").data(linksWithoutRoot, function(d) {
+                return d.target.id;
+            });
+
+            // Enter any new links at the parent's previous position.
+            link.enter().insert("path", "g").attr("class", "link").attr("d",
+                    function(d) {
+                        var o = {
+                            x : source.x0,
+                            y : source.y0
+                        };
+                        return diagonal({
+                            source : o,
+                            target : o
+                        });
+                    });
+
+            // Transition links to their new position.
+            link.transition().duration(duration).attr("d", diagonal);
+
+            // Transition exiting nodes to the parent's new position.
+            link.exit().transition().duration(duration).attr("d", function(d) {
+                var o = {
+                    x : source.x,
+                    y : source.y
+                };
+                return diagonal({
+                    source : o,
+                    target : o
+                });
+            }).remove();
+
+            // Stash the old positions for transition.
+            nodes.forEach(function(d) {
+                d.x0 = d.x;
+                d.y0 = d.y;
+            });
+        }
+
+        // Toggle children on click.
+        function toggleNode(d) {
+            if (d.children) {
+                d._children = d.children;
+                d.children = null;
+            } else {
+                d.children = d._children;
+                d._children = null;
+            }
+            update(d);
+        }
+        
+        function openDataObject(d){
+            window.open('cfg.dataobject.update.request.do?id='+d.name, '_blank')
+        }
+        
+    </script>
+ 
+    <div id="footer">
+        <div id="copyright">
+            <span>Powered by entellitrak &#x24C7;</span>
+            <img src="themes/default/web-pub/images/logo/entellitrak-icon.gif" title="Powered by entellitrak &#x24C7;" alt="Powered by entellitrak &#x24C7;">
+        </div>
+    </div>
+</body>
+</html>

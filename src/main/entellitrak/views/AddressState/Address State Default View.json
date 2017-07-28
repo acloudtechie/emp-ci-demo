@@ -1,0 +1,51 @@
+{
+  "businessKey" : "object.addressState.view.addressStateDefaultView",
+  "dataObjectBusinessKey" : "object.addressState",
+  "dataViewElements" : [ {
+    "businessKey" : "object.addressState.view.addressStateDefaultView.element.code",
+    "dataElementBusinessKey" : "object.addressState.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.addressState.view.addressStateDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.addressState.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.addressState.view.addressStateDefaultView.element.name",
+    "dataElementBusinessKey" : "object.addressState.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.addressState.view.addressStateDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.addressState.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Address State Listing",
+  "name" : "Address State Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Address State Listing"
+}

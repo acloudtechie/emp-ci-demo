@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transferutility.cf1b1ab6-5dee-4c4b-9f9a-ce6c37c07ec2",
+  "description" : "TransferUtilityView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "TransferUtilityView",
+  "packageBusinessKey" : "package.transferUtility.1a1e8577-dee2-47f0-a7e9-0bc88c468e39",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

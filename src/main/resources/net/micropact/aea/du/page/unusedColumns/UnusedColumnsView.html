@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Developer Utility - Unused Columns</title>
+		
+		<link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+            
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        
+        <style type="text/css">
+            .command{
+                display: block;
+            }
+        </style>
+        
+        <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+            "use strict"
+            
+            var unusedColumnsModel = (function(){
+                var state = {unusedColumns: $unusedColumns}
+                
+                function initialize(){
+                	
+                	state.unusedColumns.sort(function(a, b){
+                		var comp = a.TABLE_NAME.localeCompare(b.TABLE_NAME);
+                        if(comp != 0){
+                            return comp
+                        }else{
+                            return a.COLUMN_NAME.localeCompare(b.COLUMN_NAME)
+                        }
+                	})
+                }
+                
+                initialize()
+                
+                return {
+                	unusedColumns: state.unusedColumns
+                	}
+            }())
+            
+            var UnusedColumns = React.createFactory(React.createClass({
+                render: function(){
+                	var unusedColumns = unusedColumnsModel.unusedColumns
+                	
+                    return React.DOM.table({className: "grid aea-core-grid"},
+                    		React.DOM.thead(null,
+                    				React.DOM.tr(null,
+                    						React.DOM.th(null, "Table"),
+                    						React.DOM.th(null, "Column"),
+                    						React.DOM.th(null, "Drop Query"))),
+                    		React.DOM.tbody(null, unusedColumns.map(function(column, i){
+                    			return React.DOM.tr({key: i},
+                    					React.DOM.td(null, column.TABLE_NAME),
+                    					React.DOM.td(null, column.COLUMN_NAME),
+                                        React.DOM.td(null, 
+                                        		column.indexes.map(function(index, j){
+                                        			return React.DOM.span({key: j,
+                                        				className: "command"},
+                                        					"DROP INDEX " + column.TABLE_NAME + "." + index.NAME +";")
+                                        		}),
+                                        		React.DOM.span({className: "command"},
+                                        				"ALTER TABLE " + column.TABLE_NAME + " DROP COLUMN " + column.COLUMN_NAME + ";")))
+                    		})))
+                }
+            }))
+            
+            var UnusedColumnsApp = React.createFactory(React.createClass({
+                render: function(){
+                    return AeaCoreReactComponents.Application({
+                        title: "Unused Columns",
+                        instructions: ["This page displays columns which appear to have been part of the data model in the past, but do not appear to be part of the data model anymore.",
+                                       "If you believe that there are columns which are showing up which should not, or should show up but are not, please contact System Design."],
+                        mainContent: UnusedColumns({})})
+                }
+            }))
+            
+            jQuery(function(){
+                ReactDOM.render(UnusedColumnsApp(null),
+                           jQuery('.app')[0])})
+            
+        </script>
+    
+    </head>
+    <body>
+        <div class="app"></div>
+    </body>
+</html>

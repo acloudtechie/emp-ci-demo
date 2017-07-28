@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cachefetchdatacontroller.a67babb4-1991-489d-a04c-4aff8fb522bf",
+  "description" : "CacheFetchDataAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CacheFetchDataAjaxController",
+  "packageBusinessKey" : "package.cacheFetchDataAjax.82667570-10e3-44b2-9639-9ad880fe8b0c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

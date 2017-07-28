@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.checkSimpleWorkflowCorruption",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewcorruptedsimpleworkflowcontroller.93a92902-8525-4226-b680-0597e0a048f1",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Check Simple Workflow Corruption",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Check Simple Workflow Corruption",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewcorruptedsimpleworkflowview.301f9f6a-93c7-485c-b2b9-3f09301d84fc"
+}

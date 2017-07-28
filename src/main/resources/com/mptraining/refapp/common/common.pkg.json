@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.common.d27b1af8-e010-4e31-819e-232bcbc16b2e",
+  "name" : "common",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.refapp.0bdca937-dc8c-40c0-9376-7e8af2690bc1",
+  "workspaceName" : "system"
+}

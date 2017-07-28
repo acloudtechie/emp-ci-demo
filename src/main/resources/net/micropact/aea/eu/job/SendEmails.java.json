@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sendemails.1ae9abd3-1f2e-4121-adee-366763bfddcd",
+  "description" : "SendEmails",
+  "handlerType" : "JOB_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "SendEmails",
+  "packageBusinessKey" : "package.job.fa89c155-4f2b-4698-a6b2-2b7815e64392",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

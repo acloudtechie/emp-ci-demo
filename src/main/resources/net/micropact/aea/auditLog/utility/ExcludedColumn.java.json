@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.excludedcolumn.6ea96976-1fd4-4ad0-87a2-c6109973e51f",
+  "description" : "Defines a filtered column for audit logging.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ExcludedColumn",
+  "packageBusinessKey" : "package.utility.6626d93c-1563-49ba-9804-87c072ca8908",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

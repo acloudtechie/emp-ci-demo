@@ -1,0 +1,28 @@
+{
+  "businessKey" : "aea.core.utility.reactComponents",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultjavascriptcontroller.d3996852-5cb5-433c-b3fe-652e6af45fc6",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "AEA - CORE - Utility - React Components",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - CORE - Utility - React Components",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.reactcomponentsview.3e17d16c-a8e0-4bb0-bdcb-e3a55a1a640c"
+}

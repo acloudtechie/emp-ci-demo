@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.temporarysqlforimport.1169d0ee-5fb7-4bfb-8580-ec93dc553efc",
+  "description" : "Dynamically updated SQL used for SQL imports.",
+  "handlerType" : "NONE",
+  "languageType" : "SQL",
+  "name" : "TemporarySqlForImport",
+  "packageBusinessKey" : "package.temp.12927e0b-9c4d-4d06-ba49-249d9402cca3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

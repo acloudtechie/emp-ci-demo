@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.vieworphanedfilesview.5d66d41a-ffa3-4f43-9a05-93786fb9941a",
+  "description" : "ViewOrphanedFilesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ViewOrphanedFilesView",
+  "packageBusinessKey" : "package.viewOrphanedFiles.aff54a64-c5d2-4b4a-af34-2fab34a2a033",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.updateLogViewer",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaulthtmlcontroller.76cf7c84-2e19-46b0-b017-b53beeba2122",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Update Log Viewer",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Update Log Viewer",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.updatelogviewerview.cf8180ef-9317-420b-a2cd-1bbb7a074caa"
+}

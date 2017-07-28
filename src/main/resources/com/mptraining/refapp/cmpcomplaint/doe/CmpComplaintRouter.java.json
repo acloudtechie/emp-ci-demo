@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cmpcomplaintrouter.614110c3-90fe-4eb1-b26a-755799854322",
+  "description" : "Handles business logic for CMP Complaint BTO for each CRUD action",
+  "handlerType" : "DATA_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "CmpComplaintRouter",
+  "packageBusinessKey" : "package.doe.5abff064-d1ce-4285-9106-ecbd926c7f6d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

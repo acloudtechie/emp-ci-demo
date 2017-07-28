@@ -1,0 +1,301 @@
+<html>
+
+<head>
+    <title>View Workflow</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp">
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/editor.css" />
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/component/grid/css/grid.css" />
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/page-resources/entellitrak/rt/page/pageEditor.css" />
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/submodal/subModal.css" />
+    <link media="screen, projection" rel="stylesheet" href="themes/default/web-pub/udm/css/udm-style.css">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript" src='page.request.do?page=aea.form.utilities.javascript'></script>
+
+    <style type="text/css">
+        ul.navigation {
+            padding: 0;
+            margin: 0;
+            display: block;
+            background: black;
+            background: url("themes/default/web-pub/images/topmenu-bg.png") repeat-x scroll center top / 100% 100% #353535;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            line-height: 50px;
+        }
+        
+        ul.navigation>li {
+            display: inline-block;
+            height: 50px;
+        }
+        
+        ul.navigation>li>a {
+            display: inline-block;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        
+        ul.navigation a:link,
+        ul.navigation a:visited,
+        ul.navigation a:active {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        
+        ul.navigation>li>a:hover {
+            background: gray;
+            background: linear-gradient(to bottom, #060908 0%, #616060 100%);
+        }
+        
+        ul.navigation>li.active,
+        ul.navigation>li.active>a:hover {
+            background: #ea2b1b;
+            text-decoration: underline;
+        }
+        
+        body {
+            height: 100%;
+        }
+        
+        #titleDisplay {
+            background-color: #666666;
+            color: #FFFFFF;
+        }
+        
+        #workflowContainer {
+            position: relative;
+            border: solid 1px #CCCCCC;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 10px;
+            z-index: 2000;
+            background-color: #FFFFFF;
+            font-size: 14px;
+            display: none;
+        }
+        
+        #infoDiv {
+            position: relative;
+            border: solid 1px #CCCCCC;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            background-color: #FFFFFF;
+            font-size: 13px;
+            z-index: 1000;
+        }
+        
+        .wrapper {
+            position: absolute;
+            top: 90px;
+            bottom: 0px;
+            width: 100%;
+            border-top: solid 1px #CCCCCC;
+        }
+        
+        iframe {
+            width: 100%;
+            padding: 0;
+            border: 0;
+            height: 100%;
+        }
+        
+        .messageContainerClose {
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            border-radius: 40px !important;
+            color: #333333;
+            cursor: pointer;
+            height: 25px !important;
+            min-width: 25px !important;
+            position: absolute;
+            right: 5px;
+            text-decoration: none !important;
+            width: 25px !important;
+        }
+        
+        .messageContainerClose:hover {
+            background-color: #FFFFFF;
+        }
+        
+        .savedMessage {
+            color: #FFFFFF;
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            height: 25px;
+            margin-right: 0.5em;
+            padding: 50px;
+            position: absolute;
+            right: 45%;
+            text-align: center;
+            text-transform: uppercase;
+            top: 160px;
+            width: 120px;
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        "use strict";
+
+        var workflowId = $rfWorkflowId
+        var rfTransitions = $rfTransitions
+
+        function uniqueBy(array, key) {
+            var returnArray = [];
+            jQuery(array).each(function() {
+                if (AeaFormUtilitiesJavascriptLibrary.filterArray(returnArray, key, this[key]).size() == 0) {
+                    returnArray.push(this)
+                }
+            })
+            return jQuery(returnArray)
+        }
+
+        function buildTransitionFilterDiv() {
+            var uniqueTransitions = uniqueBy(jQuery(rfTransitions).map(function(i, transition) {
+                return {
+                    TRANSITIONID: transition.TRANSITIONID,
+                    TRANSITIONNAME: transition.TRANSITIONNAME,
+                    TRANSITIONCODE: transition.TRANSITIONCODE
+                }
+            }), 'TRANSITIONID')
+            jQuery(uniqueTransitions).map(function(i, transition) {
+                    return jQuery('<div>')
+                        .append(jQuery('<input>')
+                            .prop({
+                                type: 'checkbox',
+                                name: 'activeTransitions',
+                                value: this.TRANSITIONID,
+                                checked: 'true'
+                            })
+                            //.change(refreshTransitions)
+                        )
+                        .append(jQuery('<label>')
+                            .text(transition.TRANSITIONNAME + ' (' + transition.TRANSITIONCODE + ')'))[0]
+                })
+                .appendTo(jQuery('#transitionFormDiv'))
+        }
+
+        function refreshTransitions() {
+            jQuery(jQuery('iframe')[0].contentWindow.rfTransitions).each(function(i, rfTransition) {
+                if (rfTransition.connection) {
+                    if (jQuery('[name=activeTransitions][value=' + rfTransition.TRANSITIONID + ']:checked').size() == 0) {
+                        rfTransition.connection.setVisible(false);
+                    } else {
+                        rfTransition.connection.setVisible(true);
+                    }
+                }
+            })
+        }
+
+        jQuery(function() {
+
+            jQuery('#infoDiv').hide();
+
+            buildTransitionFilterDiv()
+
+            /* Setup the save layout button */
+            jQuery('#saveDiv')
+                .click(function() {
+                    /*The DTD for this XML is explained in the viewWorkflow.ajaxHandler page */
+
+                    var xml = jQuery('<document>')
+                        .append(jQuery('<rf-states>')
+                            .append(
+                                jQuery(jQuery('iframe')[0].contentWindow.rfStates)
+                                .map(function() {
+                                    return jQuery('iframe')[0].contentWindow.jQuery('#rfState_' + this.ID)[0]
+                                })
+                                .map(function() {
+                                    return jQuery('<rf-state>')
+                                        .attr({
+                                            'rf-state-id': jQuery(this).prop('id').substring(8),
+                                            'x-coordinate': jQuery(this).css('left'),
+                                            'y-coordinate': jQuery(this).css('top')
+                                        })[0]
+                                }))
+                            .append(jQuery('<rf-start-state>')
+                                .attr({
+                                    'x-coordinate': jQuery('iframe')[0].contentWindow.jQuery('#rfStartState').css('left'),
+                                    'y-coordinate': jQuery('iframe')[0].contentWindow.jQuery('#rfStartState').css('top'),
+                                    'workflow-id': workflowId
+                                }))
+                        ).html()
+                    jQuery.post('page.request.do', {
+                            page: 'rf.viewWorkflow.ajaxHandler',
+                            xmlData: xml
+                        },
+                        function() {
+                            jQuery('#messageContainer').show();
+                            jQuery('#messageContainer').delay(800).fadeOut(400);
+                        }
+                    )
+                    return false;
+                })
+
+            jQuery('#closeForm').click(function() {
+                jQuery('#workflowContainer').hide()
+                refreshTransitions()
+            });
+            jQuery('#showForm').click(function() {
+                jQuery('#workflowContainer').toggle();
+                refreshTransitions()
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <ul class="navigation">
+        <li><a href="home.do">Home</a></li>
+        <li class="active"><a href="page.request.do?page=rf.page.viewWorkflow&rfWorkflowId=${rfWorkflowId}">View Workflow - $esc.escapeHtml($workflowInfo.get("C_CODE"))</a></li>
+    </ul>
+    <div id="messageContainer" class="savedMessage">Page Saved</div>
+    <div id="commentWrapper">
+        <div id="comment">
+            <div id="toolbarContainer">
+                <div id="toolbar">
+                    <ul>
+                        <li>
+                            <a id="saveDiv" accesskey="s">
+                                <img border="0" title="Save Layout" src="themes/default/web-pub/images/icons/16x16/disk_blue.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a id="showForm" accesskey="t">
+                                <img border="0" title="Toggle Transitions" src="themes/default/web-pub/images/icons/16x16/text_rich_marked.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="workflowContainer">
+                <button id="closeForm" class="messageContainerClose">X</button>
+                <div style="font-weight: bold; margin: 0px 0px 5px 0px;">Available Transitions</div>
+                <div id="transitionFormDiv"></div>
+            </div>
+        </div>
+    </div>
+    <div id="infoDiv"></div>
+    <div class="wrapper"><iframe src="page.request.do?page=rf.page.viewWorkflow.graph&rfWorkflowId=${rfWorkflowId}"></iframe></div>
+
+    <div id="footer">
+        <div id="copyright">
+            <span>Powered by entellitrak &#x24C7;</span>
+            <img src="themes/default/web-pub/images/logo/entellitrak-icon.gif" title="Powered by entellitrak &#x24C7;" alt="Powered by entellitrak &#x24C7;">
+        </div>
+    </div>
+</body>
+
+</html>

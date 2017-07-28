@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.exceptionutilswrapper.cbb46d4c-30dc-4a05-9d1c-e95e578470ab",
+  "description" : "ExceptionUtilsWrapper",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ExceptionUtilsWrapper",
+  "packageBusinessKey" : "package.wrappedAPIs.abbea5cf-10a7-4c50-9faa-e8b3b194d0d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

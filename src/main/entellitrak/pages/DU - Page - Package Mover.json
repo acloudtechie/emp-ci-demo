@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.packageMover",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.packagemovercontroller.5046cc70-55af-48d3-9faf-7b301d59eb5c",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Package Mover",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Package Mover",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.packagemoverview.991c0916-8d59-4c91-ac53-26d2bf3f2c3a"
+}

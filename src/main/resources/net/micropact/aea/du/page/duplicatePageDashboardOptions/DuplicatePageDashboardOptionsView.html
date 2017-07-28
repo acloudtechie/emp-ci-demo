@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Duplicate Page Dashboard Options</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var config = {
+                duplicateRecords: $duplicateRecords
+        }
+        
+        var DashboardOptions = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div(null,
+                        React.DOM.button({type: "button",
+                            onClick: function(event){
+                                jQuery.getJSON("page.request.do?page=du.page.duplicatePageDashboardOptionsClean")
+                                .done(function(){
+                                    alert("Duplicates removed")
+                                }).fail(function(){
+                                    alert("Could not remove duplicates")
+                                })
+                            }},
+                                "Clean Duplicates"),
+                        AeaCoreReactComponents.SimpleHeaderTableGrid({
+                            className: "aea-core-grid",
+                            headers: ["User", "Page", "Number of Records"],
+                            tbody: React.DOM.tbody(null,
+                                    config.duplicateRecords.map(function(record, i){
+                                        return React.DOM.tr({key: i},
+                                                React.DOM.td(null, record.USERNAME),
+                                                React.DOM.td(null, record.BUSINESS_KEY),
+                                                React.DOM.td(null, record.COUNT))
+                                    }))
+                        }))
+            }
+        }))
+        
+        var DashboardOptionsApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Duplicate Page Dashboard Options",
+                    instructions: ["This page identifies duplicate records in the ETK_PAGE_DASHBOARD_OPTION table.",
+                                   "These duplicate records can be introduced if the user double-clicks the Save button on the Page Dashboard Options screen."],
+                    mainContent: DashboardOptions({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(DashboardOptionsApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

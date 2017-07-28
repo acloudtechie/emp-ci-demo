@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.formvalidationexception.238fe78f-7ad7-4575-bb4e-a38bdb4eb53c",
+  "description" : "FormValidationException",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "FormValidationException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

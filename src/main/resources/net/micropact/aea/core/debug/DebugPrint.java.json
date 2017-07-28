@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.debugprinting.3a8b4c25-c9f2-4f0d-b011-85eb909c248d",
+  "description" : "DebugPrint",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DebugPrint",
+  "packageBusinessKey" : "package.debug.df8e946a-55a9-428e-8a40-e04a9568e03f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

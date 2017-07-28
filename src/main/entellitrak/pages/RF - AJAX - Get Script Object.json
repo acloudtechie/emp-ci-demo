@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.ajax.getScriptObject",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.ajaxgetscriptobjectcontroller.c28c7388-0b29-4cde-8681-a423155c52a1",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "RF - AJAX - Get Script Object",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - AJAX - Get Script Object",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

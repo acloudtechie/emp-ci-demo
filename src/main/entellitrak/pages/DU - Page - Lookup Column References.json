@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.lookupColumnReferences",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaulthtmlcontroller.76cf7c84-2e19-46b0-b017-b53beeba2122",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Lookup Column References",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Lookup Column References",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.lookupcolumnreferencesview.9c02dcdf-2eed-4880-97be-221d8548fb95"
+}

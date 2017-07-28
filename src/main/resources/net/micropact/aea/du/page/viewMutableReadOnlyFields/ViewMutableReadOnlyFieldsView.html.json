@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewmutablereadonlyfieldsview.4d0c7209-4b22-490b-97dd-6933feb10d8a",
+  "description" : "ViewMutableReadOnlyFieldsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ViewMutableReadOnlyFieldsView",
+  "packageBusinessKey" : "package.viewMutableReadOnlyFields.3d6be19a-e2bb-4e4d-af5c-515f1c7f4371",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

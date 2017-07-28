@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cmpcomplaintdao.f1abdd09-9a0d-4c6a-a3bc-6e0ef23d3d68",
+  "description" : "Handles SQL calls regarding the CmpComplaint object",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "CmpComplaintDao",
+  "packageBusinessKey" : "package.dao.51564cd7-c8b3-4fff-9a4c-9ca51e8492a1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rflookupjavascriptview.bb330337-bb3d-451f-8b73-7fca6a753500",
+  "description" : "RfLookupJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "RfLookupJavascriptView",
+  "packageBusinessKey" : "package.rfLookupJavascript.f955ba3d-1845-4674-9342-18b7ff1868d4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

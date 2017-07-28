@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.formComplaintSacAssignedCountAjax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.sacassignedcountcontroller.e76bbb30-e652-45b2-84e7-a2528a31392c",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "Form - Complaint - SAC Assigned Count - AJAX",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Form - Complaint - SAC Assigned Count - AJAX",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.sacassignedcountview.d8e53524-dded-41e5-b1c5-85eb409ff13a"
+}

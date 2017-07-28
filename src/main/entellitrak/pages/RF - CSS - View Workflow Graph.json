@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.css.viewWorkflowGraph",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultcsscontroller.4c4fffef-8895-447d-a228-c25dc4a97c23",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "RF - CSS - View Workflow Graph",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - CSS - View Workflow Graph",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cssviewworkflowgraphview.7d8714d0-1df6-4b9a-90f1-ef7b5f3bd2f0"
+}

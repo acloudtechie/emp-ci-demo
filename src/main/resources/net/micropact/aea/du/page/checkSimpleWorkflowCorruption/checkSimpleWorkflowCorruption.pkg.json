@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.checkSimpleWorkflowCorruption.6752a020-14f3-49bb-a915-3c9e71bd4fce",
+  "name" : "checkSimpleWorkflowCorruption",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.page.f630bb4e-78de-4837-b2f3-611dcf3e08e0",
+  "workspaceName" : "system"
+}

@@ -1,0 +1,28 @@
+{
+  "businessKey" : "eu.form.euEmailTemplate.javascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultjavascriptcontroller.d3996852-5cb5-433c-b3fe-652e6af45fc6",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "EU - Form - EU Email Template - Javascript",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "EU - Form - EU Email Template - Javascript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.euemailtemplatejavascriptview.1c43803a-56d9-4f25-a09d-96020c773268"
+}

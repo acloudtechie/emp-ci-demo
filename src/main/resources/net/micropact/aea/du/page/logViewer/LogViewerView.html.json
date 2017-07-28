@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.logviewerview.509e0999-38e2-4370-867b-602917fe76b1",
+  "description" : "LogViewerView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "LogViewerView",
+  "packageBusinessKey" : "package.logViewer.13049dd3-bd46-41bd-bb99-7464dc9cd085",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

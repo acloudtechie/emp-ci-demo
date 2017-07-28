@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ajaxgetrfscriptcontroller.c9d934ec-1f65-488e-a336-bb87cf541c99",
+  "description" : "AjaxGetRfScriptController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "AjaxGetRfScriptController",
+  "packageBusinessKey" : "package.ajaxGetRfScript.3d116526-6c39-4136-91ea-6d2af7bdac03",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

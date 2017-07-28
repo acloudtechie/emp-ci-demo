@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.changedDataModelNames",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.changednamescontroller.a33dbcaa-1fea-4d56-b5a3-101e1bcd9cc2",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Changed Data Model Names",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Changed Data Model Names",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.changednamesview.3302fa18-1ce4-4263-966c-8e7964a9279e"
+}

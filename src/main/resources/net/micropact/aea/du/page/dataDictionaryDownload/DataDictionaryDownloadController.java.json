@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.datadictionarycontroller.0b237c73-0db3-4fd4-afb4-2f43d32e190f",
+  "description" : "DataDictionaryDownloadController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DataDictionaryDownloadController",
+  "packageBusinessKey" : "package.dataDictionaryDownload.23cd4b6a-a878-4fc9-aefa-4b1f3370fead",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

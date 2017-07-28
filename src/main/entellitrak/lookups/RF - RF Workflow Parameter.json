@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.rfRfWorkflowParameter",
+  "dataObjectBusinessKey" : "object.rfWorkflowParameter",
+  "description" : "RF - RF Workflow Parameter",
+  "displayDataElementBusinessKey" : "object.rfWorkflowParameter.element.name",
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "DATA_OBJECT_LOOKUP",
+  "name" : "RF - RF Workflow Parameter",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : null
+}

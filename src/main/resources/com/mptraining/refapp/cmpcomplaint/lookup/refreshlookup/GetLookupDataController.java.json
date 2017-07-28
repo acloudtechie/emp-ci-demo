@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.getlookupdatacontroller.681c1fac-83f3-45df-91bd-e0165fba8518",
+  "description" : "GetLookupDataController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "GetLookupDataController",
+  "packageBusinessKey" : "package.refreshlookup.59b47c9c-82ca-4392-873f-511b4defe6a4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

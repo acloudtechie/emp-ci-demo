@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.utility.08ed835a-3e15-4b0a-99ce-0934905bd87d",
+  "description" : "Utility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "Utility",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

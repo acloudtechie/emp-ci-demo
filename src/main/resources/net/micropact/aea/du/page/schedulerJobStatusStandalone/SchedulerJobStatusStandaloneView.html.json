@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.schedulerjobstatusstandaloneview.02ce0b80-c989-44c3-8821-75a42caf2a5f",
+  "description" : "SchedulerJobStatusStandaloneView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "SchedulerJobStatusStandaloneView",
+  "packageBusinessKey" : "package.schedulerJobStatusStandalone.9c566191-27e8-4fb2-a71f-cbf6d7bf76c9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.systempreferenceexport.19190e00-a3c5-4cd3-acfe-91d2e4c05520",
+  "description" : "SystemPreferenceExport",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SystemPreferenceExport",
+  "packageBusinessKey" : "package.systemPreference.d19bfbcc-e861-4735-96c3-ec4d11c1545f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

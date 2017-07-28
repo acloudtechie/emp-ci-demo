@@ -1,0 +1,21 @@
+{
+  "businessKey" : "rf.ajax.getEffectsUsingRfScript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.ajaxgeteffectsusingrfscript.0f7dddcb-4adc-4d40-a116-af32141bbff8",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "RF - AJAX - Get Effects Using RF Script",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - AJAX - Get Effects Using RF Script",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

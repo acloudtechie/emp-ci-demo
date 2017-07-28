@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.complaintreportview.8b2e780e-abac-4c07-b421-f2a09a34f14d",
+  "description" : "Page to accept parameters for the Complaint Report and run the report.",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ComplaintReportView",
+  "packageBusinessKey" : "package.report.9663bdb3-946b-414e-9371-27751501c547",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

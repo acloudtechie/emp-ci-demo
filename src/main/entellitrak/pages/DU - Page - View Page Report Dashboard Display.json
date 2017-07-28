@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.viewPageReportDashboardDisplay",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewpagereportdashboarddisplaycontroller.8380e89e-102f-431b-9e2b-7ebc3d9cce3d",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - View Page Report Dashboard Display",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - View Page Report Dashboard Display",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewpagereportdashboarddisplayview.98b4252b-7598-43e4-ad1c-4fd19cb9cf3d"
+}

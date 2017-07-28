@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodao.3fde314c-655b-44c5-962e-607ec6732dd3",
+  "description" : "DAO for accessing information about Reference Data.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoDao",
+  "packageBusinessKey" : "package.dao.45e17a35-9e46-49a8-8e97-ff5b914b172b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

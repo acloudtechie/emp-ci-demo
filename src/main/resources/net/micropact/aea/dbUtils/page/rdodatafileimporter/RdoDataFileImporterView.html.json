@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodatafileimporterview.8700e2bd-8251-4a4b-8b8c-060bc7ca19a7",
+  "description" : "View code used to import files exported by the 2 part RDO Data Export into the system.",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "RdoDataFileImporterView",
+  "packageBusinessKey" : "package.rdodatafileimporter.79a48490-a4f2-4aef-9bec-ab8d57549d1d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

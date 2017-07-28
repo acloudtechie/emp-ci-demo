@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfscriptparameterjavascriptcontroller.4578b6b8-c3dd-4199-9810-75ed0b56d627",
+  "description" : "RfScriptParameterJavascriptController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RfScriptParameterJavascriptController",
+  "packageBusinessKey" : "package.rfScriptParameterJavascript.7347c040-b7ab-47ef-b577-b87cbf9ba37e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

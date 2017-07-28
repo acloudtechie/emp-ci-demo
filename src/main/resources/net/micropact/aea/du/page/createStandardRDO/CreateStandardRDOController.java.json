@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.createstandardrdocontroller.92ca7a38-6a5c-4d2e-8d27-c06eb2633c3a",
+  "description" : "CreateStandardRDOController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CreateStandardRDOController",
+  "packageBusinessKey" : "package.createStandardRDO.4b196912-2b00-47b5-840e-8bd17482c590",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

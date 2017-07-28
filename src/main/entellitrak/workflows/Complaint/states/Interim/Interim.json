@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.complaint.state.interim",
+  "dataObjectBusinessKey" : "object.complaint",
+  "description" : "Interim",
+  "name" : "Interim",
+  "type" : "INTERIM",
+  "x" : 0,
+  "y" : 0
+}

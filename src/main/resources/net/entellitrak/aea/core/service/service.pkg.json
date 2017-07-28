@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.service.e7b386e1-c592-4cac-a48d-23eae4cfe2cf",
+  "name" : "service",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.core.4d21504c-fa65-4bbb-aa60-271d3e1d8d34",
+  "workspaceName" : "system"
+}

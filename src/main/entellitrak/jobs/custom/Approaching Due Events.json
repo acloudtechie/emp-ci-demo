@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "job.approachingDueEvents",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:50Z",
+  "cronTriggerExpression" : "0 0 1 * * ?",
+  "cronTriggerType" : "DAILY",
+  "description" : "Notify SAC Assigned users when an event will be due in 3 days and has not yet been completed for open complaints",
+  "endDate" : null,
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-28T17:17:50Z",
+  "name" : "Approaching Due Events",
+  "quartzJobDetails" : {
+    "description" : "Notify SAC Assigned users when an event will be due in 3 days and has not yet been completed for open complaints",
+    "isDurable" : "1",
+    "isNonconcurrent" : "0",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ScriptObjectJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAPdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "job.approachingDueEvents",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : null,
+  "repeatUnits" : "SECOND",
+  "scriptObjectBusinessKey" : "script.notifyalmostdueevents.567ffa5d-5ba5-4da4-a4ef-73355592d154",
+  "suspendOnError" : true,
+  "triggerType" : "CRON_TRIGGER"
+}

@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.doe.0b43c896-1e5f-45ca-aa7f-15e44f89726f",
+  "name" : "doe",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.core.a5e06a3b-5da7-43d0-83b1-8a5750f93ada",
+  "workspaceName" : "system"
+}

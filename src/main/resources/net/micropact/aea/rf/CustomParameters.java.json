@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.customparameters.09842797-bb7c-4f23-95e4-7a2868de916a",
+  "description" : "CustomParameters",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "CustomParameters",
+  "packageBusinessKey" : "package.rf.4d8bba8f-0b6a-4765-864f-4adeff4a6cfe",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

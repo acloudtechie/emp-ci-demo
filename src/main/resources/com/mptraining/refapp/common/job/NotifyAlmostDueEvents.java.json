@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.notifyalmostdueevents.567ffa5d-5ba5-4da4-a4ef-73355592d154",
+  "description" : "Email SAC Assigned 3 days before Event Due Date for Open Complaints",
+  "handlerType" : "JOB_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "NotifyAlmostDueEvents",
+  "packageBusinessKey" : "package.job.2f381af2-173a-404a-b865-a237d1929895",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

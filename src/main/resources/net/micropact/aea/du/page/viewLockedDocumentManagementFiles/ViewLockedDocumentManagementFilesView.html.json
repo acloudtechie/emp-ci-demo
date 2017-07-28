@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewlockeddocumentmanagementfilesview.a9c6ca12-4a49-441b-9ecc-93f34f39188b",
+  "description" : "ViewLockedDocumentManagementFilesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ViewLockedDocumentManagementFilesView",
+  "packageBusinessKey" : "package.viewLockedDocumentManagementFiles.efdf6a8b-29f4-4543-8c82-eb42cdcef1fa",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

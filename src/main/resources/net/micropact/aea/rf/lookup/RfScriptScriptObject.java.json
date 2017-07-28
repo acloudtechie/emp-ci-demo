@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.scriptobject.2f77c90e-1dd1-404c-a9a7-f1b1adec2bb7",
+  "description" : "RfScriptScriptObject",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfScriptScriptObject",
+  "packageBusinessKey" : "package.lookup.065a5fb2-a524-4643-a7a1-b89642f1c62e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

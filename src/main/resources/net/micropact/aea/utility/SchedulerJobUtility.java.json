@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.schedulerjobutility.94801320-99f6-4903-adc3-441fb5742ba3",
+  "description" : "SchedulerJobUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SchedulerJobUtility",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

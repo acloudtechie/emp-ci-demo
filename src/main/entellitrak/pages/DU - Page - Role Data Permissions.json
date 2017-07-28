@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.roleDataPermissions",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.roledatapermissionscontroller.b82663d4-36cd-4531-92cd-aea8a416aca8",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Role Data Permissions",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Role Data Permissions",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.roledatapermissionsview.9d4e8029-90e2-47c3-843f-0e3e435b8519"
+}

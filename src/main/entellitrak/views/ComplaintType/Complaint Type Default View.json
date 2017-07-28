@@ -1,0 +1,71 @@
+{
+  "businessKey" : "object.complaintType.view.complaintTypeDefaultView",
+  "dataObjectBusinessKey" : "object.complaintType",
+  "dataViewElements" : [ {
+    "businessKey" : "object.complaintType.view.complaintTypeDefaultView.element.category",
+    "dataElementBusinessKey" : "object.complaintType.element.category",
+    "description" : "Category column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Category",
+    "multiValueDelimiter" : null,
+    "name" : "category",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaintType.view.complaintTypeDefaultView.element.code",
+    "dataElementBusinessKey" : "object.complaintType.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaintType.view.complaintTypeDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.complaintType.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaintType.view.complaintTypeDefaultView.element.name",
+    "dataElementBusinessKey" : "object.complaintType.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaintType.view.complaintTypeDefaultView.element.order",
+    "dataElementBusinessKey" : "object.complaintType.element.order",
+    "description" : "Order column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Order",
+    "multiValueDelimiter" : null,
+    "name" : "order",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaintType.view.complaintTypeDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.complaintType.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Complaint Type Listing",
+  "name" : "Complaint Type Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Complaint Type Listing"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.objectexportcontroller.a1138bb7-04b2-414c-a18a-861249e1f4b5",
+  "description" : "ObjectExportController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ObjectExportController",
+  "packageBusinessKey" : "package.objectExport.93d7222b-0238-49e3-a047-7e0dce0d3cc7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ajaxgeteffectsusingrfscript.0f7dddcb-4adc-4d40-a116-af32141bbff8",
+  "description" : "AjaxGetEffectsUsingRfScript",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "AjaxGetEffectsUsingRfScript",
+  "packageBusinessKey" : "package.ajaxGetEffectsUsingRfScript.9d62d257-e5f1-4820-b720-952999f7456f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

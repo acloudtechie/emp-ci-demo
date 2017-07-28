@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.executionRepository.eaa6295b-d858-48c0-ba7a-feb4606fb28d",
+  "name" : "executionRepository",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.page.f630bb4e-78de-4837-b2f3-611dcf3e08e0",
+  "workspaceName" : "system"
+}

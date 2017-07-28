@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.updatelogviewerview.cf8180ef-9317-420b-a2cd-1bbb7a074caa",
+  "description" : "UpdateLogViewerView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "UpdateLogViewerView",
+  "packageBusinessKey" : "package.updateLogViewer.4c1e8ea2-f275-4fb0-948c-51e53856aeec",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

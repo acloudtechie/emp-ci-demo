@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sharepagesreportswithadministratorsview.775bfb6d-5559-4a77-a6ba-0a23a6d98ea3",
+  "description" : "SharePagesReportsWithAdministratorsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "SharePagesReportsWithAdministratorsView",
+  "packageBusinessKey" : "package.sharePagesReportsWithAdministrators.8c1dcb62-1caf-4701-aac9-53656d9c6fc4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

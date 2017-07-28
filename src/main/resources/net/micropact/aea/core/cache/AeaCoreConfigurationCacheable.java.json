@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeacoreconfigurationcacheable.4a073e8d-dba1-41a1-b599-8ce74c2e5a1f",
+  "description" : "AeaCoreConfigurationCacheable",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaCoreConfigurationCacheable",
+  "packageBusinessKey" : "package.cache.54704d20-95be-4305-917a-93703e2c56c4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

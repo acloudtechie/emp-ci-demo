@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanrdobaseobjectflagview.000775a6-f9a6-4e48-bfa7-3c0de0812f1d",
+  "description" : "CleanRdoBaseObjectFlagView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CleanRdoBaseObjectFlagView",
+  "packageBusinessKey" : "package.cleanRdoBaseObjectFlag.2052c371-789a-4125-a578-2f3b1e423223",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.rfRfTransitionEffectWorkflowEffect",
+  "dataObjectBusinessKey" : null,
+  "description" : "RF - RF Transition - workflowEffects",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RF - RF Transition - workflowEffects",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.rftransitioneffectworkfloweffect.0b6108a2-ca15-45f7-ab59-cefa7c8fd56b",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

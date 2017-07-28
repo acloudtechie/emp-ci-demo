@@ -1,0 +1,28 @@
+{
+  "businessKey" : "tu.form.tuReplacementSection.javascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultjavascriptcontroller.d3996852-5cb5-433c-b3fe-652e6af45fc6",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "TU - Form - TU Replacement Section - Javascript",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "TU - Form - TU Replacement Section - Javascript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.tureplacementsectionjavascriptview.8eac1dc7-af93-4297-b3cd-ad83a00afbf0"
+}

@@ -1,0 +1,18 @@
+{
+  "businessKey" : "object.complaint.displayMapping.26649",
+  "dataFormBusinessKey" : "object.complaint.form.complaintRestrictedForm",
+  "dataObjectBusinessKey" : "object.complaint",
+  "dataViewBusinessKey" : "object.complaint.view.complaintDefaultView",
+  "description" : "Restrict Confidential and SAC Assigned fields when the user isn't Admin, SAC, or Special Agent and the Confidential field already is marked as Yes",
+  "disableForm" : false,
+  "disableView" : false,
+  "etpStateBusinessKey" : null,
+  "evaluationOrder" : 2,
+  "evaluationScriptObjectBusinessKey" : "script.restrictedcomplaint.ba09bd15-c5cb-4c05-827d-7636ec0cc830",
+  "name" : "Restricted Complaint",
+  "processDataObjectBusinessKey" : "object.complaint",
+  "readOnlyForm" : false,
+  "roleBusinessKey" : null,
+  "useDefaultForm" : false,
+  "useDefaultView" : false
+}

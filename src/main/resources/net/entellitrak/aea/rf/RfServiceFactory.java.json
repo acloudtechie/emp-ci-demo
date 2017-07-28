@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfservicefactory.debaa332-e7b0-496f-9354-3f9ba7e121b8",
+  "description" : "RfServiceFactory",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfServiceFactory",
+  "packageBusinessKey" : "package.rf.4b62c02b-6a99-40cf-861f-1ba7068be81f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

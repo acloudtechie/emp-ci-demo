@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.db.utils.rdoDataExportConfig.form.javascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultjavascriptcontroller.d3996852-5cb5-433c-b3fe-652e6af45fc6",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Javascript for the AEA RDO Data Export Config",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - DbUtils - RDO Data Export Config - Form - Javascript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.aeardodataexportconfigjs.718b7248-53ba-4a07-9b85-66007c3fe232"
+}

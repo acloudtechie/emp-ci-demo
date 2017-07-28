@@ -1,0 +1,51 @@
+{
+  "businessKey" : "object.rfScript.view.rfScriptDefaultView",
+  "dataObjectBusinessKey" : "object.rfScript",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfScript.view.rfScriptDefaultView.element.code",
+    "dataElementBusinessKey" : "object.rfScript.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfScript.view.rfScriptDefaultView.element.description",
+    "dataElementBusinessKey" : "object.rfScript.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfScript.view.rfScriptDefaultView.element.name",
+    "dataElementBusinessKey" : "object.rfScript.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfScript.view.rfScriptDefaultView.element.scriptobject",
+    "dataElementBusinessKey" : "object.rfScript.element.scriptObject",
+    "description" : "Script Object column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Script Object",
+    "multiValueDelimiter" : null,
+    "name" : "scriptObject",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Script Listing",
+  "name" : "RF Script Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Script Listing"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.trackedDataObjectGraph.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.trackeddataobjectgraphajaxcontroller.7a3c253d-82d8-48db-b3ad-702c3e2459fd",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Tracked Data Object Graph - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Tracked Data Object Graph - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

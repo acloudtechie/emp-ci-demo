@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euqueueattachmentjavascriptview.dffb4ffd-d87a-46b5-a5ba-e9b516de6441",
+  "description" : "EuQueueAttachmentJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "EuQueueAttachmentJavascriptView",
+  "packageBusinessKey" : "package.euQueueAttachmentJavascript.b8367b4e-2ccf-4756-9d7e-c0d9a899f878",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

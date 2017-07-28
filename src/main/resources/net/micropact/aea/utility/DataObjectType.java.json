@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dataobjecttype.3f2d95b6-86c8-440b-b3f5-3f7e5cb6b03e",
+  "description" : "DataObjectType",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DataObjectType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

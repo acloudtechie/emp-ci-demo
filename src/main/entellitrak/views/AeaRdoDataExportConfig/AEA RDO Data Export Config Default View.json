@@ -1,0 +1,51 @@
+{
+  "businessKey" : "object.aeaRdoDataExportConfig.view.aeaRdoDataExportConfigDefaultView",
+  "dataObjectBusinessKey" : "object.aeaRdoDataExportConfig",
+  "dataViewElements" : [ {
+    "businessKey" : "object.aeaRdoDataExportConfig.view.aeaRdoDataExportConfigDefaultView.element.additionalfiltercriteria",
+    "dataElementBusinessKey" : "object.aeaRdoDataExportConfig.element.additionalFilterCriteria",
+    "description" : "Additional Filter Criteria column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Additional Filter Criteria",
+    "multiValueDelimiter" : null,
+    "name" : "additionalFilterCriteria",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaRdoDataExportConfig.view.aeaRdoDataExportConfigDefaultView.element.code",
+    "dataElementBusinessKey" : "object.aeaRdoDataExportConfig.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaRdoDataExportConfig.view.aeaRdoDataExportConfigDefaultView.element.columnsthatdefineuid",
+    "dataElementBusinessKey" : "object.aeaRdoDataExportConfig.element.columnsThatDefineUid",
+    "description" : "Columns That Define UID column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Columns That Define UID",
+    "multiValueDelimiter" : null,
+    "name" : "columnsThatDefineUid",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaRdoDataExportConfig.view.aeaRdoDataExportConfigDefaultView.element.databasetablename",
+    "dataElementBusinessKey" : "object.aeaRdoDataExportConfig.element.databaseTableName",
+    "description" : "Database Table Name column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Database Table Name",
+    "multiValueDelimiter" : null,
+    "name" : "databaseTableName",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "AEA RDO Data Export Config Listing",
+  "name" : "AEA RDO Data Export Config Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "AEA RDO Data Export Config Listing"
+}

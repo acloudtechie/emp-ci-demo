@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfworkflowjavascriptview.5cf78daf-d002-46f5-9b0a-b575d2149134",
+  "description" : "RfWorkflowJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "RfWorkflowJavascriptView",
+  "packageBusinessKey" : "package.rfWorkflowJavascript.17ef6739-e655-4751-aaa8-465168822f15",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

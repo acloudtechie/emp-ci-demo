@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfworkflowdoe.e430d699-a56d-4ab2-afb2-cb7dce9493f2",
+  "description" : "RfWorkflowDoe",
+  "handlerType" : "DATA_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfWorkflowDoe",
+  "packageBusinessKey" : "package.doe.deb72ee7-276a-4a9f-98a6-5a843be4817c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

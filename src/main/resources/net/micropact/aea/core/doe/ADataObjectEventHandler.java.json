@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.adataobjecteventhandler.f21fe9d0-b94b-4733-8879-f757468a4a21",
+  "description" : "ADataObjectEventHandler",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ADataObjectEventHandler",
+  "packageBusinessKey" : "package.doe.0b43c896-1e5f-45ca-aa7f-15e44f89726f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,28 @@
+{
+  "businessKey" : "tt.ajax.getAccessible",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.getaccessiblecontroller.15419d2b-d464-49cd-934d-c94b7be41104",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:48Z",
+  "description" : "TT - Ajax - Get Accessible",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "TT - Ajax - Get Accessible",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

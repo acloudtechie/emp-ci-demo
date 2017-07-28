@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aealogentry.189afedf-fa9a-495b-a8d7-572dc5928fe1",
+  "description" : "AeaLogEntry",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaLogEntry",
+  "packageBusinessKey" : "package.auditLog.76853c05-2dea-442c-b419-adef684c3615",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.codeSearch",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.codesearchcontroller.d83ee3a9-2e80-4128-8b40-471c8ec6a2ff",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:48Z",
+  "description" : "DU - Page - Code Search",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Code Search",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.codesearchview.2e8f475b-8370-450a-8033-1f5b9bea6a34"
+}

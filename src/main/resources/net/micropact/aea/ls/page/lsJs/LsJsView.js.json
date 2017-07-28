@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lsjsview.2de2ef9f-198f-4fc3-b508-eeba139f1c76",
+  "description" : "LsJsView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "LsJsView",
+  "packageBusinessKey" : "package.lsJs.94b1c5a7-df35-415c-80a0-020bba90f67d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

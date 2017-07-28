@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.emailqueuesender.41bf2e2e-374e-49be-a836-01c6767c95da",
+  "description" : "EmailQueueSender",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "EmailQueueSender",
+  "packageBusinessKey" : "package.utility.147b89af-db98-45c9-bf21-dd34094583fa",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

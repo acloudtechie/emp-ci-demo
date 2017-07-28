@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookupdatautility.c5fb5ff4-ad91-4d03-966f-b3ebe458cdb9",
+  "description" : "Helper utility to retrieve lookup information from etk tables.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "LookupDataUtility",
+  "packageBusinessKey" : "package.lookup.2de02577-0671-4661-acfa-255f2490ce5a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

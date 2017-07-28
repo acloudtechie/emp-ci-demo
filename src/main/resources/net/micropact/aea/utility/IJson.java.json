@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ijson.f09f8612-e83a-40b3-9707-0e276bc153ab",
+  "description" : "IJson",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IJson",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

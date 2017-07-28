@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - View Orphaned Files</title>
+        
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <style>
+            em{
+                font-weight: bold;
+                font-style: normal;
+            }
+        </style>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var config = $fileSummary
+        
+        function OrphanedCColumnsSummary(props){
+            return AeaCoreReactComponents.SimpleHeaderTableGrid({headers: ["Data Object", "Data Element", "Tracking Id"],
+                caption: "Summary of Orphaned Elements",
+                className: "aea-core-grid",
+                tbody: React.DOM.tbody(null, props.orphanedRecords.map(function(record, i){
+                    return React.DOM.tr({key: i},
+                            React.DOM.td(null, record.dataObjectName),
+                            React.DOM.td(null, record.dataElementName),
+                            React.DOM.td(null, record.trackingId))
+                }))})
+        }
+        
+        function OrphanedEtkRecordsSummary(props){
+            var etkFileSummary = props.etkFileSummary
+            return AeaCoreReactComponents.SimpleHeaderTableGrid({headers: ["File Id"],
+                caption: "Summary of Orphaned ETK_FILE Records",
+                className: "aea-core-grid",
+                tbody: React.DOM.tbody(null,
+                        props.orphanedFiles.map(function(fileId, i){
+                            return React.DOM.tr({key: i},
+                                    React.DOM.td(null, fileId))
+                        }))})
+        }
+        
+        function CleanButton(){
+            return React.DOM.button({type: "button",
+                onClick: function(){
+                    window.open("page.request.do?page=du.page.cleanOrphanedFiles", "_blank")
+                }},
+                "Clean Files")
+        }
+        
+        var ViewOrphanedFiles = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div(null,
+                        CleanButton(),
+                        OrphanedCColumnsSummary(config),
+                        OrphanedEtkRecordsSummary(config))
+                }
+            }))
+        
+        var ViewOrphanedFilesApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "View Orphaned Files",
+                    instructions: ["This page views files from ETK_FILE which are no longer referenced by entellitrak as well as Data Elements which reference ETK_FILE entries which do not exist.",
+                                   "This page does not show files stored in Document Management due to a core limitation."],
+                    mainContent: ViewOrphanedFiles({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(ViewOrphanedFilesApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+        
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

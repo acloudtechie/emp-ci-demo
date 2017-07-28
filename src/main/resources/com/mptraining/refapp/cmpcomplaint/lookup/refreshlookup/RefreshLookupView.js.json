@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.refreshlookupview.7e0fe653-f763-4b5a-8389-a0091c92b3f7",
+  "description" : "RefreshLookupView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "RefreshLookupView",
+  "packageBusinessKey" : "package.refreshlookup.59b47c9c-82ca-4392-873f-511b4defe6a4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

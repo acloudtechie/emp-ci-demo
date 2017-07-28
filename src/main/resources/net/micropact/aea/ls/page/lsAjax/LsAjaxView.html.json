@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lsajaxview.9c5698aa-b864-46c0-ad48-8b4421a489c5",
+  "description" : "LsAjaxView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "LsAjaxView",
+  "packageBusinessKey" : "package.lsAjax.7bc46b5c-ed78-463a-b545-6d93d7849494",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

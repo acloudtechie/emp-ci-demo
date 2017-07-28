@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.orderworkfloweffectscontroller.a68bf5ea-000c-4f5a-806c-0613c15cabf5",
+  "description" : "OrderWorkflowEffectsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "OrderWorkflowEffectsController",
+  "packageBusinessKey" : "package.orderWorkflowEffects.c793116e-062c-4571-b1a7-60c348f1f6ed",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewworkflowgraphjavascriptview.3bbe13c8-7eac-453b-a597-a77506f1daba",
+  "description" : "ViewWorkflowGraphJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "ViewWorkflowGraphJavascriptView",
+  "packageBusinessKey" : "package.viewWorkflowGraphJavascript.79529afa-a2dc-49be-aa57-9d92655a76e9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

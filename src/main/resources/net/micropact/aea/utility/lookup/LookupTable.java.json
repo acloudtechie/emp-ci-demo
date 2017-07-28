@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookuptable.6aa5ec97-8672-4a0e-9e1c-eae20c19207a",
+  "description" : "Definition of a lookup table",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "LookupTable",
+  "packageBusinessKey" : "package.lookup.2de02577-0671-4661-acfa-255f2490ce5a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cmpcomplaintjavascriptview.79c0c0fa-6597-486b-937d-9c4884d06c1f",
+  "description" : "Main JavaScript to run on the CMP Complaint form",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "CmpComplaintJavaScriptView",
+  "packageBusinessKey" : "package.page.b43d2903-90f0-4d6b-b146-37db246f2cd7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

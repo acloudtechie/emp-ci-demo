@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.datatypepluginclassutility.a7eb305f-d911-40eb-bd72-242f85fbc208",
+  "description" : "Methods for utilizing the class associated with data elements that use Data Type Plugins",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DataTypePluginClassUtility",
+  "packageBusinessKey" : "package.dataTypePlugin.a04ac310-a5e1-4c33-b72b-058e6a8dfe0d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

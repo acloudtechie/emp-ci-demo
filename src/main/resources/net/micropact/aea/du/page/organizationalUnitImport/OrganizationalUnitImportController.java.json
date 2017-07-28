@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.orgunitimportcontroller.e466577e-905c-415d-8b65-9b4d0908425c",
+  "description" : "OrganizationalUnitImportController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "OrganizationalUnitImportController",
+  "packageBusinessKey" : "package.organizationalUnitImport.be2e1969-ac51-4052-a889-4b18a824226b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

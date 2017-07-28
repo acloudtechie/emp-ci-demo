@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.auditLog.21e7be9f-0a4d-496b-8c67-776e9ec0668e",
+  "name" : "auditLog",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.aea.ca9a7b36-b88d-45f0-b234-5306a62459a5",
+  "workspaceName" : "system"
+}

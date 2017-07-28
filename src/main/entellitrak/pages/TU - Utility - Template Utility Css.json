@@ -1,0 +1,28 @@
+{
+  "businessKey" : "tu.utility.templateUtilityCss",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultcsscontroller.4c4fffef-8895-447d-a228-c25dc4a97c23",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "TU - Utility - Template Utility Css",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "TU - Utility - Template Utility Css",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.templateutilitycss.567aaf1b-b771-41bd-94f1-c9814202703b"
+}

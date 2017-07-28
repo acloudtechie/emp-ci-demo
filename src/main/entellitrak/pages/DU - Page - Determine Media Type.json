@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.determineMediaType",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.determinemediatypecontroller.2fc07b61-e3bb-4fe4-85ff-a64f92f10ae5",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Determine Media Type",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Determine Media Type",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.determinemediatypeview.71935f2d-791c-4653-bcab-320677d90331"
+}

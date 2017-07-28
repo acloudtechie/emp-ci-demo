@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "job.quickSearchFullIndexing",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:49Z",
+  "cronTriggerExpression" : null,
+  "cronTriggerType" : null,
+  "description" : "Quick Search Full Indexing",
+  "endDate" : null,
+  "jobType" : "FULL_INDEX",
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-28T17:17:49Z",
+  "name" : "Quick Search Full Indexing",
+  "quartzJobDetails" : {
+    "description" : "Quick Search Full Indexing",
+    "isDurable" : "1",
+    "isNonconcurrent" : "1",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ExecutableSystemJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAPdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "job.quickSearchFullIndexing",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : 1,
+  "repeatUnits" : "HOUR",
+  "suspendOnError" : false,
+  "triggerType" : "CALENDAR_INTERVAL_TRIGGER"
+}

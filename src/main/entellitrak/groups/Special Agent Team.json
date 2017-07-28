@@ -1,0 +1,7 @@
+{
+  "businessKey" : "group.specialAgentTeam",
+  "description" : "Team for users with roles of SAC and Special Agent",
+  "name" : "Special Agent Team",
+  "subjectPreferences" : [ ],
+  "subjectRoles" : [ "role.specialAgent" ]
+}

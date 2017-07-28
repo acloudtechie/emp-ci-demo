@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.predeploymentDataExporter",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.dataexporter.ddbffc74-92cc-4a7e-8539-ed9de94e0715",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "Pre-Deployment Data Exporter",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Pre-Deployment Data Exporter",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.8f85be5e-ae50-4f79-a296-5f6e7c1504ce"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewpagepermissionsview.44faef8d-d196-4abf-9150-7d76eb7b2efc",
+  "description" : "ViewPagePermissionsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ViewPagePermissionsView",
+  "packageBusinessKey" : "package.viewPagePermissions.5cb09a3a-4f22-41d4-bf54-60e9dfc63075",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unuseddataelementscontroller.841cf7a2-910c-4407-8ec5-43bd9850ac86",
+  "description" : "UnusedDataElementsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "UnusedDataElementsController",
+  "packageBusinessKey" : "package.unusedDataElements.0680a19d-0cee-4c9c-9679-80854fc871aa",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

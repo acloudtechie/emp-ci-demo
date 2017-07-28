@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.currentStatusWre",
+  "dataObjectBusinessKey" : null,
+  "description" : "Current Status - WRE",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "Current Status - WRE",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.currentstatuslookup.6377d05d-d149-469d-9113-6748db373e24",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

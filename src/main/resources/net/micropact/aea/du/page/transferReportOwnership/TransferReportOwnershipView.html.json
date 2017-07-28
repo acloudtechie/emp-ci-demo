@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transferreportownershipview.1523feba-7a53-4298-9496-8187dfa0ea99",
+  "description" : "TransferReportOwnershipView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "TransferReportOwnershipView",
+  "packageBusinessKey" : "package.transferReportOwnership.02308b5a-f689-4c39-a422-44425f12d1cc",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

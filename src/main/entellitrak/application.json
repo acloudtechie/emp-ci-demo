@@ -1,9 +1,9 @@
 {
-  "applicationVersion" : null,
+  "applicationVersion" : "3.26D",
   "businessKey" : "etk.app",
-  "description" : "demo",
+  "description" : "Ref App 2.0 ETK 3.26 Development Environment\nUpgraded to 3.26 on 7/19/2017",
   "isBeanshellEnabled" : false,
   "isGroovyEnabled" : false,
   "isJavaEnabled" : true,
-  "name" : "demo"
+  "name" : "Ref App"
 }

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.systempreferencevalue.81501006-af33-4567-9dba-552718469495",
+  "description" : "SystemPreferenceValue",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SystemPreferenceValue",
+  "packageBusinessKey" : "package.systemPreference.d19bfbcc-e861-4735-96c3-ec4d11c1545f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

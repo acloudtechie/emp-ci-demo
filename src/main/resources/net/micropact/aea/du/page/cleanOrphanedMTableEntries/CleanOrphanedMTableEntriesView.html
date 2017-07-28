@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+		<title>Developer Utility - Clean Orphaned M_ Table Entries</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var count = $count
+        
+        var CleanOrphanedMtableEntries = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.p(null, 
+                        React.DOM.strong(null, count), 
+                        " Orphaned M_ Table Entries have been deleted.")
+            }
+        }))
+        
+        var CleanOrphanedMtableEntriesApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Clean Orphaned M_ Table Entries",
+                    instructions: ["This page deletes entries from Multi-Select tables which are referencing tracked data objects which no longer exist."],
+                    mainContent: CleanOrphanedMtableEntries({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(CleanOrphanedMtableEntriesApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+	</head>
+	<body onload="init()">
+        <div id="app"></div>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.daoexception.5a300940-44d3-4ccb-a763-771e19e096b9",
+  "description" : "DAO Exception",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DaoException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanorphanedmtableentries.e9f37ae5-2f16-4331-a7e3-f004838a339b",
+  "description" : "Clean orphaned M_ table entries",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CleanOrphanedMTableEntriesController",
+  "packageBusinessKey" : "package.cleanOrphanedMTableEntries.5eb02cad-4ee3-4b95-a6ea-6c846921b2c7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

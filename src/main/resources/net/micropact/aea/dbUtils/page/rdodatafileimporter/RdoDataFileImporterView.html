@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <title>AEA - DbUtils - RDO ETK_FILE Import Page</title>
+</head>
+
+<body>
+    <div id="contentDiv">
+
+        <form name="importForm" 
+        action="page.request.do?page=aea.db.utils.rdoEtkFileImportPage" 
+        method="post" 
+        enctype="multipart/form-data">
+
+			#if ($!result)
+			<p>$!result</p>
+			#else
+			
+			<h2>Use of AEA - DbUtils - RDO ETK_FILE Import Page is no longer recommended.</h2>
+			<h2>Please use <a href="page.request.do?page=aea.db.utils.rdoDataImportUtility">AEA - DbUtils - RDO Data Import Utility</a></h2>
+			<br>
+            <p>Backup your database.</p>
+            <p>Please upload the ETK_FILE_DATA.zip file contained within the 2-part export provided by AEA - DbUtils - RDO Data Export Utility</p>
+
+            <label for="importFile">File&nbsp;&nbsp; </label>
+            <input type="file" name="importFile"/>
+            <br/><br/>
+
+
+            <input id="importButton" type="submit" value="Import"/>      
+            #end
+            
+        </form>
+    </div>
+</body>
+
+</html>

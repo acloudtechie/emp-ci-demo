@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanorphanedassignmentscontroller.0aefa7a1-0362-4e81-9372-8a953ae6cead",
+  "description" : "CleanOrphanedAssignmentsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CleanOrphanedAssignmentsController",
+  "packageBusinessKey" : "package.cleanOrphanedAssignments.7fe99ded-64c7-4a7f-8e5d-1462d573dece",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.rfWorkflow.state.interim",
+  "dataObjectBusinessKey" : "object.rfWorkflow",
+  "description" : "Interim",
+  "name" : "Interim",
+  "type" : "INTERIM",
+  "x" : 0,
+  "y" : 0
+}

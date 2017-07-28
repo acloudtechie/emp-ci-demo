@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.replacementvariablechoosercontroller.5ad1ea7c-571c-4d51-87cd-e1f142990c96",
+  "description" : "ReplacementVariableChooserController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ReplacementVariableChooserController",
+  "packageBusinessKey" : "package.replacementVariableChooser.6359345e-22d9-445f-b3c7-bb1a6da33bd4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

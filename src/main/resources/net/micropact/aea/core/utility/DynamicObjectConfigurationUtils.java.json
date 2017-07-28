@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dynamicobjectconfigurationutils.a57154bf-7d7b-476c-888c-7b272404a0c7",
+  "description" : "DynamicObjectConfigurationUtils",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DynamicObjectConfigurationUtils",
+  "packageBusinessKey" : "package.utility.a3652cc4-3e96-42a8-9c42-099cd257fd1b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

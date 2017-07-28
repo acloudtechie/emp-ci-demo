@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.scriptobjecthandlertype.194a5ee6-73f4-4071-926f-f0d9bad7fa4f",
+  "description" : "Script Object Handler Type.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ScriptObjectHandlerType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

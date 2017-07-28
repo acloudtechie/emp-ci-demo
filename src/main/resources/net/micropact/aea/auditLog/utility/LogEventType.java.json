@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.logeventtype.5fe21eab-9419-4968-8d30-78f6b8b8b9e3",
+  "description" : "CRUD event type definition",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "LogEventType",
+  "packageBusinessKey" : "package.utility.6626d93c-1563-49ba-9804-87c072ca8908",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

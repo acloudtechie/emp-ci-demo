@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.softdeletefilter.50f17739-789f-44b3-976c-b2e47827eabd",
+  "description" : "Filters out soft deleted records from an efiler's view.",
+  "handlerType" : "RECORD_FILTER_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "SoftDeleteFilter",
+  "packageBusinessKey" : "package.sm.5a993c95-d4fe-4fc9-9cd0-13eb48149670",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

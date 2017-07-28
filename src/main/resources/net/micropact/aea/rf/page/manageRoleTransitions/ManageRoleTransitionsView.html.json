@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.manageroletransitionsview.d4dac0b1-3db8-4fbd-ac22-19777e5d0f8e",
+  "description" : "ManageRoleTransitionsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ManageRoleTransitionsView",
+  "packageBusinessKey" : "package.manageRoleTransitions.bde16b1a-71ea-45ea-8b25-9a75bf1b4ed6",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

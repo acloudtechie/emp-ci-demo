@@ -1,0 +1,26 @@
+{
+  "businessKey" : "report.administrator.systemUsers",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:50Z",
+  "datasource" : null,
+  "description" : "Report showing all users in the entellitrak system",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "System Users",
+  "reportPermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.admin"
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "reportType" : "JASPER"
+}

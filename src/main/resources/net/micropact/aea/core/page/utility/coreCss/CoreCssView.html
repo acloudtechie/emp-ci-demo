@@ -1,0 +1,154 @@
+ul.aea-core-navigation{
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: black;
+    background: url("themes/default/web-pub/images/topmenu-bg.png") repeat-x scroll center top / 100% 100% #353535;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+ul.aea-core-navigation > li{
+    display: inline-block;
+    height: 50px;
+}
+
+ul.aea-core-navigation > li > a{
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+ul.aea-core-navigation a:link, ul.aea-core-navigation a:visited, ul.aea-core-navigation a:active {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+ul.aea-core-navigation > li > a:hover{
+    background: gray;
+    background: linear-gradient(to bottom, #060908 0%,#616060 100%);
+}
+
+ul.aea-core-navigation > li.aea-core-active, ul.aea-core-navigation > li.aea-core-active > a:hover{
+    background: #ea2b1b;
+    text-decoration: underline;
+}
+
+.aea-core-count{
+    font-style: italic;
+}
+
+.aea-core-count:before{
+    content: " (";
+}
+
+.aea-core-count:after{
+    content: ")";
+}
+
+.aea-core-stackData{
+    display: table;
+}
+
+.aea-core-stackData > * {
+    display: table-row;
+}
+
+.aea-core-stackData > * > * {
+    display: table-cell;
+    padding: 0.5em 0.5em;
+}
+
+.aea-core-hidden {
+    display: none;
+}
+
+table.aea-core-grid{
+    width: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+table.aea-core-grid > thead > tr > th{
+    font-weight: bold; /* Because ExtJS overrides the default browser behavior */
+}
+
+table.aea-core-grid-hyperlinked > tbody > tr{
+    cursor: pointer;
+}
+
+table.aea-core-grid-hyperlinked > tbody > tr:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+table.aea-core-grid caption{
+    background-color: #353535;
+    color: #ffffff;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+table.aea-core-grid.aea-core-highlight > tbody > tr:hover{
+    background-color: #f1f1f1;
+}
+
+.aea-core-mainContent{
+    margin: 1em;
+}
+
+.aea-core-message{
+    font-weight: bold;
+    list-style: none;
+    padding-left: 0em;
+    margin-left: 0em;
+}
+
+.aea-core-error{
+    color: #ff0000;
+}
+
+.aea-core-success{
+    color: #00aa00;
+}
+
+.aea-core-instructions{
+    border: 1px solid #CCCCCC;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    display: inline-block;
+    max-width: 50em;
+}
+
+button, input[type=submit]{
+    background: none repeat scroll 0 0 #3399cc;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-family: Bitstream Vera Sans,Arial,Verdana,sans-serif,Helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, input[type=submit]:hover{
+    background: none repeat scroll 0 0 #ea2b1b;
+}
+
+.aea-core-loading{
+    background-image: url("themes/default/web-pub/images/icons/ajax-loader.gif");
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+    display: inline-block;
+}
+
+.aea-core-loading:after{
+    content: " ...";
+}

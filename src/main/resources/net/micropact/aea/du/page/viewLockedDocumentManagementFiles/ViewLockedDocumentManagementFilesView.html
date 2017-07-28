@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Developer Utility - View Locked Document Management Files</title>
+        
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+            
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        
+        <style type="text/css">
+        </style>
+        
+        <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+            "use strict"
+            
+            var lockedFilesModel = (function(){
+                var state = {lockedFiles: $lockedFiles}
+                
+                return {
+                    lockedFiles: state.lockedFiles
+                    }
+            }())
+            
+            function UserView(props){
+                return React.DOM.a({href: "admin.profile.update.request.do?id=" + encodeURIComponent(props.userId),
+                        target: "_blank"},
+                        props.username)
+            }
+            
+            function LockedFiles(){
+                    var lockedFiles = lockedFilesModel.lockedFiles
+                    
+                    return React.DOM.table({className: "grid aea-core-grid"},
+                            React.DOM.thead(null,
+                                    React.DOM.tr(null,
+                                            React.DOM.th(null, "Locked On"),
+                                            React.DOM.th(null, "Locking User"),
+                                            React.DOM.th(null, "Object Name"),
+                                            React.DOM.th(null, "File Name"))),
+                            React.DOM.tbody(null, lockedFiles.map(function(lockedFile, i){
+                                return React.DOM.tr({key: i},
+                                        React.DOM.td(null, lockedFile.LOCKEDON),
+                                        React.DOM.td(null, UserView({userId: lockedFile.USERID, username: lockedFile.USERNAME})),
+                                        React.DOM.td(null, lockedFile.OBJECTNAME),
+                                        React.DOM.td(null, React.DOM.a({href: "workflow.do?dataObjectKey=" + encodeURIComponent(lockedFile.OBJECTKEY) + "&trackingId=" + encodeURIComponent(lockedFile.TRACKINGID),
+                                            target: "_blank"}, 
+                                                lockedFile.FILENAME)))
+                            })))
+                }
+            
+            var LockedFilesApp = React.createFactory(React.createClass({
+                render: function(){
+                    return AeaCoreReactComponents.Application({
+                        title: "View Locked Document Management Files",
+                        instructions: ["This page display Document Management files which are currently locked, and provides links to those objects so that they may be unlocked."],
+                        mainContent: LockedFiles({})})
+                }
+            }))
+            
+            jQuery(function(){
+                ReactDOM.render(LockedFilesApp(null),
+                           jQuery('.app')[0])})
+            
+        </script>
+    
+    </head>
+    <body>
+        <div class="app"></div>
+    </body>
+</html>

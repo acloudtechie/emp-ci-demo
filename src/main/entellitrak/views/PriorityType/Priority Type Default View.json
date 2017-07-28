@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.priorityType.view.priorityTypeDefaultView",
+  "dataObjectBusinessKey" : "object.priorityType",
+  "dataViewElements" : [ {
+    "businessKey" : "object.priorityType.view.priorityTypeDefaultView.element.code",
+    "dataElementBusinessKey" : "object.priorityType.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.priorityType.view.priorityTypeDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.priorityType.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.priorityType.view.priorityTypeDefaultView.element.name",
+    "dataElementBusinessKey" : "object.priorityType.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.priorityType.view.priorityTypeDefaultView.element.order",
+    "dataElementBusinessKey" : "object.priorityType.element.order",
+    "description" : "Order column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Order",
+    "multiValueDelimiter" : null,
+    "name" : "order",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.priorityType.view.priorityTypeDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.priorityType.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Priority Type Listing",
+  "name" : "Priority Type Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Priority Type Listing"
+}

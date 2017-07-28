@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.form.rfTransition.javascript",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.rftransitionjavascriptcontroller.98734695-9faf-48f0-821b-f81786c4d041",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "RF - Form - RF Transition - Javascript",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Form - RF Transition - Javascript",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.rftransitionjavascriptview.fc11ddb6-9b89-4aa4-a481-111e5ac926e9"
+}

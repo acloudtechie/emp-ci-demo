@@ -1,0 +1,11 @@
+{
+  "businessKey" : "object.cmpComplaint.state.begin.transition.started",
+  "description" : "Started",
+  "name" : "Started",
+  "nextStateBusinessKey" : "object.cmpComplaint.state.interim",
+  "previousStateBusinessKey" : "object.cmpComplaint.state.begin",
+  "sequenceNumber" : 1,
+  "trackingEventListeners" : [ ],
+  "transitionType" : "ALWAYS_TRANSITION",
+  "triggerScriptObjectBusinessKey" : null
+}

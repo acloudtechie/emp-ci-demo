@@ -1,0 +1,31 @@
+{
+  "businessKey" : "object.rfScriptParameterValue.view.rfScriptParameterValueDefaultView",
+  "dataObjectBusinessKey" : "object.rfScriptParameterValue",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfScriptParameterValue.view.rfScriptParameterValueDefaultView.element.scriptparameter",
+    "dataElementBusinessKey" : "object.rfScriptParameterValue.element.scriptParameter",
+    "description" : "Script Parameter column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Script Parameter",
+    "multiValueDelimiter" : null,
+    "name" : "scriptParameter",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfScriptParameterValue.view.rfScriptParameterValueDefaultView.element.value",
+    "dataElementBusinessKey" : "object.rfScriptParameterValue.element.value",
+    "description" : "Value column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Value",
+    "multiValueDelimiter" : null,
+    "name" : "value",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Script Parameter Value Listing",
+  "name" : "RF Script Parameter Value Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Script Parameter Value Listing"
+}

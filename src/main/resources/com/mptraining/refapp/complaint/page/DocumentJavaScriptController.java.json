@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.documentjavascriptcontroller.83a1e87b-ef81-4a10-825a-fa576646e2dc",
+  "description" : "Controller for main JavaScript to be run on the Document form",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DocumentJavaScriptController",
+  "packageBusinessKey" : "package.page.d28e1107-917e-4145-97fd-9906f4ed8871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

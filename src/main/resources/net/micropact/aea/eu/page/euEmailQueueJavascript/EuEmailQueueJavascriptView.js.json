@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euemailqueuejavascriptview.8ee3720c-ad40-4ce6-969d-4eb177e645b3",
+  "description" : "EuEmailQueueJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "EuEmailQueueJavascriptView",
+  "packageBusinessKey" : "package.euEmailQueueJavascript.525a9288-7333-4aa6-9dfa-ef717f31a037",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

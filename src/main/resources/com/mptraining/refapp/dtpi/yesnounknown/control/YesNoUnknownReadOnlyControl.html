@@ -1,0 +1,5 @@
+<!-- Template for the read-only Yes/No/Unknown control.  This defines a hidden control with the value, plus a read-only display of the selected option's label. -->
+<input type="hidden" name="{{controlName}}" value="{{value}}"/>
+{{#helper.options}}
+{{#checked}}{{optionLabel}}{{/checked}}
+{{/helper.options}}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+		<title>Developer Utility - Clean Orphaned Assignments</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var CleanOrphanedAssignments = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.p(null, "Orphaned Assignments have been removed from ETK_ASSIGNMENT")
+            }
+        }))
+        
+        function CleanOrphanedAssignmentsApp (){
+            return AeaCoreReactComponents.Application({
+                title: "Clean Orphaned Assignments",
+                instructions: ["This page deletes assignments from ETK_ASSIGNMENT which are referencing tracked data objects which no longer exist."],
+                mainContent: CleanOrphanedAssignments({})})
+        }
+        
+        function init(){
+            ReactDOM.render(CleanOrphanedAssignmentsApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+	</head>
+	<body onload="init()">
+        <div id="app"></div>
+	</body>
+</html>

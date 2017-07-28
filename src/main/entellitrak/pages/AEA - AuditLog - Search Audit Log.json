@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.auditLog.searchAuditLog",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.searchauditlogcontroller.0ee64e71-7e26-49b9-9d4c-37512f0e4f8c",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Standalone page that allows a user to search for audit log entries.",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - AuditLog - Search Audit Log",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.searchauditlogview.d914cd92-833e-4970-b922-11d30bef22fe"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewpagereportdashboarddisplaycontroller.8380e89e-102f-431b-9e2b-7ebc3d9cce3d",
+  "description" : "ViewPageReportDashboardDisplayController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewPageReportDashboardDisplayController",
+  "packageBusinessKey" : "package.viewPageReportDashboardDisplay.2317be25-78e8-482e-81d7-a943d5ff8b8e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

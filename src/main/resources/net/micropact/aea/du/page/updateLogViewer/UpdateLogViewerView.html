@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Update Log Viewer</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <style type="text/css">
+        input[type=text]{
+            width: 3.5em;
+        }
+        
+        button {
+            margin-left: 1em;
+        }
+        
+        .additional-info {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .additional-info:before {
+            content: "(";
+        }
+        
+        .additional-info:after {
+            content: ")";
+        }
+        
+        .grid .sort-ascending span::after,
+        .grid .sort-descending span::after {
+            float: right;
+        }
+        
+        .grid .sort-ascending span::after {
+            content: "\25B2";
+        }
+        
+        .grid .sort-descending span::after {
+            content: "\25BC";
+        }
+        
+        .log-entries th {
+            cursor: pointer;
+        }
+        
+        table.grid thead th {
+            text-align: center;
+        }
+        
+        table.grid tbody th {
+            background-color: #d2d2d2;
+            font-size: 13px;
+            padding: 0 0.5em;
+        }
+        
+        table.grid tbody tr:not(:first-child) th {
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .duration {
+            text-align: right;
+            white-space: nowrap;
+        }
+        
+        .duration > span {
+            display: inline-block;
+            min-width: 3.5em;
+        }
+        
+        .number {
+            text-align: right;
+        }
+        
+        .grid tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        caption {
+            background-color: #353535;
+            color: #ffffff;
+            padding: 0.5em;
+            font-weight: bold;
+        }
+    </style>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var logModel = function(changeCallback) {
+            var state = {
+                initialized: false,
+                logEntries: [],
+                limit: 100,
+
+                // The default sort will be newest on top
+                sortProperty: "START_TIMESTAMP",
+                sortAsc: false
+            }
+
+            fetchData()
+
+            function fetchData() {
+                state.initialized = false
+
+                jQuery.post("page.request.do", {
+                        page: "du.page.updateLogViewer.ajax",
+                        limit: state.limit
+                    })
+                    .done(function(response) {
+                        /* Do the initial sort */
+                        state.initialized = true
+                        state.logEntries = response
+                        sortEntries()
+                    })
+                changeCallback()
+            }
+
+            function isInitialized() {
+                return state.initialized
+            }
+
+            function getLogEntries() {
+                return state.logEntries
+            }
+
+            function getLimit() {
+                return state.limit
+            }
+
+            function setLimit(limit) {
+                state.limit = limit
+                changeCallback()
+            }
+
+            /* This will sort the entries based on the the requested property and direction from the state */
+            function sortEntries() {
+                var property = state.sortProperty
+
+                function compare(entry1, entry2) {
+                    var entry1Value = entry1[property]
+                    var entry2Value = entry2[property]
+                    if (entry1Value == entry2Value) {
+                        return 0
+                    } else {
+                        var compResult = entry1Value < entry2Value ? -1 : 1
+                        return state.sortAsc ? compResult : (0 - compResult)
+                    }
+                }
+
+                state.logEntries = mergeSort(state.logEntries, compare)
+                changeCallback()
+            }
+
+            function getSortProperty() {
+                return state.sortProperty
+            }
+
+            function isSortAscending() {
+                return state.sortAsc
+            }
+
+            /* This will sort the entries by the requested property.
+             * Note: if you want to sort times, you should do it by the numbers, 
+             ie: "START_TIMESTAMP" instead of "startTimeStampDisplay" */
+            function sortBy(requestedProperty) {
+                var oldProperty = state.sortProperty
+                var isSameProperty = oldProperty == requestedProperty
+
+                state.sortProperty = requestedProperty
+                state.sortAsc = isSameProperty ? !state.sortAsc : true
+
+                sortEntries()
+
+                changeCallback()
+            }
+
+            return {
+                //state: state,
+                isInitialized: isInitialized,
+                getLimit: getLimit,
+                setLimit: setLimit,
+                getLogEntries: getLogEntries,
+                getSortProperty: getSortProperty,
+                isSortAscending: isSortAscending,
+                fetchData: fetchData,
+                sortBy: sortBy
+            }
+        }
+
+        /* We define mergeSort because it is a stable sort, unlike the browser's default sort */
+        function mergeSort(arr, comparator) {
+            if (arr.length < 2) {
+                return arr
+            }
+            var middle = parseInt(arr.length / 2)
+            var left = arr.slice(0, middle)
+            var right = arr.slice(middle, arr.length)
+
+            return merge(mergeSort(left, comparator), mergeSort(right, comparator), comparator);
+        }
+
+        function merge(left, right, comparator) {
+            var result = [];
+
+            while (left.length > 0 && right.length > 0) {
+                if (comparator(left[0], right[0]) <= 0) {
+                    result.push(left.shift())
+                } else {
+                    result.push(right.shift())
+                }
+            }
+
+            while (left.length > 0) {
+                result.push(left.shift())
+            }
+            while (right.length > 0) {
+                result.push(right.shift())
+            }
+
+            return result;
+        }
+
+        function calculateMeanDuration(logEntries) {
+            if (logEntries.length == 0) {
+                return null
+            } else {
+                var total = 0
+
+                logEntries.forEach(function(entry) {
+                    total += entry.duration
+                })
+
+                return total / logEntries.length
+            }
+        }
+
+        function calculateMedianDuration(logEntries) {
+            if (logEntries.length == 0) {
+                return null
+            } else if (logEntries.length % 2 == 1) {
+                return logEntries[logEntries.length >> 1].duration
+            } else {
+                var greaterThanMiddle = logEntries.length >> 1
+                return (logEntries[greaterThanMiddle].duration + logEntries[greaterThanMiddle - 1].duration) / 2
+            }
+        }
+
+        function formatDuration(milliseconds) {
+            if (milliseconds == null) {
+                return "N/A"
+            } else {
+                var negative = milliseconds < 0
+                var absoluteMilliseconds = Math.abs(milliseconds)
+
+                var totalSeconds = Math.floor(absoluteMilliseconds / 1000)
+                var seconds = totalSeconds % 60
+                var totalMinutes = (totalSeconds - seconds) / 60
+                var minutes = totalMinutes % 60
+                var hours = (totalMinutes - minutes) / 60
+
+                return React.DOM.div({
+                        className: "duration"
+                    },
+                    negative ? "-" : null,
+                    hours > 0 && React.DOM.span(null, hours + " hr "),
+                    totalMinutes > 0 && React.DOM.span(null, minutes + " min "),
+                    React.DOM.span(null, seconds + " sec"))
+            }
+        }
+
+        /* Destructively adds basic statistics to the item */
+        function addStatistics(item) {
+            item.mean = calculateMeanDuration(item.entries)
+            item.median = calculateMedianDuration(item.entries)
+            item.number = item.entries.length
+        }
+
+        /* Takes entries which are sorted with most recent first and returns all entries since cutoffTime */
+        function entriesAfter(sortedEntries, cutoffTime) {
+            var returnValues = []
+            for (var i = 0; i < sortedEntries.length && sortedEntries[i].START_TIMESTAMP >= cutoffTime; i++) {
+                returnValues.push(sortedEntries[i])
+            }
+            return returnValues
+        }
+
+        /* Gets statistics about the SUCCESSFUL log model entries. */
+        function gatherStatistics(logModel) {
+            var successfulEntries = filterSuccessful(logModel.getLogEntries())
+            successfulEntries.sort(function(e1, e2) {
+                return e2.START_TIMESTAMP - e1.START_TIMESTAMP
+            })
+
+            var now = new Date().getTime()
+
+            var items = [{
+                type: "Last One",
+                entries: successfulEntries.slice(0, 1)
+            }, {
+                type: "Last Day",
+                entries: entriesAfter(successfulEntries, now - 86400000)
+            }, {
+                type: "Last Week",
+                entries: entriesAfter(successfulEntries, now - 604800000)
+            }, {
+                type: "Last Month",
+                entries: entriesAfter(successfulEntries, now - 2592000000)
+            }, {
+                type: "All Time",
+                entries: successfulEntries
+            }]
+            items.forEach(function(item) {
+                addStatistics(item)
+            })
+            return items
+        }
+
+        /* Return just the successful entries */
+        function filterSuccessful(logEntries) {
+            return logEntries.filter(function(entry) {
+                return entry.STATUS == 500
+            })
+        }
+
+        var Statistics = React.createFactory(React.createClass({
+            render: function() {
+                var logModel = this.props.logModel
+                return React.DOM.table({
+                        className: "grid aea-core-grid"
+                    },
+                    React.DOM.caption(null,
+                        "Success Statistics"),
+                    React.DOM.thead(null,
+                        React.DOM.tr(null,
+                            React.DOM.th(null, "Statistic"),
+                            React.DOM.th(null, "Mean"),
+                            React.DOM.th(null, "Median"),
+                            React.DOM.th(null, "Number"))),
+                    React.DOM.tbody(null,
+                        gatherStatistics(logModel).map(function(statistic, i) {
+                            return React.DOM.tr({
+                                    key: i
+                                },
+                                React.DOM.th(null, statistic.type),
+                                React.DOM.td(null, formatDuration(statistic.mean)),
+                                React.DOM.td(null, formatDuration(statistic.median)),
+                                React.DOM.td({
+                                    className: "number"
+                                }, statistic.number))
+                        })))
+            }
+        }))
+
+        function LogEntryTable(props) {
+            var logModel = props.logModel
+            var currentSortProperty = logModel.getSortProperty()
+            return React.DOM.table({
+                    className: "log-entries grid aea-core-grid"
+                },
+                React.DOM.caption(null,
+                    "Update Log"),
+                React.DOM.thead(null,
+                    React.DOM.tr(null, [{
+                        name: "Status",
+                        sortProperty: "STATUS"
+                    }, {
+                        name: "Description",
+                        sortProperty: "DESCRIPTION"
+                    }, {
+                        name: "Duration",
+                        sortProperty: "duration"
+                    }, {
+                        name: "Start Time",
+                        sortProperty: "START_TIMESTAMP"
+                    }, {
+                        name: "End Time",
+                        sortProperty: "END_TIMESTAMP"
+                    }, {
+                        name: "User",
+                        sortProperty: "USERNAME"
+                    }, {
+                        name: "IP Address",
+                        sortProperty: "IP_ADDRESS"
+                    }].map(function(header, i) {
+                        var className = currentSortProperty == header.sortProperty && (logModel.isSortAscending() ? "sort-ascending" : "sort-descending")
+
+                        return React.DOM.th({
+                                key: i,
+                                className: className,
+                                onClick: function(e) {
+                                    e.preventDefault()
+                                    logModel.sortBy(header.sortProperty)
+                                }
+                            },
+                            React.DOM.span(null, header.name))
+                    }))),
+                React.DOM.tbody(null,
+                    logModel.getLogEntries().map(function(logEntry, i) {
+                        return React.DOM.tr({
+                                key: logEntry.UPDATE_LOG_ID
+                            },
+                            React.DOM.td(null, logEntry.updateLogStatusDisplay),
+                            React.DOM.td(null, logEntry.DESCRIPTION),
+                            React.DOM.td(null, formatDuration(logEntry.duration)),
+                            React.DOM.td(null, logEntry.startTimeStampDisplay),
+                            React.DOM.td(null, logEntry.endTimeStampDisplay),
+                            React.DOM.td(null, logEntry.USERNAME),
+                            React.DOM.td(null, logEntry.IP_ADDRESS))
+                    })))
+        }
+
+        function LimitForm(props) {
+            var logModel = props.logModel
+
+            return React.DOM.form(null,
+                React.DOM.label(null, "Limit to latest ",
+                    React.DOM.input({
+                        type: "text",
+                        value: logModel.getLimit(),
+                        onChange: function(event) {
+                            logModel.setLimit(event.target.value)
+                        }
+                    }),
+                    " entries ",
+                    React.DOM.span({
+                        className: "additional-info"
+                    }, "leave blank for all")),
+                React.DOM.button({
+                        onClick: function(event) {
+                            event.preventDefault()
+                            logModel.fetchData()
+                        }
+                    },
+                    "Refresh"))
+        }
+
+        var UpdateLog = React.createFactory(React.createClass({
+            componentWillMount: function() {
+                this.setState({
+                    logModel: logModel(function() {
+                        this.forceUpdate()
+                    }.bind(this))
+                })
+            },
+            render: function() {
+                return !this.state.logModel.isInitialized() ? AeaCoreReactComponents.Loading({}) : React.DOM.div(null,
+                    LimitForm({
+                        logModel: this.state.logModel
+                    }),
+                    Statistics({
+                        logModel: this.state.logModel
+                    }),
+                    LogEntryTable({
+                        logModel: this.state.logModel
+                    }))
+            }
+        }))
+
+        var UpdateLogViewerApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Update Log Viewer",
+                    instructions: ["This page is for viewing the Apply Changes log.",
+                        "It also contains basic statistics on how long it has taken to Apply Changes.",
+                        "The Success Statistics only includes information about the entries currently loaded by the browser."
+                    ],
+                    mainContent: UpdateLog({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(UpdateLogViewerApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

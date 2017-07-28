@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.escapelike.318b9d72-ae9e-485e-ac9f-4956f6fe35f9",
+  "description" : "EscapeLike",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "EscapeLike",
+  "packageBusinessKey" : "package.query.8ba4c0f8-e200-406c-b632-d721d9ca2048",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

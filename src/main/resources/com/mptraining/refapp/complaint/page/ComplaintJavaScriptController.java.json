@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.complaintjavascriptcontroller.9b33956d-70fd-486f-a21b-84840f4520e4",
+  "description" : "Controller for Main JavaScript to run on the Complaint form",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ComplaintJavaScriptController",
+  "packageBusinessKey" : "package.page.d28e1107-917e-4145-97fd-9906f4ed8871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

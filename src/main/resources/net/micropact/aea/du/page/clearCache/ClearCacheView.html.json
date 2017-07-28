@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.clearcacheview.9f0b13f5-3ef0-4df1-8e2d-1c2a5cb7c97c",
+  "description" : "Cache clearing utility view.",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ClearCacheView",
+  "packageBusinessKey" : "package.clearCache.2b7d4d33-745a-44e8-b263-12498dc8ef49",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

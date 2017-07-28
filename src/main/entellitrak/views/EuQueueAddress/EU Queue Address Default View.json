@@ -1,0 +1,31 @@
+{
+  "businessKey" : "object.euQueueAddress.view.euQueueAddressDefaultView",
+  "dataObjectBusinessKey" : "object.euQueueAddress",
+  "dataViewElements" : [ {
+    "businessKey" : "object.euQueueAddress.view.euQueueAddressDefaultView.element.address",
+    "dataElementBusinessKey" : "object.euQueueAddress.element.address",
+    "description" : "Address column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Address",
+    "multiValueDelimiter" : null,
+    "name" : "address",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euQueueAddress.view.euQueueAddressDefaultView.element.personal",
+    "dataElementBusinessKey" : "object.euQueueAddress.element.personal",
+    "description" : "Personal column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Personal",
+    "multiValueDelimiter" : null,
+    "name" : "personal",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "EU Queue Address Listing",
+  "name" : "EU Queue Address Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "EU Queue Address Listing"
+}

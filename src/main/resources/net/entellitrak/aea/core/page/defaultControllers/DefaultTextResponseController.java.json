@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.defaulttextresponsecontroller.3f25a6b2-289b-4c17-9aa8-f369e7480074",
+  "description" : "DefaultTextResponseController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DefaultTextResponseController",
+  "packageBusinessKey" : "package.defaultControllers.71787ded-6b49-4b45-9376-2baf891f7ff9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

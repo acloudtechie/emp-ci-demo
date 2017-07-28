@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.systemobjectdisplayformat.e33ed106-d535-4065-85c3-069757a2b59f",
+  "description" : "Declares System Object Display Formats used within Lookup Definitions",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SystemObjectDisplayFormat",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

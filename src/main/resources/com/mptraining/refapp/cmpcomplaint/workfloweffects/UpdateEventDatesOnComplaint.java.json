@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.updateeventdatesoncomplaint.66493279-e718-4845-9489-5361bbb408b8",
+  "description" : "Update  the Last Event Date and Due Date fields on CMP Complaint based on the last created CMP Event",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "UpdateEventDatesOnComplaint",
+  "packageBusinessKey" : "package.workfloweffects.b7e3d1b3-a329-43b9-bd33-9530e105ab87",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,7 @@
+{
+  "businessKey" : "plugin.yesnounknown",
+  "className" : "com.mptraining.refapp.dtpi.yesnounknown.YesNoUnknown",
+  "description" : "A radio field with Yes, No, and Unknown as options.",
+  "name" : "YesNoUnknown",
+  "pluginType" : "DATA_TYPE"
+}

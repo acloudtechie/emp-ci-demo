@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.newlinetrimmednoblanksdeserializer.d090b979-2b36-4c5c-8bd0-c48bc6d16cb8",
+  "description" : "NewlineTrimmedNoBlanksDeserializer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "NewlineTrimmedNoBlanksDeserializer",
+  "packageBusinessKey" : "package.deserializer.a4a46229-8b12-406c-b118-0032671a8349",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

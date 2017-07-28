@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euemailtemplatedoe.ebd9b4a7-08ab-4d42-a5a3-3622af459c94",
+  "description" : "EuEmailTemplateDoe",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "EuEmailTemplateDoe",
+  "packageBusinessKey" : "package.doe.41a16562-4920-484b-96d2-2cbf7dad3da5",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

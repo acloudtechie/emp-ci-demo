@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.javascriptUtilities",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultjavascriptcontroller.accaa7b2-eb38-4824-a20c-d05669420ac6",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:48Z",
+  "description" : "JavaScript Utilities",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "JavaScript Utilities",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.javascriptutilitiescontroller.d3e9bf27-8ad8-48df-b62d-ad9a6b0838ba"
+}

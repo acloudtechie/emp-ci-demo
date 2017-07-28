@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.packagemoverview.991c0916-8d59-4c91-ac53-26d2bf3f2c3a",
+  "description" : "PackageMoverView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "PackageMoverView",
+  "packageBusinessKey" : "package.packageMover.2aef7221-f671-4d45-ace7-c7510ecfb227",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

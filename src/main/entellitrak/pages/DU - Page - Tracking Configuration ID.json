@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.trackingConfigurationId",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.trackingconfigurationidcontroller.e8bd9afa-c307-4ad2-967d-9cf26c1d1a5e",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Tracking Configuration ID",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Tracking Configuration ID",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.trackingconfigurationidview.70f75430-04e9-4ad4-9b12-6f6e01875da6"
+}

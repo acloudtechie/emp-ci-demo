@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.tureplacementsectiondoe.6050c77c-f159-4bb8-ad99-69baa57f7749",
+  "description" : "TuReplacementSectionDoe",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "TuReplacementSectionDoe",
+  "packageBusinessKey" : "package.doe.4812854a-ca30-445d-ae16-d59ceed07fd7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

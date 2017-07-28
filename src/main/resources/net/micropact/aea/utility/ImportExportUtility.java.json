@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.importexportutility.402efb2e-f4fe-45b4-af49-df08a59df68c",
+  "description" : "ImportExportUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ImportExportUtility",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

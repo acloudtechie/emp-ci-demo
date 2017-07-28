@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfworkfloweffectjavascriptcontroller.22c5c933-6487-48ca-879e-bac95811b114",
+  "description" : "RfWorkflowEffectJavascriptController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RfWorkflowEffectJavascriptController",
+  "packageBusinessKey" : "package.rfWorkflowEffectJavascript.153447a2-832e-4fcb-9d91-a7daf0c66421",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

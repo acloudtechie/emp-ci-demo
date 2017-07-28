@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transferreportownershipcontroller.98fd2fcc-b78a-4fd7-a977-09d4a86bb03e",
+  "description" : "TransferReportOwnershipController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "TransferReportOwnershipController",
+  "packageBusinessKey" : "package.transferReportOwnership.02308b5a-f689-4c39-a422-44425f12d1cc",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

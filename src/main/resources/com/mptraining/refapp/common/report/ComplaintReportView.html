@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Complaint Report</title>
+	
+	<link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+	<link type="text/css" rel="stylesheet" href="web-pub/js/jscalendar-1.0/calendar-win2k-cold-1.css" />
+	
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	
+	<style type="text/css">
+		ul.core-navigation {
+			padding: 0;
+			margin: 0;
+			display: block;
+			background: black;
+			background: url("themes/default/web-pub/images/topmenu-bg.png") repeat-x
+				scroll center top/100% 100% #353535;
+			color: #fff;
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 50px;
+		}
+		
+		ul.core-navigation>li {
+			display: inline-block;
+			height: 50px;
+		}
+		
+		ul.core-navigation>li>a {
+			display: inline-block;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		ul.core-navigation a:link, ul.core-navigation a:visited, ul.core-navigation a:active
+			{
+			color: inherit;
+			text-decoration: inherit;
+		}
+		
+		ul.core-navigation>li>a:hover {
+			background: gray;
+			background: linear-gradient(to bottom, #060908 0%, #616060 100%);
+		}
+		
+		ul.core-navigation>li.core-active, ul.core-navigation>li.core-active>a:hover
+			{
+			background: #ea2b1b;
+		}
+		
+		div#mainContent > form#reportForm > table > tbody > tr > td {
+			vertical-align: middle;
+		}
+		
+		div#mainContent > form#reportForm > table > tbody > tr > td:first-of-type {
+			width: 200px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+	<script type="text/javascript" src="web-pub/js/jscalendar-1.0/openCalendar.js"></script>
+	<script type="text/javascript" src="web-pub/js/jscalendar-1.0/calendar.js"></script>
+	<script type="text/javascript" src="web-pub/js/jscalendar-1.0/lang/calendar-en.js"></script>
+	<script type="text/javascript" src="web-pub/js/jscalendar-1.0/calendar-setup.js"></script>
+	
+	<script type="text/javascript">
+		function generateReport(){
+			var sacAssigned = jQuery("#sacAssigned").val();
+			var complaintCurrentStatus = jQuery("#complaintCurrentStatus").val();
+			var receivedDateStart = jQuery("#receivedDateStart").val();
+			var receivedDateEnd =jQuery("#receivedDateEnd").val();
+			var fileFormat = jQuery("input[name='fileFormat']:checked").val();
+			var ignorePagination = jQuery("#ignorePagination:checked").val() == null ? '' : 'true';
+			window.open('report.parameters.submit.do?id=$!reportId&fileFormat=' + fileFormat + '&receivedDateStart=' + receivedDateStart + '&receivedDateEnd=' + receivedDateEnd + '&sacAssigned=' + sacAssigned + '&complaintCurrentStatus=' + complaintCurrentStatus + '&IS_IGNORE_PAGINATION=' + ignorePagination);
+		}
+	
+		function setupCalendar(controlName){
+			Calendar.setup({
+			inputField: controlName,
+			ifFormat: '%Y-%m-%d',
+			showsTime: false,
+			button: 'anchor_' + controlName,
+			singleClick: true,
+			step: 1
+			}); 
+		}
+	
+		
+		function setupDates(){
+			setupCalendar('receivedDateStart');
+			setupCalendar('receivedDateEnd');
+		}
+	
+		window.onload = setupDates;
+	</script>
+</head>
+<body>
+	<div id="titleDisplay">
+		<ul class="core-navigation">
+			<li><a href="home.do">Home</a></li>
+			<li class="core-active">
+				<a href="page.request.do?page=page.complaintReport">Complaint Report</a>
+			</li>
+		</ul>
+	</div>
+	<div id="mainContent">
+		<form name="reportForm" method="post" action="page.request.do" id="reportForm">
+			<input type="hidden" name="page" value="page.complaintReport">
+			<input type="hidden" name="action" value="">
+			<input type="hidden" name="dest" value="$reportId">
+			<table>
+				<tbody>
+					<tr>
+						<td><b>Received Date Start:</b></td>
+						<td>
+							<input type="text" size="10" maxlength="10" name="receivedDateStart" id="receivedDateStart" value="">
+							<img src="themes/default/web-pub/images/icons/calendar.gif" border="0" id="anchor_receivedDateStart" title="Start Date" alt="Start Date">&nbsp;(yyyy-mm-dd)
+						</td>
+					</tr>
+					<tr>
+						<td><b>Received Date End:</b></td>
+						<td>
+							<input type="text" size="10" maxlength="10" name="receivedDateEnd" id="receivedDateEnd" value="">
+							<img src="themes/default/web-pub/images/icons/calendar.gif" border="0" id="anchor_receivedDateEnd" title="End Date" alt="End Date">&nbsp;(yyyy-mm-dd)
+						</td>
+					</tr>
+					<tr>
+						<td><b>Complaint Status:</b></td>
+						<td>
+							<select id="complaintCurrentStatus" name="complaintCurrentStatus">
+								<option value=""></option>
+								#foreach($status in $statusList)
+								<option value="$status.value">$status.display</option>
+								#end
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><b>SAC Assigned:</b></td>
+						<td>
+							<select id="sacAssigned" name="sacAssigned">
+								<option value=""></option>
+								#foreach($sac in $sacList)
+								<option value="$sac.value">$sac.display</option>
+								#end
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br/>
+			<fieldset>
+				<legend>Display Options</legend>
+				<table>
+					<tbody>
+							<tr>
+							<td><input name="fileFormat" id="html" type="radio" value="html" checked="checked"></td>
+							<td><label for="html">Single Page HTML</label></td>
+						</tr>
+						<tr>
+							<td><input name="fileFormat" id="pdf" type="radio" value="pdf"></td>
+							<td><label for="pdf">PDF</label></td>
+						</tr>
+						<tr>
+							<td><input name="fileFormat" id="rtf" type="radio" value="rtf"></td>
+							<td><label for="rtf">MS Word (RTF)</label></td>
+						</tr>			
+						<tr>
+							<td><input name="fileFormat" id="xls" type="radio" value="xls"></td>
+							<td><label for="xls">MS Excel</label></td>
+						</tr>
+						<tr>
+			                <td><input name="IS_IGNORE_PAGINATION" id="ignorePagination" type="checkbox" value="true"></td>
+			                <td><label for="ignorePagination">Single Page (no page breaks)</label></td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+			<br/>
+			<input type="button" class="formButton" value="Run Report" onclick="generateReport()">
+			<input type="button" class="formButton" value="Close" onclick="window.close()">
+		</form>
+	</div>
+</body>
+</html>

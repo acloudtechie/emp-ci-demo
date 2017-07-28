@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.queryutility.82f83c0f-b5cf-4575-b05f-0c3c19561311",
+  "description" : "QueryUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "QueryUtility",
+  "packageBusinessKey" : "package.query.8ba4c0f8-e200-406c-b632-d721d9ca2048",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

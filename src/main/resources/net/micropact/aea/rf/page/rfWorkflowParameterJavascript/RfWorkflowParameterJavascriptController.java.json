@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfworkflowparameterjavascriptcontroller.31f2e208-ba68-4638-a059-99c25181662b",
+  "description" : "RfWorkflowParameterJavascriptController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RfWorkflowParameterJavascriptController",
+  "packageBusinessKey" : "package.rfWorkflowParameterJavascript.5a567a16-7f03-4106-a96d-0c2013d63403",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

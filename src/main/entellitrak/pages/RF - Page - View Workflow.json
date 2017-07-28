@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.page.viewWorkflow",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewworkflowcontroller.f18307f2-9458-433f-89b1-7c472ccfd969",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Page - View Workflow",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - View Workflow",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewworkflowview.d466b2d9-b3cd-49e7-94dd-01a77df0e536"
+}

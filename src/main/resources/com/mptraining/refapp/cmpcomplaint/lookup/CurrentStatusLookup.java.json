@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.currentstatuslookup.6377d05d-d149-469d-9113-6748db373e24",
+  "description" : "Current Status Lookup - for use with WRE",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "CurrentStatusLookup",
+  "packageBusinessKey" : "package.lookup.d8a89035-31c6-45d7-9179-210e33e48aa7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

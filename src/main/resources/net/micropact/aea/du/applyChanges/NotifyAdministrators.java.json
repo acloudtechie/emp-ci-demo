@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.notifyadministrators.a2b81eb8-95bb-412e-b0f8-2a506b00ff07",
+  "description" : "NotifyAdministrators",
+  "handlerType" : "APPLY_CHANGES_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "NotifyAdministrators",
+  "packageBusinessKey" : "package.applyChanges.20442ff9-2ca3-430a-a86e-106df437a4d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

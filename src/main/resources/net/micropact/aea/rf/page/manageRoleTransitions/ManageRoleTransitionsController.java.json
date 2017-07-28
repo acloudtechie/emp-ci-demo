@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.manageroletransitionscontroller.77637e26-8590-4f4e-b9ae-48d638398a09",
+  "description" : "ManageRoleTransitionsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ManageRoleTransitionsController",
+  "packageBusinessKey" : "package.manageRoleTransitions.bde16b1a-71ea-45ea-8b25-9a75bf1b4ed6",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

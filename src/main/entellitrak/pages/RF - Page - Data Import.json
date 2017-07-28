@@ -1,0 +1,21 @@
+{
+  "businessKey" : "rf.page.objectImport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.objectimportcontroller.071db8ff-be56-4967-9578-79c3d9325123",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Page - Data Import",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - Data Import",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.objectimportview.1f3c24fa-4c7c-4d7c-8775-6e1ef54e5334"
+}

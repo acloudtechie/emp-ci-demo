@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rftransitionfromstates.ac816651-7a76-40f2-998c-beae69a006f5",
+  "description" : "RF Ttransition - From States",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfTransitionFromStates",
+  "packageBusinessKey" : "package.lookup.065a5fb2-a524-4643-a7a1-b89642f1c62e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

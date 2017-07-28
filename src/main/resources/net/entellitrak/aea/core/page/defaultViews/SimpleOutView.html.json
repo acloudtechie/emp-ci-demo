@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d",
+  "description" : "SimpleOutView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "SimpleOutView",
+  "packageBusinessKey" : "package.defaultViews.5b6861a4-aee9-4082-836a-fa5440c7829d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

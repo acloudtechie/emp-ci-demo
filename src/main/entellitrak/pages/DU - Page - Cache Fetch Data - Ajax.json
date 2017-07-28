@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.cacheFetchData.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cachefetchdatacontroller.a67babb4-1991-489d-a04c-4aff8fb522bf",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Cache Fetch Data - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Cache Fetch Data - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

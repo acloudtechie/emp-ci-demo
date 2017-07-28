@@ -1,0 +1,81 @@
+{
+  "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView",
+  "dataObjectBusinessKey" : "object.cmpDocument",
+  "dataViewElements" : [ {
+    "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView.element.description",
+    "dataElementBusinessKey" : "object.cmpDocument.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView.element.dmfile",
+    "dataElementBusinessKey" : "object.cmpDocument.element.dmFile",
+    "description" : "DM File column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "DM File",
+    "multiValueDelimiter" : null,
+    "name" : "dmFile",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView.element.documentname",
+    "dataElementBusinessKey" : "object.cmpDocument.element.documentName",
+    "description" : "Document Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Document Name",
+    "multiValueDelimiter" : null,
+    "name" : "documentName",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView.element.documenttype",
+    "dataElementBusinessKey" : "object.cmpDocument.element.documentType",
+    "description" : "Document Type column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Document Type",
+    "multiValueDelimiter" : null,
+    "name" : "documentType",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView.element.file",
+    "dataElementBusinessKey" : "object.cmpDocument.element.file",
+    "description" : "File column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "File",
+    "multiValueDelimiter" : null,
+    "name" : "file",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView.element.lastupdatedon",
+    "dataElementBusinessKey" : "object.cmpDocument.element.lastUpdatedOn",
+    "description" : "Last Updated On column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Last Updated On",
+    "multiValueDelimiter" : null,
+    "name" : "lastUpdatedOn",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpDocument.view.cmpDocumentDefaultView.element.title",
+    "dataElementBusinessKey" : "object.cmpDocument.element.title",
+    "description" : "Title column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Title",
+    "multiValueDelimiter" : null,
+    "name" : "title",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "CMP Document Listing",
+  "name" : "CMP Document Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "CMP Document Listing"
+}

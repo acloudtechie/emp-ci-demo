@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.pdfgenerateexception.c920f6cd-824c-48a6-b43b-22da20490cfd",
+  "description" : "PdfGenerateException",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "PdfGenerateException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

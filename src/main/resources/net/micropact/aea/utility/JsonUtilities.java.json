@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.jsonutilities.afd5cb03-9e78-404a-86c7-df11932156c0",
+  "description" : "JSON Helper Utility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "JsonUtilities",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

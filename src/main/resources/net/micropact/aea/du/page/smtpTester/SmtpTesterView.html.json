@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.smtptesterview.75f3d8e0-1dfd-4029-83f5-dee68e63a3eb",
+  "description" : "SmtpTesterView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "SmtpTesterView",
+  "packageBusinessKey" : "package.smtpTester.83b4a4e1-721a-486d-9cb2-79663ade40c0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.coreservicefactory.cf959427-466b-4463-8798-28f59ee02464",
+  "description" : "CoreServiceFactory",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "CoreServiceFactory",
+  "packageBusinessKey" : "package.core.4d21504c-fa65-4bbb-aa60-271d3e1d8d34",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

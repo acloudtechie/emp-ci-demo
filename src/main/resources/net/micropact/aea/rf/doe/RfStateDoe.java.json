@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfstatedoe.8aa3a359-83aa-4e82-b113-9754188d5839",
+  "description" : "RfStateDoe",
+  "handlerType" : "DATA_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfStateDoe",
+  "packageBusinessKey" : "package.doe.deb72ee7-276a-4a9f-98a6-5a843be4817c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.workspaceservicewrapper.fd23d08e-db51-43d2-9f90-1dbf0545556b",
+  "description" : "WorkspaceServiceWrapper",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "WorkspaceServiceWrapper",
+  "packageBusinessKey" : "package.wrappedAPIs.abbea5cf-10a7-4c50-9faa-e8b3b194d0d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

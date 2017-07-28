@@ -1,0 +1,21 @@
+{
+  "businessKey" : "eu.page.objectExport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.objectexportcontroller.f6568e54-3241-4a34-9a1c-1b5af9c74721",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "EU - Page - Data Export",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "EU - Page - Data Export",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.objectexportview.7af94951-84de-4ba7-b565-b43463032912"
+}

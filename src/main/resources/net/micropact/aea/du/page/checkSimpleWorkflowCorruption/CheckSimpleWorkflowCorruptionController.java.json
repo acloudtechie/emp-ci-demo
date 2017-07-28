@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewcorruptedsimpleworkflowcontroller.93a92902-8525-4226-b680-0597e0a048f1",
+  "description" : "CheckSimpleWorkflowCorruptionController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CheckSimpleWorkflowCorruptionController",
+  "packageBusinessKey" : "package.checkSimpleWorkflowCorruption.6752a020-14f3-49bb-a915-3c9e71bd4fce",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

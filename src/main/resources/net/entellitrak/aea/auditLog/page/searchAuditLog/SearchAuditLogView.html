@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Search AEA Audit Log</title>
+
+		<link href="themes/default/web-pub/css/rt.jsp" rel="stylesheet" />
+		<link href="web-pub/js/jscalendar-1.0/calendar-win2k-cold-1.css" rel="stylesheet" type="text/css" />
+		<link href="themes/default/public/com/jqueryui/current/jquery-ui.min.css" rel="stylesheet" />
+		<link href="themes/default/web-pub/page-resources/entellitrak/rt/search/searchForm.css" rel="stylesheet" />
+		<link href="themes/default/web-pub/component/grid/css/grid.css" rel="stylesheet" />
+		<script src="web-pub/js/common/prototype.js" type="text/javascript"></script>
+		<script src="web-pub/js/jscalendar-1.0/openCalendar.js" type="text/javascript"></script>
+		<script src="web-pub/js/jscalendar-1.0/calendar.js" type="text/javascript"></script>
+		<script src="web-pub/js/jscalendar-1.0/lang/calendar-en.js" type="text/javascript"></script>
+		<script src="web-pub/js/jscalendar-1.0/calendar-setup.js" type="text/javascript"></script>
+		<script src="web-pub/js/CalendarPopup.js" type="text/javascript"></script>
+		<script src="web-pub/js/rt.js" type="text/javascript"></script>
+		<script src="web-pub/js/promptSave.js" type="text/javascript"></script>
+		<script src="web-pub/js/png.js" type="text/javascript"></script>
+		<script src="web-pub/js/spellCheck/SubmissionScript.js" type="text/javascript"></script>
+		<script src="web-pub/js/tableRuler.js" type="text/javascript"></script>
+		<script src="web-pub/js/simpleMenu.js" type="text/javascript"></script>
+		<script src="web-pub/page-resources/entellitrak/rt/search/search.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			addOnloadEvent(function() {
+				$!dynamicScripting
+			});
+			
+
+			function showBetween(form, name, operator) {
+			    try {
+			        var and = document.getElementById(name + "_and");
+			        var end = document.getElementById(name + "_end_text");
+			        var end_lu = document.getElementById(name + "_end_lu");
+			        var end_format = document.getElementById(name + "_end_format");
+
+			        if (eval(form[operator].options[form[operator].selectedIndex]).value=='between') {
+			            and.className = "show";
+			            end.className = "show";
+			            end_lu.className = "show";
+			            end_format.className = "show";
+			        } else {
+			            and.className = "hide";
+			            end.className = "hide";
+			            end_lu.className = "hide";
+			            end_format.className = "hide";
+			        }
+			    } catch (error) {
+			    }
+			}
+			
+			function resetForms() {
+				document.getElementById('formReset').value = 'true';
+				document.getElementById('searchForm').submit();
+		    }
+			
+			function searchPageNavigate (aPageNumber, sortColumn, sortOrder) {
+				
+				if (sortColumn) {
+					document.getElementById('sortColumn').value = sortColumn;
+				}
+				
+				if (sortOrder) {
+					document.getElementById('sortOrder').value = sortOrder;
+				}
+				
+				document.getElementById('navigateToPage').value = aPageNumber;
+				document.getElementById('searchForm').submit();
+			}
+			
+			function checkSubmit(e)
+			{
+			   if(e && e.keyCode == 13)
+			   {
+				   document.getElementById('searchForm').submit();
+			   }
+			}
+			
+			function testMethodName() {
+				document.getElementById('editSearchParams').style.display = 'none';
+				document.getElementById('inputSearchFormFields').style.display = 'block';
+				document.getElementById('ui-grid-container').style.display = 'none';
+			}
+		</script>
+		<style type="text/css">
+		    body {
+		      font-size: 11px;
+		    }
+		    
+		    h1 {
+		      font-size: 16px;
+		    }
+		
+			.formBody td input[type="text"], .searchInput, input[type="text"], input[type="password"] {
+				height:100% !important;
+			}
+			
+			select:focus:hover, INPUT:focus:hover {
+			   border: 1px solid #3399cc;
+			}
+			
+			.ui-grid-controls input {
+				width: 40px !important;
+			}
+			
+			.pageTitleElement {
+			   margin: 0px 5px;
+			}
+			
+			table.mp-etk-grid tbody tr td, table.grid tbody tr td {
+				max-width: 200px;
+				word-wrap: break-word;
+			}
+			
+			#navlist a, input.button, .formButton, a.button {
+				border: 2px solid #3399cc;
+				padding: 3px 8px !important;
+				font-size: 11px;
+				margin: 0 0 8px;
+			}
+			
+			a.pageArrow {
+                padding: 0px 5px !important;
+            }
+            
+            .overflowDiv {
+            	max-height: 300px;
+            	overflow: auto;
+            	border: 1px solid #c0c0c0;
+                border-radius: 4px;
+            }
+            
+            table.linked > tbody > tr:hover {
+                cursor: pointer;
+                background-color: #fafafa;
+            }
+		</style>
+	</head>
+    <body>
+    	<table cellspacing="0" cellpadding="0" style="height: 100%; width: 100%; padding:0;">
+    		<tbody>
+    			<tr>
+    			   <td valign="top" style="vertical-align: top;">
+    			   	   <div id="mainContent">
+    			   	   		<div id="formContainer">
+    			   	   			<br>
+								<form id="searchForm" onsubmit="return preventDoubleSubmit()" method="post" action="page.request.do?page=$!pageBusinessKey&search=true" name="searchForm">
+       								<h1 id="pageTitleDisplay" class="pageTitleElement">$!pageTitle</h1>
+       								#if (!$predefinedSearch)
+       								<input id="searchButton" class="formButton" type="button" onclick="searchPageNavigate(1);" value=" Search ">
+									<input id="resetButton" class="formButton" type="button" onclick="resetForms();" value=" Reset ">
+									<input id="editSearchParams" class="formButton" type="button" onclick="testMethodName();" style="$!uIGridControlsStyle" value=" Edit Search Parameters " >
+									#end
+									<input id="sortColumn" name="sortColumn" type="text" style="display:none" value="$!sortColumnValue">
+									<input id="sortOrder" name="sortOrder" type="text" style="display:none" value="$!sortOrderValue">
+									<input id="pageTitle" name="pageTitle" type="text" style="display:none" value="$!pageTitle">
+									<input id="filterByOrgHierarchy" name="filterByOrgHierarchy" type="text" style="display:none" value="$!filterByOrgHierarchy">
+									<input id="militaryTimeMode" name="militaryTimeMode" type="text" style="display:none" value="$!militaryTimeMode">
+									<input id="formBusinessKey" name="formBusinessKey" type="text" style="display:none" value="$!formBusinessKey">
+									<input id="viewBusinessKey" name="viewBusinessKey" type="text" style="display:none" value="$!viewBusinessKey">
+									<input id="predefinedSearch" name="predefinedSearch" type="text" style="display:none" value="$predefinedSearch">
+									<input id="formReset" name="formReset" type="text" style="display:none" value="">
+									
+									<div id="validationDiv" class="messages">
+										$!validationErrors
+									</div>
+									<div id="ui-grid-container" class="ui-grid-container" style="$!uIGridControlsStyle">
+	       								<div id="ui-grid-controls" class="ui-grid-controls">
+											<ul>
+												<li><a class="pageArrow" id="link_firstPage"
+													href="#" onclick="searchPageNavigate(1);"> <img
+														alt="Go to the first page of records."
+														title="Go to the first page of records."
+														src="themes/default/web-pub/grid/images/page-first.png">
+												</a></li>
+												<li><a class="pageArrow" id="link_prevPage"
+												     href="#" onclick="searchPageNavigate($!previousPage);"> <img
+														alt="Go to the previous page of records."
+														title="Go to the previous page of records."
+														src="themes/default/web-pub/grid/images/page-prev.png">
+												</a></li>
+												<li>Page <input id="navigateToPage" type="text" value="$!currentPage" name="navigateToPage"
+												    onKeyPress="return checkSubmit(event)"
+													title="Please enter the desired page number and press enter"
+													alt="Please enter the desired page number and press enter">
+													of $!totalPages
+												</li>
+												<li><a class="pageArrow" id="link_nextPage"
+												     href="#" onclick="searchPageNavigate($!nextPage);"> <img
+														alt="Go to the next page of records."
+														title="Go to the next page of records."
+														src="themes/default/web-pub/grid/images/page-next.png">
+												</a></li>
+												<li><a class="pageArrow" id="link_lastPage"
+												    href="#" onclick="searchPageNavigate($!totalPages);"> <img
+														alt="Go to the last page of records."
+														title="Go to the last page of records."
+														src="themes/default/web-pub/grid/images/page-last.png">
+												</a></li>
+												<li class="seperatorItem"><img border="0" class="seperator"
+													alt=""
+													src="themes/default/web-pub/component/grid/images/seperator.jpg"></li>
+												<li>Display <input type="text" value="$!recordsToDisplay" id="recordsToDisplay"
+												    onKeyPress="return checkSubmit(event)"
+													title="Enter the number of records to display and then 'Refresh Grid'"
+													alt="Enter the number of records to display and then 'Refresh Grid'"
+													name="recordsToDisplay"> per page
+												</li>
+									
+												<li class="seperatorItem"><img border="0" class="seperator"
+													alt=""
+													src="themes/default/web-pub/component/grid/images/seperator.jpg"></li>
+									
+												<li><a href="#" onclick="searchPageNavigate(1);"> <img
+														alt="Refresh" title="Refresh"
+														src="themes/default/web-pub/images/icons/16x16/refresh.png">&nbsp;Refresh
+												</a></li>
+												<li class="seperatorItem"><img border="0" class="seperator"
+													alt=""
+													src="themes/default/web-pub/component/grid/images/seperator.jpg"></li>
+												<li class="displayingPages">Displaying $!startIndex - $!endIndex of $!rowCount</li>
+											</ul>
+										</div>
+										$!searchResult
+									</div>
+									<div id="inputSearchFormFields" style="$!inputSearchFormFieldsStyle">
+										$!inputSearchForm
+									</div>
+       							</form>
+       						</div>
+       					</div>
+       				</td>
+       			</tr>
+       		</tbody>
+       	</table>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.rfScript",
+  "dataObjectBusinessKey" : "object.rfScript",
+  "description" : "RF - RF Script",
+  "displayDataElementBusinessKey" : "object.rfScript.element.name",
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "DATA_OBJECT_LOOKUP",
+  "name" : "RF - RF Script",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : null
+}

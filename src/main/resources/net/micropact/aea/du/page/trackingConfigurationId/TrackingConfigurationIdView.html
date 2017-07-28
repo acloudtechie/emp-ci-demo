@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+		<title>Developer Utility - Tracking Configurations</title>
+
+		<link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+		
+        <script type="text/javascript">
+        "use strict"
+        
+        var trackingConfigs = [{name: "Currently Deployed",
+            version: $currentlyDeployedVersion,
+            query: $currentlyDeployedQuery},
+            {name: "Next Deployed",
+                version: $nextDeployedVersion,
+                query: $nextDeployedQuery}]
+        
+        var TrackingConfigurations = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.table({className: "grid aea-core-grid"},
+                		React.DOM.thead(null,
+                				React.DOM.tr(null,
+                						["Version", "Tracking Config Id", "SQL Query"].map(function(title, i){
+                							return React.DOM.th({key: i}, title)
+                						}))),
+                		React.DOM.tbody(null, trackingConfigs.map(function(trackingConfig, i){
+                			return React.DOM.tr({key: i},
+                					React.DOM.td(null, trackingConfig.name),
+                					React.DOM.td(null, trackingConfig.version),
+                					React.DOM.td(null, trackingConfig.query))
+                		})))
+            }
+        }))
+        
+        var TrackingConfigurationsApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Tracking Configurations",
+                    instructions: ["This page displays information regarding the two important entellitrak Tracking Configurations.",
+                                   "It is extremely important that you use reference the correct one (usually the Currently Deployed version) by SQL query in code."],
+                    mainContent: TrackingConfigurations({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(TrackingConfigurationsApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+  
+	</head>
+	<body onload="init()">
+		<div id="app"></div>
+	</body>
+</html>

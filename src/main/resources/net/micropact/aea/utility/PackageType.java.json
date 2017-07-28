@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.packagetype.3f7110e8-571b-45aa-954f-3b31b54ea7e3",
+  "description" : "Defines the types of packages a script object can be associated with.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "PackageType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

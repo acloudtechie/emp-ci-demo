@@ -1,0 +1,111 @@
+{
+  "businessKey" : "object.rfTransition.view.rfTransitionDefaultView",
+  "dataObjectBusinessKey" : "object.rfTransition",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.code",
+    "dataElementBusinessKey" : "object.rfTransition.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.description",
+    "dataElementBusinessKey" : "object.rfTransition.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.rfTransition.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 11,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.fromstates",
+    "dataElementBusinessKey" : "object.rfTransition.element.fromStates",
+    "description" : "From States column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "From States",
+    "multiValueDelimiter" : null,
+    "name" : "fromStates",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.initialtransition",
+    "dataElementBusinessKey" : "object.rfTransition.element.initialTransition",
+    "description" : "Initial Transition column.",
+    "displayOrder" : 9,
+    "displaySize" : null,
+    "label" : "Initial Transition",
+    "multiValueDelimiter" : null,
+    "name" : "initialTransition",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.name",
+    "dataElementBusinessKey" : "object.rfTransition.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.order",
+    "dataElementBusinessKey" : "object.rfTransition.element.order",
+    "description" : "Order column.",
+    "displayOrder" : 8,
+    "displaySize" : null,
+    "label" : "Order",
+    "multiValueDelimiter" : null,
+    "name" : "order",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.roles",
+    "dataElementBusinessKey" : "object.rfTransition.element.roles",
+    "description" : "Roles column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "Roles",
+    "multiValueDelimiter" : null,
+    "name" : "roles",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.rfTransition.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 10,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfTransition.view.rfTransitionDefaultView.element.tostate",
+    "dataElementBusinessKey" : "object.rfTransition.element.toState",
+    "description" : "To State column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "To State",
+    "multiValueDelimiter" : null,
+    "name" : "toState",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Transition Listing",
+  "name" : "RF Transition Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Transition Listing"
+}

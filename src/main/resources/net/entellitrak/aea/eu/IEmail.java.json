@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.iemail.8922e678-2213-4d37-8f2c-604026123d07",
+  "description" : "IEmail",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IEmail",
+  "packageBusinessKey" : "package.eu.3204496f-b6f5-4da6-9338-80a9b38d82e3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

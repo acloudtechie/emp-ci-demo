@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.page.objectExport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.controller.15c6bb62-2d08-4a6d-9611-5ff4397c6f9d",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "AEA - Page - Object Export",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - Page - Object Export",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.view.49f3c7b1-78fa-4908-8df1-6ced5ae11809"
+}

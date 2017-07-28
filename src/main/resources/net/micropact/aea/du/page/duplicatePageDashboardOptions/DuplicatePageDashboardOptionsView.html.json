@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.duplicatepagedashboardoptionsview.553b42f9-5f58-4487-8ed3-e1b98e251e3a",
+  "description" : "DuplicatePageDashboardOptionsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "DuplicatePageDashboardOptionsView",
+  "packageBusinessKey" : "package.duplicatePageDashboardOptions.136c7bbe-a628-45a1-b2f9-dde8a1d6bf87",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

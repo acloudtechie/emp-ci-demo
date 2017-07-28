@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.viewMutableReadOnlyFields",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewmutablereadonlyfieldscontroller.02828287-705b-4f55-a9b9-aab7e8999637",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - View Mutable Read Only Fields",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - View Mutable Read Only Fields",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewmutablereadonlyfieldsview.4d0c7209-4b22-490b-97dd-6933feb10d8a"
+}

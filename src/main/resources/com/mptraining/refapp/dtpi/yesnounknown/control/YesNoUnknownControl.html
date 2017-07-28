@@ -1,0 +1,13 @@
+<!-- Template for the Yes/No/Unknown control.  This defines an HTML radio group with a name of {{controlName}}.  The selected value
+     comes from the Options in the helper class. -->
+{{#helper.options}}
+    <label for="{{controlName}}_{{optionName}}">
+        <input id="{{controlName}}_{{optionName}}"
+        type="radio"
+        name="{{controlName}}"
+        value="{{optionValue}}"
+        {{#checked}} checked="checked" {{/checked}}/>
+        {{optionLabel}}
+    </label>
+{{/helper.options}}
+{{#attributes.required}}{{requiredImage}}{{/attributes.required}}

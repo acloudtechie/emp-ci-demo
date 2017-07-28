@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.status.view.statusDefaultView",
+  "dataObjectBusinessKey" : "object.status",
+  "dataViewElements" : [ {
+    "businessKey" : "object.status.view.statusDefaultView.element.code",
+    "dataElementBusinessKey" : "object.status.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.status.view.statusDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.status.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.status.view.statusDefaultView.element.name",
+    "dataElementBusinessKey" : "object.status.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.status.view.statusDefaultView.element.order",
+    "dataElementBusinessKey" : "object.status.element.order",
+    "description" : "Order column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Order",
+    "multiValueDelimiter" : null,
+    "name" : "order",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.status.view.statusDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.status.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Status Listing",
+  "name" : "Status Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Status Listing"
+}

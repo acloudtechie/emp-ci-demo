@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.rfRfWorkflowChildTransitionElement",
+  "dataObjectBusinessKey" : null,
+  "description" : "RF - RF Workflow - Child Transition Element",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RF - RF Workflow - Child Transition Element",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.rfworkflowchildtransitionelement.2f254f1e-c6a3-47ec-af62-2c0c51f37086",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "TEXT"
+}

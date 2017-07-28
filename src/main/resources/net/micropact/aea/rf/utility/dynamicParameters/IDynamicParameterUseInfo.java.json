@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.idynamicparameteruseinfo.982d3d22-bc4d-44ba-8ed4-030032d60176",
+  "description" : "IDynamicParameterUseInfo",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IDynamicParameterUseInfo",
+  "packageBusinessKey" : "package.dynamicParameters.caabeaa1-c79f-42af-a265-2f73dd92022c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

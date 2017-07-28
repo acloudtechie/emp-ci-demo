@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.transferEntelliSqlOwnership",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.transferentellisqlcontroller.6f1e969b-c82a-479f-beb6-b33ac05a4f95",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Transfer entelliSQL Ownership",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Transfer entelliSQL Ownership",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.transferentellisqlview.442e0f71-da60-4ab2-b1b6-7394f162758e"
+}

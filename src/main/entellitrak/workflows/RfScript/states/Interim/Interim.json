@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.rfScript.state.interim",
+  "dataObjectBusinessKey" : "object.rfScript",
+  "description" : "Interim",
+  "name" : "Interim",
+  "type" : "INTERIM",
+  "x" : 0,
+  "y" : 0
+}

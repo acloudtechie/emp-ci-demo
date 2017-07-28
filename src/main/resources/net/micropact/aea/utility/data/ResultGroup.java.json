@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.resultgroup.dbaa36e5-8192-4930-ab8e-42d53ea6940f",
+  "description" : "ResultGroup",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ResultGroup",
+  "packageBusinessKey" : "package.data.b370a8a2-677f-4487-8f5e-b054553ceefe",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

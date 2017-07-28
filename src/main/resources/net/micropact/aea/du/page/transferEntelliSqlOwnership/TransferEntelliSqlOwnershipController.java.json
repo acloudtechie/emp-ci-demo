@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transferentellisqlcontroller.6f1e969b-c82a-479f-beb6-b33ac05a4f95",
+  "description" : "TransferEntelliSqlOwnershipController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "TransferEntelliSqlOwnershipController",
+  "packageBusinessKey" : "package.transferEntelliSqlOwnership.07df64e6-d66d-4ce9-aff3-94c3355f7630",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

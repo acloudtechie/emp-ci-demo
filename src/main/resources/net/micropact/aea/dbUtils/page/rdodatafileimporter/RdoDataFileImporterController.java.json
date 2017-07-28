@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodatafileimportercontroller.da0409c4-7abb-4de1-86cd-7c561dd8076b",
+  "description" : "Controller code to import files into ETK_FILE.",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RdoDataFileImporterController",
+  "packageBusinessKey" : "package.rdodatafileimporter.79a48490-a4f2-4aef-9bec-ab8d57549d1d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

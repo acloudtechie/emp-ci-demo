@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfimportlogic.bc295a36-422f-46e3-a55d-9445b7010379",
+  "description" : "RfImportLogic",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfImportLogic",
+  "packageBusinessKey" : "package.service.f06b2c56-685e-4c4e-b7a2-32b095596055",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

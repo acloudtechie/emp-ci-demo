@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.icacheable.7ab0768c-3674-4bd3-8cc6-695999a55131",
+  "description" : "ICacheable",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ICacheable",
+  "packageBusinessKey" : "package.cache.73bfc64f-d2c6-4333-8e29-cac7d172bf5d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

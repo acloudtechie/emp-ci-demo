@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euqueueaddressajaxcontroller.5e7d3f37-9e4c-4820-a8b1-9b30f859ff21",
+  "description" : "EuQueueAddressAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "EuQueueAddressAjaxController",
+  "packageBusinessKey" : "package.euQueueAddressAjax.d56a6c4d-4245-4d93-87b0-20f19d60c29b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

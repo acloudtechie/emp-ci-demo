@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanorphanedassignmentsview.9b834f23-a287-4c5f-b6fc-1597efa33b3c",
+  "description" : "CleanOrphanedAssignmentsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CleanOrphanedAssignmentsView",
+  "packageBusinessKey" : "package.cleanOrphanedAssignments.7fe99ded-64c7-4a7f-8e5d-1462d573dece",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

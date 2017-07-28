@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.templater.a9d406d1-5ab1-4422-af7d-bc897d5148b8",
+  "description" : "Templater",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "Templater",
+  "packageBusinessKey" : "package.tu.3f95fcf4-4c86-40d0-b81b-0969c72399c1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

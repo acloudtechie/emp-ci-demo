@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdoimportlogic.34e82b28-39dc-4db1-a51c-747f939846b0",
+  "description" : "RdoImportLogic",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoImportLogic",
+  "packageBusinessKey" : "package.service.b5832e12-512c-4640-b0fc-b24f769ae871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

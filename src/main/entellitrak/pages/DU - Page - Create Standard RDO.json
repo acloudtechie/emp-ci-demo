@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.createStandardRDO",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.createstandardrdocontroller.92ca7a38-6a5c-4d2e-8d27-c06eb2633c3a",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Create Standard RDO",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Create Standard RDO",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.createstandardrdoview.93ea099e-1f55-43da-ae4a-97362fe5137b"
+}

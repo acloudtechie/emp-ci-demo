@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.db.utils.rdoDataExportCalculateOrder",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.rdodataexportcalculateordercontroller.16260b46-02f9-403b-b590-c723f3383556",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "Helper page for RDO Data Export to auto-calculate the order of RDOs.",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - DbUtils - RDO Data Export - Calculate Order",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

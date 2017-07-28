@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dataelementrequiredlevel.e72a2399-8b4e-4a38-8f57-d6a82212e6d2",
+  "description" : "DataElementRequiredLevel",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DataElementRequiredLevel",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

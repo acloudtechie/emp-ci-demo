@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.showbaddatesview.a6a335d0-4d2c-4428-9ac1-8e174431a448",
+  "description" : "ViewBadDatesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ViewBadDatesView",
+  "packageBusinessKey" : "package.viewBadDates.6645cfde-f8ee-484e-aed9-7436e5f1e864",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

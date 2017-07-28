@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.objectimportcontroller.eb94b5bb-e130-476b-86ab-52f7c278fe56",
+  "description" : "ObjectImportController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ObjectImportController",
+  "packageBusinessKey" : "package.objectImport.2ababe60-9768-4fd4-92d5-a16b41c9dd5c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

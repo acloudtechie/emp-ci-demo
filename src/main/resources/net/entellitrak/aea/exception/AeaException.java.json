@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeaexception.06124d97-67b0-46f6-b42a-657997ad6027",
+  "description" : "AeaException",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

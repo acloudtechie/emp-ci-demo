@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeacoreconfiguration.f64c99e0-9c77-496c-9ec1-a39d274e8833",
+  "description" : "AeaCoreConfiguration",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaCoreConfiguration",
+  "packageBusinessKey" : "package.cache.54704d20-95be-4305-917a-93703e2c56c4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

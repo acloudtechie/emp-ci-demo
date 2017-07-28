@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.restrictedcomplaint.ba09bd15-c5cb-4c05-827d-7636ec0cc830",
+  "description" : "Display mapping to evaluate if the Confidential and SAC Assigned fields should be Read Only",
+  "handlerType" : "DISPLAY_MAPPING_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RestrictedComplaint",
+  "packageBusinessKey" : "package.dm.4d256ba5-0110-45b8-80b9-18f6dd73f147",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

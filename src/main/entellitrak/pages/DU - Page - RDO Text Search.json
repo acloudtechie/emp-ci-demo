@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.rdoTextSearch",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.rdotextsearchcontroller.99a99677-7ee8-4dc4-aadf-2a999d6530f8",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - RDO Text Search",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - RDO Text Search",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.rdotextsearchview.87f71e0f-0d2f-44d5-9ff5-0aaa30c13a31"
+}

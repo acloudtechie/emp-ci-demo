@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.columnnamelookup.a39b11f1-d99d-4aa4-ae5e-ffd1d4bce0ab",
+  "description" : "Looks up columns for a given table name.",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "ColumnNameLookup",
+  "packageBusinessKey" : "package.lookup.14eca15f-0030-442d-ad47-374130336736",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

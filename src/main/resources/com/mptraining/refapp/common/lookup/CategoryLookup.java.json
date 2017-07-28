@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.categorylookup.40e86a7b-77c8-42e6-ab66-0d2f7c2b1ca4",
+  "description" : "Lookup which filters the Category to just Allegation if the user is an eFiler",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "CategoryLookup",
+  "packageBusinessKey" : "package.lookup.d505160c-69d0-48ae-a21f-32ee8a2aa1f2",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

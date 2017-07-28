@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.deploymentservice.adf303a1-8fc8-490e-8642-815b4568e0b8",
+  "description" : "DeploymentService",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DeploymentService",
+  "packageBusinessKey" : "package.service.cf3d0f46-2660-4662-bf56-058f20a07af0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

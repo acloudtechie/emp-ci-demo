@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.euEuQueueAddress",
+  "dataObjectBusinessKey" : null,
+  "description" : "EU - EU Email Queue - From Address",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "EU - EU Email Queue - From Address",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.euemailqueuefromaddress.8786ff6b-13a2-4f6e-83c4-78706b6bdfcf",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.yesnounknownformcontrol.ae3f625a-e7ad-4a57-b509-62d89051886b",
+  "description" : "Form Control Definitions for the Yes/No/Unknown control",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "YesNoUnknownFormControl",
+  "packageBusinessKey" : "package.yesnounknown.ec427d53-9cd6-4511-917a-a3d34d7033f9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.foreignkeyexplanation.247912af-1ad8-4584-8e74-c37360a42f73",
+  "description" : "ForeignKeyExplanation",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ForeignKeyExplanation",
+  "packageBusinessKey" : "package.foreignKeyExplanation.cb0844ad-9eca-4c7e-8f3a-8f7fb0d1ca96",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.packagemovercontroller.5046cc70-55af-48d3-9faf-7b301d59eb5c",
+  "description" : "PackageMoverController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "PackageMoverController",
+  "packageBusinessKey" : "package.packageMover.2aef7221-f671-4d45-ace7-c7510ecfb227",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

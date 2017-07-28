@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.rfLookup",
+  "dataObjectBusinessKey" : "object.rfLookup",
+  "description" : "RF - RF Lookup",
+  "displayDataElementBusinessKey" : "object.rfLookup.element.name",
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : "object.rfLookup.element.endDate",
+  "lookupSourceType" : "DATA_OBJECT_LOOKUP",
+  "name" : "RF - RF Lookup",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : "object.rfLookup.element.startDate",
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : null
+}

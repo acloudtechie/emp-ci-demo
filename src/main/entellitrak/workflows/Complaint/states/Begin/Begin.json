@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.complaint.state.begin",
+  "dataObjectBusinessKey" : "object.complaint",
+  "description" : "Begin",
+  "name" : "Begin",
+  "type" : "BEGIN",
+  "x" : 0,
+  "y" : 0
+}

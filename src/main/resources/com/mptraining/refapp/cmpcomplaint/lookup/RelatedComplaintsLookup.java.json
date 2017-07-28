@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.relatedcomplaintslookup.a6ba9d39-c0a7-4031-a289-8106c20775cc",
+  "description" : "Lookup of all CMP Complaints",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RelatedComplaintsLookup",
+  "packageBusinessKey" : "package.lookup.d8a89035-31c6-45d7-9179-210e33e48aa7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

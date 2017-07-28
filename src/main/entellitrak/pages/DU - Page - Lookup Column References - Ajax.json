@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.lookupColumnReferences.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.lookupcolumnreferencesajaxcontroller.6c34a912-aaa7-42e1-aa9b-d5686c4819f8",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Lookup Column References - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Lookup Column References - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.transferPageOwnership",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.transferpageownershipcontroller.5c9a0945-110c-4455-8446-7da2dec6a871",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Transfer Page Ownership",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Transfer Page Ownership",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.transferpageownershipview.57fd664a-8035-499c-a716-768586fd807d"
+}

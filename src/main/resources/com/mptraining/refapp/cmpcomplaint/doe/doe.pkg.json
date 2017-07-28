@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.doe.5abff064-d1ce-4285-9106-ecbd926c7f6d",
+  "name" : "doe",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.cmpcomplaint.db6df8fe-4f04-48a8-99c9-42551a450f84",
+  "workspaceName" : "system"
+}

@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.schedulerJobStatus.9f7549e3-17bb-41b2-94c5-b97773381cdd",
+  "name" : "schedulerJobStatus",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.page.f630bb4e-78de-4837-b2f3-611dcf3e08e0",
+  "workspaceName" : "system"
+}

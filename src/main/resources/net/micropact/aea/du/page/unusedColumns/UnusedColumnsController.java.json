@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unusedcolumnscontroller.7461b3a1-56b2-49dc-bc06-3ee8737f9008",
+  "description" : "UnusedColumnsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "UnusedColumnsController",
+  "packageBusinessKey" : "package.unusedColumns.a33baa84-eedf-4164-83f1-a3d2a6e8ba57",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

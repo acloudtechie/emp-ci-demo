@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.categoryType",
+  "dataObjectBusinessKey" : null,
+  "description" : "Category Type",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "Category Type",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.categorylookup.40e86a7b-77c8-42e6-ab66-0d2f7c2b1ca4",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

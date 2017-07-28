@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.utility.6626d93c-1563-49ba-9804-87c072ca8908",
+  "name" : "utility",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.auditLog.21e7be9f-0a4d-496b-8c67-776e9ec0668e",
+  "workspaceName" : "system"
+}

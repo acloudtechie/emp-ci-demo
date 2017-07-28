@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ideploymentresult.967d772d-4ea5-4439-837a-3ede09be325a",
+  "description" : "IDeploymentResult",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IDeploymentResult",
+  "packageBusinessKey" : "package.service.e7b386e1-c592-4cac-a48d-23eae4cfe2cf",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

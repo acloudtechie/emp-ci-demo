@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.replacementvariablechooserview.42d36d71-0ffa-44d0-ac36-2dab1af77d46",
+  "description" : "ReplacementVariableChooserView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "ReplacementVariableChooserView",
+  "packageBusinessKey" : "package.replacementVariableChooser.6359345e-22d9-445f-b3c7-bb1a6da33bd4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.complaintReport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.complaintreportcontroller.a7792204-c5f8-4afc-bb3a-5979914cb001",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Complaint Report",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Complaint Report",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.admin"
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.complaintreportview.8b2e780e-abac-4c07-b421-f2a09a34f14d"
+}

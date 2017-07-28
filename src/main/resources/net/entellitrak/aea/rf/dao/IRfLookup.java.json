@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.irflookup.376767e5-b3db-4cd4-b346-be8453bed8c2",
+  "description" : "IRfLookup",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IRfLookup",
+  "packageBusinessKey" : "package.dao.58cb1e04-652f-4756-bd3b-01d5455f933a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

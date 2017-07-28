@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Lookup Column References</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <style type="text/css">
+        
+        .not-exist {
+            background-color: #ffc0cb;
+        }
+        
+        .left-blank {
+            background-color: #ffcc00;
+        }
+        
+        .summary-container {
+            display: inline-block;
+        }
+        
+        .summary-label {
+            font-weight: bold;
+            margin-right: 0.3em;
+            padding-left: 0.5em;
+        }
+        
+        .summary-label:after {
+            content: ":"
+        }
+        
+        .summary-value {
+            font-style: italic;
+            padding-right: 0.5em;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        function SummaryView(props) {
+
+            var lookups = props.lookups
+
+            var errors = props.lookups.filter(function(lookup) {
+                return lookup.tableColumnExists === false
+            }).length
+
+            var unknown = props.lookups.filter(function(lookup) {
+                return lookup.tableColumnExists === null
+            }).length
+
+            return React.DOM.div({
+                    className: "summary-container"
+                },
+                React.DOM.div({
+                        className: "not-exist"
+                    },
+                    React.DOM.span({
+                        className: "summary-label"
+                    }, "Errors"),
+                    React.DOM.span({
+                        className: "summary-value"
+                    }, errors)),
+                React.DOM.div({
+                        className: "left-blank"
+                    },
+                    React.DOM.span({
+                        className: "summary-label"
+                    }, "Indeterminate"),
+                    React.DOM.span({
+                        className: "summary-value"
+                    }, unknown)))
+        }
+
+        var LookupColumnReferences = React.createFactory(React.createClass({
+            getInitialState: function() {
+                return {
+                    loaded: false,
+                    lookups: []
+                }
+            },
+            componentWillMount: function() {
+                jQuery.post("page.request.do", {
+                        page: "du.page.lookupColumnReferences.ajax"
+                    })
+                    .done(function(response) {
+                        this.setState({
+                            lookups: response,
+                            loaded: true
+                        })
+                    }.bind(this))
+            },
+            render: function() {
+
+                return this.state.loaded ?
+                    React.DOM.div(null,
+                        SummaryView({
+                            lookups: this.state.lookups
+                        }),
+                        React.DOM.table({
+                                className: "grid aea-core-grid aea-highlight"
+                            },
+                            React.DOM.thead(null,
+                                React.DOM.tr(null,
+                                    React.DOM.th(null, "Lookup"),
+                                    React.DOM.th(null, "Lookup Business Key"),
+                                    React.DOM.th(null, "Lookup Type"),
+                                    React.DOM.th(null, "Table"),
+                                    React.DOM.th(null, "Column"))),
+                            React.DOM.tbody(null,
+                                this.state.lookups.map(function(lookup) {
+                                    return React.DOM.tr({
+                                            key: lookup.LOOKUP_DEFINITION_ID,
+                                            className: lookup.tableColumnExists === null ? "left-blank" : false === lookup.tableColumnExists ? "not-exist" : null
+                                        },
+                                        React.DOM.td(null,
+                                            React.DOM.a({
+                                                    href: "cfg.lookup.update.request.do?id=" + encodeURIComponent(lookup.LOOKUP_DEFINITION_ID),
+                                                    target: "_blank"
+                                                },
+                                                lookup.NAME)),
+                                        React.DOM.td(null, lookup.LOOKUP_BUSINESS_KEY),
+                                        React.DOM.td(null, lookup.lookupSourceTypeDisplay),
+                                        React.DOM.td(null, lookup.tableName),
+                                        React.DOM.td(null, lookup.columnName))
+                                })))) : AeaCoreReactComponents.Loading()
+            }
+        }))
+
+        var LookupColumnReferencesApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Lookup Column References",
+                    instructions: ["This page displays information about lookups including which table and colmun each references.",
+                        "It can infer the Table/Column for Data Object and System Object lookusps.",
+                        React.DOM.span(null, "You can explicitly tell it the Table/Column for Java Script type lookups by implementing the ", React.DOM.code(null, "net.entellitrak.aea.lookup.IAeaLookupHandler"), " interface")
+                    ],
+                    mainContent: LookupColumnReferences({})
+                })
+            }
+        }))
+
+        jQuery(function() {
+            ReactDOM.render(LookupColumnReferencesApp(null),
+                jQuery('.app')[0])
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <div class="app"></div>
+</body>
+
+</html>

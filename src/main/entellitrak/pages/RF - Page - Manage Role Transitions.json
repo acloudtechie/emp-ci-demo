@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.page.manageRoleTransitions",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.manageroletransitionscontroller.77637e26-8590-4f4e-b9ae-48d638398a09",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Page - Manage Role Transitions",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - Manage Role Transitions",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.manageroletransitionsview.d4dac0b1-3db8-4fbd-ac22-19777e5d0f8e"
+}

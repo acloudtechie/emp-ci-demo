@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sequencedao.1055f0fa-4e0b-4315-811d-582ff9e3e713",
+  "description" : "DAO for performing operations with any sequences",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SequenceDao",
+  "packageBusinessKey" : "package.dao.bd67c632-9f9d-4258-8dce-202a3048a553",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

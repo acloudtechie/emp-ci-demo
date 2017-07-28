@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.job.2f381af2-173a-404a-b865-a237d1929895",
+  "name" : "job",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.common.d27b1af8-e010-4e31-819e-232bcbc16b2e",
+  "workspaceName" : "system"
+}

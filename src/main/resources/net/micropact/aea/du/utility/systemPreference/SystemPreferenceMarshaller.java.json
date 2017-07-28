@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.systempreferencemarshaller.5a3857e2-1d56-4c75-88a8-2f64a6165e0d",
+  "description" : "SystemPreferenceMarshaller",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SystemPreferenceMarshaller",
+  "packageBusinessKey" : "package.systemPreference.d19bfbcc-e861-4735-96c3-ec4d11c1545f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.baseobjecteventhandlerutility.ca47e870-a931-496e-8b48-9880c3f0ef27",
+  "description" : "BaseObjectEventHandlerUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "BaseObjectEventHandlerUtility",
+  "packageBusinessKey" : "package.doe.0b43c896-1e5f-45ca-aa7f-15e44f89726f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

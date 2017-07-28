@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rflookupimpl.b3328694-d922-462c-a076-8e775ab0bd81",
+  "description" : "RfLookupImpl",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfLookupImpl",
+  "packageBusinessKey" : "package.dao.24096f08-6cac-4044-9974-f24950b92903",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.schedulerjobstatuscontroller.cde111c2-eb75-42ca-9c2c-03fdc34352ca",
+  "description" : "SchedulerJobStatusController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "SchedulerJobStatusController",
+  "packageBusinessKey" : "package.schedulerJobStatus.9f7549e3-17bb-41b2-94c5-b97773381cdd",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.scriptobjectusageview.a9339133-86c1-47d8-bd04-2f7ddc41c149",
+  "description" : "ScriptObjectUsageView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ScriptObjectUsageView",
+  "packageBusinessKey" : "package.scriptObjectUsage.c7a13a0f-55e7-49e8-95e5-7e1fe12477d4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

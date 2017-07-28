@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.core.a5e06a3b-5da7-43d0-83b1-8a5750f93ada",
+  "name" : "core",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.aea.ca9a7b36-b88d-45f0-b234-5306a62459a5",
+  "workspaceName" : "system"
+}

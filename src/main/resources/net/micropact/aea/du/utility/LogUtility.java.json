@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.logutility.73b559b7-2155-4e84-9258-838ccdcd1a03",
+  "description" : "LogUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "LogUtility",
+  "packageBusinessKey" : "package.utility.8fe2784e-917e-4ebe-b3d5-8fae29c3d499",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

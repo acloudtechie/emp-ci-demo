@@ -1,0 +1,21 @@
+{
+  "businessKey" : "aea.db.utils.rdoDataImportUtility",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.rdodataimportutilitycontroller.85a457a1-f8f7-4baa-8f33-9a28631b64b5",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "Data import utility that takes an export ZIP from the AEA - DbUtils - RDO Data Export Utility",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "AEA - DbUtils - RDO Data Import Utility",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.rdodataimportutilityview.eaa104cc-c6a2-4c59-b694-c51c4e3b947f"
+}

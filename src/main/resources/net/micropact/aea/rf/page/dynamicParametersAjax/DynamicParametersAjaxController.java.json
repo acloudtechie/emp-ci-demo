@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dynamicparametersajaxcontroller.41ed2588-4b56-4c32-a863-b03057cbc8ce",
+  "description" : "DynamicParametersAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DynamicParametersAjaxController",
+  "packageBusinessKey" : "package.dynamicParametersAjax.9157a486-0c17-4b4b-b3f8-e9fa9dc95d8a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

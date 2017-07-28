@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.pdfformtype.e079e3f7-298d-4aee-afc0-9efb69c23ded",
+  "description" : "Indicates the types of forms inside of a PDF document.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "PdfFormType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

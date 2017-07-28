@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.textreplacer.9bf3e36a-4b1a-4abb-92cb-438295f9c779",
+  "description" : "TextReplacer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "TextReplacer",
+  "packageBusinessKey" : "package.replacers.8e5ed76a-52e5-4f09-9eae-f251612b9855",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

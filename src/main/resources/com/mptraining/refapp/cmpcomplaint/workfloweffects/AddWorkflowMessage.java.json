@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.addworkflowmessage.8b7c485c-e97d-436a-8168-d62b8f28e74e",
+  "description" : "Adds workflow messages",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AddWorkflowMessage",
+  "packageBusinessKey" : "package.workfloweffects.b7e3d1b3-a329-43b9-bd33-9530e105ab87",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

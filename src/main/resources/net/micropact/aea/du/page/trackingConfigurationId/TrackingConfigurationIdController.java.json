@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.trackingconfigurationidcontroller.e8bd9afa-c307-4ad2-967d-9cf26c1d1a5e",
+  "description" : "TrackingConfigurationIdController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "TrackingConfigurationIdController",
+  "packageBusinessKey" : "package.trackingConfigurationId.43d07537-afa4-4f2d-99d0-edbfe54abd56",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

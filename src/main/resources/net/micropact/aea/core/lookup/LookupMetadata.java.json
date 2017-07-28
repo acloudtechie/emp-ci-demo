@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookupmetadata.8c8980c0-0ff8-4ebb-b2bc-9e29b49ba689",
+  "description" : "LookupMetadata",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "LookupMetadata",
+  "packageBusinessKey" : "package.lookup.de76c125-9fa6-4336-8202-44db11e67683",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

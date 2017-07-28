@@ -1,0 +1,51 @@
+{
+  "businessKey" : "object.event.view.eventDefaultView",
+  "dataObjectBusinessKey" : "object.event",
+  "dataViewElements" : [ {
+    "businessKey" : "object.event.view.eventDefaultView.element.completeddate",
+    "dataElementBusinessKey" : "object.event.element.completedDate",
+    "description" : "Completed Date column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Completed Date",
+    "multiValueDelimiter" : null,
+    "name" : "completedDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.event.view.eventDefaultView.element.duedate",
+    "dataElementBusinessKey" : "object.event.element.dueDate",
+    "description" : "Due Date column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Due Date",
+    "multiValueDelimiter" : null,
+    "name" : "dueDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.event.view.eventDefaultView.element.eventtype",
+    "dataElementBusinessKey" : "object.event.element.eventType",
+    "description" : "Event Type column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Event Type",
+    "multiValueDelimiter" : null,
+    "name" : "eventType",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.event.view.eventDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.event.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Event Listing",
+  "name" : "Event Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Event Listing"
+}

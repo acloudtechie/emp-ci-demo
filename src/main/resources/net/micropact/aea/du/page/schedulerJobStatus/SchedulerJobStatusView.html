@@ -1,0 +1,30 @@
+<div class="aea-du-schedulerJobStatus">
+    <style type="text/css">
+        .aea-du-schedulerJobStatus .aea-pageHeader {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        
+        .aea-du-schedulerJobStatus .aea-noErrors {
+            color: #22BB22;
+        }
+        
+        .aea-du-schedulerJobStatus .aea-errors {
+            color: #FF0000;
+        }
+    </style>
+    
+    #if($errorsExist)
+        <h3 class="aea-errors aea-pageHeader">There are Scheduler Job Errors</h3>
+
+        $schedulerJobErrorsTable
+
+        <script type="text/javascript">
+        alert("There is an error with the scheduler. \nGo to Administration -> System Data & Settings -> Scheduler Jobs to restart the timer\n");
+        </script>
+    #else
+        <h3 class="aea-noErrors aea-pageHeader">No Scheduler Job errors</h3>
+    #end
+    
+    
+</div>

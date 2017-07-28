@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.smtptestercontroller.57d55cb0-e45b-4aad-a403-4fff10badd12",
+  "description" : "SmtpTesterController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "SmtpTesterController",
+  "packageBusinessKey" : "package.smtpTester.83b4a4e1-721a-486d-9cb2-79663ade40c0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

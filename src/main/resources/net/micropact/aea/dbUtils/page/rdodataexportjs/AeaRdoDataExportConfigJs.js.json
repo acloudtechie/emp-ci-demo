@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeardodataexportconfigjs.718b7248-53ba-4a07-9b85-66007c3fe232",
+  "description" : "JS for the AEA RDO Data Export Config Page",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "AeaRdoDataExportConfigJs",
+  "packageBusinessKey" : "package.rdodataexportjs.fc078dac-9153-4d5b-922b-74b72a47f032",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

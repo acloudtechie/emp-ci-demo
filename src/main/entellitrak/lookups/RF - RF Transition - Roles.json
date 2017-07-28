@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.rfRole",
+  "dataObjectBusinessKey" : null,
+  "description" : "RF - RF Transition - Roles",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RF - RF Transition - Roles",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.role.5a97a544-b517-4ee1-a5b1-90d51bf16fbf",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

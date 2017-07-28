@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanorphanedmtableentriesview.f122f6f3-6f62-4c6c-b5e5-80ad2e39e824",
+  "description" : "Clean orphaned M_ table entries",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CleanOrphanedMTableEntriesView",
+  "packageBusinessKey" : "package.cleanOrphanedMTableEntries.5eb02cad-4ee3-4b95-a6ea-6c846921b2c7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

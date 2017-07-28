@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.iimportlogic.02ae9751-9926-4181-adab-319ec327fcff",
+  "description" : "IImportLogic",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IImportLogic",
+  "packageBusinessKey" : "package.importExport.2e1ace73-5d8c-463a-bb72-4caf866c2329",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

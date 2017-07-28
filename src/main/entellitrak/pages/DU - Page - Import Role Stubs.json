@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.importRoleStubs",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.importrolestubscontroller.b7131c71-7881-4db4-b479-b67646367934",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Import Role Stubs",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Import Role Stubs",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.importrolestubsview.a882d403-b5d5-489f-8e8e-1eb8190e5f8c"
+}

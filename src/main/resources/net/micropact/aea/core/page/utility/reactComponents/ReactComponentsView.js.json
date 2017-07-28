@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.reactcomponentsview.3e17d16c-a8e0-4bb0-bdcb-e3a55a1a640c",
+  "description" : "ReactComponentsView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "ReactComponentsView",
+  "packageBusinessKey" : "package.reactComponents.ee9e761b-5e29-4278-b664-943a4175c276",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

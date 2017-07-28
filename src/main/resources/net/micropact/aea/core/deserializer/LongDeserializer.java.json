@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.longdeserializer.8359ab4c-062b-4a95-adf0-691dad8a821d",
+  "description" : "LongDeserializer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "LongDeserializer",
+  "packageBusinessKey" : "package.deserializer.a4a46229-8b12-406c-b118-0032671a8349",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

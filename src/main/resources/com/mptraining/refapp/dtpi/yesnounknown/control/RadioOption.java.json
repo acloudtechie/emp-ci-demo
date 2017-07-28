@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.radiooption.6ba4e0ea-15ea-49de-9f19-9f0317a030e3",
+  "description" : "Class that represents a single radio button option",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RadioOption",
+  "packageBusinessKey" : "package.control.95554b3a-ad47-4b92-a306-ac85d3784214",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

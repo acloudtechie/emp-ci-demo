@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.rfWorkflow.state.begin",
+  "dataObjectBusinessKey" : "object.rfWorkflow",
+  "description" : "Begin",
+  "name" : "Begin",
+  "type" : "BEGIN",
+  "x" : 0,
+  "y" : 0
+}

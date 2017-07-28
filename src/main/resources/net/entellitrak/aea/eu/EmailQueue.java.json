@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.emailqueue.e62cce19-4ec6-4b34-a662-11355cbd2133",
+  "description" : "EmailQueue",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "EmailQueue",
+  "packageBusinessKey" : "package.eu.3204496f-b6f5-4da6-9338-80a9b38d82e3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

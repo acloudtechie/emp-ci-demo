@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euemailqueueajaxcontroller.67d616d7-3cce-4a73-a163-754aca7fbe10",
+  "description" : "EuEmailQueueAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "EuEmailQueueAjaxController",
+  "packageBusinessKey" : "package.euEmailQueueAjax.9b5676ef-299f-4c3b-8971-18b45dd211ea",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

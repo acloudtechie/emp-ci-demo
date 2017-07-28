@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdoimportworktransactioncontroller.0dc0429e-080b-4758-b7eb-e26198b0e8ad",
+  "description" : "RdoImportWorkTransactionController",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoImportWorkTransactionController",
+  "packageBusinessKey" : "package.service.b5832e12-512c-4640-b0fc-b24f769ae871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.viewBadDates",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.showbaddatescontroller.3449c5c6-72eb-4c0d-bceb-76a9ee613d03",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - View Bad Dates",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - View Bad Dates",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.showbaddatesview.a6a335d0-4d2c-4428-9ac1-8e174431a448"
+}

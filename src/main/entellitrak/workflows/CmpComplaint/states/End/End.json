@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.cmpComplaint.state.end",
+  "dataObjectBusinessKey" : "object.cmpComplaint",
+  "description" : "End",
+  "name" : "End",
+  "type" : "END",
+  "x" : 0,
+  "y" : 0
+}

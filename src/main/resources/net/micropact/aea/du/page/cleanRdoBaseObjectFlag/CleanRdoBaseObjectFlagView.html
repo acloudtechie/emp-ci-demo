@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Clean RDO Base Object Flag</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <style type="text/css">
+            em{
+                font-weight: bold;
+                font-style: normal;
+            }
+        </style>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var CleanRdoBaseObjectFlag = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.p(null, 
+                        React.DOM.em(null, "ETK_DATA_OBJECT.BASE_OBJECT"), 
+                        " has been set to ",
+                        React.DOM.em(null, "1"),
+                        " for appropriate Reference Data Objects")
+            }
+        }))
+        
+        var CleanRdoBaseObjectFlagApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Clean RDO Base Object Flag",
+                    instructions: React.DOM.p(null, "This page cleans up after a bug in the ",
+                            React.DOM.em(null, "Create Standard RDO"),
+                            " page which created RDOs with ",
+                            React.DOM.em(null, "ETK_DATA_OBJECT.BASE_OBJECT"),
+                            " set to ",
+                            React.DOM.em(null, "0"),
+                            " instead of ",
+                            React.DOM.em(null, "1"),
+                            ". This caused an error in ",
+                            React.DOM.em(null, "entellitrak Application Manager"),
+                            " during export."),
+                    mainContent: CleanRdoBaseObjectFlag({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(CleanRdoBaseObjectFlagApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

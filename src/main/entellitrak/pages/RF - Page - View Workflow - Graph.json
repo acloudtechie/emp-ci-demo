@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.page.viewWorkflow.graph",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewworkflowgraphcontroller.37d57286-6651-4cca-8f93-2b0f24805633",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Page - View Workflow - Graph",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - View Workflow - Graph",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewworkflowgraphview.9123b366-c5ab-48b4-98d0-d568f5f1565a"
+}

@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "eu.schedulerJob.sendEmails",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:50Z",
+  "cronTriggerExpression" : null,
+  "cronTriggerType" : null,
+  "description" : "EU - SCHEDULER JOB - Send Emails",
+  "endDate" : null,
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-28T17:17:50Z",
+  "name" : "EU - SCHEDULER JOB - Send Emails",
+  "quartzJobDetails" : {
+    "description" : "EU - SCHEDULER JOB - Send Emails",
+    "isDurable" : "1",
+    "isNonconcurrent" : "0",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ScriptObjectJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAPdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "eu.schedulerJob.sendEmails",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : 5,
+  "repeatUnits" : "MINUTE",
+  "scriptObjectBusinessKey" : "script.sendemails.1ae9abd3-1f2e-4121-adee-366763bfddcd",
+  "suspendOnError" : true,
+  "triggerType" : "CALENDAR_INTERVAL_TRIGGER"
+}

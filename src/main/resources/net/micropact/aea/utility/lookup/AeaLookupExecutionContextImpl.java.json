@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aealookupexecutioncontextimpl.437059d2-d3e7-4457-99f4-c8ce820c512e",
+  "description" : "AEA Lookup Context for resolving script type lookups.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaLookupExecutionContextImpl",
+  "packageBusinessKey" : "package.lookup.2de02577-0671-4661-acfa-255f2490ce5a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

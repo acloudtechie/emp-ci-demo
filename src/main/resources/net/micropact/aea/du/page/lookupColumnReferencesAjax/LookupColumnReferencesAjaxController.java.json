@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookupcolumnreferencesajaxcontroller.6c34a912-aaa7-42e1-aa9b-d5686c4819f8",
+  "description" : "LookupColumnReferencesAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "LookupColumnReferencesAjaxController",
+  "packageBusinessKey" : "package.lookupColumnReferencesAjax.75d9cc61-4049-4f48-a9af-d1de6229f7ce",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

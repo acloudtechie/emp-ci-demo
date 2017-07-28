@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.rfLookup.view.rfLookupDefaultView",
+  "dataObjectBusinessKey" : "object.rfLookup",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfLookup.view.rfLookupDefaultView.element.code",
+    "dataElementBusinessKey" : "object.rfLookup.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfLookup.view.rfLookupDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.rfLookup.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfLookup.view.rfLookupDefaultView.element.name",
+    "dataElementBusinessKey" : "object.rfLookup.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfLookup.view.rfLookupDefaultView.element.sql",
+    "dataElementBusinessKey" : "object.rfLookup.element.sql",
+    "description" : "SQL column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "SQL",
+    "multiValueDelimiter" : null,
+    "name" : "sql",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfLookup.view.rfLookupDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.rfLookup.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Lookup Listing",
+  "name" : "RF Lookup Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Lookup Listing"
+}

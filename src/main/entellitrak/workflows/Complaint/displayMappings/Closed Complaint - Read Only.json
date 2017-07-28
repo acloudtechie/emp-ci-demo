@@ -1,0 +1,18 @@
+{
+  "businessKey" : "object.complaint.displayMapping.21533",
+  "dataFormBusinessKey" : "object.complaint.form.complaintDefaultForm",
+  "dataObjectBusinessKey" : "object.complaint",
+  "dataViewBusinessKey" : "object.complaint.view.complaintDefaultView",
+  "description" : "A closed complaint is read only to all users",
+  "disableForm" : false,
+  "disableView" : false,
+  "etpStateBusinessKey" : null,
+  "evaluationOrder" : 1,
+  "evaluationScriptObjectBusinessKey" : "script.closedcomplaint.f04a27ca-6f46-4c8b-a4e0-1e3f511d2d7c",
+  "name" : "Closed Complaint - Read Only",
+  "processDataObjectBusinessKey" : "object.complaint",
+  "readOnlyForm" : true,
+  "roleBusinessKey" : null,
+  "useDefaultForm" : false,
+  "useDefaultView" : false
+}

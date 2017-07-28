@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfexportlogic.c5ee49d2-2250-40b6-aaf3-8a49861835c9",
+  "description" : "RfExportLogic",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfExportLogic",
+  "packageBusinessKey" : "package.service.f06b2c56-685e-4c4e-b7a2-32b095596055",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

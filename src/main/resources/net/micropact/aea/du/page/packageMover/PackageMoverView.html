@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Package Mover</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <style type="text/css">
+            .success{
+                font-weight: bold;
+            }
+            
+            .error{
+                font-weight: bold;
+            }
+            
+            .input > input {
+                width: 30em;
+            }
+            
+            .input > label:after{
+                content: ": ";
+            }
+        </style>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        <!-- 
+        <script type="text/javascript">
+        "use strict"
+
+        var model = (function() {
+            var state = {
+                errors: $errors,
+                resultAction: $resultAction,
+                fromPackage: $fromPackage,
+                toPackage: $toPackage
+            }
+
+            function callEventListeners() {
+                init()
+            }
+
+            function getErrors() {
+                return state.errors
+            }
+
+            function isSuccess() {
+                return state.resultAction == "success"
+            }
+
+            function getFromPackage() {
+                return state.fromPackage
+            }
+
+            function getToPackage() {
+                return state.toPackage
+            }
+
+            function setFromPackage(pkg) {
+                state.fromPackage = pkg
+                callEventListeners()
+            }
+
+            function setToPackage(pkg) {
+                state.toPackage = pkg
+                callEventListeners()
+            }
+
+            return {
+                getErrors: getErrors,
+                isSuccess: isSuccess,
+
+                getFromPackage: getFromPackage,
+                getToPackage: getToPackage,
+                setFromPackage: setFromPackage,
+                setToPackage,
+                setToPackage
+            }
+        }())
+
+        var Errors = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.ul({
+                    className: "error"
+                }, this.props.errors.map(function(error, i) {
+                    return React.DOM.li({
+                            key: i
+                        },
+                        error)
+                }))
+            }
+        }))
+
+        var Success = React.createFactory(React.createClass({
+            render: function() {
+                return this.props.success ? React.DOM.p({
+                        className: "success"
+                    },
+                    "Package Updated") : null
+            }
+        }))
+
+        var Form = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.form({
+                        method: "POST",
+                        action: "page.request.do?page=du.page.packageMover",
+                        onSubmit: function(e) {
+                            var fromPackage = model.getFromPackage()
+                            var toPackage = model.getToPackage()
+                            if (!confirm("Are you sure that you want to move package \"" + fromPackage + "\" to \"" + toPackage + "\"?\nThis cannot be undone.")) {
+                                e.preventDefault()
+                            }
+                        }
+                    },
+                    React.DOM.input({
+                        type: "hidden",
+                        name: "requestedAction",
+                        value: "update"
+                    }),
+                    React.DOM.div({
+                            className: "input"
+                        },
+                        React.DOM.label(null, "From Package"),
+                        React.DOM.input({
+                            type: "text",
+                            name: "fromPackage",
+                            value: model.getFromPackage(),
+                            onChange: function(e) {
+                                model.setFromPackage(e.target.value)
+                            }
+                        })),
+                    React.DOM.div({
+                            className: "input"
+                        },
+                        React.DOM.label(null, "To Package"),
+                        React.DOM.input({
+                            type: "text",
+                            name: "toPackage",
+                            value: model.getToPackage(),
+                            onChange: function(e) {
+                                model.setToPackage(e.target.value)
+                            }
+                        })),
+                    React.DOM.input({
+                        type: "submit",
+                        vaule: "Move Package"
+                    }))
+            }
+        }))
+
+        var Instructions = React.DOM.div(null,
+            React.DOM.p(null, "This page is intended for assisting in moving AEArchitecture Accelerators from one package to another. All accelerators start in \"com.destinationSite.accelerators\" and if you wish to change this, you must either use this page, or move them manually."),
+            React.DOM.p(null, "From Package is the current location of the accelerator (ie: com.destinationSite.accelerators.popupSearch)"),
+            React.DOM.p(null, "To Package is the desired location of the accelerator (ie: gov.cia.caseManagement.popupSearch)"),
+            React.DOM.div(null, "This page takes the following actions",
+                React.DOM.ul(null, ["Move the Script Object Package itself",
+                    "Update the contents of any Script Objects which refer to From Package",
+                    "Change Page Business Keys which begin with From Package",
+                    "Update the contents of any Form Instructions which refer to From Package",
+                    "Update the contents of any View Instructions which refer to From Package"
+                ].map(function(action, i) {
+                    return React.DOM.li({
+                        key: i
+                    }, action)
+                }))),
+            React.DOM.p(null,
+                React.DOM.strong(null, "Because of how this page works, it is possible that it can update too much. For instance, if you have com.util and com.utility and attempt to move com.util to net.utility, any Script Objects, Form Instructions, View Instructions and Page Business keys which referred to com.utility will be changed to refer to net.utilityity which is not the desired outcome.")),
+            React.DOM.p(null,
+                React.DOM.strong(null, "This page updates the System Repository which means that a database rollback is the only simple way to revert changes.")))
+
+        var PackageMover = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null,
+                    Success({
+                        success: model.isSuccess()
+                    }),
+                    Errors({
+                        errors: model.getErrors()
+                    }),
+                    Form())
+            }
+        }))
+
+        var PackageMoverApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Package Mover",
+                    instructions: Instructions,
+                    mainContent: PackageMover({})
+                })
+            }
+        }))
+
+        function init() {
+            React.render(PackageMoverApp(null),
+                document.getElementById("app"))
+        }
+        
+        </script>
+        -->
+        
+        <script type="text/javascript">
+        function init() {
+            ReactDOM.render(AeaCoreReactComponents.Application({
+                title: "Package Mover",
+                instructions: "Due to changes in 3.19 this Developer Utility is no longer available.",
+                mainContent: "Due to changes in 3.19 this Developer Utility is no longer available."
+            }),
+                document.getElementById("app"))
+        }
+        </script>
+        
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

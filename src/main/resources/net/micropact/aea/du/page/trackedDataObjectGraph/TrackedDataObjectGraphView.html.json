@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.trackeddataobjectgraphview.06be73c4-16e6-4775-9d49-d02da06550fb",
+  "description" : "TrackedDataObjectGraphView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "TrackedDataObjectGraphView",
+  "packageBusinessKey" : "package.trackedDataObjectGraph.9169975a-bbbe-40af-9799-b124ac079a1b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

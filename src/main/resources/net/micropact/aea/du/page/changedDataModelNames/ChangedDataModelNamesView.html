@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Changed Data Model Names</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+    <style>
+        .non-match {
+            background-color: #ffcc00;
+        }
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            changedObjects: $changedObjects,
+            changedElements: $changedElements
+        }
+
+        function MatchCell(props) {
+            return React.DOM.td({
+                    className: props.match ? "match" : "non-match"
+                },
+                props.content)
+        }
+
+        function ChangedObjects(props) {
+            return AeaCoreReactComponents.SimpleHeaderTableGrid({
+                className: "aea-core-grid",
+                caption: "Changed Objects",
+                headers: ["Name", "Label", "Object Name"],
+                tbody: React.DOM.tbody(null, config.changedObjects.map(function(object) {
+                    return React.DOM.tr({key: object.DATA_OBJECT_ID},
+                        React.DOM.td(null, React.DOM.a({
+                                href: "cfg.dataobject.update.request.do?id=" + encodeURIComponent(object.DATA_OBJECT_ID),
+                                target: "_blank"
+                            },
+                            object.NAME)),
+                        MatchCell({
+                            content: object.LABEL,
+                            match: object.nameMatchesLabel
+                        }),
+                        MatchCell({
+                            content: object.OBJECT_NAME,
+                            match: object.nameMatchesObjectName
+                        }))
+                }))
+            })
+        }
+        
+        function ChangedElements(props) {
+            return AeaCoreReactComponents.SimpleHeaderTableGrid({
+                className: "aea-core-grid",
+                caption: "Changed Elements",
+                headers: ["Object Name", "Element Name (Name)", "Element Name (Property)"],
+                tbody: React.DOM.tbody(null, config.changedElements.map(function(element) {
+                    return React.DOM.tr({key: element.DATA_ELEMENT_ID},
+                            React.DOM.td(null, React.DOM.a({
+                                href: "cfg.dataobject.update.request.do?id=" + encodeURIComponent(element.DATA_OBJECT_ID),
+                                target: "_blank"
+                            },
+                            element.OBJECT_NAME)),
+                        React.DOM.td(null, React.DOM.a({
+                                href: "cfg.dataelement.update.request.do?id=" + encodeURIComponent(element.DATA_ELEMENT_ID),
+                                target: "_blank"
+                            },
+                            element.ELE_NAME)),
+                        MatchCell({
+                            content: element.ELEMENT_NAME,
+                            match: element.nameMatchesElementName
+                        }))
+                }))
+            })
+        }
+
+        var ChangedNames = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null, 
+                        ChangedObjects({}),
+                        ChangedElements({}))
+            }
+        }))
+
+        var ChangedNamesApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Changed Data Model Names",
+                    instructions: ["This page displays Data Objects which appear to have had their Label or Name changed after creation as well as Data Elements which appear to have had their Name changed after creation.",
+                                   "This page does not indicate that there is a problem, but it can be useful if you are new to a project and would like to be aware of names which might not match your expectations."],
+                    mainContent: ChangedNames({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(ChangedNamesApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

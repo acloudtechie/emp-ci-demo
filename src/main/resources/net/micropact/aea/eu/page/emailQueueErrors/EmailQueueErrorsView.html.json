@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.emailqueueerrorsview.07bf83c0-f624-4856-b98f-708d282d8910",
+  "description" : "EmailQueueErrorsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "EmailQueueErrorsView",
+  "packageBusinessKey" : "package.emailQueueErrors.ec8d95dc-5b1d-455e-a6b8-2ca19fc92eae",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

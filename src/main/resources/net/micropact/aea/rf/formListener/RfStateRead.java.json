@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfstateread.cd9b4d9b-b668-4437-88e2-823234bbac19",
+  "description" : "RF State - Read",
+  "handlerType" : "FORM_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfStateRead",
+  "packageBusinessKey" : "package.formListener.8f1276a1-bfb8-40af-ae2b-16871a78435b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

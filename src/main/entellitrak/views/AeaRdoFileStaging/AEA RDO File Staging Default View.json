@@ -1,0 +1,51 @@
+{
+  "businessKey" : "object.aeaRdoFileStaging.view.aeaRdoFileStagingDefaultView",
+  "dataObjectBusinessKey" : "object.aeaRdoFileStaging",
+  "dataViewElements" : [ {
+    "businessKey" : "object.aeaRdoFileStaging.view.aeaRdoFileStagingDefaultView.element.code",
+    "dataElementBusinessKey" : "object.aeaRdoFileStaging.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaRdoFileStaging.view.aeaRdoFileStagingDefaultView.element.etkfileid",
+    "dataElementBusinessKey" : "object.aeaRdoFileStaging.element.etkFileId",
+    "description" : "ETK File ID column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "ETK File ID",
+    "multiValueDelimiter" : null,
+    "name" : "etkFileId",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaRdoFileStaging.view.aeaRdoFileStagingDefaultView.element.name",
+    "dataElementBusinessKey" : "object.aeaRdoFileStaging.element.name",
+    "description" : null,
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaRdoFileStaging.view.aeaRdoFileStagingDefaultView.element.sourcesystemid",
+    "dataElementBusinessKey" : "object.aeaRdoFileStaging.element.sourceSystemId",
+    "description" : "Source System ID column.",
+    "displayOrder" : 8,
+    "displaySize" : null,
+    "label" : "Source System ID",
+    "multiValueDelimiter" : null,
+    "name" : "sourceSystemId",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "AEA RDO File Staging Listing",
+  "name" : "AEA RDO File Staging Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "AEA RDO File Staging Listing"
+}

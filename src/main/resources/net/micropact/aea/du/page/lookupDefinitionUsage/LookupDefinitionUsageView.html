@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Lookup Definition Usage</title>
+    
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <style type="text/css">
+        .plainList {
+            list-style: none;
+        }
+        
+        .wrapper {
+            border: 1px solid #CCCCCC;
+            border-radius: 1em;
+            padding: 1em;
+            margin: 1em;
+            display: inline-block;
+        }
+        
+        .keyTitle {
+            font-size: 1.25em;
+            font-weight: bold;
+            margin-left: 2em;
+        }
+        
+        ul.lookupList {
+            color: black;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-left: 0em;
+            padding-left: 0em;
+        }
+        
+        ul a:link, a:visited, a:active {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        
+        a:hover {
+            color: white;
+            background-color: #3182BD;
+        }
+        
+        .cached{
+            font-style: italic;
+            float: right;
+            margin-left: 0.5em;
+        }
+        
+        .lookupList > li > span, .formControlList > li > span, .dataElementList > li > span {
+            border-color: #3182BD;
+            border-style: solid;
+            border-width: 2px;
+            padding: 0.1em;
+            padding-left: 1em;
+            min-width: 50em;
+            display: inline-block;
+        }
+        
+        .lookupList > li > span {
+            background-color: rgba(253, 141, 60, 0.5);
+        }
+        
+        .formControlList > li > span {
+            background-color: rgba(54, 214, 149, 0.5);
+        }
+        
+        .dataElementList > li > span {
+            background-color: rgba(198, 219, 239, 0.5);
+        }
+        
+        div.filter {
+            display: block;
+            min-width: 40em;
+        }
+        
+        .invalid {
+            background-color: #FE6565;
+        }
+    </style>
+    
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+    
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+    
+    <script type="text/javascript">
+        "use strict"
+        
+        var lookupModel = (function(){
+            
+        	var state = {
+        		    loaded: false,
+
+        			lookupDefinitions: [],
+        			dataElements: [],
+        			formControls: [],
+        			
+        			lookupDefinitionIdIndex: {},
+        			dataElementsByLookupDefinitionId: {},
+        			formControlsByLookupDefinitionId: {},
+        	
+        			eventListeners: [],
+        			onlyShowUnused: false,
+        			onlyShowCached: false,
+        			regex: ""
+        	}
+        	
+        	jQuery.post('page.request.do?page=du.page.lookupDefinitionUsage.ajax', function(response){
+        		state.lookupDefinitions = response.lookupDefinitions
+        		state.dataElements = response.dataElements
+        		state.formControls = response.formControls
+        		
+        		buildIndices()
+        		state.loaded = true
+        		callEventListeners()
+        	})
+        	
+        	function addMultiIndex(index, key, value){
+        		if(index[key] === undefined){
+        			index[key] = []
+        		}
+        		index[key].push(value)
+        	}
+        	
+        	function getLoaded(){
+        		return state.loaded
+        	}
+        	
+        	function buildIndices(){
+        		state.lookupDefinitions.forEach(function(lookupDefinition){
+        			state.lookupDefinitionIdIndex[lookupDefinition.LOOKUP_DEFINITION_ID] = lookupDefinition
+        		})
+        		
+        		state.dataElements.forEach(function(dataElement){
+        			addMultiIndex(state.dataElementsByLookupDefinitionId, dataElement.LOOKUP_DEFINITION_ID, dataElement)
+        		})
+        		
+        		state.formControls.forEach(function(formControl){
+        			addMultiIndex(state.formControlsByLookupDefinitionId, formControl.LOOKUP_DEFINITION_ID, formControl)
+        		})
+        	}
+        	
+        	function setRegex(regex){
+        		state.regex = regex
+        		callEventListeners()
+        	}
+        	
+        	function getRegex(){
+        		return state.regex
+        	}
+        	
+        	function toggleOnlyShowUnused(){
+                state.onlyShowUnused = !state.onlyShowUnused
+                callEventListeners()
+            }
+            
+            function getOnlyShowUnused(){
+                return state.onlyShowUnused
+            }
+            
+            function toggleOnlyShowCached(){
+                state.onlyShowCached = !state.onlyShowCached
+                callEventListeners()
+            }
+            
+            function getOnlyShowCached(){
+                return state.onlyShowCached
+            }
+        	
+        	function addEventListener(func){
+        		state.eventListeners.push(func)
+        	}
+        	
+        	function callEventListeners(){
+        		for(var i = 0; i < state.eventListeners.length; i++){
+        			state.eventListeners[i]()
+        		}
+        	}
+        	
+        	function getDataElementsByLookupId(lookupId){
+        		return state.dataElementsByLookupDefinitionId[lookupId] || []
+        	}
+        	
+        	function getFormControlsByLookupDefinitionId(lookupId){
+        		return state.formControlsByLookupDefinitionId[lookupId] || []
+        	}
+        	
+        	function getFilteredLookups(){
+        		
+        		if(isRegexValid(state.regex)){
+        			var regexp = new RegExp(state.regex, "i")
+                    
+                    return state.lookupDefinitions.filter(function(lookup){
+                        var lookupId = lookup.LOOKUP_DEFINITION_ID
+                        return regexp.test(lookup.NAME)
+                        && (!getOnlyShowUnused()
+                                || (getDataElementsByLookupId(lookupId).length == 0
+                                        && getFormControlsByLookupDefinitionId(lookupId).length == 0))
+                        && (!getOnlyShowCached() || lookup.ENABLE_CACHING === 1)
+                    })
+        		}else{
+        			return []
+        		}
+        	}
+        	
+        	return {
+        		addEventListener: addEventListener,
+        		
+        		getLoaded: getLoaded,
+        		
+        		setRegex: setRegex,
+        		getRegex: getRegex,
+
+                toggleOnlyShowUnused: toggleOnlyShowUnused,
+                getOnlyShowUnused: getOnlyShowUnused,
+                
+                toggleOnlyShowCached: toggleOnlyShowCached,
+                getOnlyShowCached: getOnlyShowCached,
+        		
+        		getFilteredLookups: getFilteredLookups,
+        		getDataElementsByLookupId: getDataElementsByLookupId,
+        		getFormControlsByLookupDefinitionId: getFormControlsByLookupDefinitionId
+        	}
+        }())
+        
+        function isRegexValid(string){
+            try{
+                new RegExp(string)
+                return true
+            }catch(e){
+                return false
+            }
+        }
+        
+        function openDataElementTab(dataObjectId, dataElementId) {
+        	jQuery.get('cfg.dataobject.update.request.do?id=' + dataObjectId, function( data ) {
+        		//Do nothing here.
+        	}).done(function() {
+        		window.open('cfg.dataelement.update.request.do?id=' + dataElementId);
+        	});
+        }
+        
+        function CachingEnabled(props){
+            return props.cached 
+            ? React.DOM.span({className: "cached"}, "Cached")
+                    : null
+        }
+        
+        var Lookups = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div({className: "wrapper"},
+                    this.props.lookupModel.getLoaded() 
+                    ? React.DOM.ul({className: "plainList lookupList"},
+                        this.props.lookupModel.getFilteredLookups().map(function(lookup){
+                            return React.DOM.li({key: lookup.LOOKUP_DEFINITION_ID},
+                                    React.DOM.span({},
+                                        React.DOM.a({href: "cfg.lookup.update.request.do?id="+lookup.LOOKUP_DEFINITION_ID,
+                                                    target: "_blank"},
+                                        lookup.NAME),
+                                        CachingEnabled({cached: lookup.ENABLE_CACHING})),
+                                    DataElements({dataElements: this.props.lookupModel.getDataElementsByLookupId(lookup.LOOKUP_DEFINITION_ID)}),
+                                    FormControls({formControls: this.props.lookupModel.getFormControlsByLookupDefinitionId(lookup.LOOKUP_DEFINITION_ID)}))
+                        }.bind(this)))
+                    : AeaCoreReactComponents.Loading({}))}}))
+        
+        var FormControls = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.ul({className: "plainList formControlList"},
+        				this.props.formControls.map(function(formControl, index){
+        					return React.DOM.li({key: index},
+        							React.DOM.span({}, 
+        									React.DOM.a({href: "cfg.dataobject.update.request.do?id=" + formControl.DATA_OBJECT_ID,
+        											target: "_blank"},
+        											formControl.DATA_OBJECT_NAME),
+        									React.DOM.span({},
+        											" - "),
+        									React.DOM.a({href: "cfg.ui.FormDesigner.do?method=getView&id=" + formControl.DATA_FORM_ID,
+        											target: "_blank"},
+        											formControl.DATA_FORM_NAME + " - " + formControl.FORM_CONTROL_NAME)))
+        				}))
+        	}
+        }))
+        
+        var DataElements = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.ul({className: "plainList dataElementList"},
+        				this.props.dataElements.map(function(dataElement){
+        					return React.DOM.li({key: dataElement.DATA_ELEMENT_ID},
+        							React.DOM.span({},
+        									React.DOM.a({href: "cfg.dataobject.update.request.do?id=" + dataElement.DATA_OBJECT_ID,
+        											target: "_blank"},
+        											dataElement.DATA_OBJECT_NAME),
+        									React.DOM.span({}, 
+        											" - "),
+        									React.DOM.a({href:"javascript:void(0)",
+        										         onClick: function() {openDataElementTab(dataElement.DATA_OBJECT_ID, dataElement.DATA_ELEMENT_ID)}},
+        									dataElement.DATA_ELEMENT_NAME)))
+        				}))
+        	}
+        }))
+        
+        var Key = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.div({className: "wrapper"},
+        				React.DOM.div({className: "keyTitle"}, "Key"),
+        				React.DOM.ul({className: "plainList lookupList"},
+        						React.DOM.li({},
+        								React.DOM.span({}, "Lookup Definition",
+        								        React.DOM.span({className: "cached"}, "Cached?")),
+        								React.DOM.ul({className: "plainList dataElementList"}, 
+        										React.DOM.li({}, 
+        												React.DOM.span({}, "DataObjectName - DataElementName"))),
+        								React.DOM.ul({className: "plainList formControlList"},
+        										React.DOM.li({},
+        												React.DOM.span({}, "DataObjectName - DataForm - FormControlName"))))))
+        	}
+        }))
+        
+        var Filters = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.div({className: "wrapper filter"},
+        				Regex({lookupModel: this.props.lookupModel}),
+        				UnusedFilter({lookupModel: this.props.lookupModel}),
+        				CachedFilter({lookupModel: this.props.lookupModel}))
+        	}
+        }))
+        
+        var Regex = React.createFactory(React.createClass({
+        	render: function(){
+        		
+        		var regex = this.props.lookupModel.getRegex()
+        		
+        		return React.DOM.div({},
+        				React.DOM.label({}, "Filter Lookup Name by Regular Expression:"),
+        				React.DOM.input({type: "text",
+        					className: isRegexValid(regex) ? null : "invalid",
+        					value: regex,
+        					onChange: function(event){
+        						this.props.lookupModel.setRegex(event.target.value)
+        					}.bind(this)}))
+        	}
+        }))
+        
+        var UnusedFilter = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div(null,
+                        React.DOM.label({htmlFor: "onlyShowUnusedInput"}, "Only show unused lookups"),
+                        React.DOM.input({
+                            id: "onlyShowUnusedInput",
+                            type: "checkbox",
+                            checked: this.props.lookupModel.getOnlyShowUnused(),
+                            onChange: this.props.lookupModel.toggleOnlyShowUnused}))
+            }
+        }))
+        
+        var CachedFilter = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div(null,
+                        React.DOM.label({htmlFor: "onlyShowCachedInput"}, "Only show cached lookups"),
+                        React.DOM.input({
+                            type: "checkbox",
+                            id: "onlyShowCachedInput",
+                            checked: this.props.lookupModel.getOnlyShowCached(),
+                            onChange: this.props.lookupModel.toggleOnlyShowCached}))
+            }
+        }))
+        
+        var LookupDefinitionContent = React.createFactory(React.createClass({
+        	getInitialState: function(){
+        		return {lookupModel: null,
+        			lookupModelCallback: null}
+        	},
+        	componentWillMount: function(){
+        		var lookupModelCallback = function(){
+        			this.setState({})
+        		}.bind(this)
+        		this.setState({lookupModel: lookupModel,
+        			  lookupModelCallback: lookupModelCallback})
+        		lookupModel.addEventListener(lookupModelCallback)
+        	},
+        	render: function(){
+        		return React.DOM.div({}, 
+        				Key({}),
+        		        Filters({lookupModel: this.state.lookupModel}),
+        		        Lookups({lookupModel: this.state.lookupModel}))
+        	}
+        }))
+        
+        var LookupDefinitionUsageApp = React.createFactory(React.createClass({
+        	render: function(){
+        		return AeaCoreReactComponents.Application({
+                    title: "Lookup Definition Usage",
+                    instructions: ["This page can be used to determine where lookups are being used",
+                                   "It is recommended to check this page before modifying a lookup to see if it is used elsewhere in the system"],
+                    mainContent: LookupDefinitionContent({})})
+        	}
+        }))
+        
+    	jQuery(function(){
+            ReactDOM.render(LookupDefinitionUsageApp(null),
+            		   jQuery('.app')[0])})
+        
+        </script>
+    
+    </head>
+    <body>
+        <div class="app"></div>
+    </body>
+</html>

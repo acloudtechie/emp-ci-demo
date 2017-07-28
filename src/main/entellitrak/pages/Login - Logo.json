@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.loginLogo",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.loginimagecontroller.61718419-57a3-402c-96ed-48df5493185e",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Login - Logo",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Login - Logo",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : true,
+  "viewBusinessKey" : "script.loginimageview.0e906e90-6a83-4dcc-b56a-7761df0a37f8"
+}

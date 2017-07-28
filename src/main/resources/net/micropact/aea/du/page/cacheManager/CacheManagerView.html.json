@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cachemanagementview.71bf15c5-b41e-4c00-b2b9-70046191513a",
+  "description" : "CacheManagerView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CacheManagerView",
+  "packageBusinessKey" : "package.cacheManager.92da2942-82e0-4549-8fbb-6b14abd87ea0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

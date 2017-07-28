@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Data Dictionary</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <style type="text/css">
+        em {
+            font-weight: bold;
+            font-style: normal;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict";
+
+        var ForeignKeys = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.a({
+                        className: "button",
+                        href: "page.request.do?page=du.page.dataDictionary.download"
+                    },
+                    "Download CSV")
+            }
+        }))
+
+        var Instructions = React.DOM.div(null,
+                React.DOM.p(null, "This page provides a link for downloading a CSV file containing information about the data model with regards to Tracked Data Objects and Elements."),
+                React.DOM.p(null, "Please provide feedback if you need more or fewer fields, or some other alternative user interface."))
+
+        var ForeignKeysApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Data Dictionary",
+                    instructions: Instructions,
+                    mainContent: ForeignKeys({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(ForeignKeysApp(null),
+                jQuery('.app')[0])
+        }
+
+    </script>
+
+</head>
+
+<body onload="init();">
+    <div class="app"></div>
+</body>
+
+</html>

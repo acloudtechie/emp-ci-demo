@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.mediatypeutility.f4566264-fa8d-4a91-85a9-433c87ad6afb",
+  "description" : "MediaTypeUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "MediaTypeUtility",
+  "packageBusinessKey" : "package.ioUtility.59c31539-e835-485b-a041-7ae975c28a67",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

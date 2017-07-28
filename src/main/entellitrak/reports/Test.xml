@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="untitled" language="java" columnCount="1" printOrder="Vertical" pageWidth="595" pageHeight="842" orientation="Portrait" whenNoDataType="NoPages" columnWidth="555" columnSpacing="0" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" isTitleNewPage="false" isSummaryNewPage="false" isFloatColumnFooter="false" isIgnorePagination="false" whenResourceMissingType="Null">
+  <title>
+    <band height="50" isSplitAllowed="true" />
+  </title>
+  <pageHeader>
+    <band height="50" isSplitAllowed="true" />
+  </pageHeader>
+  <columnHeader>
+    <band height="30" isSplitAllowed="true" />
+  </columnHeader>
+  <detail>
+    <band height="100" isSplitAllowed="true" />
+  </detail>
+  <columnFooter>
+    <band height="30" isSplitAllowed="true" />
+  </columnFooter>
+  <pageFooter>
+    <band height="50" isSplitAllowed="true" />
+  </pageFooter>
+  <lastPageFooter>
+    <band height="50" isSplitAllowed="true" />
+  </lastPageFooter>
+  <summary>
+    <band height="50" isSplitAllowed="true" />
+  </summary>
+</jasperReport>

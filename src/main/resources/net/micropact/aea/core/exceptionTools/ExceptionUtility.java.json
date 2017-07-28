@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.exceptionutility.928849c9-fc33-4dac-a798-1ed10b3f1905",
+  "description" : "ExceptionUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ExceptionUtility",
+  "packageBusinessKey" : "package.exceptionTools.80df01ae-b9bd-4709-b414-8ec542664a2e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.roledatapermissionscontroller.b82663d4-36cd-4531-92cd-aea8a416aca8",
+  "description" : "RoleDataPermissionsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RoleDataPermissionsController",
+  "packageBusinessKey" : "package.roleDataPermissions.db72c9ea-7304-4ecc-ac10-aee13991846c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

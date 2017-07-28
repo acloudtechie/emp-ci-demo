@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Convert Subreport Expressions</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <style type="text/css">
+        .submit {
+            margin-left: 1em;
+        }
+        
+        .inputLabel {
+            display: inline-block;
+            margin-top: 0.2em;
+            vertical-align: top;
+        }
+        
+        .multiselect {
+            display: inline-block;
+        }
+        
+        .multiselect-selectAll {
+            border: 1px solid rgb(185, 185, 185);
+            border-radius: 0.3em;
+            margin-bottom: 0.2em;
+            padding: 0.1em;
+            padding-left: 0;
+            background-color: rgb(238, 238, 238);
+        }
+        
+        .multiselect-items {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            subreportTypes: $subreportTypes,
+        }
+
+        var ConversionModel = (function() {
+
+            var state = {
+                subreportTypes: config.subreportTypes,
+                selectedReportType: null,
+                reports: $reports
+            }
+
+            initModel()
+
+            function initModel() {
+                state.reports.forEach(function(report) {
+                    report.selected = false
+                })
+            }
+
+            function callEventListeners() {
+                init()
+            }
+
+            function setAllSelection(selected) {
+                state.reports.forEach(function(report) {
+                    report.selected = selected
+                })
+                callEventListeners()
+            }
+
+            function getReports() {
+                return state.reports
+            }
+
+            function getSubreportTypes() {
+                return state.subreportTypes
+            }
+
+            function getSelectedSubreportType() {
+                return state.selectedSubreportType
+            }
+
+            function setReportSelected(reportId, selected) {
+                state.reports.filter(function(report) {
+                    return report.SAVED_REPORT_ID == reportId
+                })[0].selected = selected
+                callEventListeners()
+            }
+
+            function setSelectedSubreportType(subreportType) {
+                state.selectedSubreportType = subreportType
+                callEventListeners()
+            }
+
+            return {
+                getSubreportTypes: getSubreportTypes,
+                getSelectedSubreportType: getSelectedSubreportType,
+                setSelectedSubreportType: setSelectedSubreportType,
+                getReports: getReports,
+                setReportSelected: setReportSelected,
+                setAllSelection: setAllSelection
+            }
+        }())
+
+        function SubreportTypes(props) {
+            var model = props.model
+            return React.DOM.label(null, "Target Sub Report Expression Type: ",
+                React.DOM.select({
+                        name: "subreportType",
+                        value: model.getSelectedSubreportType(),
+                        onChange: function(event) {
+                            model.setSelectedSubreportType(event.target.value)
+                        }
+                    },
+                    model.getSubreportTypes().map(function(subreportType) {
+                        return React.DOM.option({
+                                key: subreportType.value,
+                                value: subreportType.value
+                            },
+                            subreportType.display)
+                    })))
+        }
+
+        function Multiselect(props) {
+            var items = props.items
+            var areAllChecked = items.every(function(item) {
+                return item.checked
+            })
+
+            return React.DOM.div({
+                    className: "multiselect"
+                },
+                React.DOM.div({
+                        className: "multiselect-selectAll"
+                    },
+                    React.DOM.label(null,
+                        React.DOM.input({
+                            type: "checkbox",
+                            checked: areAllChecked,
+                            onChange: function() {
+                                props.selectAll(!areAllChecked)
+                            }
+                        }),
+                        "Select All")),
+                React.DOM.ul({
+                        className: "multiselect-items"
+                    },
+                    items.map(function(item) {
+                        return React.DOM.li({
+                                key: item.value
+                            },
+                            React.DOM.label(null,
+                                React.DOM.input({
+                                    type: "checkbox",
+                                    name: props.name,
+                                    value: item.value,
+                                    checked: item.checked,
+                                    onChange: function(event) {
+                                        props.onSelect(item.value, !item.checked)
+                                    }
+                                }), item.display))
+                    })))
+        }
+
+        var ConvertSubreportExpressions = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.form({
+                        method: "POST",
+                        action: "page.request.do?page=du.page.convertSubreportExpressions"
+                    },
+                    React.DOM.div(null,
+                        React.DOM.label({
+                            className: "inputLabel"
+                        }, "Reports: "),
+                        Multiselect({
+                            name: "reports",
+                            selectAll: ConversionModel.setAllSelection,
+                            onSelect: function(value, selected) {
+                                ConversionModel.setReportSelected(value, selected)
+                            },
+                            items: ConversionModel.getReports().map(function(report) {
+                                return {
+                                    value: report.SAVED_REPORT_ID,
+                                    display: report.NAME + " (" + report.BUSINESS_KEY + ")",
+                                    checked: report.selected
+                                }
+                            })
+                        })),
+                    SubreportTypes({
+                        model: ConversionModel
+                    }),
+                    React.DOM.div(null,
+                        React.DOM.button({
+                            className: "submit"
+                        }, "Submit")))
+            }
+        }))
+
+        var ConvertSubreportExpressionsApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Convert Subreport Expressions",
+                    instructions: ["This page can be used to convert the subreportExperission for XML Reports to different formats.",
+                        "Jaspersoft Studio and entellitrak use different subReportExpressions to define subreports. If you create a report in Jaspersoft Studio, you must convert the subreportExpression into the form expected by entellitrak. The converse is also true.",
+                        "Before running this page, you should make sure that your reports are backed up."
+                    ],
+                    mainContent: ConvertSubreportExpressions({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(ConvertSubreportExpressionsApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

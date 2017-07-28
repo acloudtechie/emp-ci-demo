@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rulesframework.a049d6ae-15a4-4391-a6ee-ef63d8458ef8",
+  "description" : "Rules Framework",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RulesFramework",
+  "packageBusinessKey" : "package.rf.4b62c02b-6a99-40cf-861f-1ba7068be81f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

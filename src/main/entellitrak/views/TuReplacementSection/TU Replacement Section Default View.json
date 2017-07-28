@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.tuReplacementSection.view.tuReplacementSectionDefaultView",
+  "dataObjectBusinessKey" : "object.tuReplacementSection",
+  "dataViewElements" : [ {
+    "businessKey" : "object.tuReplacementSection.view.tuReplacementSectionDefaultView.element.code",
+    "dataElementBusinessKey" : "object.tuReplacementSection.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementSection.view.tuReplacementSectionDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.tuReplacementSection.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementSection.view.tuReplacementSectionDefaultView.element.name",
+    "dataElementBusinessKey" : "object.tuReplacementSection.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementSection.view.tuReplacementSectionDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.tuReplacementSection.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementSection.view.tuReplacementSectionDefaultView.element.text",
+    "dataElementBusinessKey" : "object.tuReplacementSection.element.text",
+    "description" : "Text column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Text",
+    "multiValueDelimiter" : null,
+    "name" : "text",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "TU Replacement Section Listing",
+  "name" : "TU Replacement Section Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "TU Replacement Section Listing"
+}

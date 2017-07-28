@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.bulkdeletedataview.5114f318-6082-4bb2-9d14-093166b0dc50",
+  "description" : "BulkDeleteDataView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "BulkDeleteDataView",
+  "packageBusinessKey" : "package.bulkDeleteData.c052b562-1042-4e59-90b2-cacf92880b0e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

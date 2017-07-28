@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.rfRfWorkflowParentStateElement",
+  "dataObjectBusinessKey" : null,
+  "description" : "RF - RF Workflow - Parent State Element",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RF - RF Workflow - Parent State Element",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.rfworkflowparentstateelement.e7365134-f48a-4e29-b75d-cb795f6308f1",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "TEXT"
+}

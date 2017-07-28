@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lookupcolumnreferencesview.9c02dcdf-2eed-4880-97be-221d8548fb95",
+  "description" : "LookupColumnReferencesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "LookupColumnReferencesView",
+  "packageBusinessKey" : "package.lookupColumnReferences.bd6ce505-4b25-4186-8e96-294cde400508",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.systempreferenceexportview.990a6022-ceb4-43f1-ad4f-c4bde516e511",
+  "description" : "SystemPreferencesToolView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "SystemPreferencesToolView",
+  "packageBusinessKey" : "package.systemPreferencesTool.7c6695f0-e322-48a1-b6c7-8baa24bb16fb",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

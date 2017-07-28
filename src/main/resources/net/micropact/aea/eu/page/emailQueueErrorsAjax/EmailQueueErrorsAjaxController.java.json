@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.emailqueueerrorsajaxcontroller.68bd0c5d-973c-4daf-8a4c-d20508b7b2b5",
+  "description" : "EmailQueueErrorsAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "EmailQueueErrorsAjaxController",
+  "packageBusinessKey" : "package.emailQueueErrorsAjax.f03db6d3-2243-4971-9bea-9eeed9993399",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

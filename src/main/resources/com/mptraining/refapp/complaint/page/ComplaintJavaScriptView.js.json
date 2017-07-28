@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.complaintjavascript.058df12f-dde2-44f1-af17-552edd42679a",
+  "description" : "Main JavaScript to run on the Complaint form",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "ComplaintJavaScriptView",
+  "packageBusinessKey" : "package.page.d28e1107-917e-4145-97fd-9906f4ed8871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

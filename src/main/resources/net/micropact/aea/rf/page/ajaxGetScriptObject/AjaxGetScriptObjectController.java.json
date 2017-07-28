@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ajaxgetscriptobjectcontroller.c28c7388-0b29-4cde-8681-a423155c52a1",
+  "description" : "AjaxGetScriptObjectController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "AjaxGetScriptObjectController",
+  "packageBusinessKey" : "package.ajaxGetScriptObject.2912ff09-51fa-4043-bd02-5ac716ab2610",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Developer Utility - Scheduler Job Status</title>
+        
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+            
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        
+        <style type="text/css">
+            table.grid{
+                width: auto;
+            }
+        </style>
+        
+        <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+            "use strict"
+            
+            var SchedulerJobStatus = React.createFactory(React.createClass({
+                componentDidMount: function(){
+                    var div = ReactDOM.findDOMNode(this)
+                    jQuery(div).load("page.request.do",
+                            {
+                        page: "du.page.schedulerJobStatus"
+                        })
+                },
+                render: function(){
+                    return React.DOM.div()
+                }
+            }))
+            
+            var SchedulerJobStatusApp = React.createFactory(React.createClass({
+                render: function(){
+                    return AeaCoreReactComponents.Application({
+                        title: "Scheduler Job Status",
+                        instructions: ["This page indicates whether there is a problem with the Scheduler Jobs"],
+                        mainContent: SchedulerJobStatus({})})
+                }
+            }))
+            
+            jQuery(function(){
+                ReactDOM.render(SchedulerJobStatusApp(null),
+                           jQuery('.app')[0])})
+            
+        </script>
+    
+    </head>
+    <body>
+        <div class="app"></div>
+    </body>
+</html>

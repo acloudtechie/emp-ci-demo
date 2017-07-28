@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Log Viewer</title>
+
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <style type="text/css">
+            .logViewer{
+                display: table-row
+            }
+            
+            .logViewer > *{
+                display: table-cell;
+            }
+            
+            .files{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                width: 400px;
+            }
+            
+            .files > li{
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 3px;
+            }
+            
+            .files > li:hover{
+                background-color: #80ECAF;
+            }
+            
+            .files > .selected{
+                background-color: #08CE5E;
+            }
+            
+            .fileSize:before{
+                content: "(";
+            }
+            
+            .fileSize:after{
+                content: ")";
+            }
+            
+            .fileInfo{
+                display: inline-block;
+                width: 300px;
+            }
+            
+            .logContentView{
+                margin-left: 0.5em;
+            }
+            
+            .lineGroup{
+                border-width: 1px;
+                border-style: solid;
+                border-bottom-style: none;
+                border-color: #888;
+                padding: 0.5em;
+            }
+            
+            .lineGroup:last-child{
+                border-bottom-style: solid;
+            }
+            
+            .filter-label > span:after {
+                content: ": ";
+            }
+            
+            label.filter-label {
+                margin-right: 1em;
+            }
+            
+            .aea-core-loading{
+                margin: 1em 0;
+            }
+            
+            code{
+                display: block;
+                white-space: pre-wrap;
+            }
+            
+            .invalid{
+                background-color: #FBB2CE;
+            }
+            
+            .noFile{
+                text-align: center;
+                margin-top: 1em;
+                color: #888;
+            }
+            
+            .tail-container{
+                overflow-y: scroll;
+                font-size: 0.9em;
+            }
+            
+            .start-error{
+                background-color: #ffb6c1;
+            }
+            
+            .start-info{
+                background-color: #add8e6;
+            }
+            
+            .start-warn{
+                background-color: #ffffe0;
+            }
+            
+            .start-debug{
+                background-color: #90ee90;
+            }
+            
+        </style>
+        
+        <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+            "use strict"
+    
+            // Regular expression to match the name of the log file which should be opened when the page initializes
+            var DEFAULT_LOG_REGEX = /^(.*-stdout.*\.log)|(catalina\.out)$/
+            
+            // Regular expression which will match the beginnings of lines and will highlight the matching part
+            var HIGHLIGHT_LINE_START_REGEX = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3} ETK ((ERROR)|(DEBUG)|( INFO)|( WARN)) \d+ --- \[[^\]]+\]/
+            // Old regular expression (from before application.yml)
+            // var HIGHLIGHT_LINE_START_REGEX = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3} \[ETK ((ERROR)|(DEBUG)|(INFO )|(WARN ))\] \[(\w|\.)+ +\d+\]/
+                
+            // Number of milliseconds to wait before refreshing the log
+            var REFRESH_WAIT_TIME = 3000
+            
+            /* This function takeas a function which returns a promise.
+             * The function will be called every REFRESH_WAIT_TIME milliseconds until it is stopped by calling
+             * .stop()
+             * Once stop is called, the promiseFn will not be called again. */
+            function stoppableRecurringPromise(promiseFn) {
+                var stopped = false
+    
+                function stop() {
+                    stopped = true
+                }
+                
+                function executePromise() {
+                    // If we have not been instructed to stop, call the promise
+                    if (!stopped) {
+                        promiseFn()
+                            .always(function() {
+                                // Execute the promise again later
+                                    setTimeout(executePromise,
+                                            REFRESH_WAIT_TIME)
+                            })
+                    }
+                }
+    
+                executePromise()
+    
+                return {
+                    stop: stop
+                }
+            }
+    
+            var model = (function() {
+                
+                // This will load the entire application state
+                var state = {
+                        // Whether or not we are currently loading the files
+                    isFileListLoaded: false,
+                    // Array of available files
+                    files: [],
+                    // Name of the selected ifle
+                    selectedFile: null,
+                    // Our position within the file
+                    position: null,
+                    // Array of the lines in the file we are tailing
+                    lines: [],
+                    
+                    // The current stoppableRecurringPromise which is tailing the log
+                    tailer: null,
+    
+                    // Event listeners which should be notified when something changes
+                    eventListeners: []
+                }
+                
+                /* Immediately perform initialization of the model */
+                initialize()
+                
+                /* Calls all of the event listeners which are currently registered with us */
+                function callEventListeners() {
+                    state.eventListeners.forEach(function(f) {
+                        f()
+                    })
+                }
+                
+                /* Add a new event listener which will be notified of state changes */
+                function addEventListener(f) {
+                    state.eventListeners.push(f)
+                }
+    
+                /* Sets up the initial state of the model */
+                function initialize() {
+                    loadFiles()
+                }
+                
+                function isFileListLoaded() {
+                    return state.isFileListLoaded
+                }
+    
+                function getFiles() {
+                    return state.files
+                }
+    
+                function getLines() {
+                    return state.lines
+                }
+    
+                function getSelectedFile() {
+                    return state.selectedFile
+                }
+    
+                /* Stops the current recurring promise from tailing the file */
+                function stopTailer() {
+                    if (state.tailer) {
+                        state.tailer.stop()
+                        state.tailer = null
+                    }
+                }
+                
+                /* This will begin tailing the currently selected file */
+                function tail() {
+                    
+                    var tailer = stoppableRecurringPromise(function() {
+                        return jQuery.post("page.request.do", {
+                            page: "du.page.logViewer.fileTailer",
+                            position: state.position,
+                            fileName: state.selectedFile
+                        }).done(function(response) {
+                            // We only want to update things if we are still the current tailer
+                            if(tailer == state.tailer){
+                                try{
+                                    // We only need to make updates if the log has been written to since we last checked
+                                    if (state.position != response.finalPosition) {
+                                        // Update the current position
+                                        state.position = response.finalPosition
+                                        // Add the new lines to our state
+                                        response.lines.forEach(function(line) {
+                                            state.lines.push(line)
+                                        })
+                                        callEventListeners()
+                                    }
+                                }catch(e){
+                                    /* This can happen for instance if they time out. 
+                                     The ajax call doesn't fail, but it doesn't have the right information. */
+                                    alert("There was a problem attempting to tail the file")
+                                }
+                            }
+                        }).fail(function(response) {
+                            alert("There was a problem attempting to tail the file")
+                        })
+                        })
+                    
+                    // We store ourselves as the current tailer
+                    state.tailer = tailer
+                }
+    
+                function loadFiles() {
+    
+                    //setTimeout(function(){
+                    jQuery.post("page.request.do", {
+                            page: "du.page.logViewer.fileList"
+                        })
+                        .done(function(response) {
+                            response.files.sort(function(f1, f2) {
+                                return f1.name.localeCompare(f2.name)
+                            })
+                            state.files = response.files
+                        }).done(function() {
+                            state.isFileListLoaded = true
+                        }).done(function() {
+                            var defaultFiles = state.files.filter(function(file) {
+                                return DEFAULT_LOG_REGEX.test(file.name)
+                            })
+                            if (defaultFiles.length > 0) {
+                                defaultFiles.sort(function(a, b) {
+                                    return a.lastModified - b.lastModified
+                                })
+                                setSelectedFile(defaultFiles[defaultFiles.length - 1].name)
+                            }
+                        }).fail(function() {
+                            alert("Failed to load file list")
+                        }).always(function() {
+                            callEventListeners()
+                        })
+                        //}, 2000)
+                    callEventListeners()
+                }
+                
+                /* Deselects the currently selected file */
+                function deselectFile() {
+                    
+                    // We want to stop the log tailing AJAX calls
+                    stopTailer()
+                    // Reset all fields in the state related to the file
+                    state.selectedFile = null
+                    state.position = null
+                    state.lines = []
+    
+                    callEventListeners()
+                }
+    
+                /* Selects a certain file and begins tailing it */
+                function setSelectedFile(name) {
+                    deselectFile()
+                    state.selectedFile = name
+                    tail()
+                    callEventListeners()
+                }
+    
+                /* Clears the current display of output lines */
+                function clearLines() {
+                    state.lines = []
+                    state.position = null
+                    callEventListeners()
+                }
+    
+                return {
+                    state: state,
+    
+                    addEventListener: addEventListener,
+    
+                    isFileListLoaded: isFileListLoaded,
+                    getFiles: getFiles,
+                    getLines: getLines,
+                    getSelectedFile: getSelectedFile,
+                    setSelectedFile: setSelectedFile,
+                    deselectFile: deselectFile,
+                    clearLines: clearLines
+                }
+            }())
+            
+            /* Gets a case-insensitive RegExp object for text, or null if text is not a valid regular expression. */
+            function getRegex(text) {
+                try {
+                    return new RegExp(text, "i")
+                } catch (e) {
+                    return null
+                }
+            }
+            
+            /* Component which displays the contents of a particular log file.
+             * It provides capabilities surrounding filtering lines. */
+            var LogContentView = React.createFactory(React.createClass({
+                getInitialState: function() {
+                    return {
+                        filterText: "",
+                        // linesBefore and linesAfter have to be Strings because of the way input fields work
+                        linesBefore: "",
+                        linesAfter: ""
+                    }
+                },
+                render: function() {
+                    /* It is very important that we deal with the numbers as actual numbers instead of Strings. */
+                    var linesBeforeNumber = isNaN(Number(this.state.linesBefore)) ? 0 : Number(this.state.linesBefore)
+                    var linesAfterNumber = isNaN(Number(this.state.linesAfter)) ? 0 : Number(this.state.linesAfter)
+                    
+                    /* Generates a label and text input field where the text field is tied directly to one of the fields
+                     * of our state.
+                     * label: Text of the input's label
+                     * stateProperty: The property that the input is tied to
+                     * placeholder: The input's placeholder text*/
+                    var generateInput = function(label, stateProperty, placeholder) {
+                        return React.DOM.label({className: "filter-label"},
+                            label,
+                            React.DOM.input({
+                                type: "text",
+                                value: this.state[stateProperty],
+                                placeholder: placeholder,
+                                onChange: function(event) {
+                                    var newState = {}
+                                    newState[stateProperty] = event.target.value
+                                    this.setState(newState)
+                                }.bind(this)
+                            }))
+                    }.bind(this)
+    
+                    return React.DOM.div({
+                            className: "logContentView"
+                        },
+                        React.DOM.label({className: "filter-label"},
+                            "Filter",
+                            RegexView({
+                                value: this.state.filterText,
+                                placeholder: "Filter lines by regex",
+                                onChange: function(event) {
+                                    this.setState({
+                                        filterText: event.target.value
+                                    })
+                                }.bind(this)
+                            })),
+                        generateInput("Lines Before", "linesBefore", "# displayed before match"),
+                        generateInput("Lines After", "linesAfter", "# displayed after match"),
+                        React.DOM.button({onClick: function(event){
+                            event.preventDefault()
+                            model.clearLines()
+                        }}, 
+                        "Clear Output"),
+                        /* We will display something different in each of the following scenarios:
+                            - No file has been selected
+                            - A file is selected but we are not filtering it
+                            - A file has been selected and it is being filtered */
+                        model.getSelectedFile() == null 
+                        ? React.DOM.div({className: "noFile"}, "No file selected") 
+                                : React.DOM.div(null,
+                            AeaCoreReactComponents.Loading(),
+                            React.DOM.div({className: "tail-container",
+                                style: {maxHeight: (jQuery(window).height() - 30) + "px"}}, this.state.filterText == "" 
+                                ? TailView({lines: model.getLines()}) 
+                                        : FilteredTailView(model.getLines(),
+                                    this.state.filterText,
+                                    linesBeforeNumber,
+                                    linesAfterNumber))))
+                }
+            }))
+        
+            /* This will return a React object for a log file which is being filtered.
+             * lines: Lines of the log file
+             * filterText: The regular expression which lines should match
+             * linesBefore: Number of lines before each match which should be displayed
+             * linesAfter: Number of lines after each match which should be displayed
+             */
+            function FilteredTailView(lines, filterText, linesBefore, linesAfter, clearLinesCallback) {
+                var regexp = getRegex(filterText)
+                
+                // Groups of matched lines. Has the form [[String]]
+                var lineGroups = []
+                
+                if(regexp != null){
+                    // The regular expression is valid
+                    for (var i = 0; i < lines.length; i++) {
+                        if (regexp.test(lines[i])) {
+                            // The regular expression matches
+                            /* Add a new group to line groups containing the lines before and the lines after.
+                             * We make sure that the indexes are in bounds. */
+                            lineGroups.push(lines.slice(Math.max(i - linesBefore, 0),
+                                Math.min(i + linesAfter + 1, lines.length)))
+                        }
+                    }
+                }
+                
+                return React.DOM.div(null, lineGroups.map(function(lines, i) {
+                    return TailView({lines: lines,
+                        key: i})
+                }))
+            }
+    
+            /* React element for a regular expression input element.
+             * props supports: value, onChange, placeholder*/
+            function RegexView(props) {
+                return React.DOM.input({
+                    type: "text",
+                    placeholder: props.placeholder,
+                    value: props.value,
+                    onChange: props.onChange,
+                    className: getRegex(props.value) == null ? "invalid" : null
+                })
+            }
+            
+            /* React element for unfiltered lines.
+             * props can have: lines, key*/
+            function TailView (props){
+                    return React.DOM.div({className: "lineGroup",
+                        key: props.key},
+                        props.lines.map(function(line, i) {
+                            return React.DOM.code({
+                                key: i
+                            }, LineView({line: line}))
+                        }))}
+            
+            /* React element for a single line
+             * props can have: line*/
+            function LineView(props){
+                var line = props.line
+                var matches = HIGHLIGHT_LINE_START_REGEX.exec(line)
+                if(matches !== null){
+                    
+                    /* The class mapping maps the Strings captured by the regular expression to CSS classes.
+                     * It includes leading/trailing whitespace accordingly, and has changed when application.yml
+                     * was introduced. */
+                    var classMapping = {
+                            "DEBUG": "start-debug",
+                            " WARN": "start-warn",
+                            "ERROR": "start-error",
+                            " INFO": "start-info"
+                    }
+                    
+                    return [React.DOM.span({key: 0,
+                        className: classMapping[matches[1]]}, 
+                        matches[0]), 
+                            React.DOM.span({key: 1}, 
+                                    line.substring(matches[0].length))]
+                }else{
+                    return line
+                }
+            }
+            
+            /* Displays the list of files. It also allows the list to be filtered and for files to be downloaded. */
+            var FilesList = React.createFactory(React.createClass({
+                getInitialState: function() {
+                    return {
+                        filter: ""
+                    }
+                },
+                render: function() {
+                    var filterRegex = getRegex(this.state.filter)
+                    return React.DOM.div({className: "filesList"},
+                            // File Name Filter
+                        RegexView({
+                            value: this.state.filter,
+                            placeholder: "Filter filename by regex",
+                            onChange: function(event) {
+                                this.setState({
+                                    filter: event.target.value
+                                })
+                            }.bind(this)
+                        }),
+                        this.props.isFileListLoaded 
+                        // List of Files
+                        ? React.DOM.ul({
+                                className: "files"
+                            }, 
+                            this.props.files.filter(function(file) {
+                                // Only return files which match the regex
+                                return filterRegex != null && filterRegex.test(file.name)
+                            }).map(function(file, i) {
+                                var fileIsSelected = file.name == model.getSelectedFile()
+    
+                                return React.DOM.li({
+                                        key: i,
+                                        className: fileIsSelected ? "selected" : null,
+                                        onClick: function(event) {
+                                            if(fileIsSelected){
+                                                if(!jQuery(event.target).hasClass('download')){
+                                                /* The file was already selected and they didn't just click the download
+                                                 * button, so we will deselect the file. */                                                    
+                                                model.deselectFile()
+                                                }
+                                            }else{
+                                                // The file was not already selected, so we select it
+                                                model.setSelectedFile(file.name)                                                
+                                            }
+                                        }
+                                    },
+                                    // file name/size
+                                    React.DOM.span({className: "fileInfo"},
+                                        React.DOM.span({}, file.name),
+                                        React.DOM.span({
+                                            className: "fileSize"
+                                        }, file.size)),
+                                    // Download link
+                                    React.DOM.a({
+                                        download: true,
+                                        href: "page.request.do?page=du.page.logDownloader&fileName=" + encodeURIComponent(file.name),
+                                        className: "button download"
+                                    }, "Download"))
+                            })) 
+                            // Files have not been loaded yet
+                            : AeaCoreReactComponents.Loading())
+                }
+            }))
+            
+            var LogViewer = React.createFactory(React.createClass({
+                componentWillMount: function() {
+                    model.addEventListener(function() {
+                        this.setState({})
+                    }.bind(this))
+                },
+                render: function() {
+                    return React.DOM.div({
+                            className: "logViewer"
+                        },
+                        FilesList({isFileListLoaded: model.isFileListLoaded(),
+                                files: model.getFiles()}),
+                        LogContentView(null))
+                }
+            }))
+    
+            var LogViewerApp = React.createFactory(React.createClass({
+                render: function() {
+                    return AeaCoreReactComponents.Application({
+                        title: "Log Viewer",
+                        instructions: ["This page can be used to monitor the logs. It is common to open this page and then run code which you know will be writing to the log."],
+                        mainContent: LogViewer({})
+                    })
+                }
+            }))
+    
+            function init() {
+                ReactDOM.render(LogViewerApp(null),
+                    document.getElementById("app"))
+            }
+
+        </script>
+  
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

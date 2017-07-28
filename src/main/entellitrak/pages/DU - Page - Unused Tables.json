@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.unusedTables",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.unusedtablescontroller.196152b4-d100-4ffb-ab49-b87dda4f4aef",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Unused Tables",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Unused Tables",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.unusedtablesview.879ef3c9-ef69-4676-9f92-a30ab3eec49b"
+}

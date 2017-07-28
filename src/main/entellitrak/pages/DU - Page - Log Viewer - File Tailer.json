@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.logViewer.fileTailer",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.logviewertailercontroller.aaab3958-3e14-4d7a-a181-eb1e8caf0b05",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Log Viewer - File Tailer",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Log Viewer - File Tailer",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

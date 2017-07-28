@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.cleanOrphanedSubjects.be12e17e-9fdc-43b7-bbe1-6351e007537b",
+  "name" : "cleanOrphanedSubjects",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.page.f630bb4e-78de-4837-b2f3-611dcf3e08e0",
+  "workspaceName" : "system"
+}

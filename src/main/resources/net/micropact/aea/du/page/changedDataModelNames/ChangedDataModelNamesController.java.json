@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.changednamescontroller.a33dbcaa-1fea-4d56-b5a3-101e1bcd9cc2",
+  "description" : "ChangedDataModelNamesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ChangedDataModelNamesController",
+  "packageBusinessKey" : "package.changedDataModelNames.c52323bb-41f3-48ca-b31c-c3a5e217342a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

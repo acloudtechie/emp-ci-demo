@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dataelementdecoder.130029f2-7df8-473c-a14e-3d9e7b10ec0c",
+  "description" : "DataElementDecoder",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DataElementDecoder",
+  "packageBusinessKey" : "package.utility.a3652cc4-3e96-42a8-9c42-099cd257fd1b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.dependencySorter.cbf15f02-3cc9-4658-bc47-5125eb807473",
+  "name" : "dependencySorter",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.algorithm.e785037a-d008-4a57-a4a6-bcfa0319a81e",
+  "workspaceName" : "system"
+}

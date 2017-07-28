@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.logviewertailercontroller.aaab3958-3e14-4d7a-a181-eb1e8caf0b05",
+  "description" : "LogViewerFileTailerController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "LogViewerFileTailerController",
+  "packageBusinessKey" : "package.logViewerFileTailer.eb92bf4c-6efe-4685-a00a-b5ec39483b37",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

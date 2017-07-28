@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euemailqueuestatusdoe.e3e006d2-ef81-48eb-8080-6af16b32b6ee",
+  "description" : "EuEmailQueueStatusDoe",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "EuEmailQueueStatusDoe",
+  "packageBusinessKey" : "package.doe.41a16562-4920-484b-96d2-2cbf7dad3da5",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

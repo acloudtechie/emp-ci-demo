@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lsjscontroller.19fd9d3d-7d48-4cc4-a796-92f19f502077",
+  "description" : "LsJsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "LsJsController",
+  "packageBusinessKey" : "package.lsJs.94b1c5a7-df35-415c-80a0-020bba90f67d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

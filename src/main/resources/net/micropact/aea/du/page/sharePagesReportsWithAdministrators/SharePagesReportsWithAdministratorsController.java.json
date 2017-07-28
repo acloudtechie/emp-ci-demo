@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sharepagesreportswithadministratorscontroller.51c1ecce-ce45-4420-9083-91397e227752",
+  "description" : "SharePagesReportsWithAdministratorsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "SharePagesReportsWithAdministratorsController",
+  "packageBusinessKey" : "package.sharePagesReportsWithAdministrators.8c1dcb62-1caf-4701-aac9-53656d9c6fc4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

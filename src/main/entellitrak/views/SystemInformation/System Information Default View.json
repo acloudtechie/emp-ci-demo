@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.systemInformation.view.systemInformationDefaultView",
+  "dataObjectBusinessKey" : "object.systemInformation",
+  "dataViewElements" : [ {
+    "businessKey" : "object.systemInformation.view.systemInformationDefaultView.element.code",
+    "dataElementBusinessKey" : "object.systemInformation.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.systemInformation.view.systemInformationDefaultView.element.description",
+    "dataElementBusinessKey" : "object.systemInformation.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.systemInformation.view.systemInformationDefaultView.element.file",
+    "dataElementBusinessKey" : "object.systemInformation.element.file",
+    "description" : "File column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "File",
+    "multiValueDelimiter" : null,
+    "name" : "file",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.systemInformation.view.systemInformationDefaultView.element.name",
+    "dataElementBusinessKey" : "object.systemInformation.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.systemInformation.view.systemInformationDefaultView.element.value",
+    "dataElementBusinessKey" : "object.systemInformation.element.value",
+    "description" : "Value column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Value",
+    "multiValueDelimiter" : null,
+    "name" : "value",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "System Information Listing",
+  "name" : "System Information Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "System Information Listing"
+}

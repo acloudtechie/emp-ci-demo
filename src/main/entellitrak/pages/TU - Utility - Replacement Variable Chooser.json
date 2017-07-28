@@ -1,0 +1,28 @@
+{
+  "businessKey" : "tu.utility.replacementVariableChooser",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.replacementvariablechoosercontroller.5ad1ea7c-571c-4d51-87cd-e1f142990c96",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "TU - Utility - Replacement Variable Chooser",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "TU - Utility - Replacement Variable Chooser",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.replacementvariablechooserview.42d36d71-0ffa-44d0-ac36-2dab1af77d46"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.noisyoutputstream.db589f0b-2593-4e55-9ce3-0f898063b770",
+  "description" : "NoisyOutputStream",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "NoisyOutputStream",
+  "packageBusinessKey" : "package.debug.df8e946a-55a9-428e-8a40-e04a9568e03f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

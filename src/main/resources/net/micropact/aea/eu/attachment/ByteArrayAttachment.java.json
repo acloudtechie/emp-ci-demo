@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.bytearrayattachment.c82497c4-039a-451b-97ba-36e0337967d7",
+  "description" : "ByteArrayAttachment",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ByteArrayAttachment",
+  "packageBusinessKey" : "package.attachment.9f2b9744-1028-41c3-a106-9d2b0086ddbf",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

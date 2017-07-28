@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.templateexception.f40d72e2-f7e9-48dd-a52b-fda7c0de98f6",
+  "description" : "TemplateException",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "TemplateException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

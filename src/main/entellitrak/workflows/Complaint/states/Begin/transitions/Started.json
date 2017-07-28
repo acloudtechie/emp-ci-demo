@@ -1,0 +1,11 @@
+{
+  "businessKey" : "object.complaint.state.begin.transition.started",
+  "description" : "Started",
+  "name" : "Started",
+  "nextStateBusinessKey" : "object.complaint.state.interim",
+  "previousStateBusinessKey" : "object.complaint.state.begin",
+  "sequenceNumber" : 1,
+  "trackingEventListeners" : [ ],
+  "transitionType" : "ALWAYS_TRANSITION",
+  "triggerScriptObjectBusinessKey" : null
+}

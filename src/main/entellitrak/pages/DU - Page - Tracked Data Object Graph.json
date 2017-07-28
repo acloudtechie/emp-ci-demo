@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.trackedDataObjectGraph",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaulthtmlcontroller.76cf7c84-2e19-46b0-b017-b53beeba2122",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Tracked Data Object Graph",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Tracked Data Object Graph",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.trackeddataobjectgraphview.06be73c4-16e6-4775-9d49-d02da06550fb"
+}

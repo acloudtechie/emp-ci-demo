@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.workspaceservice.8d70ebe3-be58-4bf6-a117-038d0f0547a9",
+  "description" : "WorkspaceService",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "WorkspaceService",
+  "packageBusinessKey" : "package.utility.a3652cc4-3e96-42a8-9c42-099cd257fd1b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

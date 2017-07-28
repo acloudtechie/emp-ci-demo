@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanorphanedfilesview.54ddeb13-c329-4c49-8dcc-ca56c04518a5",
+  "description" : "CleanOrphanedFilesView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CleanOrphanedFilesView",
+  "packageBusinessKey" : "package.cleanOrphanedFiles.2cfe0703-da23-4e8f-b389-476ad352e820",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.irfworkflow.7a76853c-fce5-4d2c-a90e-e9354a5f2c4b",
+  "description" : "IRfWorkflow",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IRfWorkflow",
+  "packageBusinessKey" : "package.dao.58cb1e04-652f-4756-bd3b-01d5455f933a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

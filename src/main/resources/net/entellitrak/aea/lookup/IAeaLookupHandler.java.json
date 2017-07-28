@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.iaealookuphandler.588b90f5-a82c-48b7-92a6-8539eb1e60b6",
+  "description" : "Additional lookup handler that AEs should implement. Necessary for RDO data import/export.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IAeaLookupHandler",
+  "packageBusinessKey" : "package.lookup.5592b781-332e-47b1-95b9-a5326b939348",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.smtpTester",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.smtptestercontroller.57d55cb0-e45b-4aad-a403-4fff10badd12",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - SMTP Tester",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - SMTP Tester",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.smtptesterview.75f3d8e0-1dfd-4029-83f5-dee68e63a3eb"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transitionlookup.dddf15e2-8e87-4b49-958c-03f20a073882",
+  "description" : "Lookup of available state transitions",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "TransitionLookup",
+  "packageBusinessKey" : "package.lookup.d8a89035-31c6-45d7-9179-210e33e48aa7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

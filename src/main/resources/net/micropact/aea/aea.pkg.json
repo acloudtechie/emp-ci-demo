@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.aea.ca9a7b36-b88d-45f0-b234-5306a62459a5",
+  "name" : "aea",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.micropact.9e49a242-cf41-4be6-9546-25b1de175abd",
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sacassignedcountcontroller.e76bbb30-e652-45b2-84e7-a2528a31392c",
+  "description" : "Returns a count of the number of Complaints that currently has the given SAC assigned to it.",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "SacAssignedCountController",
+  "packageBusinessKey" : "package.page.d28e1107-917e-4145-97fd-9906f4ed8871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

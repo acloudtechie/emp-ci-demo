@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.controller.15c6bb62-2d08-4a6d-9611-5ff4397c6f9d",
+  "description" : "Controller",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "Controller",
+  "packageBusinessKey" : "package.componentExport.9ff234b6-55bd-4478-a3b4-5c0c50e608ff",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

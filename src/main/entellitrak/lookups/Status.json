@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.status",
+  "dataObjectBusinessKey" : "object.status",
+  "description" : "Status",
+  "displayDataElementBusinessKey" : "object.status.element.name",
+  "enableCaching" : true,
+  "endDateDataElementBusinessKey" : "object.status.element.endDate",
+  "lookupSourceType" : "DATA_OBJECT_LOOKUP",
+  "name" : "Status",
+  "orderByDataElementBusinessKey" : "object.status.element.order",
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : "object.status.element.startDate",
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : null
+}

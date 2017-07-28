@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.handlesacassigned.eeb675e0-0e5a-4d69-935c-000ca433019f",
+  "description" : "Checks that SAC Assigned is selected when the new CMP Complaint is a Case.  If there is an SAC Assigned, the CMP Complaint is assigned to that user.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "HandleSacAssigned",
+  "packageBusinessKey" : "package.workfloweffects.b7e3d1b3-a329-43b9-bd33-9530e105ab87",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

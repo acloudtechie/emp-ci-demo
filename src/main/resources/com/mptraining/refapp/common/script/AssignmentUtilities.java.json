@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.assignmentutilities.763c83da-4800-42d8-94b3-706fd590dfbe",
+  "description" : "Convenience methods for setting object assignments to users or groups.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AssignmentUtilities",
+  "packageBusinessKey" : "package.script.63cff695-8e72-4426-8fcc-d605738c6cb8",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

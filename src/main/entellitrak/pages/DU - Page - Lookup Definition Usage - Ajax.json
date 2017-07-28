@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.lookupDefinitionUsage.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.lookupdefinitionusageajaxcontroller.43e4ab85-67bd-48b5-8e26-65bb6fe3ce4a",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Lookup Definition Usage - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Lookup Definition Usage - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

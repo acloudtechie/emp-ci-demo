@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.utility.parameter.css",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultcsscontroller.4c4fffef-8895-447d-a228-c25dc4a97c23",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Utility - Parameter - CSS",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Utility - Parameter - CSS",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.utilityparametercssview.ee22e0f6-f3b6-428d-b3dd-377969555de4"
+}

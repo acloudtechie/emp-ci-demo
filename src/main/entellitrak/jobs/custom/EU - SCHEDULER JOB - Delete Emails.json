@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "eu.schedulerJob.deleteEmails",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:50Z",
+  "cronTriggerExpression" : "0 0 3 * * ?",
+  "cronTriggerType" : "DAILY",
+  "description" : "Deletes emails from the EU Email Queue which were created a long time ago. The time is determined by the \"eu.daysUntilDeleteEmailsFromQueue\" entry in the AEA - CORE - Configuration RDO.",
+  "endDate" : null,
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-28T17:17:50Z",
+  "name" : "EU - SCHEDULER JOB - Delete Emails",
+  "quartzJobDetails" : {
+    "description" : "Deletes emails from the EU Email Queue which were created a long time ago. The time is determined by the \"eu.daysUntilDeleteEmailsFromQueue\" entry in the AEA - CORE - Configuration RDO.",
+    "isDurable" : "1",
+    "isNonconcurrent" : "0",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ScriptObjectJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAPdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "eu.schedulerJob.deleteEmails",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : 0,
+  "repeatUnits" : "SECOND",
+  "scriptObjectBusinessKey" : "script.deleteemails.91a2288f-8bb5-42ff-a3f3-16548eb4ce08",
+  "suspendOnError" : true,
+  "triggerType" : "CRON_TRIGGER"
+}

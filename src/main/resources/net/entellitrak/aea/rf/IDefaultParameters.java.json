@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.idefaultparameters.d96f31bc-7ff6-4a1b-82df-9b7296f759b6",
+  "description" : "IDefaultParameters",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IDefaultParameters",
+  "packageBusinessKey" : "package.rf.4b62c02b-6a99-40cf-861f-1ba7068be81f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

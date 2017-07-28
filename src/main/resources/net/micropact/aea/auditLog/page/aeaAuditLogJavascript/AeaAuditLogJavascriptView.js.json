@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeaauditlogjavascriptview.f5f6f6f5-3a46-4dc1-8fc7-af1cd3fa915e",
+  "description" : "AeaAuditLogJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "AeaAuditLogJavascriptView",
+  "packageBusinessKey" : "package.aeaAuditLogJavascript.d083bc7b-b127-4c6e-ae3e-736a6bce37e6",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

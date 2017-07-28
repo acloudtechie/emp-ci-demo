@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.convertSubreportExpressions",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.convertsubreportexpressioncontroller.44d5d171-d244-4f64-816f-55a92e550cf7",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Convert Subreport Expressions",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Convert Subreport Expressions",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.convertsubreportexpressionview.0b1dec6f-cd7d-469b-8cb9-d69a56ff5c19"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aclasskeycacheable.c8ba113a-ce78-488c-bdc5-723a924c918b",
+  "description" : "AClassKeyCacheable",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AClassKeyCacheable",
+  "packageBusinessKey" : "package.cache.73bfc64f-d2c6-4333-8e29-cac7d172bf5d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

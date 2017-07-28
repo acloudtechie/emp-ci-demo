@@ -1,0 +1,28 @@
+{
+  "businessKey" : "page.efilerRegistration",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.efilerregistrationcontroller.0526af8c-367f-41d7-a0ba-30fc6dcd2f98",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "eFiler Registration",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "eFiler Registration",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : true,
+  "viewBusinessKey" : "script.efilerregistrationview.073ad9c9-e86a-41d3-8c1f-f788ba804c96"
+}

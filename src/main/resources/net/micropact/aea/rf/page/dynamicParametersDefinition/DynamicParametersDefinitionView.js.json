@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dynamicparametersdefinitionview.a8dc1d50-bba1-4536-8e7d-a9c0ad4497d9",
+  "description" : "DynamicParametersDefinitionView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "DynamicParametersDefinitionView",
+  "packageBusinessKey" : "package.dynamicParametersDefinition.eeaa73b7-7b7c-487c-8aec-6fa858063d7c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

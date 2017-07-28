@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.radiooptionhelper.4dd70057-4f9a-45bb-8d15-1fdcabe4767d",
+  "description" : "Helper class that is used to render the set of radio button options.  The constructor takes the selected value and constructs the list of radio buttons to display.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RadioOptionHelper",
+  "packageBusinessKey" : "package.control.95554b3a-ad47-4b92-a306-ac85d3784214",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

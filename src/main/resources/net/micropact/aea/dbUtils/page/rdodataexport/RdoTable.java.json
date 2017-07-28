@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdotable.d4e63b63-d08a-436a-99e0-d16868a6cf5c",
+  "description" : "Defines a user entered, sortable RDO table for the Data Export Controller",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoTable",
+  "packageBusinessKey" : "package.rdodataexport.2a0b00ee-6dfa-4d6a-9cff-43eca71f1449",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.tablenamelookup.a05b67ae-9b9a-42c5-9002-fbff75a07c3e",
+  "description" : "Returns all table names in the system.",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "TableNameLookup",
+  "packageBusinessKey" : "package.lookup.14eca15f-0030-442d-ad47-374130336736",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

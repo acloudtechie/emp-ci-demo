@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dependencysorter.a9b566ab-bf1e-4be9-aa68-33bc3dff64b8",
+  "description" : "DependencySorter",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DependencySorter",
+  "packageBusinessKey" : "package.dependencySorter.cbf15f02-3cc9-4658-bc47-5125eb807473",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

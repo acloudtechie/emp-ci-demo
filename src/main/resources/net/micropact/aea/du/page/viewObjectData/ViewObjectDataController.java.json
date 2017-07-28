@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewobjectcontroller.613523cd-b28d-4901-be52-6ab5093656f2",
+  "description" : "ViewObjectDataController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewObjectDataController",
+  "packageBusinessKey" : "package.viewObjectData.161919c6-96be-4ac1-ab16-0db63d3fe331",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

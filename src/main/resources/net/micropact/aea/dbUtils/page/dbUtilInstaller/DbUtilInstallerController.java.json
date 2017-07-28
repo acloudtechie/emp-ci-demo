@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dbutilinstallercontroller.c5e01386-7bba-42da-85de-3a4fcf0d8f0b",
+  "description" : " \tAn installer script that installs a common set of helpful DB views, packages and stored procedures for use by the AEA frameworks and AE code.",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DbUtilInstallerController",
+  "packageBusinessKey" : "package.dbUtilInstaller.a9ecdae3-798f-49b3-b114-8922ab9fe858",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euemailqueuefromaddress.8786ff6b-13a2-4f6e-83c4-78706b6bdfcf",
+  "description" : "EuEmailQueueFromAddress",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "EuEmailQueueFromAddress",
+  "packageBusinessKey" : "package.lookup.f13021de-f02f-463b-a60b-b7c519f13961",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

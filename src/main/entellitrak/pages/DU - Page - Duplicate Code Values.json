@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.duplicateCodeValues",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.duplicatecodevaluescontroller.4b13fd01-4d93-4500-863b-c4f4b3937c72",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Duplicate Code Values",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Duplicate Code Values",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.duplicatecodevaluesview.53b273e1-5d08-4570-9676-e4a220310f93"
+}

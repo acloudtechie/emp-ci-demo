@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.documentmanagementattachment.342fe8e3-4eaf-4823-8f02-10467d6af6ee",
+  "description" : "DocumentManagementAttachment",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DocumentManagementAttachment",
+  "packageBusinessKey" : "package.attachment.9f2b9744-1028-41c3-a106-9d2b0086ddbf",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Update Role Transitions</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <style type="text/css">
+        td.rowHeader {
+            font-weight: bold;
+        }
+        
+        label.selectAll {
+            font-style: italic;
+            font-weight: normal;
+        }
+        
+        table.grid>tbody>tr:hover {
+            background-color: #F1F1F1;
+        }
+        
+        input[type=submit] {
+            margin-top: 1em;
+        }
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        /* This page does not currently use React for its actual contents because it predates React.
+        React was added to make the look and feel consistent with the rest of the site. */
+
+        var roles = $roles;
+        var transitions = $transitions;
+        var roleTransitions = $roleTransitions;
+
+        /* This function looks to see whether a roleTransition was selected when we first opened this page*/
+        function isRoleTransitionChecked(roleId, transitionId) {
+            for (var i = 0; i < roleTransitions.length; i++) {
+                if (roleTransitions[i].RFTRANSITIONID == transitionId && roleTransitions[i].ROLEID == roleId) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function checkColumn(column, checked) {
+            jQuery("#tableHolder > table > tbody > tr").map(function(i, tr) {
+                jQuery(tr).children(":nth(" + (column + 1) + ")").find(":checkbox").prop({
+                    "checked": checked
+                })
+            })
+        }
+
+        function buildTable() {
+            var table = jQuery("<table>")
+                .addClass("grid aea-core-grid")
+                .append(jQuery("<thead>")
+                    .append(jQuery("<tr>")
+                        .append(jQuery("<th>")
+                            .text(""))
+                        .append(jQuery(roles).map(function(i, role) {
+                            return jQuery("<th>")
+                                .append(jQuery("<div>")
+                                    .text(role.NAME))
+                                .append(jQuery("<label>")
+                                    .addClass("selectAll")
+                                    .append(jQuery("<input>")
+                                        .prop({
+                                            type: "checkbox"
+                                        })
+                                        .click(function() {
+                                            checkColumn(i, jQuery(this).is(":checked"))
+                                        }))
+                                    .append(jQuery("<span>")
+                                        .text("Select All")))[0];
+                        }))))
+                .append(jQuery("<tbody>")
+                    .append(jQuery(transitions).map(function(i, transition) {
+                        return jQuery("<tr>")
+                            .append(jQuery("<td>")
+                                .addClass("rowHeader")
+                                .text(transition.NAME + " (" + transition.CODE + ")"))
+                            .append(jQuery(roles).map(function(i, role) {
+                                return jQuery("<td>")
+                                    .append(jQuery("<input>")
+                                        .prop({
+                                            type: "checkbox",
+                                            name: "transitionRoles",
+                                            value: transition.ID + "_" + role.ROLEID,
+                                            checked: isRoleTransitionChecked(role.ROLEID, transition.ID)
+                                        }))[0]
+                            }))[0]
+                    })))
+            return table;
+        }
+
+        var UpdateRoleTransitions = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.form({
+                            method: "POST"
+                        },
+                        React.DOM.input({
+                            type: "hidden",
+                            name: "formAction",
+                            value: "commit"
+                        }),
+                    React.DOM.div({
+                        id: "tableHolder",
+                        ref: function(tableHolder) {
+                            jQuery(tableHolder).append(buildTable())
+                        }
+                    }),
+                    React.DOM.input({
+                        type: "submit",
+                        value: "Commit"
+                    }))
+            }
+        }))
+
+        function UpdateRoleTransitionsApp() {
+            return AeaCoreReactComponents.Application({
+                title: "Update Role Permissions",
+                instructions: ["This page allows a single location for managing which roles can take which transitions."],
+                mainContent: UpdateRoleTransitions({})
+            })
+        }
+
+        function init() {
+            ReactDOM.render(UpdateRoleTransitionsApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

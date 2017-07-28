@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.refappdataloader.e166d248-b6f3-446e-bba3-adc0dbf36323",
+  "description" : "Loads Reference Data and Workflow Rules Engine configuration after a new site is deployed.",
+  "handlerType" : "DEPLOYMENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RefAppDataLoader",
+  "packageBusinessKey" : "package.script.63cff695-8e72-4426-8fcc-d605738c6cb8",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

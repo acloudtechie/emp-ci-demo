@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.defaultjavascriptcontroller.d3996852-5cb5-433c-b3fe-652e6af45fc6",
+  "description" : "DefaultJavascriptController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DefaultJavascriptController",
+  "packageBusinessKey" : "package.defaultControllers.71787ded-6b49-4b45-9376-2baf891f7ff9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

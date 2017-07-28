@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.maputilswrapper.d521cd53-9ca0-4c66-bad0-7789eb5f48ac",
+  "description" : "MapUtilsWrapper",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "MapUtilsWrapper",
+  "packageBusinessKey" : "package.wrappedAPIs.abbea5cf-10a7-4c50-9faa-e8b3b194d0d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.utilitiesjavascriptview.9a82c53f-13ed-48e2-98a0-10202f146562",
+  "description" : "UtilitiesJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "UtilitiesJavascriptView",
+  "packageBusinessKey" : "package.formUtilitiesJavascript.7fb0b2e2-4daf-4748-b35a-98c2bd124142",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,11 @@
+{
+  "businessKey" : "object.cmpComplaint.state.interim.transition.ended",
+  "description" : "Ended",
+  "name" : "Ended",
+  "nextStateBusinessKey" : "object.cmpComplaint.state.end",
+  "previousStateBusinessKey" : "object.cmpComplaint.state.interim",
+  "sequenceNumber" : 1,
+  "trackingEventListeners" : [ ],
+  "transitionType" : "NEVER_TRANSITION",
+  "triggerScriptObjectBusinessKey" : null
+}

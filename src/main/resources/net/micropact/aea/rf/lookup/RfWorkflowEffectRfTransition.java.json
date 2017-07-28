@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfworkfloweffectrftransition.5e93833c-87fb-4e74-86b8-b543741b4fdc",
+  "description" : "RF Workflow Effect - RF Transition",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfWorkflowEffectRfTransition",
+  "packageBusinessKey" : "package.lookup.065a5fb2-a524-4643-a7a1-b89642f1c62e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

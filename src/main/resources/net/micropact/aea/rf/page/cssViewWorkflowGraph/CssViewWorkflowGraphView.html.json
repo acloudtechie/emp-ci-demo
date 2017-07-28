@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cssviewworkflowgraphview.7d8714d0-1df6-4b9a-90f1-ef7b5f3bd2f0",
+  "description" : "CssViewWorkflowGraphView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CssViewWorkflowGraphView",
+  "packageBusinessKey" : "package.cssViewWorkflowGraph.3d4b157d-10e0-4ca3-97ac-9865f54f873f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

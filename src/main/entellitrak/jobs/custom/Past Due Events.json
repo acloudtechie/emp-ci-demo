@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "job.findPastDueEvents",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:50Z",
+  "cronTriggerExpression" : "0 0 5 * * ?",
+  "cronTriggerType" : "DAILY",
+  "description" : "Updates Complaints which have Events which are past due",
+  "endDate" : null,
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-28T17:17:50Z",
+  "name" : "Past Due Events",
+  "quartzJobDetails" : {
+    "description" : "Find Past Due Events",
+    "isDurable" : "1",
+    "isNonconcurrent" : "0",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ScriptObjectJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAPdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "job.findPastDueEvents",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : null,
+  "repeatUnits" : "SECOND",
+  "scriptObjectBusinessKey" : "script.findpastdueevents.d1231aa7-f9c2-415e-9e3f-9f546732cb10",
+  "suspendOnError" : true,
+  "triggerType" : "CRON_TRIGGER"
+}

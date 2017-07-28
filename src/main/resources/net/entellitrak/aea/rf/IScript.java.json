@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.iscript.eba26361-f215-4f2f-b938-095bc1b6c010",
+  "description" : "IScript",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IScript",
+  "packageBusinessKey" : "package.rf.4b62c02b-6a99-40cf-861f-1ba7068be81f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

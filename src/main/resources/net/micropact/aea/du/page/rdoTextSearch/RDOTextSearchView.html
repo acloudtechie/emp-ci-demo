@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - RDO Text Search</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+    <style type="text/css">
+        form > div {
+            display: table-row;
+        }
+        
+        form > div > * {
+            display: table-cell;
+            padding: 1em;
+        }
+        
+        .checkboxes {
+            padding: 0;
+            list-style: none;
+        }
+        
+        .form-label:after {
+            content: ": ";
+        }
+        
+        input[type=submit] {
+            margin: 1em 0 0 1em;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            margin: 2em 0 1em 0;
+        }
+        
+        ul.collapsed {
+            display: none;
+        }
+        
+        .allNone{
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        .no-result{
+            color: #666;
+            font-size: 1.5em;
+            font-style: italic;
+            margin: 1em;
+        }
+        
+        .no-result:before{
+            content: "(";
+        }
+        
+        .no-result:after{
+            content: ")";
+        }
+        
+        /* Tables */
+        
+        .results {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .results > li {}
+        /* Records */
+        
+        .results > li > ul {}
+        
+        .results > li > ul > li {
+            display: table-row;
+        }
+        
+        .results > li > ul > li > * {
+            display: table-cell;
+        }
+        
+        .results > li > ul > li > a {
+            font-weight: bold;
+        }
+        /* Elements */
+        
+        .results > li > ul > li > ul {
+            margin: 0;
+            padding: 1em 0 0 1em;
+        }
+        
+        .results > li > ul > li > ul > li {
+            display: table-row;
+        }
+        
+        .results > li > ul > li > ul > li > * {
+            display: table-cell;
+        }
+        
+        .results > li > ul > li > ul > li > span {
+            font-weight: bold;
+            padding-right: 1em;
+            padding-bottom: 0.3em;
+        }
+        
+        /*.results > li > ul > li > ul > li > span:after {
+            content: ":";
+            margin-right: 1em;
+        }*/
+        /* Lines */
+        
+        .results > li > ul > li > ul > li > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .results > li > ul > li > ul > li > li {}
+        
+        .matching-line {
+            white-space: pre;
+        }
+        
+        .match {
+            font-weight: bold;
+            color: #EA2B1B;
+            font-style: italic;
+        }
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            errors: $errors,
+            doSearch: $doSearch,
+            searchText: $searchText,
+            dataTypes: $dataTypes,
+            dataObjects: $dataObjects,
+            searchResults: $searchResults
+        }
+        
+        function setAllDataObjectsSelected(selected){
+            config.dataObjects.forEach(function(dataObject){
+                dataObject.selected = selected
+            })
+            init()
+        }
+        
+        function setDataObjectSelected(dataObjectKey, selected){
+            config.dataObjects.filter(function(dataObject){
+                return dataObject.BUSINESS_KEY == dataObjectKey
+            })[0].selected = selected
+            
+            init()
+        }
+        
+        var AllResults = function(props) {
+            return !props.doSearch ? null : props.allResults.length == 0 ? React.DOM.div({className: "no-result"}, "No Results") : React.DOM.ul({
+                    className: "results"
+                },
+                props.allResults.map(function(table, i) {
+                    return React.DOM.li({
+                            key: i
+                        },
+                        React.DOM.h4(null, React.DOM.a({
+                                href: "admin.refdata.list.do?dataObjectKey=" + table.BUSINESS_KEY,
+                                target: "_blank"
+                            },
+                            React.DOM.span(null, table.LABEL))),
+                        Records(table))
+                }))
+        }
+
+        var Records = function(props) {
+            return React.DOM.ul(null,
+                props.records.map(function(record, i) {
+                    return React.DOM.li({
+                            key: i
+                        },
+                        React.DOM.a({
+                                href: "admin.refdata.update.request.do?dataObjectKey=" + props.BUSINESS_KEY + "&trackingId=" + record.ID,
+                                target: "_blank"
+                            },
+                            record.ID),
+                        Columns(record))
+                }))
+        }
+
+        var Columns = function(props) {
+            return React.DOM.ul(null,
+                props.COLUMNS.map(function(column, i) {
+                    return React.DOM.li({
+                            key: i
+                        },
+                        React.DOM.span(null, column.ELEMENT_NAME),
+                        MultipleLines({
+                            lines: column.VALUE
+                        }))
+                }))
+        }
+
+        var MultipleLines = function(props) {
+            return React.DOM.ul(null,
+                props.lines.map(function(line, i) {
+                    return React.DOM.li({
+                            key: i
+                        },
+                        SingleLine({
+                            fragments: line
+                        }))
+                }))
+        }
+
+        var SingleLine = function(props) {
+            return React.DOM.div({
+                    className: "matching-line"
+                },
+                props.fragments.map(function(fragment, i) {
+                    return React.DOM.span({
+                            key: i,
+                            className: fragment.isMatch ? "match" : null
+                        },
+                        fragment.fragment)
+                }))
+        }
+
+        var DataObjectsView = React.createFactory(React.createClass({
+            getInitialState: function() {
+                return {
+                    collapsed: true
+                }
+            },
+            render: function() {
+                var collapsedClass = this.state.collapsed ? "collapsed" : "expanded"
+                        var allSelected = this.props.dataObjects.every(function(dataObject){return dataObject.selected})
+                return React.DOM.div(null,
+                    React.DOM.div(null,
+                        React.DOM.label({
+                            className: "form-label"
+                        }, "Data Objects")),
+                    React.DOM.fieldset(null,
+                        React.DOM.legend(null, React.DOM.a({
+                                className: collapsedClass,
+                                href: "javascript:void(0)",
+                                onClick: function(e) {
+                                    this.setState({
+                                        collapsed: !this.state.collapsed
+                                    })
+                                    e.preventDefault()
+                                }.bind(this)
+                            },
+                            this.state.collapsed ? "Expand" : "Collapse")),
+                        React.DOM.ul({
+                                className: "checkboxes " + collapsedClass
+                            },
+                            React.DOM.li(null,
+                                    React.DOM.label(null,
+                                            React.DOM.input({
+                                                type: "checkbox",
+                                                checked: allSelected,
+                                                    onClick: function(e){
+                                                        setAllDataObjectsSelected(!allSelected)
+                                                    }
+                                            }),
+                                            React.DOM.span({className: "allNone"}, "Select All/None"))),
+                            this.props.dataObjects.map(function(dataObject) {
+                                return React.DOM.li({
+                                        key: dataObject.BUSINESS_KEY
+                                    },
+                                    React.DOM.label(null,
+                                        React.DOM.input({
+                                            type: "checkbox",
+                                            name: "dataObjects",
+                                            value: dataObject.BUSINESS_KEY,
+                                            checked: dataObject.selected,
+                                            onClick: function(e){
+                                                setDataObjectSelected(dataObject.BUSINESS_KEY, !dataObject.selected)
+                                            }
+                                        }),
+                                        dataObject.LABEL))
+                            }))))
+            }
+        }))
+
+        var InputForm = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.form({
+                        method: "POST"
+                    },
+                    React.DOM.input({
+                        type: "hidden",
+                        name: "page",
+                        value: "du.page.rdoTextSearch"
+                    }),
+                    React.DOM.input({
+                        type: "hidden",
+                        name: "update",
+                        value: "1"
+                    }),
+                    React.DOM.div(null,
+                        React.DOM.div(null,
+                            React.DOM.label({
+                                className: "form-label"
+                            }, "Search Text")),
+                        React.DOM.input({
+                            type: "text",
+                            name: "searchText",
+                            defaultValue: this.props.searchText
+                        })),
+                    React.DOM.div(null,
+                        React.DOM.div(null,
+                            React.DOM.label({
+                                className: "form-label"
+                            }, "Data Types")),
+                        React.DOM.ul({
+                                className: "checkboxes"
+                            },
+                            this.props.dataTypes.map(function(dataType) {
+                                return React.DOM.li({
+                                        key: dataType.value
+                                    },
+                                    React.DOM.label(null,
+                                        React.DOM.input({
+                                            type: "checkbox",
+                                            name: "dataTypes",
+                                            value: dataType.value,
+                                            defaultChecked: dataType.selected
+                                        }),
+                                        dataType.display))
+                            }))),
+                    DataObjectsView(config),
+                    React.DOM.div(null, React.DOM.input({
+                        type: "submit",
+                        value: "Search"
+                    })))
+            }
+        }))
+
+        var RDOTextSearch = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null,
+                    AeaCoreReactComponents.Errors(config),
+                    InputForm(config),
+                    AllResults({
+                        doSearch: config.doSearch,
+                        allResults: config.searchResults
+                    }))
+            }
+        }))
+
+        var RDOTextSearchApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "RDO Text Search",
+                    instructions: ["This page can be used to perform a search across the textual (text/long text) data elements of RDO data.",
+                        "This is useful if you need to change RDO data but do not know which RDO it is stored in as well as if you want to find out whether any RDOs refer to a particular string."
+                    ],
+                    mainContent: RDOTextSearch({})
+                })
+            },
+            componentDidMount: function() {
+                document.getElementsByName("searchText")[0].focus()
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(RDOTextSearchApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

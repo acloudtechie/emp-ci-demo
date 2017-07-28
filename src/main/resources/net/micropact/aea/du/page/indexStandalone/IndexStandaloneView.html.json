@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.indexstandaloneview.c2298c8c-3c73-402e-a267-338a860cd48e",
+  "description" : "IndexStandaloneView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "IndexStandaloneView",
+  "packageBusinessKey" : "package.indexStandalone.8bb2c87e-a7ea-4eb8-ba46-307ae7105123",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

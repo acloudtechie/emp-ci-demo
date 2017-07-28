@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdotextsearchcontroller.99a99677-7ee8-4dc4-aadf-2a999d6530f8",
+  "description" : "RDOTextSearchController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RDOTextSearchController",
+  "packageBusinessKey" : "package.rdoTextSearch.0f1d759c-f231-4f16-990d-2661065f0f42",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

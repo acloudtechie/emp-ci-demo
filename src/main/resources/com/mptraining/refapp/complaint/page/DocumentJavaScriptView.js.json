@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.documentjavascriptview.c97b6f83-1945-4a03-98b5-b440cda26aea",
+  "description" : "Main JavaScript to run on the Document form",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "DocumentJavaScriptView",
+  "packageBusinessKey" : "package.page.d28e1107-917e-4145-97fd-9906f4ed8871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

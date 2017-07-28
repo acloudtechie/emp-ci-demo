@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.sharePagesReportsWithAdministrators",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.sharepagesreportswithadministratorscontroller.51c1ecce-ce45-4420-9083-91397e227752",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Share Pages Reports with Administrators",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Share Pages Reports with Administrators",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.sharepagesreportswithadministratorsview.775bfb6d-5559-4a77-a6ba-0a23a6d98ea3"
+}

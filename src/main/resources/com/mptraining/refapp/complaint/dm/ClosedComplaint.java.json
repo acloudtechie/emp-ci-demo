@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.closedcomplaint.f04a27ca-6f46-4c8b-a4e0-1e3f511d2d7c",
+  "description" : "Display mapping to evaluate if a complaint is closed",
+  "handlerType" : "DISPLAY_MAPPING_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "ClosedComplaint",
+  "packageBusinessKey" : "package.dm.4d256ba5-0110-45b8-80b9-18f6dd73f147",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

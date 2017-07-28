@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rftransitiondoe.ac32653b-9512-46ea-9aba-5958fabbb90c",
+  "description" : "RfTransitionDoe",
+  "handlerType" : "DATA_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfTransitionDoe",
+  "packageBusinessKey" : "package.doe.deb72ee7-276a-4a9f-98a6-5a843be4817c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

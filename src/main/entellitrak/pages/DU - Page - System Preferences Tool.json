@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.systemPreferencesTool",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.systempreferenceexportcontroller.9cef350a-0b2d-4bc6-b1bb-0894e29c530c",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - System Preferences Tool",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - System Preferences Tool",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.systempreferenceexportview.990a6022-ceb4-43f1-ad4f-c4bde516e511"
+}

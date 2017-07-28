@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.executionrepositorycontroller.91ca32d1-6d6f-4931-a911-f74ddfcc631e",
+  "description" : "ExecutionRepositoryController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ExecutionRepositoryController",
+  "packageBusinessKey" : "package.executionRepository.eaa6295b-d858-48c0-ba7a-feb4606fb28d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

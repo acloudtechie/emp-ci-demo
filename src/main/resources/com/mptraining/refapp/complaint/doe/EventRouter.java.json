@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.eventrouter.c44f49cc-ba35-4b4f-9aa8-190aa9a26822",
+  "description" : "Handles business logic for Event CTO for each CRUD operation.  If logic is extensive, this will route logic to other classes based on the operation performed.",
+  "handlerType" : "DATA_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "EventRouter",
+  "packageBusinessKey" : "package.doe.1fa143cf-b567-4fcd-a314-194f5bcfcd37",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

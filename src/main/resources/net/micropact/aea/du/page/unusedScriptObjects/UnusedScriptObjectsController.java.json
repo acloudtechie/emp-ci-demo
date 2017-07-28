@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unusedscriptobjectscontroller.168eabe9-60f0-4b9c-ab11-e14a36eb171d",
+  "description" : "UnusedScriptObjectsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "UnusedScriptObjectsController",
+  "packageBusinessKey" : "package.unusedScriptObjects.6083c5c0-2261-472f-b2b8-ca6504fab946",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

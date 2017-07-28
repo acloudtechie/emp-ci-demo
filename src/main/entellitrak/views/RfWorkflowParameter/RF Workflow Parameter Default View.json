@@ -1,0 +1,91 @@
+{
+  "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView",
+  "dataObjectBusinessKey" : "object.rfWorkflowParameter",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.allowmultiple",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.allowMultiple",
+    "description" : "Allow Multiple column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Allow Multiple",
+    "multiValueDelimiter" : null,
+    "name" : "allowMultiple",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.code",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.description",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 8,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.lookup",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.lookup",
+    "description" : "Lookup column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Lookup",
+    "multiValueDelimiter" : null,
+    "name" : "lookup",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.name",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.order",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.order",
+    "description" : "Order column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "Order",
+    "multiValueDelimiter" : null,
+    "name" : "order",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.required",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.required",
+    "description" : "Required column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Required",
+    "multiValueDelimiter" : null,
+    "name" : "required",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowParameter.view.rfWorkflowParameterDefaultView.element.type",
+    "dataElementBusinessKey" : "object.rfWorkflowParameter.element.type",
+    "description" : "Type column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Type",
+    "multiValueDelimiter" : null,
+    "name" : "type",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Workflow Parameter Listing",
+  "name" : "RF Workflow Parameter Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Workflow Parameter Listing"
+}

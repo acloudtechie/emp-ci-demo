@@ -1,0 +1,12 @@
+{
+  "active" : true,
+  "businessKey" : "systemEventListener.newEfilerDashboardCustomization",
+  "createdBy" : "administrator",
+  "createdOn" : "2016-10-26T18:12:47Z",
+  "description" : "New eFiler Dashboard Customization",
+  "eventType" : "ON_USER_CREATION",
+  "lastUpdatedBy" : "administrator",
+  "lastUpdatedOn" : "2016-10-26T18:12:47Z",
+  "name" : "New eFiler Dashboard Customization",
+  "scriptObjectBusinessKey" : "script.newefilerusercreationhandler.eff55014-5b1e-4c98-8e1a-a4492eb0ffa8"
+}

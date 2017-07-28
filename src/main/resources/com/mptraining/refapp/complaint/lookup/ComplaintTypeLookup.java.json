@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.complainttypelookup.4f39edc3-68e6-492b-b5ac-4b14fe6b1ffe",
+  "description" : "Complaint Type Lookup",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "ComplaintTypeLookup",
+  "packageBusinessKey" : "package.lookup.a7a2d836-9aab-4cb5-bb18-2fbfc0c197d3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

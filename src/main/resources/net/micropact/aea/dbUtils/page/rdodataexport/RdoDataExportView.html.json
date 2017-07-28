@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodataexportview.4cd1a2d7-f9dc-439e-ad8f-f4dcb0328bcf",
+  "description" : "View for the RDO data export page.",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "RdoDataExportView",
+  "packageBusinessKey" : "package.rdodataexport.2a0b00ee-6dfa-4d6a-9cff-43eca71f1449",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rulesframeworkexception.06b42aa3-55f3-4d95-b3f9-7ed09e8ed602",
+  "description" : "RulesFrameworkException",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RulesFrameworkException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

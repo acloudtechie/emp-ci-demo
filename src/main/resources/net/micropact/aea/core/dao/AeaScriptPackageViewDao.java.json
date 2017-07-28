@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeascriptpackageviewdao.162ec1fe-0a7e-46d0-aa4e-c07858858953",
+  "description" : "AeaScriptPackageViewDao",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaScriptPackageViewDao",
+  "packageBusinessKey" : "package.dao.e4eec82b-dd4e-4583-982d-e3a3ba6608d9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

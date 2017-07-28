@@ -1,0 +1,131 @@
+{
+  "businessKey" : "object.complaint.view.complaintDefaultView",
+  "dataObjectBusinessKey" : "object.complaint",
+  "dataViewElements" : [ {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.category",
+    "dataElementBusinessKey" : "object.complaint.element.category",
+    "description" : "Category column.",
+    "displayOrder" : 10,
+    "displaySize" : null,
+    "label" : "Category",
+    "multiValueDelimiter" : null,
+    "name" : "category",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.complaintid",
+    "dataElementBusinessKey" : "object.complaint.element.complaintId",
+    "description" : "Complaint ID column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Complaint ID",
+    "multiValueDelimiter" : null,
+    "name" : "complaintId",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.complainttype",
+    "dataElementBusinessKey" : "object.complaint.element.complaintType",
+    "description" : "Complaint Type column.",
+    "displayOrder" : 12,
+    "displaySize" : null,
+    "label" : "Complaint Type",
+    "multiValueDelimiter" : null,
+    "name" : "complaintType",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.confidential",
+    "dataElementBusinessKey" : "object.complaint.element.confidential",
+    "description" : "Confidential column.",
+    "displayOrder" : 8,
+    "displaySize" : null,
+    "label" : "Confidential",
+    "multiValueDelimiter" : null,
+    "name" : "confidential",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.currentstatus",
+    "dataElementBusinessKey" : "object.complaint.element.currentStatus",
+    "description" : "Current Status column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Current Status",
+    "multiValueDelimiter" : null,
+    "name" : "currentStatus",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.duedate",
+    "dataElementBusinessKey" : "object.complaint.element.dueDate",
+    "description" : "Due Date column.",
+    "displayOrder" : 15,
+    "displaySize" : null,
+    "label" : "Due Date",
+    "multiValueDelimiter" : null,
+    "name" : "dueDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.lasteventdate",
+    "dataElementBusinessKey" : "object.complaint.element.lastEventDate",
+    "description" : "Last Event Date column.",
+    "displayOrder" : 23,
+    "displaySize" : null,
+    "label" : "Last Event Date",
+    "multiValueDelimiter" : null,
+    "name" : "lastEventDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.message",
+    "dataElementBusinessKey" : "object.complaint.element.message",
+    "description" : null,
+    "displayOrder" : 20,
+    "displaySize" : null,
+    "label" : "Message",
+    "multiValueDelimiter" : null,
+    "name" : "message",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.priority",
+    "dataElementBusinessKey" : "object.complaint.element.priority",
+    "description" : "Priority column.",
+    "displayOrder" : 18,
+    "displaySize" : null,
+    "label" : "Priority",
+    "multiValueDelimiter" : null,
+    "name" : "priority",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.receiveddate",
+    "dataElementBusinessKey" : "object.complaint.element.receivedDate",
+    "description" : "Received Date column.",
+    "displayOrder" : 13,
+    "displaySize" : null,
+    "label" : "Received Date",
+    "multiValueDelimiter" : null,
+    "name" : "receivedDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.sacassigned",
+    "dataElementBusinessKey" : "object.complaint.element.sacAssigned",
+    "description" : "SAC Assigned column.",
+    "displayOrder" : 19,
+    "displaySize" : null,
+    "label" : "SAC Assigned",
+    "multiValueDelimiter" : null,
+    "name" : "sacAssigned",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.complaint.view.complaintDefaultView.element.shorttitle",
+    "dataElementBusinessKey" : "object.complaint.element.shortTitle",
+    "description" : "Short Title column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "Short Title",
+    "multiValueDelimiter" : null,
+    "name" : "shortTitle",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "Complaint Listing",
+  "name" : "Complaint Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "Complaint Listing"
+}

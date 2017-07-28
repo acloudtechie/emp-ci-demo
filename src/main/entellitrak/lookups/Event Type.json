@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.eventType",
+  "dataObjectBusinessKey" : "object.eventType",
+  "description" : "Event Type",
+  "displayDataElementBusinessKey" : "object.eventType.element.name",
+  "enableCaching" : true,
+  "endDateDataElementBusinessKey" : "object.eventType.element.endDate",
+  "lookupSourceType" : "DATA_OBJECT_LOOKUP",
+  "name" : "Event Type",
+  "orderByDataElementBusinessKey" : "object.eventType.element.order",
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : "object.eventType.element.startDate",
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

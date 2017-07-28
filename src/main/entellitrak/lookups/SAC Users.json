@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.sacUsers",
+  "dataObjectBusinessKey" : null,
+  "description" : "All Users with the SAC role",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "SAC Users",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.sacassignedlookup.c181f89d-73d5-49e6-8824-69e77c9fb895",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

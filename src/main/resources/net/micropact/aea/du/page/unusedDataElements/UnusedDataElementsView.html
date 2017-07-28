@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Unused Data Elements</title>
+    
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <style type="text/css">
+        
+        table.grid > tbody > tr:hover{
+            background-color: #f1f1f1;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+    
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+    
+    <script type="text/javascript">
+        "use strict"
+        
+        var unusedDataElementsModel = (function(){
+            var state = {
+            		unusedDataElements: $unusedDataElements
+            }
+            
+            init()
+            
+            function init(){
+            	state.unusedDataElements.forEach(function(dataElement){
+            		dataElement.ON_VIEW = dataElement.ON_VIEW === 1
+            	})
+            }
+            
+            return {
+                unusedDataElements: state.unusedDataElements
+            }
+        }())
+        
+        var UnusedDataElements = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.table({className: "grid aea-core-grid"},
+                		React.DOM.thead(null,
+                				React.DOM.tr(null,
+                						React.DOM.th(null, "Object Name"),
+                						React.DOM.th(null, "Data Element Name"),
+                						React.DOM.th(null, "Used on a View?"))),
+                		React.DOM.tbody(null,
+                				unusedDataElementsModel.unusedDataElements.map(function(dataElement){
+                					return React.DOM.tr({key: dataElement.DATA_ELEMENT_ID},
+                							React.DOM.td(null, React.DOM.a({href: "cfg.dataobject.update.request.do?id="+encodeURIComponent(dataElement.DATA_OBJECT_ID),
+                								target: "_blank"}, 
+                									dataElement.OBJECT_NAME)),
+                							React.DOM.td(null, dataElement.DATA_ELEMENT_NAME),
+                							React.DOM.td(null, dataElement.ON_VIEW ? "Yes" : "No"))
+                				})))
+            }
+        }))
+        
+        var UnusedDataElementsApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Unused Data Elements",
+                    instructions: ["This page displays Data Elements which are not part of any Form. It also indicates whether or not the element is on a View.",
+                                   "If an element is not on a View or Form, it is likely that it can be removed, however there will be exceptions for a particular site.",
+                                   "An example of useful fields which are not on a form would be fields which are completely managed via a custom page."],
+                    mainContent: UnusedDataElements({})})
+            }
+        }))
+        
+        jQuery(function(){
+            ReactDOM.render(UnusedDataElementsApp(null),
+                       jQuery('.app')[0])})
+        
+        </script>
+    
+    </head>
+    <body>
+        <div class="app"></div>
+    </body>
+</html>

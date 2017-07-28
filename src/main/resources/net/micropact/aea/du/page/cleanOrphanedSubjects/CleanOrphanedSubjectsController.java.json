@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanorphanedsubjectscontroller.071ffecf-8f9e-4d8f-be11-fda0d29c2372",
+  "description" : "CleanOrphanedSubjectsController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CleanOrphanedSubjectsController",
+  "packageBusinessKey" : "package.cleanOrphanedSubjects.be12e17e-9fdc-43b7-bbe1-6351e007537b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

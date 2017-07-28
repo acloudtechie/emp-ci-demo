@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.cmpDocumentNameType",
+  "dataObjectBusinessKey" : null,
+  "description" : "Document Name Type for CMP Document",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "CMP Document Name Type",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.currentstatuslookup.6377d05d-d149-469d-9113-6748db373e24",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

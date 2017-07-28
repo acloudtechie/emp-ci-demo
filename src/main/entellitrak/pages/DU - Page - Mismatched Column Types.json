@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.mismatchedColumnTypes",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.mismatchedcolumntypescontroller.7b30e9cd-8b5e-4619-92d3-0fab347e90b2",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Mismatched Column Types",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Mismatched Column Types",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.mismatchedcolumntypesview.8316ac29-c6c0-46bb-b0c8-a1d43a45d891"
+}

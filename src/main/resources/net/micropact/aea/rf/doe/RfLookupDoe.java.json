@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rflookupdoe.11bcbafc-fe33-4f3d-afd3-afd6861641ee",
+  "description" : "RfLookupDoe",
+  "handlerType" : "REFERENCE_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfLookupDoe",
+  "packageBusinessKey" : "package.doe.deb72ee7-276a-4a9f-98a6-5a843be4817c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

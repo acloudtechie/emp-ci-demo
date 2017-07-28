@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.identitydeserializer.35786c88-eaa9-4d82-a887-a93708d388a4",
+  "description" : "IdentityDeserializer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IdentityDeserializer",
+  "packageBusinessKey" : "package.deserializer.a4a46229-8b12-406c-b118-0032671a8349",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

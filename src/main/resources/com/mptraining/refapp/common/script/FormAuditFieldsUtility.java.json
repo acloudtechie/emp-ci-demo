@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.formauditfieldsutility.28aa4860-b9d6-40be-b326-06ad2080f7f6",
+  "description" : "Utility class for easily filling in the usual created / updated fields on data forms.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "FormAuditFieldsUtility",
+  "packageBusinessKey" : "package.script.63cff695-8e72-4426-8fcc-d605738c6cb8",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

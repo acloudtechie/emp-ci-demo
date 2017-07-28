@@ -1,0 +1,12 @@
+{
+  "active" : true,
+  "businessKey" : "systemEventListener.referenceDataLoader",
+  "createdBy" : "administrator",
+  "createdOn" : "2017-05-17T19:25:47Z",
+  "description" : "Reference Data Loader",
+  "eventType" : "NEW_DEPLOYMENT",
+  "lastUpdatedBy" : "administrator",
+  "lastUpdatedOn" : "2017-05-17T19:25:47Z",
+  "name" : "Reference Data Loader",
+  "scriptObjectBusinessKey" : "script.refappdataloader.e166d248-b6f3-446e-bba3-adc0dbf36323"
+}

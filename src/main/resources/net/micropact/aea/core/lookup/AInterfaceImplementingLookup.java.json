@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.ainterfaceimplementinglookup.5c8548ed-7502-4c29-b5c8-70f7214a57ff",
+  "description" : "AInterfaceImplementingLookup",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AInterfaceImplementingLookup",
+  "packageBusinessKey" : "package.lookup.de76c125-9fa6-4336-8202-44db11e67683",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

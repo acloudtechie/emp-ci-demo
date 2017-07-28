@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.corecssview.556228bb-e9be-4f17-b92e-388ef993b106",
+  "description" : "CoreCssView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CoreCssView",
+  "packageBusinessKey" : "package.coreCss.3e017c37-08b6-49c9-9663-18b8ed62e12a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

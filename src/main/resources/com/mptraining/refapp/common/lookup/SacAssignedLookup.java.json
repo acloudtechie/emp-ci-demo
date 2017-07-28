@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sacassignedlookup.c181f89d-73d5-49e6-8824-69e77c9fb895",
+  "description" : "User lookup for all users with the SAC role.",
+  "handlerType" : "LOOKUP_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "SacAssignedLookup",
+  "packageBusinessKey" : "package.lookup.d505160c-69d0-48ae-a21f-32ee8a2aa1f2",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

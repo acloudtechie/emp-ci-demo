@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.indexview.cb0dc653-f6be-4c92-b194-a97f9896d201",
+  "description" : "IndexView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "IndexView",
+  "packageBusinessKey" : "package.index.2c937903-a2d6-4188-acee-721147a1d100",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

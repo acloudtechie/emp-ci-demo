@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.euqueueaddressjavascriptview.edfe0fd1-4c83-4d5f-b6be-f2fa86509957",
+  "description" : "EuQueueAddressJavascriptView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "EuQueueAddressJavascriptView",
+  "packageBusinessKey" : "package.euQueueAddress.9f39ad8d-4098-4233-9216-ac733b7eee2c",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

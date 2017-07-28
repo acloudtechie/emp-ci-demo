@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.duservicefactory.941f90dc-8c34-48cc-9008-e08c9ac1bcad",
+  "description" : "DuServiceFactory",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DuServiceFactory",
+  "packageBusinessKey" : "package.du.5c34f3a7-985c-4c54-aef4-4d57141a65d4",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

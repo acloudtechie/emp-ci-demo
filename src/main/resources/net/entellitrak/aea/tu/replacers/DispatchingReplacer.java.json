@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dispatchingreplacer.659ab0bf-3a4b-4fe6-a372-37856ad23fc9",
+  "description" : "DispatchingReplacer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DispatchingReplacer",
+  "packageBusinessKey" : "package.replacers.8e5ed76a-52e5-4f09-9eae-f251612b9855",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

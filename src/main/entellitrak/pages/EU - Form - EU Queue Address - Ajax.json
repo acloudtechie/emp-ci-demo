@@ -1,0 +1,21 @@
+{
+  "businessKey" : "eu.form.euQueueAddress.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.euqueueaddressajaxcontroller.5e7d3f37-9e4c-4820-a8b1-9b30f859ff21",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "EU - Form - EU Queue Address - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "EU - Form - EU Queue Address - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

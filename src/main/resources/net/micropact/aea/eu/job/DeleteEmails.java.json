@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.deleteemails.91a2288f-8bb5-42ff-a3f3-16548eb4ce08",
+  "description" : "DeleteEmails",
+  "handlerType" : "JOB_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "DeleteEmails",
+  "packageBusinessKey" : "package.job.fa89c155-4f2b-4698-a6b2-2b7815e64392",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

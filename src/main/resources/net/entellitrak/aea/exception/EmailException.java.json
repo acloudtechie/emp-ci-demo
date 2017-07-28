@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.emailexception.ffc5d544-05d9-4759-9792-c9cb8b9ea208",
+  "description" : "EmailException",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "EmailException",
+  "packageBusinessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.executionRepository",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.executionrepositorycontroller.91ca32d1-6d6f-4931-a911-f74ddfcc631e",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Execution Repository",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Execution Repository",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.executionrepositoryview.2cba7f03-2890-40bf-86cc-9ad9ca63a3c5"
+}

@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.bulkDeleteData.c052b562-1042-4e59-90b2-cacf92880b0e",
+  "name" : "bulkDeleteData",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.page.f630bb4e-78de-4837-b2f3-611dcf3e08e0",
+  "workspaceName" : "system"
+}

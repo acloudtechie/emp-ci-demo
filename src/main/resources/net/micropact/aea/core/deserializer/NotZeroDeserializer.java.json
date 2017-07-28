@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.notzerodeserializer.30c4c1bf-ca34-4552-ae88-2a818b3ee7f3",
+  "description" : "NotZeroDeserializer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "NotZeroDeserializer",
+  "packageBusinessKey" : "package.deserializer.a4a46229-8b12-406c-b118-0032671a8349",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

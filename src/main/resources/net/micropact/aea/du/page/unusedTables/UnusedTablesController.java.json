@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unusedtablescontroller.196152b4-d100-4ffb-ab49-b87dda4f4aef",
+  "description" : "UnusedTablesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "UnusedTablesController",
+  "packageBusinessKey" : "package.unusedTables.5f89b724-d6ae-4bcb-9faa-7fdcb6329960",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

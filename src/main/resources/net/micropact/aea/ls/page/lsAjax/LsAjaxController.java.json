@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.lsajaxcontroller.68109edf-90b3-4e9c-8f2a-78a20bee854a",
+  "description" : "LsAjaxController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "LsAjaxController",
+  "packageBusinessKey" : "package.lsAjax.7bc46b5c-ed78-463a-b545-6d93d7849494",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

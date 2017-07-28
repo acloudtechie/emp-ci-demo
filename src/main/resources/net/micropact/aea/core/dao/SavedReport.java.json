@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.savedreport.e3236ceb-14b7-4095-9b65-6ee6d0150533",
+  "description" : "SavedReport",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SavedReport",
+  "packageBusinessKey" : "package.dao.e4eec82b-dd4e-4583-982d-e3a3ba6608d9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

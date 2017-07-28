@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.csvtools.45f4b6f9-9a71-42c8-93c0-579942953989",
+  "description" : "CsvTools",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "CsvTools",
+  "packageBusinessKey" : "package.data.c7a9bb50-bdf4-48f5-a056-f5684e693654",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.templateutilitycss.567aaf1b-b771-41bd-94f1-c9814202703b",
+  "description" : "TemplateUtilityCss",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "TemplateUtilityCss",
+  "packageBusinessKey" : "package.templateUtilityCss.4c41fbbd-8d3c-40b5-9a40-e64b7a772422",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

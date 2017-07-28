@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.xmlutility.c0ccec6b-a111-4216-a390-4eed2f03f059",
+  "description" : "XmlUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "XmlUtility",
+  "packageBusinessKey" : "package.xml.2ef7eaa7-18a5-4428-a766-e46a6895af29",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

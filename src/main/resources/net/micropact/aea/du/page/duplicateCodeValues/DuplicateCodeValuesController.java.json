@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.duplicatecodevaluescontroller.4b13fd01-4d93-4500-863b-c4f4b3937c72",
+  "description" : "DuplicateCodeValuesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DuplicateCodeValuesController",
+  "packageBusinessKey" : "package.duplicateCodeValues.9ec26d19-cd4b-4796-9b50-19e47ba9a9f1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Foreign Keys</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <style type="text/css">
+        em {
+            font-weight: bold;
+            font-style: normal;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict";
+
+        var ForeignKeys = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.a({
+                        className: "button",
+                        href: "page.request.do?page=du.page.foreignKeyCsv"
+                    },
+                    "Download CSV")
+            }
+        }))
+
+        var Instructions = React.DOM.div(null,
+            React.DOM.p(null, "This page allows the download of a CSV file which contains information about which database columns reference which other columns in order to aid in creation of an ERD."),
+            React.DOM.p(null, "The file also contains queries to add and drop the Foreign Key constraints. This allows you to add the constraints and then use a 3rd party tool to build an ERD."),
+            React.DOM.p(null, "You ",
+                React.DOM.em(null, "should not"),
+                " leave the constraints in place and should remove them immediately after building the ERD."),
+            React.DOM.p(null, "The queries to add and remove keys ",
+                React.DOM.em(null, "will not work in SQL Server"),
+                " because of column type discrepencies."),
+            React.DOM.p(null, "The column references are determined through a combination of examining entellitark metadata and implementaion of ", React.DOM.code(null, "net.entellitrak.aea.lookup.IAeaLookupHandler"), ". This means that creation of some foreign keys may fail if you your lookup indicates that it references a View or non-unique column. You may either wish to ignore these columns, or update your ERD after the fact."))
+
+        var ForeignKeysApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Foreign Keys",
+                    instructions: Instructions,
+                    mainContent: ForeignKeys({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(ForeignKeysApp(null),
+                jQuery('.app')[0])
+        }
+
+    </script>
+
+</head>
+
+<body onload="init();">
+    <div class="app"></div>
+</body>
+
+</html>

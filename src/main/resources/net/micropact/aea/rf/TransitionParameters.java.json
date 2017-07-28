@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transitionparameters.f4ee32bd-a724-4802-baf4-1d53b4594cc7",
+  "description" : "TransitionParameters",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "TransitionParameters",
+  "packageBusinessKey" : "package.rf.4d8bba8f-0b6a-4765-864f-4adeff4a6cfe",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.viewObjectData",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.viewobjectcontroller.613523cd-b28d-4901-be52-6ab5093656f2",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - View Object Data",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - View Object Data",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.viewobjectview.d88667bf-38b6-4442-b741-99f9f5ba44c4"
+}

@@ -1,0 +1,13 @@
+{
+  "businessKey" : "object.cmpComplaint",
+  "children" : [ {
+    "businessKey" : "object.cmpDocument",
+    "children" : [ ],
+    "listOrder" : 2
+  }, {
+    "businessKey" : "object.cmpEvent",
+    "children" : [ ],
+    "listOrder" : 1
+  } ],
+  "navigationStyle" : "VERTICAL"
+}

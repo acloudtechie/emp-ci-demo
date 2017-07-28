@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodataexportcalculateordercontroller.16260b46-02f9-403b-b590-c723f3383556",
+  "description" : "RdoDataExportCalculateOrderController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RdoDataExportCalculateOrderController",
+  "packageBusinessKey" : "package.rdodataexportcalculateorder.6c6be293-1266-4159-bfba-5ad2669de949",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

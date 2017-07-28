@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.exception.b1f9a650-754e-49ee-bb95-8872fcaa904a",
+  "name" : "exception",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.aea.dc45af9e-4a39-48c3-b19c-b2a72be0d0fd",
+  "workspaceName" : "system"
+}

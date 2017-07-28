@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.rfRfStateAllowedtransitions",
+  "dataObjectBusinessKey" : null,
+  "description" : "RF - RF State - allowedTransitions",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RF - RF State - allowedTransitions",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.rfstateallowedtransitions.775bab3d-51d4-4af5-8688-21bf6e5a47fe",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

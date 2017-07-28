@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.efiledcomplaintassignment.3864fb4b-6a97-49c3-bb30-bd4a542fe3a4",
+  "description" : "Assign any complaints created by an efiler to the Special Agent Team Group",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "EfiledComplaintAssignment",
+  "packageBusinessKey" : "package.workfloweffects.b7e3d1b3-a329-43b9-bd33-9530e105ab87",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

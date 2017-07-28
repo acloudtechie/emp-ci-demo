@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.transferpageownershipcontroller.5c9a0945-110c-4455-8446-7da2dec6a871",
+  "description" : "TransferPageOwnershipController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "TransferPageOwnershipController",
+  "packageBusinessKey" : "package.transferPageOwnership.729e8281-606f-4a07-950b-2efc64893771",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

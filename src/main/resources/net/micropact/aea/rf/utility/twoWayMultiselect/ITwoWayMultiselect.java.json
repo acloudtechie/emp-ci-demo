@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.itwowaymultiselect.80982d9e-5f03-40bb-a004-8f00da543bd7",
+  "description" : "ITwoWayMultiselect",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ITwoWayMultiselect",
+  "packageBusinessKey" : "package.twoWayMultiselect.e0286f64-8520-49b0-b59f-a76dfa95e01e",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

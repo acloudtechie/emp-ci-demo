@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Developer Utility - View Page Permissions</title>
+		
+		<link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+		<link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		
+		<link rel="stylesheet" type="text/css" href="web-pub/aearchitecture/DataTables-1.10.0/media/css/jquery.dataTables.min.css" />
+		<style type="text/css">
+            
+			.content{
+				margin: 1em;
+			}
+			
+			form label{
+				padding: 0.4em;
+			}
+			
+			.yes{
+				background-image: url("themes/default/web-pub/images/icons/16x16/access/organization.gif");
+			    display: block;
+			    height: 16px;
+			    margin-left: auto;
+			    margin-right: auto;
+			    width: 16px;
+			    font-size: 0px;
+			}
+			
+			.no{
+				background-image: url("themes/default/web-pub/images/icons/16x16/access/no_access.gif");
+				display: block;
+			    height: 16px;
+			    margin-left: auto;
+			    margin-right: auto;
+			    width: 16px;
+			    font-size: 0px;
+			}
+			
+			table.permission-table{
+				width: auto;
+				margin: 0 auto 0 0;
+			}
+			
+			table.permission-table > tbody > tr:hover > td, table.permission-table > tbody > tr.even:hover > td{
+				background-color: #dddddd !important;
+			}
+			
+		</style>
+		
+		<script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+		<script type="text/javascript" src="web-pub/aearchitecture/DataTables-1.10.0/media/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript">
+		    "use strict";
+
+			var roles = $roles;
+			var users = $users;
+			var groups = $groups;
+			var pages= $pages;
+			var pagePermissions = $pagePermissions;
+			
+			var blankPermission = {	edit: false,
+					execute: false,
+					share: false}
+			
+			jQuery(function(){
+				setupRoles();
+				setupUsers();
+				setupGroups();
+				setupType();
+			})
+			
+			function makeDataTable(){
+				jQuery('table.permission-table').dataTable({
+					paging: false,
+					searching: false,
+					info: false,
+					autoWidth: false
+				})
+			}
+			
+			function typeChange(){
+				var type = jQuery('[name=type]').val();
+				
+				jQuery('.role, .user, .group, .allUsers').hide();
+				
+				jQuery('.' + type).show();
+				
+				switch (type){
+				case 'role':
+					refreshRoles();
+					break;
+				case 'user':
+					refreshUsers();
+					break;
+				case 'group':
+					refreshGroups();
+					break;
+				case 'allUsers':
+					refreshAllUsers();
+					break;
+				}
+			}
+			
+			function setupType(){
+				jQuery('[name=type]')
+					.change(typeChange)
+				typeChange();
+			}
+			
+			function setupRoles(){
+				 jQuery('<select>')
+					.attr({name: 'role'})
+					.append(jQuery(roles).map(function(i, role){
+						return jQuery('<option>')
+									.attr({value: role.ROLE_ID})
+									.text(role.NAME)[0]}))
+					.change(refreshRoles)
+					.appendTo(jQuery('.role-label'))
+				refreshRoles();
+			}
+			
+			function setupUsers(){
+				 jQuery('<select>')
+					.attr({name: 'user'})
+					.append(jQuery(users).map(function(i, user){
+						return jQuery('<option>')
+									.attr({value: user.USER_ID})
+									.text(user.USERNAME)[0]}))
+					.change(refreshUsers)
+					.appendTo(jQuery('.user-label'))
+				refreshUsers();
+			}
+			
+			function setupGroups(){
+				 jQuery('<select>')
+					.attr({name: 'group'})
+					.append(jQuery(groups).map(function(i, group){
+						return jQuery('<option>')
+									.attr({value: group.GROUP_ID})
+									.text(group.GROUP_NAME)[0]}))
+					.change(refreshGroups)
+					.appendTo(jQuery('.group-label'))
+				refreshGroups();
+			}
+			
+			function trueFalseToTag(value){
+				return value 
+						? jQuery('<var>')
+							.addClass('yes')
+							.text('yes')
+						: jQuery('<var>')
+							.addClass('no')
+							.text('no')
+			}
+			
+			function refreshTable(getPagePermission){
+				//jQuery('table.permission-table > tbody')
+				//	.html('')
+				
+				jQuery('table.permission-table').remove();
+				
+				
+				jQuery('.table-holder')
+					.append(jQuery('<table>')
+						.addClass('permission-table')
+						.append(jQuery('<thead>')
+								.append(jQuery('<tr>')
+										.append(jQuery('<th>')
+												.text('Page'))
+										.append(jQuery('<th>')
+												.text('Execute'))
+										.append(jQuery('<th>')
+												.text('Share'))
+										.append(jQuery('<th>')
+												.text('Edit'))))
+						.append(jQuery('<tbody>')))
+				
+				jQuery(pages).map(function(i, page){
+					var pagePermission = getPagePermission(page.PAGE_ID);
+					return jQuery('<tr>')
+							.append(jQuery('<td>')
+								.append(jQuery('<a>')
+										.attr({href: 'page.update.request.do?id='+page.PAGE_ID,
+												target: '_blank'})
+										.text(page.NAME)))
+							.append(jQuery('<td>')
+								.append(trueFalseToTag(pagePermission.execute)))
+							.append(jQuery('<td>')
+								.append(trueFalseToTag(pagePermission.share)))
+							.append(jQuery('<td>')
+								.append(trueFalseToTag(pagePermission.edit)))[0]
+				}).appendTo('table.permission-table > tbody')
+				makeDataTable();
+			}
+			
+			function refresh(filterFunction){
+				var permissions = jQuery.grep(pagePermissions, filterFunction)
+				
+				refreshTable(function(pageId){
+					for(var i = 0; i < permissions.length; i++){
+						var permission = permissions[i];
+						if(permission.PAGE_ID == pageId){
+							return {edit: permission.IS_EDIT == 1, 
+									execute: permission.IS_EXECUTE == 1, 
+									share: permission.IS_DISPLAY == 1
+							}
+						}
+					}
+					return blankPermission;
+				});
+			}
+			
+			function refreshRoles(){
+				var roleId = jQuery('[name=role]').val()
+				
+				refresh(function(pagePermission){
+					return pagePermission.ROLE_ID== roleId
+				});
+			}
+			
+			function refreshUsers(){
+				var userId = jQuery('[name=user]').val()
+				
+				refresh(function(pagePermission){
+					return pagePermission.SUBJECT_ID == userId
+				})
+			}
+			
+			function refreshGroups(){
+				var groupId = jQuery('[name=group]').val()
+				
+				refresh(function(pagePermission){
+					return pagePermission.SUBJECT_ID == groupId
+				})
+			}
+			
+			function refreshAllUsers(){
+				refresh(function(pagePermission){
+					return pagePermission.IS_ALL_USERS == 1
+				})
+			}
+			
+		</script>
+	</head>
+	<body>
+		<ul class="aea-core-navigation">
+            <li><a href="home.do">Home</a></li><li class="aea-core-active"><a href="page.request.do?page=du.page.viewPagePermissions">View Page Permissions</a></li>
+        </ul>
+        
+		<div class="content">
+			<form action="javascript:void(0)">
+				<label>Type:
+					<select name="type">
+						<option value="role">Role</option>
+						<option value="user">User</option>
+						<option value="group">Group</option>
+						<option selected="selected" value="allUsers">All Users</option>
+					</select>
+				</label>
+				<label class="role role-label">Role: </label>
+				<label class="user user-label">User: </label>
+				<label class="group group-label">Group: </label>
+			</form>
+		<div class="table-holder"></div>
+		</div>
+        <div id="footer">
+            <div id="copyright">
+                <span>Powered by entellitrak &#x24C7;</span>
+                <img src="themes/default/web-pub/images/logo/entellitrak-icon.gif" title="Powered by entellitrak &#x24C7;" alt="Powered by entellitrak &#x24C7;">
+            </div>
+        </div>
+	</body>
+</html>

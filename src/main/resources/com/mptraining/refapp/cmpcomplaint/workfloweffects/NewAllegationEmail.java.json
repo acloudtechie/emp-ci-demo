@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.newallegationemail.19854a93-1405-4ac5-af26-1f2506763f2e",
+  "description" : "Sends an email to the Special Agent Team group whenever a new CMP Complaint of category Allegation is created",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "NewAllegationEmail",
+  "packageBusinessKey" : "package.workfloweffects.b7e3d1b3-a329-43b9-bd33-9530e105ab87",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

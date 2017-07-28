@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.mismatchedcolumntypescontroller.7b30e9cd-8b5e-4619-92d3-0fab347e90b2",
+  "description" : "MismatchedColumnTypesController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "MismatchedColumnTypesController",
+  "packageBusinessKey" : "package.mismatchedColumnTypes.6b7622a2-a936-46b7-94ad-ddd536b2d149",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

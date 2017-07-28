@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewcorruptedsimpleworkflowview.301f9f6a-93c7-485c-b2b9-3f09301d84fc",
+  "description" : "CheckSimpleWorkflowCorruptionView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "CheckSimpleWorkflowCorruptionView",
+  "packageBusinessKey" : "package.checkSimpleWorkflowCorruption.6752a020-14f3-49bb-a915-3c9e71bd4fce",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

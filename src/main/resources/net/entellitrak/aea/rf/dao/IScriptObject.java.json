@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.iscriptobject.3010afc9-e132-4e71-91eb-07e43c43aa2c",
+  "description" : "IScriptObject",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IScriptObject",
+  "packageBusinessKey" : "package.dao.58cb1e04-652f-4756-bd3b-01d5455f933a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

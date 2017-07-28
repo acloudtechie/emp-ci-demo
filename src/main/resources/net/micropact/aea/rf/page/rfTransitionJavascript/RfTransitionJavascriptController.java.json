@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rftransitionjavascriptcontroller.98734695-9faf-48f0-821b-f81786c4d041",
+  "description" : "RfTransitionJavascriptController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RfTransitionJavascriptController",
+  "packageBusinessKey" : "package.rfTransitionJavascript.5cf15a12-39c0-412d-9baa-0dda868c92f9",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

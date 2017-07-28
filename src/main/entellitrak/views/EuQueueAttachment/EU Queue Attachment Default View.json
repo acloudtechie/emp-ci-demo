@@ -1,0 +1,31 @@
+{
+  "businessKey" : "object.euQueueAttachment.view.euQueueAttachmentDefaultView",
+  "dataObjectBusinessKey" : "object.euQueueAttachment",
+  "dataViewElements" : [ {
+    "businessKey" : "object.euQueueAttachment.view.euQueueAttachmentDefaultView.element.emailqueueid",
+    "dataElementBusinessKey" : "object.euQueueAttachment.element.emailQueueId",
+    "description" : "Email Queue Id column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Email Queue Id",
+    "multiValueDelimiter" : null,
+    "name" : "emailQueueId",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euQueueAttachment.view.euQueueAttachmentDefaultView.element.file",
+    "dataElementBusinessKey" : "object.euQueueAttachment.element.file",
+    "description" : "File column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "File",
+    "multiValueDelimiter" : null,
+    "name" : "file",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "EU Queue Attachment Listing",
+  "name" : "EU Queue Attachment Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "EU Queue Attachment Listing"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "rf.page.objectExport",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.objectexportcontroller.a1138bb7-04b2-414c-a18a-861249e1f4b5",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "RF - Page - Data Export",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - Data Export",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.objectexportview.c8e973a4-ae9d-4aa5-bff3-576be0128d03"
+}

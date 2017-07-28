@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.irfstate.0ab379be-f8a5-4346-b9ac-20e6b0cd83a0",
+  "description" : "IRfState",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IRfState",
+  "packageBusinessKey" : "package.dao.58cb1e04-652f-4756-bd3b-01d5455f933a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

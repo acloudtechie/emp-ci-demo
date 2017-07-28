@@ -1,0 +1,9 @@
+{
+  "businessKey" : "object.complaint.state.end",
+  "dataObjectBusinessKey" : "object.complaint",
+  "description" : "End",
+  "name" : "End",
+  "type" : "END",
+  "x" : 0,
+  "y" : 0
+}

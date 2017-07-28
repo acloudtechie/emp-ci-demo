@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - View Page Report Dashboard Display</title>
+  
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <style type="text/css">
+            
+            li{
+                list-style: none;
+            }
+            
+            li > h3{
+                display: inline-block;
+                margin: 0;
+                cursor: pointer;
+            }
+            
+            .count{
+                display: inline-block;
+                font-style: italic;
+                margin-left: 0.25em;
+            }
+            
+            .count::before{
+                content: "(";
+            }
+            
+            .count::after{
+                content: ")";
+            }
+            
+            .item-name{
+                font-weight: bold;
+            }
+            
+            .toggler{
+                height: 12px;
+                width: 12px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("web-pub/images/tree/minus.gif");
+                display: inline-block;
+            }
+            
+            .toggler.collapsed{
+                background-image: url("web-pub/images/tree/plus.gif");
+            }
+            
+            .hidden{
+                display: none;
+            }
+            
+        </style>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        
+        <script type="text/javascript">
+        "use strict"
+        
+        var itemGroups = $itemGroups
+        
+        var User = React.createFactory(React.createClass({
+        	render: function(){
+        		var user = this.props.user
+        		return React.DOM.li(null, React.DOM.a({target: "_blank",
+        			href: "admin.profile.update.request.do?id=" + encodeURIComponent(user.userId)},
+        			user.name))
+        	}
+        }))
+        
+        var Item = React.createFactory(React.createClass({
+            getInitialState: function(){
+            	return {collapsed: true}
+            },
+        	render: function(){
+        		var item = this.props.item
+        		var collapsed = this.state.collapsed
+        		return React.DOM.li(null,
+        				React.DOM.a({className: "toggler" + (collapsed ? " collapsed" : ""),
+        					href: "",
+        					onClick: function(e){
+        						e.preventDefault()
+        						this.setState({collapsed: !collapsed})
+        					}.bind(this)}, 
+        					""),
+        				React.DOM.a({className: " item-name",
+        					target: "_blank",
+        					href: item.url
+        				}, 
+        				item.name),
+        				React.DOM.div({className: "count"},
+        						item.users.length),
+        				React.DOM.ul({className: collapsed ? "hidden" : null},
+        						item.users.map(function(user, i){
+        							return User({key: user.userId,
+        								user: user})
+        						})))
+        	}
+        }))
+        
+        var ItemGroup = React.createFactory(React.createClass({
+        	getInitialState: function(){
+        		return {collapsed: true}
+        	},
+        	render: function(){
+        		var itemGroup = this.props.itemGroup
+        		var collapsed = this.state.collapsed
+        		
+        		var toggleCollapseHandler = function(e){
+                    e.preventDefault()
+                    this.setState({collapsed: !collapsed})
+                }.bind(this)
+        		
+        		return React.DOM.li(null,
+                        React.DOM.a({className: "toggler" + (collapsed ? " collapsed" : ""),
+                            href: "",
+                            onClick: toggleCollapseHandler}), 
+                            "",
+                        React.DOM.h3({onClick: toggleCollapseHandler}, itemGroup.type),
+                        React.DOM.div({className: "count"},
+                                itemGroup.items.length),
+                        React.DOM.ul({className: collapsed ? "hidden" : null}, itemGroup.items.map(function(item, i){
+                            return Item({key: i,
+                                item: item})
+                        })))
+        	}
+        }))
+        
+        var ViewDashboardDisplay = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.ul({className: "item-groups"}, itemGroups.map(function(itemGroup, i){
+                	return ItemGroup({key: i,
+                		   itemGroup: itemGroup})
+                }))
+            }
+        }))
+        
+        var ViewDashboardDisplayApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "View Page Report Dashboard Display",
+                    instructions: ["This page lists the Pages and Reports that users have displayed on their dashboards.",
+                                   "This is useful because users occasionally put Pages or Reports that take a long time to run and lock up their system on their dashboards. This can also be useful if you are trying to diagnose why a particular user is not seeing something on their dashboard that they should."],
+                    mainContent: ViewDashboardDisplay({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(ViewDashboardDisplayApp(null),
+                       document.getElementById("app"))
+        }
+        
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="app"></div>
+    </body>
+</html>

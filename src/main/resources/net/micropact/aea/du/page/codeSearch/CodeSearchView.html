@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+		<title>Developer Utility - Code Search</title>
+		
+		<link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp"/>
+		<style type="text/css">
+			
+            ul.navigation{
+                padding: 0;
+                margin: 0;
+                display: block;
+                background: black;
+                background: url("themes/default/web-pub/images/topmenu-bg.png") repeat-x scroll center top / 100% 100% #353535;
+                color: #fff;
+                font-size: 16px;
+                text-transform: uppercase;
+                line-height: 50px;
+            }
+            
+            ul.navigation > li{
+                display: inline-block;
+                height: 50px;
+            }
+            
+            ul.navigation > li > a{
+                display: inline-block;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            
+            ul.navigation a:link, ul.navigation a:visited, ul.navigation a:active {
+                color: inherit;
+                text-decoration: inherit;
+            }
+            
+            ul.navigation > li > a:hover{
+                background: gray;
+                background: linear-gradient(to bottom, #060908 0%,#616060 100%);
+            }
+            
+            ul.navigation > li.active, ul.navigation > li.active > a:hover{
+                background: #ea2b1b;
+                text-decoration: underline;
+            }
+            
+			.hidden{
+				display: none;
+			}
+			
+			ul.menu-list{
+				margin-left: 1em;
+				padding-left: 0;
+			}
+			
+			ul.menu-list > li{
+				list-style: none;
+				list-style-position: inside;
+			}
+			
+			.count{
+				font-style: italic;
+				color: #222;
+			}
+			
+			.count:before{
+                content: "(";
+            }
+            
+            .count:after{
+                content: ")";
+            }
+			
+			.highlight{
+				background-color: #ffff88;
+			}
+			
+			form{
+				background: url("themes/default/web-pub/images/backgrounds/bg_grid_head.png") repeat-x scroll 0 0 #fff;
+			    background-size: 100% 100%;
+			    border-bottom: 1px solid #dadada;
+			    margin-bottom: 10px;
+			    padding: 1em;
+			    padding-left: 2em;
+			}
+			
+			input[name=keyword]{
+				width: 20em;
+			}
+			
+			input[type=submit], input[type=button]{
+				border: 1px solid #cccccc;
+			    height: 2em;
+			}
+			
+			.quit-link{
+				float: right;
+			}
+			
+			.search-results{
+				margin-left: 1em;
+				margin-bottom: 7em;
+			}
+			
+			div.type-title{
+				color: #990000;
+			    font-size: 2em;
+			    padding: 0 1em 0 0;
+			    border-bottom: 1px solid #cccccc;
+			    margin-top: 2em;
+			}
+			
+			.result{
+				margin-top: 2em;
+			}
+			
+            .no-results, .no-results a, .no-results .count{
+                color: #777777;
+            }
+            
+            .has-results > a {
+                font-weight: bold;
+            }
+            
+			.result:hover{
+				background-color: #eeeeee;
+			}
+			
+			.result > a{
+				font-size: 15px;
+			}
+			
+			.matches{
+				font-family: "Courier New",Courier,monospace;
+			}
+			
+		</style>
+		
+		<script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+		<script type="text/javascript">
+		   "use strict";
+		
+			var workspaces = $workspaces;
+			var initialWorkspaceId = $workspaceId
+			var initialCaseSensitive = $caseSensitive;
+			var sensitivityChangeAllowed = $sensitivityChangeAllowed;
+			
+			jQuery(initialize)
+			
+			function initialize(){
+				setupWorkspaceDropdown();
+				setupClear();
+				setupCaseSensitive();
+				setFocus();
+			}
+			
+			function setupClear(){
+				jQuery('input[name=clear]').click(function(){
+					jQuery('input[name=keyword]')
+						.val('')
+						.focus();
+				})
+			}
+			
+			function setFocus(){
+				var input = jQuery('input[name=keyword]')
+				var val = input.val();
+				input
+					.focus()
+					.val('')
+					.val(val)
+			}
+			
+			function setupWorkspaceDropdown(){
+				jQuery('select[name=workspace]')
+					.append(jQuery(workspaces).map(function(i, workspace){
+						return jQuery('<option>')
+						.prop({value: workspace.WORKSPACE_ID})
+						.text(workspace.WORKSPACE_NAME)[0]}))
+					.val(initialWorkspaceId)
+			}
+			
+			function setupCaseSensitive(){
+				if(initialCaseSensitive){
+					jQuery('#caseSensitive')
+						.prop({checked: true})
+				}
+				
+				if(!sensitivityChangeAllowed){
+					jQuery('label[for=caseSensitive]')
+						.addClass('hidden')
+				}
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+	
+	<ul class="navigation">
+        <li><a href="home.do">Home</a></li><li class="active"><a href="page.request.do?page=du.page.codeSearch">Code Search</a></li>
+    </ul>
+	
+	<form action="page.request.do?page=du.page.codeSearch" method="POST">
+		<input type="text" name="keyword" value="$!{esc.escapeHtml($keyword)}" />
+		<select name="workspace"></select>
+		<label for="caseSensitive"><input type="checkbox" id="caseSensitive" name="caseSensitive" value="1" /><span>Case Sensitive</span></label>
+		<input type="button" class="formButton" name="clear" value="Clear" />
+		<input type="submit" class="formButton" name="search" value="Search" />
+		<a class="quit-link" href="page.list.do"><img alt="Quit" title="Quit" src="themes/default/web-pub/images/icons/16x16/exit.png"></a>
+	</form>
+	
+	<ul class="menu-list">
+		#foreach($resultGroup in $resultGroups)
+			<li class=#if($resultGroup.getResults().size() == 0)"no-results" #else "has-results"#end><a href="#$!{esc.escapeHtml($resultGroup.getTitle())}">$!esc.escapeHtml($resultGroup.getTitle())</a> <span class="count">$!esc.escapeHtml($resultGroup.getResults().size().toString())</span></li>
+		#end
+	</ul>
+	
+	<div class="search-results">
+		#foreach($resultGroup in $resultGroups)
+			<div id="$!{esc.escapeHtml($resultGroup.getTitle())}" class="type-title">$!esc.escapeHtml($resultGroup.getTitle())</div>
+			#foreach ($result in $resultGroup.getResults())
+				<div class="result">
+					<a href="$result.getUrl()" target="_blank">$!{esc.escapeHtml($result.getName())}</a>
+					#foreach ($match in $result.getMatches())
+						<div class="matches">$!match</div>
+					#end
+				</div>
+			#end
+		#end
+	</div>
+ 
+    <div id="footer">
+        <div id="copyright">
+            <span>Powered by entellitrak &#x24C7;</span>
+            <img src="themes/default/web-pub/images/logo/entellitrak-icon.gif" title="Powered by entellitrak &#x24C7;" alt="Powered by entellitrak &#x24C7;">
+        </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.importrolestubsview.a882d403-b5d5-489f-8e8e-1eb8190e5f8c",
+  "description" : "ImportRoleStubsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ImportRoleStubsView",
+  "packageBusinessKey" : "package.importRoleStubs.13b3ea6e-b752-42c6-ab7b-5b7d38a77af8",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

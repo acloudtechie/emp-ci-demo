@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.cleanOrphanedAssignments",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cleanorphanedassignmentscontroller.0aefa7a1-0362-4e81-9372-8a953ae6cead",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Clean Orphaned Assignments",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Clean Orphaned Assignments",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cleanorphanedassignmentsview.9b834f23-a287-4c5f-b6fc-1597efa33b3c"
+}

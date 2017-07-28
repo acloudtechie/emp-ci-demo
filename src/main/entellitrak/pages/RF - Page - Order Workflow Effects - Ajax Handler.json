@@ -1,0 +1,28 @@
+{
+  "businessKey" : "rf.page.orderWorkflowEffects.ajaxHandler",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.orderworkfloweffectsajaxhandlercontroller.a5bdf39b-f0c1-4053-a870-be9e2d34039d",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "RF - Page - Order Workflow Effects - Ajax Handler",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "RF - Page - Order Workflow Effects - Ajax Handler",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.orderworkfloweffectsajaxhandlerview.89db76b6-c4a0-412c-9f2d-1bcf6308cc54"
+}

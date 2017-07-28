@@ -1,0 +1,51 @@
+{
+  "businessKey" : "object.aeaComponentVersionInfo.view.aeaComponentVersionInfoDefaultView",
+  "dataObjectBusinessKey" : "object.aeaComponentVersionInfo",
+  "dataViewElements" : [ {
+    "businessKey" : "object.aeaComponentVersionInfo.view.aeaComponentVersionInfoDefaultView.element.code",
+    "dataElementBusinessKey" : "object.aeaComponentVersionInfo.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaComponentVersionInfo.view.aeaComponentVersionInfoDefaultView.element.currentversion",
+    "dataElementBusinessKey" : "object.aeaComponentVersionInfo.element.currentVersion",
+    "description" : "Current Version column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Current Version",
+    "multiValueDelimiter" : null,
+    "name" : "currentVersion",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaComponentVersionInfo.view.aeaComponentVersionInfoDefaultView.element.dateinstalled",
+    "dataElementBusinessKey" : "object.aeaComponentVersionInfo.element.dateInstalled",
+    "description" : "Date Installed column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Date Installed",
+    "multiValueDelimiter" : null,
+    "name" : "dateInstalled",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaComponentVersionInfo.view.aeaComponentVersionInfoDefaultView.element.name",
+    "dataElementBusinessKey" : "object.aeaComponentVersionInfo.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "AEA CORE Component Version Info Listing",
+  "name" : "AEA CORE Component Version Info Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "AEA CORE Component Version Info Listing"
+}

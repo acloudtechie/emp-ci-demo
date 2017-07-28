@@ -1,0 +1,28 @@
+{
+  "businessKey" : "refreshLookup.page.getLookupData",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.getlookupdatacontroller.681c1fac-83f3-45df-91bd-e0165fba8518",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Refresh Lookup - Get Lookup Data",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Refresh Lookup - Get Lookup Data",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

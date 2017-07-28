@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.formdataelement.ccd7d7cc-26bf-4cea-90d0-ae7742135ba0",
+  "description" : "Defines the common elements of a form and view data element.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoDataElement",
+  "packageBusinessKey" : "package.rdoutils.b3b825b9-e029-4fd7-8eca-d1bd724314d1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

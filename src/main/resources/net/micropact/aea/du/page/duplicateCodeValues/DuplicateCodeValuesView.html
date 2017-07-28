@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Duplicate Code Values</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <style type="text/css">
+        .wrapper {
+            border: 1px solid #CCCCCC;
+            border-radius: 1em;
+            padding: 1em;
+            margin: 1em;
+            display: inline-block;
+        }
+        
+        .keyTitle {
+            font-size: 1.25em;
+            font-weight: bold;
+            margin-left: 2em;
+        }
+        
+        ul.object-list {
+            list-style-type: none;
+            margin-left: 1em;
+            padding-left: 0em;
+        }
+        
+        ul.object-list>li {
+            margin-top: 1em;
+        }
+        
+        .object-name {
+            background-color: #74E390;
+            padding: 0.5em;
+            border-radius: 0.5em;
+            margin: 0em;
+        }
+        
+        ul.duplicate-list {
+            list-style-type: none;
+        }
+        
+        .duplicate-code {
+            background-color: #FCA692;
+            margin: 0;
+            padding: 0.5em;
+            border-radius: 0.5em;
+        }
+        
+        .item-list {
+            margin-bottom: 1em;
+        }
+        
+        .amount,
+        .objectType {
+            font-style: italic;
+        }
+        
+        .amount:before,
+        .objectType:before {
+            content: "(";
+        }
+        
+        .amount:after,
+        .objectType:after {
+            content: ")";
+        }
+        
+        .description {
+            max-width: 30em;
+        }
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            dataObjects: $dataObjects
+        }
+
+        function Key() {
+            return React.DOM.div({
+                    className: "wrapper"
+                },
+                React.DOM.div({
+                    className: "keyTitle"
+                }, "Key"),
+                React.DOM.ul({
+                        className: "object-list"
+                    },
+                    React.DOM.li(null,
+                        React.DOM.h2({
+                                className: "object-name"
+                            },
+                            "Data Object Name",
+                            React.DOM.span({
+                                    className: "objectType"
+                                },
+                                "Object Type"),
+                            React.DOM.span({
+                                    className: "amount"
+                                },
+                                "Number of conflicting codes")),
+                        React.DOM.ul({
+                                className: "duplicate-list"
+                            },
+                            React.DOM.li(null,
+                                React.DOM.h3({
+                                        className: "duplicate-code"
+                                    },
+                                    "Code Value",
+                                    React.DOM.span({
+                                            className: "amount"
+                                        },
+                                        "Number of conflicting items")),
+                                React.DOM.ul({
+                                        className: "item-list"
+                                    },
+                                    React.DOM.li(null,
+                                        React.DOM.a({
+                                                className: "duplicate-link"
+                                            },
+                                            "Tracking Id"))))))))
+        }
+
+        function Objects(props) {
+            return React.DOM.ul({
+                className: "object-list"
+            }, props.dataObjects.map(DataObject))
+        }
+
+        function DataObject(dataObject, key) {
+            return React.DOM.li({
+                    key: key
+                },
+                React.DOM.h2({
+                        className: "object-name"
+                    },
+                    dataObject.name,
+                    React.DOM.span({
+                        className: "objectType"
+                    }, dataObject.objectType.display),
+                    React.DOM.span({
+                        className: "amount"
+                    }, dataObject.duplicates.length)),
+                React.DOM.ul({
+                    className: "duplicate-list"
+                }, dataObject.duplicates.map(Duplicate)))
+        }
+
+        function Duplicate(duplicate, key) {
+            return React.DOM.li({
+                    key: key
+                },
+                React.DOM.h3({
+                        className: "duplicate-code"
+                    }, duplicate.code,
+                    React.DOM.span({
+                        className: "amount"
+                    }, duplicate.duplicateObjects.length)),
+                React.DOM.ul({
+                    className: "item-list"
+                }, duplicate.duplicateObjects.map(Record)))
+        }
+
+        function Record(record, key) {
+            return React.DOM.li({
+                    key: key
+                },
+                React.DOM.a({
+                        className: "duplicate-link",
+                        href: record.url,
+                        target: "_blank"
+                    },
+                    record.id))
+        }
+
+        var DuplicateCodeValues = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null,
+                    Key(),
+                    Objects(config))
+            }
+        }))
+
+        var DuplicateCodeValuesApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Duplicate Code Values",
+                    instructions: ["This page displays all records in the system where a particular object has duplicate values in the code column. This does not always indicate a problem, for instance the site logic may allow duplicate code values as long as only one is marked as 'active', or a child object may have duplicates with other child objects as long as they belong to different parents."],
+                    mainContent: DuplicateCodeValues({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(DuplicateCodeValuesApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

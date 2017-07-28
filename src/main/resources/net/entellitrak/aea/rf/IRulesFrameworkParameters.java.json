@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.irulesframeworkparameters.f9144535-bd95-4ac3-aa6d-45f2e5472203",
+  "description" : "IRulesFrameworkParameters",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IRulesFrameworkParameters",
+  "packageBusinessKey" : "package.rf.4b62c02b-6a99-40cf-861f-1ba7068be81f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

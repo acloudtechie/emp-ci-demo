@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdoexportlogic.e28c5b7e-a5a4-4ee1-82bd-f375ccc35595",
+  "description" : "RdoExportLogic",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoExportLogic",
+  "packageBusinessKey" : "package.service.b5832e12-512c-4640-b0fc-b24f769ae871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

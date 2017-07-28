@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.iattachment.9df97455-dd4a-4a51-a2ba-b9fc345657fc",
+  "description" : "IAttachment",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IAttachment",
+  "packageBusinessKey" : "package.eu.3204496f-b6f5-4da6-9338-80a9b38d82e3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

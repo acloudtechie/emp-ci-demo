@@ -1,0 +1,18 @@
+{
+  "businessKey" : "object.cmpComplaint.displayMapping.56642",
+  "dataFormBusinessKey" : "object.cmpComplaint.form.cmpComplaintDefaultForm",
+  "dataObjectBusinessKey" : "object.cmpComplaint",
+  "dataViewBusinessKey" : "object.cmpComplaint.view.cmpComplaintDefaultView",
+  "description" : "A closed complaint is read only to all users",
+  "disableForm" : false,
+  "disableView" : false,
+  "etpStateBusinessKey" : null,
+  "evaluationOrder" : 1,
+  "evaluationScriptObjectBusinessKey" : "script.closedcmpcomplaint.9dd8d360-f5e1-47de-be80-08971e96b6ef",
+  "name" : "Closed Complaint - Read Only",
+  "processDataObjectBusinessKey" : "object.cmpComplaint",
+  "readOnlyForm" : true,
+  "roleBusinessKey" : null,
+  "useDefaultForm" : false,
+  "useDefaultView" : false
+}

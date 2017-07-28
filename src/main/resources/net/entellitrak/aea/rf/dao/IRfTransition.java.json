@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.irftransition.3150ee7a-4a47-428e-a85e-f0b4359f7b1e",
+  "description" : "IRfTransition",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IRfTransition",
+  "packageBusinessKey" : "package.dao.58cb1e04-652f-4756-bd3b-01d5455f933a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

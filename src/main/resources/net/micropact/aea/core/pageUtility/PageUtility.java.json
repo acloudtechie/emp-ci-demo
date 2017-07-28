@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.pageutility.2d0671b7-1aee-46da-96b2-d0d9baf4386a",
+  "description" : "PageUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "PageUtility",
+  "packageBusinessKey" : "package.pageUtility.e0bdd3e4-ee78-4bf9-9837-3e94a211c126",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

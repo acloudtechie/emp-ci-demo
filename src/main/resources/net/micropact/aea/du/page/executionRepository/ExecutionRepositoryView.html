@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Developer Utility - Execution Repository</title>
+    
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    
+    <style type="text/css">
+        
+        table.grid > tbody > tr:hover{
+            background-color: #f1f1f1;
+        }
+        
+        table.grid .user-active{
+            color: #009900;
+        }
+        
+        table.grid .user-inactive{
+            color: #ff0000;
+        }
+        
+        .label:after{
+            content: ": ";
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+    
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+    
+    <script type="text/javascript">
+        "use strict"
+        
+        var executionRepositoryModel = (function(){
+            var state = {systemWorkspace: $systemWorkspace,
+            		users: $users}
+            
+            function getSystemWorkspace(){
+            	return state.systemWorkspace
+            }
+            
+            function getUsers(){
+            	return state.users
+            }
+            
+            return {
+                getSystemWorkspace: getSystemWorkspace,
+                getUsers: getUsers
+            }
+        }())
+        
+        var UsersView = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.table({className: "grid aea-core-grid"},
+        				React.DOM.thead(null,
+        						React.DOM.tr(null, ["User", "Workspace Revision", "Active User"].map(function(heading, i){
+        							return React.DOM.th({key: i}, heading)
+        						}))),
+        				React.DOM.tbody(null, executionRepositoryModel.getUsers().map(function(user){
+        					var isActive = user.TYPE_OF_USER === 1
+        					
+        					return React.DOM.tr({key: user.USER_ID},
+        							React.DOM.td(null, 
+        									React.DOM.a({href: "admin.profile.update.request.do?id=" + encodeURIComponent(user.USER_ID),
+        											target: "_blank"}, 
+        											user.USERNAME)),
+        							React.DOM.td(null, user.WORKSPACE_REVISION),
+        							React.DOM.td({className: isActive ? "user-active" : "user-inactive"}, 
+        									isActive ? "Yes" : "No"))
+        				})))
+        	}
+        }))
+        
+        var SystemRepository = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.div(null,
+        			     React.DOM.span({className: "label"}, "System Repository Version"),
+        			     React.DOM.span(null, executionRepositoryModel.getSystemWorkspace().WORKSPACE_REVISION))
+        	}
+        }))
+        
+        var ExecutionRepository = React.createFactory(React.createClass({
+        	render: function(){
+        		return React.DOM.div(null, 
+        				SystemRepository(),
+        				UsersView())
+        	}
+        }))
+        
+        var ExecutionRepositoryApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "Execution Repository",
+                    instructions: ["This page lists all users who are not using the System Repository for Execution"],
+                    mainContent: ExecutionRepository({})})
+            }
+        }))
+        
+        jQuery(function(){
+            ReactDOM.render(ExecutionRepositoryApp(null),
+                       jQuery('.app')[0])})
+        
+        </script>
+    
+    </head>
+    <body>
+        <div class="app"></div>
+    </body>
+</html>

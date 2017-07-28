@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.unusedcolumnsview.e51a7012-6c42-4fd9-9979-5c3e4008a135",
+  "description" : "UnusedColumnsView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "UnusedColumnsView",
+  "packageBusinessKey" : "package.unusedColumns.a33baa84-eedf-4164-83f1-a3d2a6e8ba57",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

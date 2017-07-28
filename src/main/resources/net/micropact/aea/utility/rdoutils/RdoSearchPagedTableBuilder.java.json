@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.pagedtablebuilder.07598e21-d007-4c3a-a825-07084d3080ba",
+  "description" : "Paged Table Builder",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoSearchPagedTableBuilder",
+  "packageBusinessKey" : "package.rdoutils.b3b825b9-e029-4fd7-8eca-d1bd724314d1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

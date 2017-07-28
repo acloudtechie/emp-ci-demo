@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.workflowinfo.b4eefa01-3547-4d6d-bd5f-a441fae2c8d1",
+  "description" : "Workflow Info",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "WorkflowInfo",
+  "packageBusinessKey" : "package.utility.bef37a55-d967-49ca-9b13-cd626ab48229",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.utilityview.305528f1-ee0d-4446-b24c-b743c8b1f89d",
+  "description" : "UtilityView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "UtilityView",
+  "packageBusinessKey" : "package.utility.fcf4f2d7-b3d7-4945-b071-85daa7361731",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

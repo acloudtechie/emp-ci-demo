@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.dataDictionary.download",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.datadictionarycontroller.0b237c73-0db3-4fd4-afb4-2f43d32e190f",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Data Dictionary - Download",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Data Dictionary - Download",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

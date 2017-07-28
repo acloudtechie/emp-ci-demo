@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cmpeventrouter.cff427b0-cfbb-444f-a205-3f60275d361a",
+  "description" : "Handles business logic for the CMP Event CTO for each",
+  "handlerType" : "DATA_OBJECT_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "CmpEventRouter",
+  "packageBusinessKey" : "package.doe.5abff064-d1ce-4285-9106-ecbd926c7f6d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

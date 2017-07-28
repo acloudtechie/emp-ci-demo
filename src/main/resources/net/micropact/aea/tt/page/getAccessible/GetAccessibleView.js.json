@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.getaccessibleview.c66b52d4-ee7e-4737-9a59-a49c05671fdb",
+  "description" : "GetAccessibleView",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "GetAccessibleView",
+  "packageBusinessKey" : "package.getAccessible.2fdebb4e-4f28-46cf-8b11-104357875a2b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

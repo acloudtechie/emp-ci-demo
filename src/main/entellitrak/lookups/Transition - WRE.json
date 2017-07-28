@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.transitionWre",
+  "dataObjectBusinessKey" : null,
+  "description" : "Transition - WRE",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "Transition - WRE",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.transitionlookup.dddf15e2-8e87-4b49-958c-03f20a073882",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

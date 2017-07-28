@@ -1,0 +1,41 @@
+{
+  "businessKey" : "object.rfParameterType.view.rfParameterTypeDefaultView",
+  "dataObjectBusinessKey" : "object.rfParameterType",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfParameterType.view.rfParameterTypeDefaultView.element.code",
+    "dataElementBusinessKey" : "object.rfParameterType.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfParameterType.view.rfParameterTypeDefaultView.element.name",
+    "dataElementBusinessKey" : "object.rfParameterType.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfParameterType.view.rfParameterTypeDefaultView.element.order",
+    "dataElementBusinessKey" : "object.rfParameterType.element.order",
+    "description" : "Order column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Order",
+    "multiValueDelimiter" : null,
+    "name" : "order",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Parameter Type Listing",
+  "name" : "RF Parameter Type Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Parameter Type Listing"
+}

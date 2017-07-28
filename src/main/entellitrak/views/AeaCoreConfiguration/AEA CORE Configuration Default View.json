@@ -1,0 +1,51 @@
+{
+  "businessKey" : "object.aeaCoreConfiguration.view.aeaCoreConfigurationDefaultView",
+  "dataObjectBusinessKey" : "object.aeaCoreConfiguration",
+  "dataViewElements" : [ {
+    "businessKey" : "object.aeaCoreConfiguration.view.aeaCoreConfigurationDefaultView.element.code",
+    "dataElementBusinessKey" : "object.aeaCoreConfiguration.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaCoreConfiguration.view.aeaCoreConfigurationDefaultView.element.description",
+    "dataElementBusinessKey" : "object.aeaCoreConfiguration.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaCoreConfiguration.view.aeaCoreConfigurationDefaultView.element.file",
+    "dataElementBusinessKey" : "object.aeaCoreConfiguration.element.file",
+    "description" : "File column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "File",
+    "multiValueDelimiter" : null,
+    "name" : "file",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.aeaCoreConfiguration.view.aeaCoreConfigurationDefaultView.element.value",
+    "dataElementBusinessKey" : "object.aeaCoreConfiguration.element.value",
+    "description" : "Value column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Value",
+    "multiValueDelimiter" : null,
+    "name" : "value",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "AEA CORE Configuration Listing",
+  "name" : "AEA CORE Configuration Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "AEA CORE Configuration Listing"
+}

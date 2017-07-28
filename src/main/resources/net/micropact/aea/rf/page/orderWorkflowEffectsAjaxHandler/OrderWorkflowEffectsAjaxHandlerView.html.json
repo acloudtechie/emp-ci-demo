@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.orderworkfloweffectsajaxhandlerview.89db76b6-c4a0-412c-9f2d-1bcf6308cc54",
+  "description" : "OrderWorkflowEffectsAjaxHandlerView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "OrderWorkflowEffectsAjaxHandlerView",
+  "packageBusinessKey" : "package.orderWorkflowEffectsAjaxHandler.d347fb59-9586-4613-a19b-3171e4ebb9f6",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

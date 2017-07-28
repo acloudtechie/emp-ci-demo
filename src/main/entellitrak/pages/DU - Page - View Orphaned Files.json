@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.viewOrphanedFiles",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.vieworphanedfilescontroller.c9913a41-c063-4050-82ba-ad85c588284a",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - View Orphaned Files",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - View Orphaned Files",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.vieworphanedfilesview.5d66d41a-ffa3-4f43-9a05-93786fb9941a"
+}

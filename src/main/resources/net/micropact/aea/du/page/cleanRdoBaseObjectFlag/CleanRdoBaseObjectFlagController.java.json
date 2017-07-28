@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cleanrdobaseobjectflagcontroller.421ea8a1-abd5-4406-a6db-60e526198c93",
+  "description" : "CleanRdoBaseObjectFlagController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CleanRdoBaseObjectFlagController",
+  "packageBusinessKey" : "package.cleanRdoBaseObjectFlag.2052c371-789a-4125-a578-2f3b1e423223",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

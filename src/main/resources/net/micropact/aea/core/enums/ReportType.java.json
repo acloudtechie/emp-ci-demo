@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.reporttype.d2968b22-e8e5-4f82-993e-1e434e95545b",
+  "description" : "ReportType",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ReportType",
+  "packageBusinessKey" : "package.enums.3e10de59-b4e9-4b66-b74d-f7429c8533e2",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

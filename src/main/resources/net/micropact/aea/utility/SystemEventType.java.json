@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.systemeventtype.7e3207cc-2976-43f0-b59d-c5d600220a53",
+  "description" : "SystemEventType",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SystemEventType",
+  "packageBusinessKey" : "package.utility.33f3639a-f5ac-469d-919e-f68897284b82",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

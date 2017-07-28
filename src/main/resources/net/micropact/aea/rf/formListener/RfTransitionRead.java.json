@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rftransitionread.8be73616-1138-43b4-a123-67fee9994917",
+  "description" : "RF Transition - Read",
+  "handlerType" : "FORM_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "RfTransitionRead",
+  "packageBusinessKey" : "package.formListener.8f1276a1-bfb8-40af-ae2b-16871a78435b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

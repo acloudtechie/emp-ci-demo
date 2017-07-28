@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdodataexportcontroller.bdf98f2d-a8a1-4c68-9452-f75e35c9d8f7",
+  "description" : "Controller code for the RDO Data export page.",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "RdoDataExportController",
+  "packageBusinessKey" : "package.rdodataexport.2a0b00ee-6dfa-4d6a-9cff-43eca71f1449",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

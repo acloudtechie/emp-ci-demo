@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.stringutilswrapper.b4a27648-1dc1-47ff-acd9-4eb95d1e5b80",
+  "description" : "StringUtilsWrapper",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "StringUtilsWrapper",
+  "packageBusinessKey" : "package.wrappedAPIs.abbea5cf-10a7-4c50-9faa-e8b3b194d0d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

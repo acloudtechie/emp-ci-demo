@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.defaultjavascriptcontroller.accaa7b2-eb38-4824-a20c-d05669420ac6",
+  "description" : "This handler implements the bare minimum for a handler to be used in JavaScript view code.",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "DefaultJavascriptController",
+  "packageBusinessKey" : "package.page.18a51acf-10e3-4f0a-83da-d8820b37ac6f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.logViewer.fileList",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.logviewerfilelistcontroller.a1c4fa40-aed2-4515-93a9-406b16ad987a",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Log Viewer - File List",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Log Viewer - File List",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

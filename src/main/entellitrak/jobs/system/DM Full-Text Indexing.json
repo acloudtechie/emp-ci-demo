@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "edoc.system.job.doc.index",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:49Z",
+  "cronTriggerExpression" : null,
+  "cronTriggerType" : null,
+  "description" : "System Job:Full-Text Indexing for Document Management.",
+  "endDate" : null,
+  "jobType" : "DM_SYSTEM_JOB",
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-28T17:17:49Z",
+  "name" : "DM Full-Text Indexing",
+  "quartzJobDetails" : {
+    "description" : "System Job:Full-Text Indexing.",
+    "isDurable" : "1",
+    "isNonconcurrent" : "1",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ExecutableSystemJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAPdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "edoc.system.job.doc.index",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : 60,
+  "repeatUnits" : "SECOND",
+  "suspendOnError" : false,
+  "triggerType" : "CALENDAR_INTERVAL_TRIGGER"
+}

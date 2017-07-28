@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.etkfileattachment.f0428571-190f-4541-af81-5f141be71461",
+  "description" : "EtkFileAttachment",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "EtkFileAttachment",
+  "packageBusinessKey" : "package.attachment.9f2b9744-1028-41c3-a106-9d2b0086ddbf",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

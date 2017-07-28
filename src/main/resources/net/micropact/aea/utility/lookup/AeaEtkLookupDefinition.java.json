@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.aeaetklookupdefinition.650d8725-7235-44b8-8eb9-a71c40c23fcf",
+  "description" : "Etk Lookup Definition",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "AeaEtkLookupDefinition",
+  "packageBusinessKey" : "package.lookup.2de02577-0671-4661-acfa-255f2490ce5a",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

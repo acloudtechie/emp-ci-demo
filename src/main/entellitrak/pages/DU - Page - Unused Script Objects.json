@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.unusedScriptObjects",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.unusedscriptobjectscontroller.168eabe9-60f0-4b9c-ab11-e14a36eb171d",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Unused Script Objects",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Unused Script Objects",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.unusedscriptobjectsview.13cdeea9-b442-44c4-96ae-6d0510af6243"
+}

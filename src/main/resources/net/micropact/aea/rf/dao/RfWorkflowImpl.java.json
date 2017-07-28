@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfworkflowimpl.d01d6f90-b2af-4e57-a037-6ffa53b1b55c",
+  "description" : "RfWorkflowImpl",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfWorkflowImpl",
+  "packageBusinessKey" : "package.dao.24096f08-6cac-4044-9974-f24950b92903",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.inclauseinfo.bfa98759-fd17-43c0-aec5-a63d9536172b",
+  "description" : "InClauseInfo",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "InClauseInfo",
+  "packageBusinessKey" : "package.query.8ba4c0f8-e200-406c-b632-d721d9ca2048",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

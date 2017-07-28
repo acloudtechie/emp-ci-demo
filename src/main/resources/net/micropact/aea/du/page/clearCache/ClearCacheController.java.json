@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.clearcachecontroller.423bdf12-4b94-489e-b922-f8dc6bb98527",
+  "description" : "Cache clearing utility controller.",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ClearCacheController",
+  "packageBusinessKey" : "package.clearCache.2b7d4d33-745a-44e8-b263-12498dc8ef49",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.scriptObjectUsage",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.scriptobjectusagecontroller.4d343dcc-293e-4350-b696-254a3b36bb49",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Script Object Usage",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Script Object Usage",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.scriptobjectusageview.a9339133-86c1-47d8-bd04-2f7ddc41c149"
+}

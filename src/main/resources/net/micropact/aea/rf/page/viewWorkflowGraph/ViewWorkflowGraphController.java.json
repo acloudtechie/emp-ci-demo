@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewworkflowgraphcontroller.37d57286-6651-4cca-8f93-2b0f24805633",
+  "description" : "ViewWorkflowGraphController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewWorkflowGraphController",
+  "packageBusinessKey" : "package.viewWorkflowGraph.cd001c3e-e805-463c-b0f2-19e60a13ff21",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

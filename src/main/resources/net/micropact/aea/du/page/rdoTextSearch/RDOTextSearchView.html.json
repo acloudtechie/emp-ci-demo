@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rdotextsearchview.87f71e0f-0d2f-44d5-9ff5-0aaa30c13a31",
+  "description" : "RDOTextSearchView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "RDOTextSearchView",
+  "packageBusinessKey" : "package.rdoTextSearch.0f1d759c-f231-4f16-990d-2661065f0f42",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

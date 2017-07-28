@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.clearCache",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.clearcachecontroller.423bdf12-4b94-489e-b922-f8dc6bb98527",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Helper page to immediately call etk.getCache().clearCache()",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Clear Cache",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.clearcacheview.9f0b13f5-3ef0-4df1-8e2d-1c2a5cb7c97c"
+}

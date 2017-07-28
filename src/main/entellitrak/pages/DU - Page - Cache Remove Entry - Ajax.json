@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.cacheRemoveEntry.ajax",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cacheremoveentrycontroller.d9f49d1d-f64c-4b8c-9797-8e223b4edab9",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:46Z",
+  "description" : "DU - Page - Cache Remove Entry - Ajax",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Cache Remove Entry - Ajax",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.simpleoutview.ed1e2eeb-07d8-46e3-a9f8-d0bfca6fda5d"
+}

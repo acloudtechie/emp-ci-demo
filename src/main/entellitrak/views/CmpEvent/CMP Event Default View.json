@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.cmpEvent.view.cmpEventDefaultView",
+  "dataObjectBusinessKey" : "object.cmpEvent",
+  "dataViewElements" : [ {
+    "businessKey" : "object.cmpEvent.view.cmpEventDefaultView.element.completeddate",
+    "dataElementBusinessKey" : "object.cmpEvent.element.completedDate",
+    "description" : "Completed Date column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "Completed Date",
+    "multiValueDelimiter" : null,
+    "name" : "completedDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpEvent.view.cmpEventDefaultView.element.description",
+    "dataElementBusinessKey" : "object.cmpEvent.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpEvent.view.cmpEventDefaultView.element.duedate",
+    "dataElementBusinessKey" : "object.cmpEvent.element.dueDate",
+    "description" : "Due Date column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Due Date",
+    "multiValueDelimiter" : null,
+    "name" : "dueDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpEvent.view.cmpEventDefaultView.element.eventtype",
+    "dataElementBusinessKey" : "object.cmpEvent.element.eventType",
+    "description" : "Event Type column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Event Type",
+    "multiValueDelimiter" : null,
+    "name" : "eventType",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.cmpEvent.view.cmpEventDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.cmpEvent.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "CMP Event Listing",
+  "name" : "CMP Event Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "CMP Event Listing"
+}

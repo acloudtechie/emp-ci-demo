@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.scriptObject",
+  "dataObjectBusinessKey" : null,
+  "description" : "RF - RF Script - Script Object",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RF - RF Script - Script Object",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.scriptobject.2f77c90e-1dd1-404c-a9a7-f1b1adec2bb7",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "TEXT"
+}

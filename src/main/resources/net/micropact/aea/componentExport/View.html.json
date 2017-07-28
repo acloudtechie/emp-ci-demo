@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.view.49f3c7b1-78fa-4908-8df1-6ced5ae11809",
+  "description" : "View",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "View",
+  "packageBusinessKey" : "package.componentExport.9ff234b6-55bd-4478-a3b4-5c0c50e608ff",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

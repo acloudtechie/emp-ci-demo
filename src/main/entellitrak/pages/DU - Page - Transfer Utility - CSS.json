@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.transferUtility.css",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultcsscontroller.4c4fffef-8895-447d-a228-c25dc4a97c23",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Transfer Utility - CSS",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Transfer Utility - CSS",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.transferutilitycssview.0ed68db3-5124-40df-b746-7ac58f6f5731"
+}

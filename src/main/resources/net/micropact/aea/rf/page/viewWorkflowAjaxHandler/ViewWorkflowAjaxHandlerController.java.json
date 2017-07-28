@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewworkflowajaxhandlercontroller.99a87e00-16e9-4383-bc52-ef611dce21be",
+  "description" : "ViewWorkflowAjaxHandlerController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ViewWorkflowAjaxHandlerController",
+  "packageBusinessKey" : "package.viewWorkflowAjaxHandler.68c022f2-1709-4f4a-b543-9396b89bb052",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,71 @@
+{
+  "businessKey" : "object.tuReplacementVariable.view.tuReplacementVariableDefaultView",
+  "dataObjectBusinessKey" : "object.tuReplacementVariable",
+  "dataViewElements" : [ {
+    "businessKey" : "object.tuReplacementVariable.view.tuReplacementVariableDefaultView.element.code",
+    "dataElementBusinessKey" : "object.tuReplacementVariable.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementVariable.view.tuReplacementVariableDefaultView.element.description",
+    "dataElementBusinessKey" : "object.tuReplacementVariable.element.description",
+    "description" : "Description column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Description",
+    "multiValueDelimiter" : null,
+    "name" : "description",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementVariable.view.tuReplacementVariableDefaultView.element.enddate",
+    "dataElementBusinessKey" : "object.tuReplacementVariable.element.endDate",
+    "description" : "End Date column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "End Date",
+    "multiValueDelimiter" : null,
+    "name" : "endDate",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementVariable.view.tuReplacementVariableDefaultView.element.name",
+    "dataElementBusinessKey" : "object.tuReplacementVariable.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementVariable.view.tuReplacementVariableDefaultView.element.sql",
+    "dataElementBusinessKey" : "object.tuReplacementVariable.element.sql",
+    "description" : "SQL column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "SQL",
+    "multiValueDelimiter" : null,
+    "name" : "sql",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.tuReplacementVariable.view.tuReplacementVariableDefaultView.element.startdate",
+    "dataElementBusinessKey" : "object.tuReplacementVariable.element.startDate",
+    "description" : "Start Date column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Start Date",
+    "multiValueDelimiter" : null,
+    "name" : "startDate",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "TU Replacement Variable Listing",
+  "name" : "TU Replacement Variable Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "TU Replacement Variable Listing"
+}

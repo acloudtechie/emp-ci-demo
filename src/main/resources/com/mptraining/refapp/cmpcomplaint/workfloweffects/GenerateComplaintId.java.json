@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.generatecomplaintid.2dc30b0d-cca9-4509-864d-c3766329d99f",
+  "description" : "Autogenerate the Complaint ID",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "GenerateComplaintId",
+  "packageBusinessKey" : "package.workfloweffects.b7e3d1b3-a329-43b9-bd33-9530e105ab87",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

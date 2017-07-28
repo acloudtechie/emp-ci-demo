@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.utility.bed674da-474a-4742-9c8a-4974aa7eca21",
+  "name" : "utility",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.dbUtils.1e18f5cd-0e7f-46df-a2c3-dd63a2b36e82",
+  "workspaceName" : "system"
+}

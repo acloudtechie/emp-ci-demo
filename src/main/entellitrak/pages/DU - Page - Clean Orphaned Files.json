@@ -1,0 +1,21 @@
+{
+  "businessKey" : "du.page.cleanOrphanedFiles",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.cleanorphanedfilescontroller.c553c350-37e3-46aa-b408-9ce4cebd4196",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "DU - Page - Clean Orphaned Files",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "DU - Page - Clean Orphaned Files",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.cleanorphanedfilesview.54ddeb13-c329-4c49-8dcc-ca56c04518a5"
+}

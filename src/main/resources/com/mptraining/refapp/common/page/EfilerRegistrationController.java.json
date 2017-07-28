@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.efilerregistrationcontroller.0526af8c-367f-41d7-a0ba-30fc6dcd2f98",
+  "description" : "Controller for eFiler registration page",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "EfilerRegistrationController",
+  "packageBusinessKey" : "package.page.18a51acf-10e3-4f0a-83da-d8820b37ac6f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

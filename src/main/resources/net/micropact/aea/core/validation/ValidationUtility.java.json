@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.validationutility.ad21a6d5-08be-4b35-8ea5-6a4f409a70f5",
+  "description" : "ValidationUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ValidationUtility",
+  "packageBusinessKey" : "package.validation.402507f8-e150-45e8-81b3-7b2edd6db66b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.findpastdueevents.d1231aa7-f9c2-415e-9e3f-9f546732cb10",
+  "description" : "Scheduled Job to find past due events.",
+  "handlerType" : "JOB_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "FindPastDueEvents",
+  "packageBusinessKey" : "package.job.2f381af2-173a-404a-b865-a237d1929895",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

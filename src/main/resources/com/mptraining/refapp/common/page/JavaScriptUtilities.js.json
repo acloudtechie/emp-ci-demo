@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.javascriptutilitiescontroller.d3e9bf27-8ad8-48df-b62d-ad9a6b0838ba",
+  "description" : "JavaScriptUtilities",
+  "handlerType" : "NONE",
+  "languageType" : "JAVASCRIPT",
+  "name" : "JavaScriptUtilities",
+  "packageBusinessKey" : "package.page.18a51acf-10e3-4f0a-83da-d8820b37ac6f",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

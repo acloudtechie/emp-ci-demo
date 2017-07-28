@@ -1,0 +1,675 @@
+#if(${form} == "initial")
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Export</title>
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp"/>
+        <style type="text/css">
+            form {
+               padding: 5px;
+            }
+        
+			fieldset {
+			    border: 1px solid black;
+			    margin: 5px 0;
+			    padding: 5px 0;
+			}
+			
+			fieldset legend {
+				background-position: 5px 50%;
+			    background-repeat: no-repeat;
+			    cursor: pointer;
+			}
+			
+			fieldset span {
+				padding: 10px 10px 10px 20px;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			
+			fieldset.fs-collapsed legend {
+			    background-image: url("themes/default/web-pub/images/icons/row_arrow.gif");
+			}
+			fieldset.fs-expanded legend {
+			    background-image: url("themes/default/web-pub/images/icons/row_arrow_down.gif");
+			}
+			fieldset.fs-collapsed div {
+			    display: none;
+			}
+			fieldset.fs-expanded div {
+			    
+			}
+			
+			.overflowDiv {
+			   max-height: 350px;
+			   overflow: auto;
+			}
+			
+			 ul.navigation{
+                padding: 0;
+                margin: 0;
+                display: block;
+                background: black;
+                background: url("themes/default/web-pub/images/topmenu-bg.png") repeat-x scroll center top / 100% 100% #353535;
+                color: #fff;
+                font-size: 16px;
+                text-transform: uppercase;
+                line-height: 50px;
+            }
+            
+            ul.navigation > li{
+                display: inline-block;
+                height: 50px;
+            }
+            
+            ul.navigation > li > a{
+                display: inline-block;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+            
+            ul.navigation a:link, ul.navigation a:visited, ul.navigation a:active {
+                color: inherit;
+                text-decoration: inherit;
+            }
+            
+            ul.navigation > li > a:hover{
+                background: gray;
+                background: linear-gradient(to bottom, #060908 0%,#616060 100%);
+            }
+            
+            ul.navigation > li.active, ul.navigation > li.active > a:hover{
+                background: #ea2b1b;
+                text-decoration: underline;
+            }           
+            
+			.hidden{
+				display: none;
+			}
+			
+			.exportButton {
+			   width: 100%;
+			}
+			
+			.center {
+			    margin: auto;
+			    width: 270px;
+			}
+			
+			.exportButtonTable {
+			    width: 100%;
+			    border-collapse: collapse;
+			    
+			}
+			
+			.shim {
+			  padding: 0px 0px 10px 2px;
+			}
+            
+            .select-custom-container{
+                float: right;
+            }
+   
+            .business-key{
+                font-weight: normal;
+                font-size: 1em;
+                font-style: italic;
+                color: #555;
+            }
+            
+            .business-key:before{
+                content: "(";
+            }
+            
+            .business-key:after{
+                content: ")";
+            }
+			
+        </style>
+        <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+        <script type="text/javascript">
+            var baseTrackedObjects = ${baseTrackedObjects};
+            var referenceObjects = ${referenceObjects};
+            var scriptObjects = ${scriptObjects};
+            var etkPageObjects = ${etkPageObjects};
+            var componentObjects = ${componentObjects};
+            var roleObjects = ${roleObjects};
+            var groupObjects = ${groupObjects};
+            var jobObjects = ${jobObjects};
+            
+            var commonComponents = ['object.aeaCore',
+                                    'object.aeaComponentVersionInfo',
+                                    'net.entellitrak.aea.package-info',
+                                    'net.entellitrak.aea.exception.',
+                                    'net.entellitrak.aea.lookup.',
+                                    'net.entellitrak.aea.core',
+                                    'net.micropact.aea.componentExport.',
+                                    'net.micropact.aea.componentImport.',
+                                    'net.micropact.aea.core',
+                                    'net.micropact.aea.dbUtils.page.dbUtilInstaller.',
+                                    'net.micropact.aea.package-info',
+                                    'net.micropact.aea.page.',
+                                    'net.micropact.aea.utility.',
+                                    'aea.core.',
+                                    'aea.db.utils.installer',
+                                    'aea.form.utilities.javascript',
+                                    'aea.page.objectExport',
+                                    'aea.page.objectImport'];
+			
+            var auditLogComponents = ['object.aeaAuditLog',
+                                      'net.entellitrak.aea.auditLog.',
+                                      'net.micropact.aea.auditLog.',
+                                      'aea.auditLog.searchAuditLog'];
+            
+	        var cfHdrComponents = ['object.cf',
+	                               'object.hdr',
+	                               'net.entellitrak.aea.calculatedfields.',
+	                               'net.micropact.aea.calculatedfields.',
+	                               'cf.',
+	                               'hdr.'];
+	        
+	        var dbUtils = ['object.aeaRdoDataExportConfig',
+	                       'object.aeaRdoFileStaging',
+	                       'net.entellitrak.aea.dbUtils.',
+                           'net.micropact.aea.dbUtils.',
+                           'aea.db.utils'];
+	        
+	        var daoComponents = ['net.entellitrak.aea.dao.AeaDaoUtils',
+	                             'net.micropact.aea.dao.AeaDaoGenerator',
+	                             'net.micropact.aea.dao.aclistener.',
+	                             'net.micropact.aea.dao.def.',
+	                             'net.micropact.aea.dao.pages.',
+	                             'net.micropact.aea.dao.querybuilder.',
+	                             'aea.dao.'];
+	        
+	        var duComponents = ['net.entellitrak.aea.du.',
+	                            'net.micropact.aea.du.',
+	                            'du.'];
+	        
+			
+	        var euComponents = ['object.eu',
+	                            'net.entellitrak.aea.eu.',
+	                            'net.micropact.aea.eu.',
+	                            'eu.'];
+	        
+	        var flgComponents = ['object.flg',
+	                             'net.entellitrak.aea.flg.',
+	                             'net.micropact.aea.flg.',
+	                             'flg.'];
+	        
+	        var lsComponents = ['net.entellitrak.aea.ls.',
+	                            'net.micropact.aea.ls.',
+	                            'ls.'];   
+	        
+	        var pdfComponents = ['object.pdfTemplateFile',
+	                             'net.entellitrak.aea.pdf.',
+	                             'net.micropact.aea.pdf.',
+	                             'aea.pdf.'];
+	        
+	        var popupSearchComponents = ['com.destinationSite.accelerators.popupSearch.']
+            
+	        var refreshLookupComponents = ['com.destinationSite.accelerators.refreshLookup.']
+            
+	        
+	        var rfComponents = ['object.rf',
+	                            'net.entellitrak.aea.rf.',
+	                            'net.micropact.aea.rf.',
+	                            'rf.'];
+	        
+	        var ttComponents = ['object.tt',
+	                            'net.entellitrak.aea.tt.',
+	                            'net.micropact.aea.tt.',
+	                            'tt.'];
+	        
+	        var tuComponents = ['object.tu',
+	                            'net.entellitrak.aea.tu.',
+	                            'net.micropact.aea.tu.',
+	                            'tu.'];
+
+            var dashboardToolsComponents = ['object.enhancedInbox',
+											'object.systemWideBroadcast',
+											'object.calendar',
+											'net.entellitrak.aea.dashboardTools.',
+           	                            	'net.micropact.aea.dashboardTools.',
+											'aea.dt.',
+											'job.dashboardTools'];
+            
+            var restServicesUtilityComponents = ['object.restServicesLink',
+											'net.entellitrak.aea.restUtility.'];
+            
+            function generateObjectInputs(arr){
+                return jQuery(arr).map(function(){
+                        return jQuery('<div>')
+                                .append(jQuery('<input type="checkbox">')
+                                    .prop('name', 'objectKeys')
+                                    .prop('id', this.BUSINESS_KEY.replace(/ /g, "_"))
+                                    .prop('value', this.BUSINESS_KEY))
+                                .append(jQuery('<label>').text(this.BUSINESS_KEY))[0]})
+            }
+            
+            function generateScriptObjectInputs(arr){
+                return jQuery(arr).map(function(){
+                        return jQuery('<div>')
+                                .append(jQuery('<input type="checkbox">')
+                                    .prop('name', 'scriptObjectKeys')
+                                    .prop('id', this.NAME.replace(/ /g, "_"))
+                                    .prop('value', this.BUSINESS_KEY))
+                                .append(jQuery('<label>').text(this.NAME))[0]})
+            }
+            
+            function generateEtkPageObjectInputs(arr){
+                return jQuery(arr).map(function(){
+                        return jQuery('<div>')
+                                .append(jQuery('<input type="checkbox">')
+                                    .prop('name', 'etkPageKeys')
+                                    .prop('id', this.BUSINESS_KEY.replace(/ /g, "_"))
+                                    .prop('value', this.BUSINESS_KEY))
+                                .append(jQuery('<label>').text(this.NAME))
+                                .append(jQuery('<span>')
+                                        .addClass("business-key")
+                                        .text(this.BUSINESS_KEY))[0]})
+            }
+            
+            function generateRoleObjectInputs(arr){
+                return jQuery(arr).map(function(){
+                        return jQuery('<div>')
+                                .append(jQuery('<input type="checkbox">')
+                                    .prop('name', 'roleBusinessKeys')
+                                    .prop('id', this.BUSINESS_KEY.replace(/ /g, "_"))
+                                    .prop('value', this.BUSINESS_KEY))
+                                .append(jQuery('<label>').text(this.NAME))
+                                .append(jQuery('<span>')
+                                        .addClass("business-key")
+                                        .text(this.BUSINESS_KEY))[0]})
+            }
+            
+            function generateGroupObjectInputs(arr){
+                return jQuery(arr).map(function(){
+                        return jQuery('<div>')
+                                .append(jQuery('<input type="checkbox">')
+                                    .prop('name', 'groupBusinessKeys')
+                                    .prop('id', this.BUSINESS_KEY.replace(/ /g, "_"))
+                                    .prop('value', this.BUSINESS_KEY))
+                                .append(jQuery('<label>').text(this.NAME))
+                                .append(jQuery('<span>')
+                                        .addClass("business-key")
+                                        .text(this.BUSINESS_KEY))[0]})
+            }
+            
+            function generateJobObjectInputs(arr){
+                return jQuery(arr).map(function(){
+                        return jQuery('<div>')
+                                .append(jQuery('<input type="checkbox">')
+                                    .prop('name', 'jobBusinessKeys')
+                                    .prop('id', this.BUSINESS_KEY.replace(/ /g, "_"))
+                                    .prop('value', this.BUSINESS_KEY))
+                                .append(jQuery('<label>').text(this.NAME))
+                                .append(jQuery('<span>')
+                                        .addClass("business-key")
+                                        .text(this.BUSINESS_KEY))[0]})
+            }
+            
+            function generateSelectedComponentObjects(arr){
+                return jQuery(arr).map(function(){
+                        return jQuery('<div>')
+                                .append(jQuery('<input type="checkbox">')
+                                    .prop('name', 'selectedComponents')
+                                    .attr('onclick', 'return false;')
+                                    .prop('id', this.BUSINESS_KEY)
+                                    .prop('value', this.BUSINESS_KEY))
+                                .append(jQuery('<label>').text(this.NAME + ' , Current Version="' + this.VERSION + '"'))[0]})
+            }
+            
+            //Selects all common core AEA components
+            function selectCommonComponents() {
+            	jQuery(commonComponents).each(selectLikeComponents);
+            }
+            
+            //Selects components with ID beginning with a predefined value
+            //Except in the special case of the DB Utils Installer page
+            function selectLikeComponents (index, value) {
+            	var selector = 'id^=';
+            	if(value == 'aea.db.utils.installer'){
+            		selector = 'id=';
+            		value = 'aea.db.utils';
+            	}
+                value = value.replace(/ /g, "_");
+                value = value.replace(/(:|\.|\[|\])/g, "\\$1");
+                jQuery('[' + selector + value + ']').prop('checked', true);
+           }
+            
+            
+            jQuery(document).ready(function(){
+                jQuery('#btosInputDiv').append(generateObjectInputs(baseTrackedObjects));
+                jQuery('#referenceDataInputDiv').append(generateObjectInputs(referenceObjects));
+                jQuery('#scriptObjectsInputDiv').append(generateScriptObjectInputs(scriptObjects));
+                jQuery('#etkPageObjectsInputDiv').append(generateEtkPageObjectInputs(etkPageObjects));
+                jQuery('#roleObjectsInputDiv').append(generateRoleObjectInputs(roleObjects));
+                jQuery('#groupObjectsInputDiv').append(generateGroupObjectInputs(groupObjects));
+                jQuery('#jobObjectsInputDiv').append(generateJobObjectInputs(jobObjects));
+                jQuery('#selectedComponentsInputDiv').append(generateSelectedComponentObjects(componentObjects));
+                
+                jQuery('#selectAll').click(function() {
+                	jQuery('input[type="checkbox"]').prop('checked', true);
+                });
+                
+                jQuery('#unselectAll').click(function() {
+                    jQuery('input[type="checkbox"]').prop('checked', false);
+                });
+                
+                //Calculated Fields select
+                jQuery('#selectAuditLogHdr').click(function() {
+                    selectCommonComponents();
+                    jQuery(auditLogComponents).each(selectLikeComponents);
+                    jQuery('#component_auditLog').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Calculated Fields select
+                jQuery('#selectCfHdr').click(function() {
+                	selectCommonComponents();
+                    jQuery(cfHdrComponents).each(selectLikeComponents);
+                    jQuery('#component_calculatedFieldsBanners').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+              //Developer Utilities select
+                jQuery('#selectDbUtils').click(function() {
+                    selectCommonComponents();
+                    jQuery(dbUtils).each(selectLikeComponents);
+                    jQuery('#component_dbUtils').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Developer Utilities select
+                jQuery('#selectDAO').click(function() {
+                    selectCommonComponents();
+                    jQuery(daoComponents).each(selectLikeComponents);
+                    jQuery('#component_daoGenerator').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Developer Utilities select
+                jQuery('#selectDU').click(function() {
+                    selectCommonComponents();
+                    jQuery(duComponents).each(selectLikeComponents);
+                    jQuery('#component_devUtils').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Email Utility Select
+                //Depends on tooltips and template utilities
+                jQuery('#selectEU').click(function() {
+                    selectCommonComponents();
+                    jQuery(ttComponents).each(selectLikeComponents);
+                    jQuery(tuComponents).each(selectLikeComponents);
+                    jQuery(euComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_tooltips').prop('checked', true);
+                    jQuery('#component_templateUtilities').prop('checked', true);
+                    jQuery('#component_emailUtils').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Form Letter Generator select
+                //Depends on tooltips and template utilities
+                jQuery('#selectFLG').click(function() {
+                    selectCommonComponents();
+                    jQuery(ttComponents).each(selectLikeComponents);
+                    jQuery(tuComponents).each(selectLikeComponents);
+                    jQuery(flgComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_tooltips').prop('checked', true);
+                    jQuery('#component_templateUtilities').prop('checked', true);
+                    jQuery('#component_formLetterGenerator').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Live Search select
+                jQuery('#selectLS').click(function() {
+                    selectCommonComponents();
+                    jQuery(lsComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_liveSearch').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+              //Live Search select
+                jQuery('#selectPDF').click(function() {
+                    selectCommonComponents();
+                    jQuery(ttComponents).each(selectLikeComponents);
+                    jQuery(tuComponents).each(selectLikeComponents);
+                    jQuery(flgComponents).each(selectLikeComponents);
+                    jQuery(pdfComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_tooltips').prop('checked', true);
+                    jQuery('#component_templateUtilities').prop('checked', true);
+                    jQuery('#component_formLetterGenerator').prop('checked', true);
+                    jQuery('#component_pdfTemplate').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+              
+              //Popup Search select
+                jQuery('#selectPopupSearch').click(function() {
+                    selectCommonComponents();
+                    jQuery(popupSearchComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_popupSearch').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+              
+              //Refresh Lookup select
+                jQuery('#selectRefreshLookup').click(function() {
+                    selectCommonComponents();
+                    jQuery(refreshLookupComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_refreshLookup').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Rules Framework Select
+                //depends on tooltips
+                jQuery('#selectRF').click(function() {
+                    selectCommonComponents();
+                    jQuery(ttComponents).each(selectLikeComponents);
+                    jQuery(rfComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_tooltips').prop('checked', true);
+                    jQuery('#component_rulesEngine').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Tooltips select
+                jQuery('#selectTT').click(function() {
+                    selectCommonComponents();
+                    jQuery(ttComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_tooltips').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                //Template Utilities Select
+                //Depends on tooltips.
+                jQuery('#selectTU').click(function() {
+                    selectCommonComponents();
+                    jQuery(ttComponents).each(selectLikeComponents);
+                    jQuery(tuComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_tooltips').prop('checked', true);
+                    jQuery('#component_templateUtilities').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+
+              	//Dashboard Tools Select
+                jQuery('#selectDT').click(function() {
+                    selectCommonComponents();
+                    jQuery(dashboardToolsComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_dashboardTools').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+              	
+              	//REST Services Utility Select
+                jQuery('#selectRSU').click(function() {
+                    selectCommonComponents();
+                    jQuery(restServicesUtilityComponents).each(selectLikeComponents);
+                    
+                    jQuery('#component_restServicesUtility').prop('checked', true);
+                    jQuery('#component_utilities').prop('checked', true);
+                });
+                
+                jQuery('legend').click(function(element) {
+                	if (jQuery(this).parent().hasClass('fs-collapsed')) {
+                		jQuery(this).parent().removeClass('fs-collapsed');
+                		jQuery(this).parent().addClass('fs-expanded');
+					} else {
+						jQuery(this).parent().addClass('fs-collapsed');
+						jQuery(this).parent().removeClass('fs-expanded');
+					}	
+                });
+                
+                jQuery("#select-custom").click(function(){
+                    var prefix = jQuery("#select-custom-input").val()
+                    selectLikeComponents(null, prefix);
+                })
+                
+            })
+        </script>
+    </head>
+    <body>
+    	<ul class="navigation">
+        	<li><a href="home.do">Home</a></li><li class="active"><a href="page.request.do?page=aea.page.objectExport">AEA Object Export</a></li>
+    	</ul>
+        <form method="POST" action="page.request.do">
+            <input type="hidden" name="requestedAction" value="generateXml"/>
+            <input type="hidden" name="page" value="aea.page.objectExport"/>
+            <div class="shim">
+            	<input type="button" class="formButton" name="selectAll" id="selectAll" value="Select All Files (Do not use to select all components)"/>
+            	<input type="button" class="formButton" name="unselectAll" id="unselectAll" value="Unselect All Files"/>
+             
+                <div class="select-custom-container">
+                    <input type="text" id="select-custom-input" placeholder="Custom Prefix"/>
+                    <button type="button" class="formButton" id="select-custom">Select Custom Prefix</button>
+                </div>
+            </div>
+            
+		<table class="exportButtonTable">
+			<thead></thead>
+			<tbody>
+				<tr>
+				    <td>
+                        <input class="formButton exportButton" type="button" name="selectAuditLogHdr" id="selectAuditLogHdr" value="Audit Log" />
+                    </td>
+					<td>
+					    <input class="formButton exportButton" type="button" name="selectCfHdr" id="selectCfHdr" value="Calculated Field / Banner" />
+					</td>
+					<td>
+                        <input class="formButton exportButton" type="button" name="selectDAO" id="selectDAO" value="DAO Generator" />
+                    </td>
+                    <td>
+                    	<input class="formButton exportButton" type="button" name="selectDT" id="selectDT" value="Dashboard Tools" />
+					</td>
+					<td>
+                        <input class="formButton exportButton" type="button" name="selectDbUtils" id="selectDbUtils" value="DB Utils " />
+                    </td>
+                    <td>
+				        <input class="formButton exportButton" type="button" name="selectDU" id="selectDU" value="Developer Utilities" />
+					</td>
+					<td>
+					    <input class="formButton exportButton" type="button" name="selectEU" id="selectEU" value="Email Utilities" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					    <input class="formButton exportButton" type="button" name="selectFLG" id="selectFLG" value="Form Letter Generation" />
+					</td>
+					<td>
+						<input class="formButton exportButton" type="button" name="selectLS" id="selectLS" value="Live Search" />
+					</td>
+					<td>
+						<input class="formButton exportButton" type="button" name="selectPDF" id="selectPDF" value="PDF Template" />
+					</td>
+                    <td>
+                    	<input class="formButton exportButton" type="button" name="selectPopupSearch" id="selectPopupSearch" value="Popup Search" />
+                    </td>
+                    <td>
+                    	<input class="formButton exportButton" type="button" name="selectRefreshLookup" id="selectRefreshLookup" value="Refresh Lookup" />
+                    </td>
+                    <td>
+                    	<input class="formButton exportButton" type="button" name="selectRSU" id="selectRSU" value="REST Services Utility" />
+                    </td>
+                    <td>
+                    	<input class="formButton exportButton" type="button" name="selectRF" id="selectRF" value="Rules Engine" />
+                    </td>
+				</tr>
+				<tr>
+					<td>
+						<input class="formButton exportButton" type="button" name="selectTU" id="selectTU" value="Template Utilities" />
+					</td>
+					<td>
+						<input class="formButton exportButton" type="button" name="selectTT" id="selectTT" value="ToolTips" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+            
+            <div id="selectedComponentsDiv">
+	            <fieldset class="fs-expanded">
+					<legend role="button"><span>Selected Components (for information only, not selectable)</span></legend>
+					<div id="selectedComponentsInputDiv" class="overflowDiv"></div>
+				</fieldset>
+			</div>
+            
+            <div id="btosDiv">
+	            <fieldset class="fs-collapsed">
+	                <legend role="button"><span>Base Tracked Objects</span></legend>
+	                <div id="btosInputDiv" class="overflowDiv"></div>
+                </fieldset>
+            </div>
+            <div id="referenceDataDiv">
+	            <fieldset class="fs-collapsed">
+	                <legend role="button"><span>Reference Data Objects</span></legend>
+	                <div id="referenceDataInputDiv" class="overflowDiv"></div>
+                </fieldset>
+            </div>
+            <div id="scriptObjectsDiv">
+            	<fieldset class="fs-collapsed">
+	                <legend role="button"><span>Script Objects</span></legend>
+	                <div id="scriptObjectsInputDiv" class="overflowDiv"></div>
+                </fieldset>
+            </div>
+            
+            <div id="etkPageObjectsDiv">
+	            <fieldset class="fs-collapsed">
+	                <legend role="button"><span>Pages</span></legend>
+	                <div id="etkPageObjectsInputDiv" class="overflowDiv"></div>
+                </fieldset>
+            </div>
+            <div id="roleObjectsDiv">
+	            <fieldset class="fs-collapsed">
+	                <legend role="button"><span>Roles</span></legend>
+	                <div id="roleObjectsInputDiv" class="overflowDiv"></div>
+                </fieldset>
+            </div>
+            <div id="groupObjectsDiv">
+	            <fieldset class="fs-collapsed">
+	                <legend role="button"><span>Groups</span></legend>
+	                <div id="groupObjectsInputDiv" class="overflowDiv"></div>
+                </fieldset>
+            </div>
+            <div id="jobObjectsDiv">
+	            <fieldset class="fs-collapsed">
+	                <legend role="button"><span>Jobs</span></legend>
+	                <div id="jobObjectsInputDiv" class="overflowDiv"></div>
+                </fieldset>
+            </div>
+            <br>
+            <div class="center">
+            	<input class="formButton exportButton" type="submit" value="Export Selected Components"/>
+            </div>
+        </form>
+    </body>
+</html>
+#elseif(${form} == "serveXml")${xml}#elseif(${form} == "errorForm")$!errorMessage#end

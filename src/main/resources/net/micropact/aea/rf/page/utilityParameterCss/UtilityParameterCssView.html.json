@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.utilityparametercssview.ee22e0f6-f3b6-428d-b3dd-377969555de4",
+  "description" : "UtilityParameterCssView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "UtilityParameterCssView",
+  "packageBusinessKey" : "package.utilityParameterCss.dc9b8df1-c79c-4023-9d6c-4baae1144648",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

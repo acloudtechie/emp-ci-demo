@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.iemailaddresses.0882a85c-c257-4188-9b5b-b372c9b26dbe",
+  "description" : "IEmailAddresses",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "IEmailAddresses",
+  "packageBusinessKey" : "package.eu.3204496f-b6f5-4da6-9338-80a9b38d82e3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

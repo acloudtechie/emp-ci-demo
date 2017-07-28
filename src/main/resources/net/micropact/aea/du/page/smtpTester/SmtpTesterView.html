@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Developer Utility - SMTP Tester</title>
+
+	<link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp">
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+ 
+     <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+	
+	<style type="text/css">
+		.sendButton{
+            margin-left: 0.5em;
+        }
+	</style>
+	
+    <script type="text/javascript">
+        "use strict"
+        
+        var config = {
+                error: $error,
+                success: $success,
+                recipient: $recipient
+        }
+        
+        var SmtpTester = React.createFactory(React.createClass({
+            render: function(){
+                return React.DOM.div(null,
+                        config.error !== null && AeaCoreReactComponents.Errors({errors: [config.error]}),
+                        config.success !== null && AeaCoreReactComponents.Successes({successes: [config.success]}),
+                        React.DOM.form({method: "POST",
+                            action: "page.request.do?page=du.page.smtpTester"},
+                            React.DOM.input({type: "hidden",
+                                name: "formAction",
+                                value: "send"}),
+                                React.DOM.label(null,
+                                        React.DOM.span(null, "Recipient Address: "),
+                                        React.DOM.input({type: "text",
+                                            name: "recipient",
+                                            defaultValue: config.recipient})),
+                                            React.DOM.button({className: "formButton sendButton"},
+                                                    "Send Test Email")))
+                                        }
+                            }))
+        
+        var SmtpTesterApp = React.createFactory(React.createClass({
+            render: function(){
+                return AeaCoreReactComponents.Application({
+                    title: "SMTP Tester",
+                    instructions: ["This page tests that entellitrak is connected to the email server correctly.",
+                        "If you are not receiving emails from this page, first verify that they are not being blocked by your spam filter."],
+                    mainContent: SmtpTester({})})
+            }
+        }))
+        
+        function init(){
+            ReactDOM.render(SmtpTesterApp(null),
+                       document.getElementById("app"))
+        }
+        
+    </script>
+ 
+</head>
+<body onload="init()">
+    <div id="app"></div>
+</body>
+</html>

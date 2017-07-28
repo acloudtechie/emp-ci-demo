@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.users",
+  "dataObjectBusinessKey" : null,
+  "description" : "Users",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SYSTEM_OBJECT_LOOKUP",
+  "name" : "Users",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : "USER_LAST_FIRST_MID_NAME",
+  "systemObjectType" : "USER",
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : null
+}

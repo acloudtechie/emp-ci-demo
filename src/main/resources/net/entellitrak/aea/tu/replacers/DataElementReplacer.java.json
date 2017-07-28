@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.dataelementreplacer.d02f1fb4-17cc-42ac-aba3-87a36e79a0dc",
+  "description" : "DataElementReplacer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "DataElementReplacer",
+  "packageBusinessKey" : "package.replacers.8e5ed76a-52e5-4f09-9eae-f251612b9855",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

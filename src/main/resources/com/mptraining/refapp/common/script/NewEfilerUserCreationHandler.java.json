@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.newefilerusercreationhandler.eff55014-5b1e-4c98-8e1a-a4492eb0ffa8",
+  "description" : "Handles changes of new eFile users to customize their dashboard",
+  "handlerType" : "USER_EVENT_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "NewEfilerUserCreationHandler",
+  "packageBusinessKey" : "package.script.63cff695-8e72-4426-8fcc-d605738c6cb8",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

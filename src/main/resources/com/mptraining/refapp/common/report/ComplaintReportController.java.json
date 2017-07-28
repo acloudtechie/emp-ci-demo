@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.complaintreportcontroller.a7792204-c5f8-4afc-bb3a-5979914cb001",
+  "description" : "Page to accept parameters for the Complaint Report and run the report.",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ComplaintReportController",
+  "packageBusinessKey" : "package.report.9663bdb3-946b-414e-9371-27751501c547",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

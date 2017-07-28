@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.emailaddress.20f1ce3c-1047-4647-b637-d3ad09536f3f",
+  "description" : "email-address",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "email-address",
+  "packageBusinessKey" : "package.doc-files.9e56a7d8-d8a3-4863-be52-b7f509a59a15",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

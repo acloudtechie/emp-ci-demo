@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.sacassignedcountview.d8e53524-dded-41e5-b1c5-85eb409ff13a",
+  "description" : "Returns a count of the number of Complaints that currently has the given SAC assigned to it.",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "SacAssignedCountView",
+  "packageBusinessKey" : "package.page.d28e1107-917e-4145-97fd-9906f4ed8871",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

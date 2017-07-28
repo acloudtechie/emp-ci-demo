@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.cmpcomplaintjavascriptcontroller.cf2e2c1a-5547-4abd-8dad-497df989ebba",
+  "description" : "Controller for main JavaScript to run on the CMP Complaint form",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "CmpComplaintJavaScriptController",
+  "packageBusinessKey" : "package.page.b43d2903-90f0-4d6b-b146-37db246f2cd7",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

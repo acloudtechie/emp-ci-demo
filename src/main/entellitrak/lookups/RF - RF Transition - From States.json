@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : false,
+  "businessKey" : "lookup.rfRfTransitionFromStates",
+  "dataObjectBusinessKey" : null,
+  "description" : "RF - RF Transition - From States",
+  "displayDataElementBusinessKey" : null,
+  "enableCaching" : false,
+  "endDateDataElementBusinessKey" : null,
+  "lookupSourceType" : "SCRIPT_LOOKUP",
+  "name" : "RF - RF Transition - From States",
+  "orderByDataElementBusinessKey" : null,
+  "scriptObjectBusinessKey" : "script.rftransitionfromstates.ac816651-7a76-40f2-998c-beae69a006f5",
+  "startDateDataElementBusinessKey" : null,
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : "NUMBER"
+}

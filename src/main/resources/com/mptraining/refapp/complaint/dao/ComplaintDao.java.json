@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.complaintdao.1c4597e2-2519-40fd-95fc-0d1cf8f184a2",
+  "description" : "Handles SQL calls regarding the Complaint object",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ComplaintDao",
+  "packageBusinessKey" : "package.dao.eaf2a3bf-fe2d-4edf-9d0f-84ebbf2a5a9b",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

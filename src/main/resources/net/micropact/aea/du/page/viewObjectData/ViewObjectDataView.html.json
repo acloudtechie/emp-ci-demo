@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.viewobjectview.d88667bf-38b6-4442-b741-99f9f5ba44c4",
+  "description" : "ViewObjectDataView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ViewObjectDataView",
+  "packageBusinessKey" : "package.viewObjectData.161919c6-96be-4ac1-ab16-0db63d3fe331",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

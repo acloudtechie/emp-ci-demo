@@ -1,0 +1,61 @@
+{
+  "businessKey" : "object.rfWorkflowEffect.view.rfWorkflowEffectDefaultView",
+  "dataObjectBusinessKey" : "object.rfWorkflowEffect",
+  "dataViewElements" : [ {
+    "businessKey" : "object.rfWorkflowEffect.view.rfWorkflowEffectDefaultView.element.code",
+    "dataElementBusinessKey" : "object.rfWorkflowEffect.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowEffect.view.rfWorkflowEffectDefaultView.element.executionorder",
+    "dataElementBusinessKey" : "object.rfWorkflowEffect.element.executionOrder",
+    "description" : "Execution Order column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Execution Order",
+    "multiValueDelimiter" : null,
+    "name" : "executionOrder",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowEffect.view.rfWorkflowEffectDefaultView.element.name",
+    "dataElementBusinessKey" : "object.rfWorkflowEffect.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowEffect.view.rfWorkflowEffectDefaultView.element.script",
+    "dataElementBusinessKey" : "object.rfWorkflowEffect.element.script",
+    "description" : "Script column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Script",
+    "multiValueDelimiter" : null,
+    "name" : "script",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.rfWorkflowEffect.view.rfWorkflowEffectDefaultView.element.transitions",
+    "dataElementBusinessKey" : "object.rfWorkflowEffect.element.transitions",
+    "description" : "Transitions column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "Transitions",
+    "multiValueDelimiter" : null,
+    "name" : "transitions",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "RF Workflow Effect Listing",
+  "name" : "RF Workflow Effect Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "RF Workflow Effect Listing"
+}

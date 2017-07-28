@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.interfaceimplementationutility.1c38f121-c737-4b65-a59f-e17fb539a53e",
+  "description" : "InterfaceImplementationUtility",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "InterfaceImplementationUtility",
+  "packageBusinessKey" : "package.reflection.d7313467-d182-4e09-b5da-10341c12d9fc",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

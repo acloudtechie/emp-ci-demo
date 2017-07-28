@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.hidesacnotes.2b573599-a7e8-40cd-be49-5f4576924fe0",
+  "description" : "Only show the SAC Notes field when the user is SAC and the complaint is Open",
+  "handlerType" : "ELEMENT_FILTER_HANDLER",
+  "languageType" : "JAVA",
+  "name" : "HideSacNotes",
+  "packageBusinessKey" : "package.sm.5a993c95-d4fe-4fc9-9cd0-13eb48149670",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.truedeserializer.1f2de4a1-cfb4-4f78-a0da-64cacd4c7765",
+  "description" : "TrueDeserializer",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "TrueDeserializer",
+  "packageBusinessKey" : "package.deserializer.a4a46229-8b12-406c-b118-0032671a8349",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

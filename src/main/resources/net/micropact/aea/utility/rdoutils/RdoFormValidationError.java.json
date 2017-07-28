@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.formvalidationerror.aa14df16-1ab9-4dfa-ade1-12ef6b23cfc2",
+  "description" : "A custom form validation error.",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RdoFormValidationError",
+  "packageBusinessKey" : "package.rdoutils.b3b825b9-e029-4fd7-8eca-d1bd724314d1",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

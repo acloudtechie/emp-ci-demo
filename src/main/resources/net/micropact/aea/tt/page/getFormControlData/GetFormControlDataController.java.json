@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.getformcontroldatacontroller.23b7a071-26fb-4127-85ad-36555f76daaa",
+  "description" : "GetFormControlDataController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "GetFormControlDataController",
+  "packageBusinessKey" : "package.getFormControlData.2664468e-3ac5-4e49-8cae-401c869d08bf",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

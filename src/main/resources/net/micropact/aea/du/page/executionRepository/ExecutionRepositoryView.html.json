@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.executionrepositoryview.2cba7f03-2890-40bf-86cc-9ad9ca63a3c5",
+  "description" : "ExecutionRepositoryView",
+  "handlerType" : "NONE",
+  "languageType" : "HTML",
+  "name" : "ExecutionRepositoryView",
+  "packageBusinessKey" : "package.executionRepository.eaa6295b-d858-48c0-ba7a-feb4606fb28d",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Import Role Stubs</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <style>
+        .field-label {
+            display: block;
+            margin-bottom: 1em;
+        }
+    </style>
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            roleStatuses: $roleStatuses,
+            formToServe: $formToServe,
+            errors: $errors
+        }
+
+        config.roleStatuses.sort(function(a, b) {
+            return a.roleBusinessKey.localeCompare(b.roleBusinessKey)
+        })
+
+        var RoleStatusView = function(props) {
+            return React.DOM.table({
+                    className: "grid aea-core-grid"
+                },
+                React.DOM.thead(null,
+                    React.DOM.tr(null,
+                        React.DOM.th(null, "Role"),
+                        React.DOM.th(null, "Status"))),
+                React.DOM.tbody(null,
+                    props.roleStatuses.map(function(roleStatus, i) {
+                        return React.DOM.tr({
+                                key: i
+                            },
+                            React.DOM.td(null, roleStatus.roleBusinessKey),
+                            React.DOM.td(null, StatusView({
+                                isInserted: roleStatus.isInserted
+                            })))
+                    })))
+        }
+
+        var StatusView = React.createFactory(React.createClass({
+            render: function() {
+                return this.props.isInserted ? React.DOM.strong(null, "Created") : React.DOM.span(null, "Already Existed")
+            }
+        }))
+
+        var FormView = function() {
+            return React.DOM.form({
+                    method: "POST",
+                    encType: "multipart/form-data"
+                },
+                React.DOM.input({
+                    type: "hidden",
+                    name: "page",
+                    value: "du.page.importRoleStub"
+                }),
+                React.DOM.label({
+                        className: "field-label"
+                    }, "entellitrak XML file: ",
+                    React.DOM.input({
+                        type: "file",
+                        name: "importFile"
+                    })),
+                React.DOM.input({
+                    type: "hidden",
+                    name: "submit",
+                    value: "1"
+                }),
+                React.DOM.input({
+                    type: "submit",
+                    value: "Submit"
+                }))
+        }
+
+        var ImportRoleStubs = React.createFactory(React.createClass({
+            render: function() {
+                return React.DOM.div(null,
+                        AeaCoreReactComponents.Errors({
+                        errors: config.errors
+                    }),
+                    config.formToServe === "SUBMIT" ? RoleStatusView({
+                        roleStatuses: config.roleStatuses
+                    }) : null,
+                    FormView())
+            }
+        }))
+
+        var ImportRoleStubsApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Import Role Stubs",
+                    instructions: ["This page helps to get around a core limitation when your site is using the built-in Role filter on Display Mappings combined with the Core Import Export feature.",
+                        "The problem is that when you do this, there is a circular dependency between Roles and Tracking Configuration which the import cannot resolve and therefore fails.",
+                        "This page can be used to import blank roles (just containing business keys) from a Standard Entellitrak Export file, thus eliminating the circular dependency and allowing the Core Import/Export to run."
+                    ],
+                    mainContent: ImportRoleStubs({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(ImportRoleStubsApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "active" : true,
+  "businessKey" : "com.entellitrak.job.simpleCleanupSystemMaintenance",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:49Z",
+  "cronTriggerExpression" : "0 30 1 ? * SAT",
+  "cronTriggerType" : "CUSTOM",
+  "description" : "System maintenance job scheduled to be run every Saturday morning at 1:30am to cleanup deleted Workflows",
+  "endDate" : null,
+  "jobType" : "WORKITEM_CLEANUP",
+  "lastUpdatedBy" : "administrator (imported)",
+  "lastUpdatedOn" : "2017-07-28T17:17:49Z",
+  "name" : "System Maintenance (Cleanup deleted Workflows)",
+  "quartzJobDetails" : {
+    "description" : "System maintenance job scheduled to be run every Saturday morning at 1:30am to cleanup deleted Workflows",
+    "isDurable" : "1",
+    "isNonconcurrent" : "1",
+    "isUpdateData" : "0",
+    "jobClassName" : "com.micropact.entellitrak.scheduler.ExecutableSystemJob",
+    "jobData" : "rO0ABXNyABVvcmcucXVhcnR6LkpvYkRhdGFNYXCfsIPov6mwywIAAHhyACZvcmcucXVhcnR6LnV0aWxzLlN0cmluZ0tleURpcnR5RmxhZ01hcIII6MP7xV0oAgABWgATYWxsb3dzVHJhbnNpZW50RGF0YXhyAB1vcmcucXVhcnR6LnV0aWxzLkRpcnR5RmxhZ01hcBPmLq0odgrOAgACWgAFZGlydHlMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cABzcgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAAAPdwgAAAAQAAAAAHgA",
+    "jobGroup" : "DEFAULT",
+    "jobName" : "com.entellitrak.job.simpleCleanupSystemMaintenance",
+    "requestsRecovery" : "0",
+    "schedulerName" : "entellitrakScheduler"
+  },
+  "repeatInterval" : null,
+  "repeatUnits" : null,
+  "suspendOnError" : false,
+  "triggerType" : "CRON_TRIGGER"
+}

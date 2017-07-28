@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.workfloweffects.b7e3d1b3-a329-43b9-bd33-9530e105ab87",
+  "name" : "workfloweffects",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.cmpcomplaint.db6df8fe-4f04-48a8-99c9-42551a450f84",
+  "workspaceName" : "system"
+}

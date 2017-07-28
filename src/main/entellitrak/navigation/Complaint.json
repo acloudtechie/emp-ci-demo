@@ -1,0 +1,13 @@
+{
+  "businessKey" : "object.complaint",
+  "children" : [ {
+    "businessKey" : "object.document",
+    "children" : [ ],
+    "listOrder" : 2
+  }, {
+    "businessKey" : "object.event",
+    "children" : [ ],
+    "listOrder" : 1
+  } ],
+  "navigationStyle" : "VERTICAL"
+}

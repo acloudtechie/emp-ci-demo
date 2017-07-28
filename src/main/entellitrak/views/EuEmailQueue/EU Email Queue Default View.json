@@ -1,0 +1,111 @@
+{
+  "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView",
+  "dataObjectBusinessKey" : "object.euEmailQueue",
+  "dataViewElements" : [ {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.bccrecipients",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.bccRecipients",
+    "description" : "BCC Recipients column.",
+    "displayOrder" : 6,
+    "displaySize" : null,
+    "label" : "BCC Recipients",
+    "multiValueDelimiter" : null,
+    "name" : "bccRecipients",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.body",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.body",
+    "description" : "Body column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Body",
+    "multiValueDelimiter" : null,
+    "name" : "body",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.ccrecipients",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.ccRecipients",
+    "description" : "CC Recipients column.",
+    "displayOrder" : 5,
+    "displaySize" : null,
+    "label" : "CC Recipients",
+    "multiValueDelimiter" : null,
+    "name" : "ccRecipients",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.createdtime",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.createdTime",
+    "description" : "Created Time column.",
+    "displayOrder" : 8,
+    "displaySize" : null,
+    "label" : "Created Time",
+    "multiValueDelimiter" : null,
+    "name" : "createdTime",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.error",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.error",
+    "description" : "Error column.",
+    "displayOrder" : 10,
+    "displaySize" : null,
+    "label" : "Error",
+    "multiValueDelimiter" : null,
+    "name" : "error",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.fromaddress",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.fromAddress",
+    "description" : "From Address column.",
+    "displayOrder" : 3,
+    "displaySize" : null,
+    "label" : "From Address",
+    "multiValueDelimiter" : null,
+    "name" : "fromAddress",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.recipients",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.recipients",
+    "description" : "Recipients column.",
+    "displayOrder" : 4,
+    "displaySize" : null,
+    "label" : "Recipients",
+    "multiValueDelimiter" : null,
+    "name" : "recipients",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.senttime",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.sentTime",
+    "description" : "Sent Time column.",
+    "displayOrder" : 9,
+    "displaySize" : null,
+    "label" : "Sent Time",
+    "multiValueDelimiter" : null,
+    "name" : "sentTime",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.status",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.status",
+    "description" : "Status column.",
+    "displayOrder" : 7,
+    "displaySize" : null,
+    "label" : "Status",
+    "multiValueDelimiter" : null,
+    "name" : "status",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueue.view.euEmailQueueDefaultView.element.subject",
+    "dataElementBusinessKey" : "object.euEmailQueue.element.subject",
+    "description" : "Subject column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Subject",
+    "multiValueDelimiter" : null,
+    "name" : "subject",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "EU Email Queue Listing",
+  "name" : "EU Email Queue Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "EU Email Queue Listing"
+}

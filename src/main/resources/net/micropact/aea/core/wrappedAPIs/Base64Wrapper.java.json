@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.base64wrapper.cc380be9-ac4d-400b-9096-f37870e4ee17",
+  "description" : "Base64Wrapper",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "Base64Wrapper",
+  "packageBusinessKey" : "package.wrappedAPIs.abbea5cf-10a7-4c50-9faa-e8b3b194d0d0",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

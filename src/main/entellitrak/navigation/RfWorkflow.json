@@ -1,0 +1,29 @@
+{
+  "businessKey" : "object.rfWorkflow",
+  "children" : [ {
+    "businessKey" : "object.rfState",
+    "children" : [ ],
+    "listOrder" : 1
+  }, {
+    "businessKey" : "object.rfTransition",
+    "children" : [ {
+      "businessKey" : "object.rfTransitionParameterValue",
+      "children" : [ ],
+      "listOrder" : 5
+    } ],
+    "listOrder" : 2
+  }, {
+    "businessKey" : "object.rfWorkflowEffect",
+    "children" : [ {
+      "businessKey" : "object.rfScriptParameterValue",
+      "children" : [ ],
+      "listOrder" : 6
+    } ],
+    "listOrder" : 3
+  }, {
+    "businessKey" : "object.rfWorkflowParameter",
+    "children" : [ ],
+    "listOrder" : 4
+  } ],
+  "navigationStyle" : "VERTICAL"
+}

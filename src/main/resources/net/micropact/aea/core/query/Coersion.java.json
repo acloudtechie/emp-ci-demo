@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.coersion.37d5a3e2-2a17-47bd-8853-fc2eb65ef6cb",
+  "description" : "Coersion",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "Coersion",
+  "packageBusinessKey" : "package.query.8ba4c0f8-e200-406c-b632-d721d9ca2048",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

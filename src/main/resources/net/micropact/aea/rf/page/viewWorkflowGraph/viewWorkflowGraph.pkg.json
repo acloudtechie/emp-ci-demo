@@ -1,0 +1,7 @@
+{
+  "businessKey" : "package.viewWorkflowGraph.cd001c3e-e805-463c-b0f2-19e60a13ff21",
+  "name" : "viewWorkflowGraph",
+  "packageType" : "STANDARD",
+  "parentBusinessKey" : "package.page.4f9f5940-eb80-4240-a503-a0c3460d08d1",
+  "workspaceName" : "system"
+}

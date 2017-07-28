@@ -1,0 +1,18 @@
+{
+  "ascendingOrder" : null,
+  "businessKey" : "lookup.priorityType",
+  "dataObjectBusinessKey" : "object.priorityType",
+  "description" : "Priority Type",
+  "displayDataElementBusinessKey" : "object.priorityType.element.name",
+  "enableCaching" : true,
+  "endDateDataElementBusinessKey" : "object.priorityType.element.endDate",
+  "lookupSourceType" : "DATA_OBJECT_LOOKUP",
+  "name" : "Priority Type",
+  "orderByDataElementBusinessKey" : "object.priorityType.element.order",
+  "scriptObjectBusinessKey" : null,
+  "startDateDataElementBusinessKey" : "object.priorityType.element.startDate",
+  "systemObjectDisplayFormat" : null,
+  "systemObjectType" : null,
+  "valueDataElementBusinessKey" : null,
+  "valueReturnType" : null
+}

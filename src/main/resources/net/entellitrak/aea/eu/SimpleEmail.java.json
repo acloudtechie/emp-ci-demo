@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.simpleemail.0fb2014e-5839-4e7f-b754-78554a9c35c1",
+  "description" : "SimpleEmail",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "SimpleEmail",
+  "packageBusinessKey" : "package.eu.3204496f-b6f5-4da6-9338-80a9b38d82e3",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

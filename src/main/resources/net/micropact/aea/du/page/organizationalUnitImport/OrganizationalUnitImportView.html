@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Developer Utility - Organizational Unit Import</title>
+
+    <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+    <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+    <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+
+    <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+
+    <script type="text/javascript">
+        "use strict"
+
+        var config = {
+            pageKey: "du.page.organizationalUnitImport",
+            errors: $errors,
+            undeletedNodes: $undeletedNodes,
+            importCompleted: $importCompleted
+        }
+
+        function Errors(props) {
+            return AeaCoreReactComponents.Errors({
+                errors: config.errors
+            })
+        }
+
+        function ImportSummary(props) {
+            return config.undeletedNodes === null ?
+                null :
+                React.DOM.div(null,
+                    AeaCoreReactComponents.SimpleHeaderTableGrid({
+                        className: "aea-core-grid",
+                        headers: ["Hierarchy Id", "Name", "Code"],
+                        caption: "Nodes to Delete",
+                        tbody: React.DOM.tbody(null, config.undeletedNodes.map(function(node) {
+                            return React.DOM.tr({
+                                    key: node.HIERARCHY_ID
+                                },
+                                React.DOM.td(null, node.HIERARCHY_ID),
+                                React.DOM.td(null, node.NAME),
+                                React.DOM.td(null, node.CODE))
+                        }))
+                    }))
+        }
+
+        function InputForm(props) {
+            return React.DOM.div(null,
+                React.DOM.form({
+                        method: "POST",
+                        action: "page.request.do?page=" + config.pageKey,
+                        encType: "multipart/form-data"
+                    },
+                    AeaStackForm.StackData({
+                        children: [AeaStackForm.Hidden({
+                                name: "update",
+                                value: "1",
+                                key: 0
+                            }),
+                            AeaStackForm.File({
+                                name: "importFile",
+                                label: "File",
+                                key: 1
+                            }),
+                            AeaStackForm.Buttons({
+                                buttons: [{
+                                    type: "submit",
+                                    name: "Import"
+                                }],
+                                key: 2
+                            })
+                        ]
+                    })))
+        }
+
+        function OrgUnitImport() {
+            return React.DOM.div(null,
+                Errors({}),
+                ImportSummary({}),
+                InputForm({}))
+        }
+
+        function Instructions() {
+            return React.DOM.div(null,
+                React.DOM.p(null,
+                    "This page imports Organizational Units which were exported by ",
+                    React.DOM.a({
+                            href: "page.request.do?page=du.page.organizationalUnitExport"
+                        },
+                        "Organizational Unit Export")),
+                React.DOM.p(null, "The page has the following behavior:"),
+                React.DOM.ul(null, [React.DOM.p(null, React.DOM.strong(null, "Code will be used as the unique identifier for nodes."), " If a node with a particular code exists in both this site and the import file, the existing node will be updated to the correct place in the hierarchy and will keep its original hierarchy_id. This means that all references to it will remain valid."),
+                        React.DOM.p(null, React.DOM.strong(null, "No hierarchy nodes will be deleted."), " This is to prevent accidental loss of data. Upon import, this page will display a list of nodes which would have been deleted. The built-in ", React.DOM.a({
+                            href: "admin.hierarchy.do",
+                            target: "_blank"
+                        }, "Organizational Hierarchy"), " screen may be used to perform the deletes."),
+                        React.DOM.p(null, React.DOM.strong(null, "All hierarchy nodes which exist in this site, but not in the import file will be reparented to the new root node."), " No attempt will be made to 'guess' an appropriate tree structure for them.")
+                    ]
+                    .map(function(element, i) {
+                        return React.DOM.li({
+                            key: i
+                        }, element)
+                    })))
+        }
+
+        var OrgUnitImportApp = React.createFactory(React.createClass({
+            render: function() {
+                return AeaCoreReactComponents.Application({
+                    title: "Organizational Unit Import",
+                    instructions: Instructions(),
+                    mainContent: OrgUnitImport({})
+                })
+            }
+        }))
+
+        function init() {
+            ReactDOM.render(OrgUnitImportApp(null),
+                document.getElementById("app"))
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="app"></div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.rfmigrationservice.cdd27256-dc16-4775-a284-8255eb84990a",
+  "description" : "RfMigrationService",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "RfMigrationService",
+  "packageBusinessKey" : "package.service.f06b2c56-685e-4c4e-b7a2-32b095596055",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

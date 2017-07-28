@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        
+        <title>Developer Utility - Transfer Page Ownership</title>
+        
+        <link type="text/css" rel="stylesheet" href="themes/default/web-pub/css/rt.jsp" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=aea.core.utility.coreCss" />
+        <link type="text/css" rel="stylesheet" href="page.request.do?page=du.page.transferUtility.css" />
+        
+        <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react.js"></script>
+        <script type="text/javascript" src="web-pub/aearchitecture/react/react-dom.js"></script>
+        
+        <script type="text/javascript" src="page.request.do?page=aea.core.utility.reactComponents"></script>
+        <script type="text/javascript" src="page.request.do?page=du.page.transferUtility"></script>
+        <script type="text/javascript">
+        
+        "use strict"
+        
+        jQuery(function(){
+            var errors = $errors;
+            var displayTransferred = $transferred
+            var transfer = AeaTransferUtility.makeTransfer($users, $items, $toUser, $selectedFromUsers, $selectedItems)
+            
+            ReactDOM.render(AeaTransferUtility.ItemMoverApp({
+                transfer: transfer,
+                displayTransferred: displayTransferred,
+                errors: errors,
+                transferType: 'Page',
+                submissionUrl: 'page.request.do?page=du.page.transferPageOwnership'
+            }),
+            jQuery('.app')[0])})
+        
+        </script>
+        
+    </head>
+    
+    <body>
+        <div class="app">
+        </div>
+    </body>
+</html>

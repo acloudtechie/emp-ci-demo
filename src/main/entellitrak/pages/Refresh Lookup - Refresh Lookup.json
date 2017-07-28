@@ -1,0 +1,28 @@
+{
+  "businessKey" : "refreshLookup.page.refreshLookup",
+  "componentPage" : false,
+  "controllerBusinessKey" : "script.defaultjavascriptcontroller.d3996852-5cb5-433c-b3fe-652e6af45fc6",
+  "createdBy" : "administrator (imported)",
+  "createdOn" : "2017-07-28T17:17:47Z",
+  "description" : "Refresh Lookup - Refresh Lookup",
+  "lastUpdatedBy" : null,
+  "lastUpdatedOn" : null,
+  "name" : "Refresh Lookup - Refresh Lookup",
+  "pagePermissions" : [ {
+    "groupBusinessKey" : null,
+    "isAllUsers" : true,
+    "isDisplay" : false,
+    "isEdit" : false,
+    "isExecute" : true,
+    "roleBusinessKey" : null
+  }, {
+    "groupBusinessKey" : null,
+    "isAllUsers" : false,
+    "isDisplay" : true,
+    "isEdit" : true,
+    "isExecute" : true,
+    "roleBusinessKey" : "role.administration"
+  } ],
+  "publicPage" : false,
+  "viewBusinessKey" : "script.refreshlookupview.7e0fe653-f763-4b5a-8389-a0091c92b3f7"
+}

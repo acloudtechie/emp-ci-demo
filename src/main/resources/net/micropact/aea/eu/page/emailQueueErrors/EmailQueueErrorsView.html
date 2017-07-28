@@ -1,0 +1,141 @@
+<div>
+    <style type="text/css">
+        table.grid td a.aea-objectLink {
+            color: #2A568F;
+        }
+        
+        .aea-pageHeader {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        .aea-noErrors {
+            color: #22BB22;
+        }
+        
+        .aea-errors {
+            color: #FF0000;
+        }
+        
+        .aea-button-holder {
+            text-align: center;
+            margin: 0.5em;
+        }
+        
+        .aea-loading {
+            display: inline-block;
+            position: fixed;
+            right: 50%;
+            top: 50%;
+            background-color: #f1f1f1;
+            border: 1px solid #999;
+            border-radius: 5px;
+            color: #000;
+            padding: 10px;
+            z-index: 1000;
+        }
+        
+        .aea-emailQueueErrorsHolder .aea-preformatted {
+            white-space: pre;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="public/com/jquery/current/jquery.min.js"></script>
+
+    <!-- This loading div could cause conflicts with other loading divs.
+    If that happens, we will have to restructure the page a little bit and perhaps build it with javascript. -->
+    <div class="aea-loading">
+        <img border="0" alt="Loading ..." title="Loading ..." src="themes/default/web-pub/images/icons/ajax-loader.gif"> Loading ...
+    </div>
+    <div class="aea-emailQueueErrorsHolder" />
+    
+    <script type="text/javascript">
+        "use strict";
+
+        (function() {
+
+            reloadEmailQueueErrors(false);
+
+            function reloadEmailQueueErrors(sendEmails) {
+
+                jQuery('.aea-loading').show();
+
+                jQuery.post("page.request.do", {
+                        page: "eu.page.emailQueueErrors.ajax",
+                        sendEmails: sendEmails ? "1" : "0"
+                    }).done(buildDisplay)
+                    .done(function() {
+                        jQuery('.aea-loading').hide()
+                    })
+            }
+
+            function buildDisplay(emailQueueErrors) {
+                var containerDiv = jQuery(".aea-emailQueueErrorsHolder")
+                containerDiv.html("")
+
+                if (emailQueueErrors.length == 0) {
+                    containerDiv.append(jQuery("<h3>")
+                        .addClass("aea-pageHeader aea-noErrors")
+                        .text("No Email Queue Errors"))
+                } else {
+                    containerDiv.append(jQuery("<div>")
+                        .append(jQuery("<h3>")
+                            .addClass("aea-pageHeader aea-errors")
+                            .text("Email Queue Errors"))
+                        .append(jQuery("<div>")
+                            .addClass("aea-button-holder")
+                            .append(jQuery("<button>")
+                                .addClass("formButton")
+                                .click(function(event) {
+                                    reloadEmailQueueErrors(true)
+                                    event.preventDefault()
+                                })
+                                .text("Resend All"))
+                            .append(jQuery("<table>")
+                                .addClass("grid")
+                                .append(jQuery("<thead>")
+                                    .append(jQuery("<tr>")
+                                        .append(jQuery(["",
+                                            "Email Queue Id",
+                                            "Subject",
+                                            "Recipients",
+                                            "CC Recipients",
+                                            "BCC Recipients",
+                                            "Created Time",
+                                            "Attachments",
+                                            "Error"
+                                        ]).map(function(index, headerText) {
+                                            return jQuery("<th>")
+                                                .text(headerText)[0]
+                                        }))))
+                                .append(jQuery("<tbody>")
+                                    .append(jQuery(emailQueueErrors).map(function(i, emailQueueError) {
+                                        return jQuery("<tr>")
+                                            .append(jQuery("<td>")
+                                                .append(jQuery("<a>")
+                                                    .addClass("aea-objectLink")
+                                                    .prop({
+                                                        href: "admin.refdata.update.request.do?dataObjectKey=object.euEmailQueue&trackingId=" + encodeURIComponent(emailQueueError.EMAILQUEUEID)
+                                                    })
+                                                    .text("(View Email)")))
+                                            .append(jQuery(["EMAILQUEUEID",
+                                                "SUBJECT",
+                                                "RECIPIENTS",
+                                                "CCRECIPIENTS",
+                                                "BCCRECIPIENTS",
+                                                "CREATEDTIME",
+                                                "ATTACHMENTS",
+                                                "ERROR"
+                                            ]).map(function(index, property) {
+                                                return jQuery("<td>")
+                                                    .html(emailQueueError[property])[0]
+                                            }))[0]
+                                    }))))))
+                }
+            }
+        }())
+
+    </script>
+</div>

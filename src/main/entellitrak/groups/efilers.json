@@ -1,0 +1,58 @@
+{
+  "businessKey" : "group.efilers",
+  "description" : "efile users",
+  "name" : "efilers",
+  "subjectPreferences" : [ {
+    "inboxPreferences" : [ {
+      "assignmentFilterDashboard" : "ALL_ASSIGNMENTS",
+      "assignmentFilterInbox" : "ALL_ASSIGNMENTS",
+      "dataObjectKey" : "T_CMP_COMPLAINT",
+      "defaultInbox" : false,
+      "defaultTab" : "T_CMP_COMPLAINT",
+      "displayedOnDashboard" : true,
+      "maxRows" : 10,
+      "pageSize" : 50,
+      "stateFilters" : [ {
+        "appliedToDashboard" : false,
+        "appliedToTrackingInbox" : false,
+        "state" : "Begin"
+      }, {
+        "appliedToDashboard" : false,
+        "appliedToTrackingInbox" : false,
+        "state" : "End"
+      }, {
+        "appliedToDashboard" : false,
+        "appliedToTrackingInbox" : false,
+        "state" : "Interim"
+      } ]
+    }, {
+      "assignmentFilterDashboard" : "ALL_ASSIGNMENTS",
+      "assignmentFilterInbox" : "ALL_ASSIGNMENTS",
+      "dataObjectKey" : "T_COMPLAINT",
+      "defaultInbox" : true,
+      "defaultTab" : "T_COMPLAINT",
+      "displayedOnDashboard" : true,
+      "maxRows" : 10,
+      "pageSize" : 50,
+      "stateFilters" : [ {
+        "appliedToDashboard" : false,
+        "appliedToTrackingInbox" : false,
+        "state" : "Begin"
+      }, {
+        "appliedToDashboard" : false,
+        "appliedToTrackingInbox" : false,
+        "state" : "End"
+      }, {
+        "appliedToDashboard" : false,
+        "appliedToTrackingInbox" : false,
+        "state" : "Interim"
+      } ]
+    } ],
+    "myAnalyticsVisible" : false,
+    "myPagesVisible" : false,
+    "myQueriesVisible" : false,
+    "myReportsVisible" : false,
+    "mySearchesVisible" : false
+  } ],
+  "subjectRoles" : [ "role.efiler" ]
+}

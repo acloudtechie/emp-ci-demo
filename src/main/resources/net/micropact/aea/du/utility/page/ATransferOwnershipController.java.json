@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.atransferownershipcontroller.e0d21b56-c4e9-4ff4-9a69-1a8198a0689b",
+  "description" : "ATransferOwnershipController",
+  "handlerType" : "NONE",
+  "languageType" : "JAVA",
+  "name" : "ATransferOwnershipController",
+  "packageBusinessKey" : "package.page.72fd6f5a-4558-439f-815d-653c26026484",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}

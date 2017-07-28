@@ -1,0 +1,31 @@
+{
+  "businessKey" : "object.euEmailQueueStatus.view.euEmailQueueStatusDefaultView",
+  "dataObjectBusinessKey" : "object.euEmailQueueStatus",
+  "dataViewElements" : [ {
+    "businessKey" : "object.euEmailQueueStatus.view.euEmailQueueStatusDefaultView.element.code",
+    "dataElementBusinessKey" : "object.euEmailQueueStatus.element.code",
+    "description" : "Code column.",
+    "displayOrder" : 2,
+    "displaySize" : null,
+    "label" : "Code",
+    "multiValueDelimiter" : null,
+    "name" : "code",
+    "responsivenessFactor" : 1
+  }, {
+    "businessKey" : "object.euEmailQueueStatus.view.euEmailQueueStatusDefaultView.element.name",
+    "dataElementBusinessKey" : "object.euEmailQueueStatus.element.name",
+    "description" : "Name column.",
+    "displayOrder" : 1,
+    "displaySize" : null,
+    "label" : "Name",
+    "multiValueDelimiter" : null,
+    "name" : "name",
+    "responsivenessFactor" : 1
+  } ],
+  "defaultView" : true,
+  "description" : "EU Email Queue Status Listing",
+  "name" : "EU Email Queue Status Default View",
+  "searchView" : true,
+  "text" : null,
+  "title" : "EU Email Queue Status Listing"
+}

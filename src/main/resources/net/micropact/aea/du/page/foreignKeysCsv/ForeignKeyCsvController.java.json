@@ -1,0 +1,10 @@
+{
+  "businessKey" : "script.foreignkeycsvcontroller.577056cf-6a6d-4e27-ba6b-1f6b8f67484e",
+  "description" : "ForeignKeyCsvController",
+  "handlerType" : "PAGE_CONTROLLER",
+  "languageType" : "JAVA",
+  "name" : "ForeignKeyCsvController",
+  "packageBusinessKey" : "package.foreignKeysCsv.eceab8e4-cf3b-4a9d-994e-af8fb59a5569",
+  "publicResource" : false,
+  "workspaceName" : "system"
+}
